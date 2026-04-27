@@ -12,8 +12,8 @@
 window.FoodvioLeads = (function() {
 
   // ⚠️ 修改这里 ⚠️ —— 部署前必须替换为你的真实值
-  const SUPABASE_URL  = 'https://YOUR_PROJECT.supabase.co';
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIs...YOUR_ANON_KEY';
+  const SUPABASE_URL  = 'https://kaqdluhhrlkogpecrwbx.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImthcWRsdWhocmxrb2dwZWNyd2J4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyNzA3MDEsImV4cCI6MjA5Mjg0NjcwMX0.Tq1yWsrnc8CBfBwmo6druKlRAolSLYM977TWgqu6j00';
 
   // 子站自动识别(根据当前页面文件名)
   function detectSubsite() {
