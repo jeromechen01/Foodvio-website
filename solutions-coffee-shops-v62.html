@@ -307,6 +307,7 @@
     .ps-row .arrow-mid { padding: 12px 0; }
   }
 </style>
+<script src="lead-capture.js" defer></script>
 </head>
 
 <body class="grain">
@@ -314,7 +315,7 @@
 <!-- NAV -->
 <nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
   <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
-    <a href="foodvio-home-zh-v62.html" class="flex items-center gap-3 nav-brand text-white">
+    <a href="index.html" class="flex items-center gap-3 nav-brand text-white">
       <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
       <span class="w-px h-3 bg-white/30 mx-1"></span>
       <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
@@ -396,7 +397,7 @@
   <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
 
     <div class="breadcrumb mb-12 reveal">
-      <a href="foodvio-home-zh-v62.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a>
       <span class="sep">›</span>
       <a href="solutions-index-v62.html">Solutions</a>
       <span class="sep">›</span>
@@ -432,7 +433,7 @@
             <span data-en>Request Samples</span>
             <span class="arrow">→</span>
           </a>
-          <a href="#" class="btn-outline">
+          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
             <span data-zh>下载案例研究</span>
             <span data-en>Case Study PDF</span>
           </a>
@@ -824,9 +825,9 @@
           <span data-en>From breakfast to afternoon tea — let our Michelin R&D team become your menu consultant.</span>
         </p>
         <div class="flex flex-wrap gap-3 justify-center">
-          <a href="#" class="btn-primary"><span data-zh>申请样品</span><span data-en>Request Samples</span><span class="arrow">→</span></a>
-          <a href="#" class="btn-outline"><span data-zh>下载案例研究</span><span data-en>Download Case Study</span></a>
-          <a href="#" class="btn-outline"><span data-zh>预约通话</span><span data-en>Book a Call</span></a>
+          <a href="#" class="btn-primary" data-foodvio-cta="sample_request"><span data-zh>申请样品</span><span data-en>Request Samples</span><span class="arrow">→</span></a>
+          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download"><span data-zh>下载案例研究</span><span data-en>Download Case Study</span></a>
+          <a href="#" class="btn-outline" data-foodvio-cta="meeting_booking"><span data-zh>预约通话</span><span data-en>Book a Call</span></a>
         </div>
         <div class="mt-10 pt-8 border-t border-white/15 text-white/60 text-sm">
           📞 400-6879-568 · 📧 huahuakefu1@foodvio.com.cn

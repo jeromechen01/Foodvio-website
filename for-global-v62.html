@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Products · Foodvio 花花食界 — 100+ SKUs across 6 Product Lines</title>
-<meta name="description" content="花花食界 6 大产品矩阵 · 100+ SKUs · 西式创新酱料 / 西式主食 / 炸品小食 / 西式主菜 / 健康小菜 / 烘焙食品 · 米其林大厨研发" />
+<title>For Global Partners · Foodvio — Made in China for the World's Western Kitchens</title>
+<meta name="description" content="Foodvio for global partners. FOB-ready Western cuisine made in China. Serving SEA, Africa, Japan, EU & NA. FDA registered." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,7 +52,7 @@
     mix-blend-mode: overlay;
   }
 
-  /* Hero */
+  /* Hero (half screen, restaurant kitchen mood) */
   .hero-bg {
     position: absolute; inset: 0;
     background: var(--ink);
@@ -61,14 +61,16 @@
   .hero-bg::before {
     content: ''; position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse at 25% 35%, rgba(245,200,46,0.18) 0%, transparent 55%),
-      radial-gradient(ellipse at 75% 65%, rgba(224,122,95,0.15) 0%, transparent 50%);
+      radial-gradient(ellipse at 30% 40%, rgba(74,144,226,0.28) 0%, transparent 60%),
+      radial-gradient(ellipse at 75% 60%, rgba(129,178,154,0.15) 0%, transparent 55%);
   }
   .hero-bg::after {
     content: ''; position: absolute; inset: 0;
-    background-image: linear-gradient(180deg, transparent 0%, transparent 70%, rgba(13,42,31,0.6) 100%);
+    background-image:
+      linear-gradient(180deg, transparent 0%, transparent 70%, rgba(13,42,31,0.6) 100%);
   }
 
+  /* Section number tag */
   .section-no {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic; color: var(--terra);
@@ -76,19 +78,19 @@
   }
   .section-no::before { content: '— '; margin-right: 6px; }
 
+  /* Reveal */
   .reveal {
     opacity: 0; transform: translateY(32px);
     transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99),
                 transform 1.2s cubic-bezier(.16,.84,.28,.99);
   }
   .reveal.in { opacity: 1; transform: translateY(0); }
-  .delay-1 { transition-delay: 0.10s; }
-  .delay-2 { transition-delay: 0.18s; }
-  .delay-3 { transition-delay: 0.26s; }
-  .delay-4 { transition-delay: 0.34s; }
-  .delay-5 { transition-delay: 0.42s; }
-  .delay-6 { transition-delay: 0.50s; }
+  .delay-1 { transition-delay: 0.12s; }
+  .delay-2 { transition-delay: 0.24s; }
+  .delay-3 { transition-delay: 0.36s; }
+  .delay-4 { transition-delay: 0.48s; }
 
+  /* Hero typography */
   .hero-title {
     font-family: 'Noto Serif SC', serif; font-weight: 700;
     line-height: 1.05; letter-spacing: -0.02em; color: #fff;
@@ -99,12 +101,22 @@
     display: inline-flex; align-items: center; gap: 12px;
     padding: 16px 32px; background: var(--rust); color: #fff;
     border-radius: 999px; font-weight: 500; font-size: 14px;
+    letter-spacing: 0.02em;
     transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
     box-shadow: 0 8px 24px -10px rgba(199,62,58,0.5);
   }
   .btn-primary:hover { background: #b03531; transform: translateY(-2px); }
   .btn-primary .arrow { transition: transform 0.4s; }
   .btn-primary:hover .arrow { transform: translateX(4px); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: transparent; color: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: #fff; }
 
   .btn-link {
     display: inline-flex; align-items: center; gap: 8px;
@@ -114,240 +126,132 @@
   }
   .btn-link:hover { gap: 14px; border-bottom-color: var(--rust); }
 
-  /* Brand split section */
-  .brand-card {
-    border-radius: 24px;
-    padding: 48px 40px;
+  /* Pain point list */
+  .pain-item {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(13,42,31,0.08);
+    display: flex; align-items: flex-start; gap: 20px;
+    transition: padding 0.4s;
+  }
+  .pain-item:last-child { border-bottom: none; }
+  .pain-item:hover { padding-left: 8px; }
+  .pain-num {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 24px; line-height: 1;
+    flex-shrink: 0; min-width: 40px;
+  }
+  .pain-text {
+    font-size: 17px; line-height: 1.6; color: var(--forest);
+  }
+
+  /* Solution cards */
+  .solution-card {
+    background: #fff; border: 1px solid rgba(27,67,50,0.08);
+    border-radius: 20px; padding: 36px 32px;
     transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
-    position: relative;
-    overflow: hidden;
+    height: 100%;
+    display: flex; flex-direction: column;
   }
-  .brand-card.b2b {
-    background: linear-gradient(160deg, var(--forest) 0%, var(--ink) 100%);
-    color: #fff;
+  .solution-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px -20px rgba(13,42,31,0.18);
   }
-  .brand-card.consumer {
-    background: linear-gradient(160deg, #F5F1EA 0%, #ede4d2 100%);
-    color: var(--ink);
-    border: 1px solid rgba(27,67,50,0.08);
+  .solution-card .card-num {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 14px; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 24px;
   }
-  .brand-card::after {
-    content: '';
-    position: absolute; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-    opacity: 0.06;
-    mix-blend-mode: overlay;
-    pointer-events: none;
+  .solution-card .card-icon {
+    font-size: 40px; margin-bottom: 24px;
   }
-  .brand-card .label {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 12px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    opacity: 0.7;
+  .solution-card h3 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 22px; line-height: 1.3; color: var(--forest);
+    margin-bottom: 12px;
   }
-  .brand-card .brand-name-zh {
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1;
-    margin-bottom: 8px;
+  .solution-card .card-body {
+    font-size: 14px; line-height: 1.65;
+    color: rgba(13,42,31,0.7); margin-bottom: 24px;
+    flex-grow: 1;
   }
-  .brand-card .brand-name-en {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 22px;
-    margin-bottom: 24px;
-    opacity: 0.85;
-  }
-  .brand-card .desc {
-    font-size: 15px; line-height: 1.7;
-    margin-bottom: 32px;
-    opacity: 0.85;
-  }
-  .brand-card .stats {
-    display: flex; gap: 24px;
-    padding: 20px 0;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    margin-bottom: 28px;
-  }
-  .brand-card.consumer .stats { border-top-color: rgba(13,42,31,0.15); }
-  .brand-card .stat-item {
-    flex: 1;
-  }
-  .brand-card .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 1;
-    color: var(--gold);
-  }
-  .brand-card.consumer .stat-num { color: var(--rust); }
-  .brand-card .stat-label {
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-top: 6px;
-    opacity: 0.6;
-  }
-  .brand-card a.action {
-    display: inline-flex; align-items: center; gap: 10px;
-    color: var(--gold);
-    font-weight: 500; font-size: 15px;
+  .solution-card .card-link {
+    font-size: 13px; color: var(--rust); font-weight: 500;
+    display: inline-flex; align-items: center; gap: 6px;
     transition: gap 0.3s;
   }
-  .brand-card.consumer a.action { color: var(--rust); }
-  .brand-card a.action:hover { gap: 16px; }
+  .solution-card:hover .card-link { gap: 12px; }
 
-  /* Product line cards */
-  .line-card {
-    background: #fff;
-    border: 1px solid rgba(27,67,50,0.08);
-    border-radius: 20px;
-    padding: 36px 32px 32px;
-    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  /* Scenario chip */
+  .scenario-chip {
+    background: #fff; border: 1px solid rgba(27,67,50,0.08);
+    border-radius: 14px; padding: 22px 18px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+    text-align: center;
     cursor: pointer;
   }
-  .line-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s cubic-bezier(.16,.84,.28,.99);
+  .scenario-chip:hover {
+    border-color: var(--rust);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px -12px rgba(199,62,58,0.25);
   }
-  .line-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px -20px rgba(13,42,31,0.18);
-    border-color: rgba(27,67,50,0.15);
+  .scenario-chip .icon { font-size: 28px; margin-bottom: 10px; }
+  .scenario-chip .name {
+    font-size: 13px; color: var(--forest);
+    font-weight: 500; line-height: 1.3;
   }
-  .line-card:hover::before { transform: scaleX(1); }
+  .scenario-chip .sku {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 11px; color: var(--terra);
+    margin-top: 6px;
+  }
 
-  /* 6 cards: 6 different accent colors + subtle bg tints */
-  .line-card.l1 { background: linear-gradient(180deg, #fff 0%, #fefaf3 100%); }
-  .line-card.l1::before { background: var(--rust); }
-  .line-card.l1 .num { color: var(--rust); }
-
-  .line-card.l2 { background: linear-gradient(180deg, #fff 0%, #f9faf5 100%); }
-  .line-card.l2::before { background: var(--terra); }
-  .line-card.l2 .num { color: var(--terra); }
-
-  .line-card.l3 { background: linear-gradient(180deg, #fff 0%, #fdf7f0 100%); }
-  .line-card.l3::before { background: var(--gold); }
-  .line-card.l3 .num { color: #c19818; }
-
-  .line-card.l4 { background: linear-gradient(180deg, #fff 0%, #faf5f3 100%); }
-  .line-card.l4::before { background: #8b3a1f; }
-  .line-card.l4 .num { color: #8b3a1f; }
-
-  .line-card.l5 { background: linear-gradient(180deg, #fff 0%, #f5faf3 100%); }
-  .line-card.l5::before { background: var(--sage); }
-  .line-card.l5 .num { color: #5a8f6e; }
-
-  .line-card.l6 { background: linear-gradient(180deg, #fff 0%, #faf7f0 100%); }
-  .line-card.l6::before { background: #b8922a; }
-  .line-card.l6 .num { color: #b8922a; }
-
-  .line-card .num {
+  /* Testimonial */
+  .testimonial {
+    background: linear-gradient(135deg, #FAF7F0 0%, #f0e9d8 100%);
+    border-radius: 20px; padding: 40px 36px;
+    position: relative; overflow: hidden;
+    height: 100%;
+    display: flex; flex-direction: column;
+  }
+  .testimonial::before {
+    content: '"';
+    position: absolute; top: -10px; left: 24px;
     font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 14px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
+    font-size: 140px; line-height: 1;
+    color: var(--terra); opacity: 0.25;
+    pointer-events: none;
   }
-  .line-card .num::before { content: '— '; }
-  .line-card .icon {
-    font-size: 40px;
-    margin-bottom: 28px;
-    line-height: 1;
-  }
-  .line-card h3 {
+  .testimonial .quote {
     font-family: 'Noto Serif SC', serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 1.25;
-    color: var(--forest);
-    margin-bottom: 4px;
+    font-size: 17px; line-height: 1.65;
+    color: var(--forest); font-style: italic;
+    margin-bottom: 24px; position: relative; z-index: 1;
+    flex-grow: 1;
   }
-  .line-card .name-en {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 16px;
-    color: var(--terra);
-    margin-bottom: 16px;
+  .testimonial .source {
+    padding-top: 20px;
+    border-top: 1px solid rgba(13,42,31,0.1);
+    font-size: 13px; color: rgba(13,42,31,0.7);
   }
-  .line-card .desc {
-    font-size: 14px;
-    line-height: 1.55;
-    color: rgba(13,42,31,0.7);
-    margin-bottom: 18px;
+  .testimonial .source .label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 12px; letter-spacing: 0.08em;
+    margin-top: 4px; display: block;
   }
-  .line-card .skus {
-    display: inline-block;
-    padding: 4px 12px;
-    background: rgba(27,67,50,0.08);
-    border-radius: 999px;
-    font-size: 12px;
-    color: var(--forest);
-    font-weight: 500;
-    margin-bottom: 20px;
-    width: fit-content;
-  }
-  .line-card .reps {
-    font-size: 13px;
-    line-height: 1.6;
-    color: rgba(13,42,31,0.55);
-    padding: 16px 0;
-    border-top: 1px dashed rgba(27,67,50,0.12);
-    margin-bottom: 20px;
-  }
-  .line-card .reps .reps-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--terra);
-    margin-bottom: 6px;
-    display: block;
-  }
-  .line-card .arrow-end {
-    margin-top: auto;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--rust);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: gap 0.3s;
-  }
-  .line-card:hover .arrow-end { gap: 14px; }
 
-  /* Custom development block */
-  .custom-block {
-    background: linear-gradient(160deg, #faf7f0 0%, #efe6d2 100%);
+  /* Bottom CTA section */
+  .cta-block {
+    background: var(--ink);
     border-radius: 28px;
-    padding: 56px 48px;
-    border: 1px solid rgba(27,67,50,0.08);
+    padding: 64px 48px;
     position: relative;
     overflow: hidden;
   }
-  .custom-block::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-    opacity: 0.05;
-    mix-blend-mode: overlay;
+  .cta-block::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(224,122,95,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 70%, rgba(245,200,46,0.10) 0%, transparent 55%);
     pointer-events: none;
   }
 
@@ -360,7 +264,7 @@
   .breadcrumb a:hover { color: var(--gold); }
   .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
 
-  /* Nav (consistent w/ homepage) */
+  /* Nav */
   .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
   .nav-bar.scrolled {
     background: rgba(13,42,31,0.95);
@@ -385,10 +289,8 @@
   .nav-link.has-dropdown::after {
     content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6;
   }
-  .nav-link.active { color: var(--gold); }
-  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
 
-  /* Mega menu */
+  /* Mega menu (consistent w/ homepage) */
   .mega-menu {
     position: fixed; top: 64px; left: 0; right: 0;
     background: #fff;
@@ -457,8 +359,9 @@
     color: var(--forest); border-color: rgba(27,67,50,0.25);
   }
 
+  /* Responsive */
   @media (max-width: 768px) {
-    .hero-title { font-size: clamp(36px, 8vw, 56px) !important; }
+    .hero-title { font-size: clamp(36px, 9vw, 56px) !important; }
     .mega-menu { display: none; }
   }
 </style>
@@ -468,7 +371,7 @@
 <body class="grain">
 
 <!-- ═══════════════════════════════════════════
-     NAVIGATION (consistent w/ entire site)
+     NAVIGATION (consistent with homepage)
      ═══════════════════════════════════════════ -->
 <nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
   <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
@@ -479,7 +382,7 @@
     </a>
 
     <div class="hidden lg:flex items-center gap-9">
-      <a href="products-index-v62.html" class="nav-link has-dropdown active" data-menu="products">Products</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="products">Products</a>
       <a href="#" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
       <a href="#" class="nav-link has-dropdown" data-menu="story">Our Story</a>
       <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
@@ -492,16 +395,16 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       </button>
       <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
-      <a href="#" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+      <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
     </div>
   </div>
 
-  <!-- Mega Menu Panels -->
+  <!-- Mega Menus (same as homepage, condensed) -->
   <div class="mega-menu" id="mega-products">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-3">
         <div class="mega-col-title">Product Lines</div>
-        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a>
+        <a href="#" class="mega-link featured">Innovation Sauces</a>
         <a href="#" class="mega-link">Western Staples</a>
         <a href="#" class="mega-link">Fried Snacks</a>
         <a href="#" class="mega-link">Main Courses</a>
@@ -543,7 +446,7 @@
       </div>
       <div class="col-span-4">
         <div class="mega-col-title">Global Channels</div>
-        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a>
+        <a href="for-foodservice-v62.html" class="mega-link featured">🍽️ Foodservice</a>
         <a href="for-industrial-v62.html" class="mega-link">🏢 Industrial</a>
         <a href="for-retail-v62.html" class="mega-link">🛒 Retail</a>
         <a href="for-online-sales-v62.html" class="mega-link">💻 Online Sales</a>
@@ -605,43 +508,55 @@
 
   <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
 
+    <!-- Breadcrumb -->
     <div class="breadcrumb mb-12 reveal">
       <a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a>
       <span class="sep">›</span>
-      <span class="text-white">Products</span>
+      <span><span data-zh>方案</span><span data-en>Solutions</span></span>
+      <span class="sep">›</span>
+      <span class="text-white"><span data-zh>海外采购商</span><span data-en>For Global Partners</span></span>
     </div>
 
     <div class="grid md:grid-cols-12 gap-8 items-end">
 
       <div class="md:col-span-8">
+        <!-- Section number -->
         <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
-          OUR PRODUCTS
+          FOR INTERNATIONAL IMPORTERS & DISTRIBUTORS
         </div>
 
+        <!-- Main title (大字克制版) -->
         <h1 class="hero-title reveal delay-1" style="font-size: clamp(44px, 6.5vw, 88px);">
-          <span data-zh>100+ SKUs<br>6 大产品矩阵</span>
-          <span data-en>100+ SKUs<br>across 6 product lines</span>
+          <span data-zh>中国制造,<br>世界西餐厨房的选择</span>
+          <span data-en>Made in China<br>for the world's<br>Western kitchens</span>
         </h1>
 
+        <!-- Subtitle (small italic) -->
         <p class="font-display italic text-white/65 mt-6 text-lg md:text-xl reveal delay-2" data-zh>
-          From Michelin kitchens to your menu.
+          Made in China for the world's Western kitchens.
         </p>
         <p class="font-serif-sc text-white/65 mt-6 text-base md:text-lg reveal delay-2" data-en>
-          米其林大厨研发,6 大产品矩阵
+          中国制造,世界西餐厨房的选择
         </p>
 
+        <!-- One sentence -->
         <p class="text-white/75 text-base md:text-lg max-w-2xl mt-10 leading-relaxed reveal delay-3">
-          <span data-zh>覆盖西式创新酱料、西式主食、炸品小食、西式主菜、健康小菜、烘焙食品 6 大产品线 · 服务 3,000+ 餐饮伙伴</span>
-          <span data-en>Spanning sauces, staples, snacks, mains, sides, and bakery — trusted by 3,000+ F&B partners.</span>
+          <span data-zh>FOB 直发 4 大港口 · 30-45 天交付 · MOQ 1×40' · 服务东南亚、非洲、日本、欧美客户</span>
+          <span data-en>Foodvio delivers FOB-ready professional Western cuisine. From 4 Chinese ports. 30-45 day lead time. MOQ 1×40' container.</span>
         </p>
       </div>
 
+      <!-- CTAs -->
       <div class="md:col-span-4 reveal delay-3">
         <div class="flex flex-col gap-3 md:items-end">
-          <a href="#" class="btn-primary" data-foodvio-cta="catalog_download">
-            <span data-zh>下载完整手册</span>
-            <span data-en>Full Catalog PDF</span>
+          <a href="#" class="btn-primary" data-foodvio-cta="general_contact">
+            <span data-zh>访问 foodvio.com</span>
+            <span data-en>Visit foodvio.com</span>
             <span class="arrow">→</span>
+          </a>
+          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
+            <span data-zh>下载能力书</span>
+            <span data-en>Capability Deck</span>
           </a>
         </div>
       </div>
@@ -651,238 +566,253 @@
 </section>
 
 <!-- ═══════════════════════════════════════════
-     SECTION 2 · Brand split (B2B vs Consumer)
+     SECTION 2 · "We know your daily pains."
+     ═══════════════════════════════════════════ -->
+<section class="bg-cream py-28 md:py-36">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+    <div class="grid md:grid-cols-12 gap-12 lg:gap-20">
+
+      <!-- Left: heading + intro -->
+      <div class="md:col-span-5 reveal">
+        <div class="section-no mb-6">01 / Pain Points</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(36px, 4.5vw, 56px);">
+          <span data-zh>为什么选择中国制造的<br>专业西餐?</span>
+          <span data-en>Why China-made<br>Western cuisine?</span>
+        </h2>
+        <p class="font-display italic text-terra text-lg mt-6">
+          <span data-zh>5 个理由,让全球采购商选择中国。</span>
+          <span data-en>5 reasons global importers source from us.</span>
+        </p>
+      </div>
+
+      <!-- Right: 5 pain points -->
+      <div class="md:col-span-7 reveal delay-1">
+        <div class="pain-item">
+          <span class="pain-num">01</span>
+          <span class="pain-text">
+            <span data-zh>中国制造成本结构有竞争力 · 同质量下比欧洲低 30-50%</span>
+            <span data-en>Competitive cost structure — 30-50% lower than European equivalents at comparable quality</span>
+          </span>
+        </div>
+        <div class="pain-item">
+          <span class="pain-num">02</span>
+          <span class="pain-text">
+            <span data-zh>研发主厨亲赴世界各国学习 · 真正懂全球风味</span>
+            <span data-en>Our R&D chefs trained across 6 countries — they truly understand global flavors</span>
+          </span>
+        </div>
+        <div class="pain-item">
+          <span class="pain-num">03</span>
+          <span class="pain-text">
+            <span data-zh>100,000㎡ 自营工厂 · 8 大类 SC 资质 · FDA 注册</span>
+            <span data-en>100,000㎡ owned facilities, 8 SC categories, US FDA registered</span>
+          </span>
+        </div>
+        <div class="pain-item">
+          <span class="pain-num">04</span>
+          <span class="pain-text">
+            <span data-zh>FOB 4 大港口 · 30-45 天交付 · 集装箱起订</span>
+            <span data-en>FOB-ready from 4 ports — 30-45 day lead time, MOQ 1×40' container</span>
+          </span>
+        </div>
+        <div class="pain-item">
+          <span class="pain-num">05</span>
+          <span class="pain-text">
+            <span data-zh>支持自有品牌 OEM · 多语言包装 · 完整出口文件</span>
+            <span data-en>Private label OEM, multi-language packaging, complete export documentation</span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3 · "How Foodvio Helps" - 3 solution cards
+     ═══════════════════════════════════════════ -->
+<section class="bg-paper py-28 md:py-36">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="grid md:grid-cols-12 gap-8 mb-16 reveal">
+      <div class="md:col-span-5">
+        <div class="section-no mb-6">02 / Our Solutions</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(36px, 4.5vw, 56px);">
+          <span data-zh>花花的解决方案</span>
+          <span data-en>How Foodvio Helps</span>
+        </h2>
+      </div>
+      <div class="md:col-span-6 md:col-start-7 flex items-end">
+        <p class="font-display italic text-terra text-xl">
+          <span data-zh>三件事,我们替你做好。</span>
+          <span data-en>Three things we do, so you don't have to.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="solution-card reveal delay-1">
+        <div class="card-num">Solution 01</div>
+        <div class="card-icon">📋</div>
+        <h3><span data-zh>世界各国风味研发</span><span data-en>R&D from across the world</span></h3>
+        <p class="card-body">
+          <span data-zh>研发主厨曾在意大利、西班牙、日本、韩国、东南亚、墨西哥学习,带回最地道的风味。</span>
+          <span data-en>Our chefs trained across Italy, Spain, Japan, Korea, SEA, Mexico — bringing authentic flavors back.</span>
+        </p>
+        <a href="#" class="card-link">
+          <span data-zh>认识我们的主厨</span><span data-en>Meet our chefs</span> →
+        </a>
+      </div>
+
+      <div class="solution-card reveal delay-2">
+        <div class="card-num">Solution 02</div>
+        <div class="card-icon">📖</div>
+        <h3><span data-zh>中国原料溯源</span><span data-en>Traceable Chinese roots</span></h3>
+        <p class="card-body">
+          <span data-zh>8 大原料产地直采:江西赣南螺丝椒、云南黑松露、内蒙古牛羊肉、新疆面粉等。</span>
+          <span data-en>8 traceable origins across China — Luosijiao chili from Gannan, truffles from Yunnan, beef from Inner Mongolia.</span>
+        </p>
+        <a href="#" class="card-link">
+          <span data-zh>探索原料故事</span><span data-en>Explore origins</span> →
+        </a>
+      </div>
+
+      <div class="solution-card reveal delay-3">
+        <div class="card-num">Solution 03</div>
+        <div class="card-icon">🚛</div>
+        <h3><span data-zh>100,000㎡ 自营工厂</span><span data-en>100,000㎡ owned facilities</span></h3>
+        <p class="card-body">
+          <span data-zh>3 自营工厂 · HACCP / ISO22000 / BSCI / 美国 FDA / 8 大类 SC 全部齐全。</span>
+          <span data-en>3 owned factories. HACCP / ISO 22000 / BSCI / US FDA / 8 SC categories — all in place.</span>
+        </p>
+        <a href="#" class="card-link">
+          <span data-zh>查看认证体系</span><span data-en>See certifications</span> →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4 · "Built for your scenario" - 11 scenario chips
      ═══════════════════════════════════════════ -->
 <section class="bg-cream py-28 md:py-36">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
 
     <div class="grid md:grid-cols-12 gap-8 mb-16 reveal">
       <div class="md:col-span-5">
-        <div class="section-no mb-6">01 / Two Brands</div>
+        <div class="section-no mb-6">03 / Find Your Fit</div>
         <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(36px, 4.5vw, 56px);">
-          <span data-zh>双品牌矩阵<br>对标味好美</span>
-          <span data-en>Two brands.<br>One promise.</span>
+          <span data-zh>4 大目标市场<br>全部 FOB 就绪</span>
+          <span data-en>4 target markets,<br>all FOB-ready.</span>
         </h2>
       </div>
       <div class="md:col-span-6 md:col-start-7 flex items-end">
         <p class="font-display italic text-terra text-xl">
-          <span data-zh>B 端专业方案 · C 端家庭厨房,品牌互补,品质一致。</span>
-          <span data-en>B2B solutions and consumer brand — complementary brands, consistent quality.</span>
+          <span data-zh>从东南亚到欧美,我们都有现成方案。</span>
+          <span data-en>Each market has its own playbook.</span>
         </p>
       </div>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6">
+    <!-- 11 scenarios grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-10 reveal">
 
-      <!-- B2B -->
-      <div class="brand-card b2b reveal delay-1">
-        <div class="relative z-10">
-          <div class="label">B2B · 80%</div>
-          <div class="brand-name-zh">花花食界</div>
-          <div class="brand-name-en">Foodvio Professional</div>
-          <p class="desc">
-            <span data-zh>B 端专业西餐食品方案 · 服务餐饮 / 团餐 / 零售 / 跨境电商 4 大渠道</span>
-            <span data-en>Professional Western foodservice solutions — serving foodservice, industrial, retail, and online sales channels.</span>
-          </p>
-          <div class="stats">
-            <div class="stat-item">
-              <div class="stat-num">6</div>
-              <div class="stat-label"><span data-zh>产品线</span><span data-en>Lines</span></div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num">100+</div>
-              <div class="stat-label">SKUs</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num">3,000+</div>
-              <div class="stat-label"><span data-zh>客户</span><span data-en>Partners</span></div>
-            </div>
-          </div>
-          <a href="#b2b-lines" class="action">
-            <span data-zh>查看 B 端产品 ↓</span><span data-en>See B2B offerings ↓</span>
-          </a>
-        </div>
-      </div>
+      <a href="#" class="scenario-chip">
+        <div class="icon">🌏</div>
+        <div class="name"><span data-zh>东南亚</span><span data-en>Southeast Asia</span></div>
+        <div class="sku">Halal-pursuing</div>
+      </a>
+      <a href="#" class="scenario-chip">
+        <div class="icon">🌍</div>
+        <div class="name"><span data-zh>非洲</span><span data-en>Africa</span></div>
+        <div class="sku">Bulk · 18-mo shelf</div>
+      </a>
+      <a href="#" class="scenario-chip">
+        <div class="icon">🇯🇵</div>
+        <div class="name"><span data-zh>日本</span><span data-en>Japan</span></div>
+        <div class="sku">JAS-pursuing · OEM</div>
+      </a>
+      <a href="#" class="scenario-chip">
+        <div class="icon">🌎</div>
+        <div class="name"><span data-zh>欧美</span><span data-en>EU & NA</span></div>
+        <div class="sku">FDA · BRC-pursuing</div>
+      </a>
+      
 
-      <!-- Consumer -->
-      <div class="brand-card consumer reveal delay-2">
-        <div class="relative z-10">
-          <div class="label" style="color: var(--terra);">CONSUMER · 20%</div>
-          <div class="brand-name-zh" style="color: var(--forest);">华仔爸爸</div>
-          <div class="brand-name-en" style="color: var(--terra);">ChinnPaPa</div>
-          <p class="desc" style="color: rgba(13,42,31,0.75);">
-            <span data-zh>家庭厨房世界美味 · 营养 · 美味 · 健康 · 便捷 · 7 大产品线覆盖主流新零售</span>
-            <span data-en>World flavors for family kitchens — nutritious, delicious, healthy, convenient. 7 lines across modern retail.</span>
-          </p>
-          <div class="stats">
-            <div class="stat-item">
-              <div class="stat-num">7</div>
-              <div class="stat-label"><span data-zh>产品线</span><span data-en>Lines</span></div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num">14+</div>
-              <div class="stat-label">SKUs</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num"><span data-zh>主流</span><span data-en>Major</span></div>
-              <div class="stat-label"><span data-zh>新零售</span><span data-en>Retailers</span></div>
-            </div>
-          </div>
-          <a href="#" class="action">
-            <span data-zh>了解 C 端品牌 →</span><span data-en>Explore Consumer →</span>
-          </a>
-        </div>
-      </div>
+    </div>
 
+    <div class="text-right">
+      <a href="#" class="btn-link">
+        <span data-zh>访问英文站 foodvio.com</span>
+        <span data-en>Visit foodvio.com for full solutions</span> →
+      </a>
     </div>
 
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════
-     SECTION 3 · 6 Product Lines
+     SECTION 5 · Testimonials
      ═══════════════════════════════════════════ -->
-<section id="b2b-lines" class="bg-paper py-28 md:py-36">
+<section class="bg-paper py-28 md:py-36">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
 
     <div class="grid md:grid-cols-12 gap-8 mb-16 reveal">
       <div class="md:col-span-5">
-        <div class="section-no mb-6">02 / Product Lines</div>
+        <div class="section-no mb-6">04 / Voices</div>
         <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(36px, 4.5vw, 56px);">
-          <span data-zh>六大产品线<br>一个承诺</span>
-          <span data-en>Six product lines.<br>One promise.</span>
+          <span data-zh>来自全球客户的<br>真实反馈</span>
+          <span data-en>Voices from<br>global partners</span>
         </h2>
       </div>
       <div class="md:col-span-6 md:col-start-7 flex items-end">
-        <p class="font-display italic text-terra text-xl">
-          <span data-zh>米其林研发,中国制造,世界风味。</span>
-          <span data-en>Michelin R&D. Made in China. Global flavors.</span>
-        </p>
+        <a href="#" class="btn-link">
+          <span data-zh>更多客户案例</span><span data-en>More case studies</span> →
+        </a>
       </div>
     </div>
 
-    <!-- 6 product line cards -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-3 gap-5">
 
-      <a href="products-sauces-v62.html" class="line-card l1 reveal delay-1">
-        <div class="num">01 / Signature</div>
-        <div class="icon">🌶️</div>
-        <h3><span data-zh>西式创新酱料</span><span data-en>Innovation Sauces</span></h3>
-        <div class="name-en"><span data-zh>Innovation Sauces</span><span data-en>西式创新酱料</span></div>
-        <p class="desc">
-          <span data-zh>4 大风味体系覆盖意 / 美 / 东南亚 / 日韩</span>
-          <span data-en>4 flavor families: Italian, American, Southeast Asian, Japanese & Korean</span>
+      <div class="testimonial reveal delay-1">
+        <p class="quote">
+          <span data-zh>Foodvio 帮我们在新加坡和马来西亚同时上线 50+ SKU,合规和物流全程无忧。</span>
+          <span data-en>Foodvio helped us launch 50+ SKUs across Singapore and Malaysia — compliance and logistics handled end-to-end.</span>
         </p>
-        <span class="skus">20+ SKUs</span>
-        <div class="reps">
-          <span class="reps-label"><span data-zh>代表产品</span><span data-en>Featured</span></span>
-          <span data-zh>番茄牛肉酱 · 韩式辣酱 · 黄咖喱</span>
-          <span data-en>Tomato Bolognese · Korean Gochujang · Yellow Curry</span>
+        <div class="source">
+          <span data-zh>某新加坡食品分销商 · 创始人</span>
+          <span data-en>Singapore Food Distributor · Founder</span>
+          <span class="label">SEA · 50+ SKUs</span>
         </div>
-        <span class="arrow-end">
-          <span data-zh>探索酱料</span><span data-en>Explore Sauces</span> →
-        </span>
-      </a>
+      </div>
 
-      <a href="#" class="line-card l2 reveal delay-2">
-        <div class="num">02 / Staples</div>
-        <div class="icon">🍕</div>
-        <h3><span data-zh>西式主食</span><span data-en>Western Staples</span></h3>
-        <div class="name-en"><span data-zh>Western Staples</span><span data-en>西式主食</span></div>
-        <p class="desc">
-          <span data-zh>披萨 / 意面 / 炒饭 / 卷饼 / 汉堡</span>
-          <span data-en>Pizza · Pasta · Rice · Wraps · Burgers</span>
+      <div class="testimonial reveal delay-2">
+        <p class="quote">
+          <span data-zh>OEM 包装定制全部按日本标准做,JAS 认证流程花花全程支持。</span>
+          <span data-en>OEM packaging done to Japanese spec, JAS certification supported throughout. Smoothest sourcing partner we've had.</span>
         </p>
-        <span class="skus">20+ SKUs</span>
-        <div class="reps">
-          <span class="reps-label"><span data-zh>代表产品</span><span data-en>Featured</span></span>
-          <span data-zh>黑松露披萨 · 古法肉酱意面 · 日式鱿鱼炒饭</span>
-          <span data-en>Black Truffle Pizza · Bolognese Pasta · Japanese Squid Rice</span>
+        <div class="source">
+          <span data-zh>某日本进口商 · 采购总监</span>
+          <span data-en>Japan Importer · Sourcing Director</span>
+          <span class="label">Tokyo · OEM private label</span>
         </div>
-        <span class="arrow-end">
-          <span data-zh>探索主食</span><span data-en>Explore Staples</span> →
-        </span>
-      </a>
+      </div>
 
-      <a href="#" class="line-card l3 reveal delay-3">
-        <div class="num">03 / Snacks</div>
-        <div class="icon">🍟</div>
-        <h3><span data-zh>炸品小食</span><span data-en>Fried Snacks</span></h3>
-        <div class="name-en"><span data-zh>Fried Snacks</span><span data-en>炸品小食</span></div>
-        <p class="desc">
-          <span data-zh>薯类 · 海鲜 · 禽类 · 其他</span>
-          <span data-en>Potato · Seafood · Poultry · Others</span>
+      <div class="testimonial reveal delay-3">
+        <p class="quote">
+          <span data-zh>FDA 注册让我们顺利进入北美市场,30 天 FOB 交付从未延误。</span>
+          <span data-en>FDA registration opened the North American market for us — 30-day FOB delivery, never delayed.</span>
         </p>
-        <span class="skus">10 SKUs</span>
-        <div class="reps">
-          <span class="reps-label"><span data-zh>代表产品</span><span data-en>Featured</span></span>
-          <span data-zh>黄金鳕鱼排 · 香酥土豆块 · 鸡肉锅巴</span>
-          <span data-en>Golden Cod Fillet · Crispy Potato Bites · Chicken Crisps</span>
+        <div class="source">
+          <span data-zh>某北美西餐连锁 · 采购副总</span>
+          <span data-en>North American Western Chain · VP Procurement</span>
+          <span class="label">USA · 200+ stores</span>
         </div>
-        <span class="arrow-end">
-          <span data-zh>探索小食</span><span data-en>Explore Snacks</span> →
-        </span>
-      </a>
-
-      <a href="#" class="line-card l4 reveal delay-4">
-        <div class="num">04 / Mains</div>
-        <div class="icon">🍖</div>
-        <h3><span data-zh>西式主菜</span><span data-en>Main Courses</span></h3>
-        <div class="name-en"><span data-zh>Main Courses</span><span data-en>西式主菜</span></div>
-        <p class="desc">
-          <span data-zh>肋排 · 猪肘 · 香肠 · 烤鸡</span>
-          <span data-en>Ribs · Pork · Sausages · Chicken</span>
-        </p>
-        <span class="skus">5 SKUs</span>
-        <div class="reps">
-          <span class="reps-label"><span data-zh>代表产品</span><span data-en>Featured</span></span>
-          <span data-zh>美式烤猪肋排 · 德式脆皮猪肘 · 意式香草鸡</span>
-          <span data-en>American Pork Ribs · German Crispy Pork · Italian Herb Chicken</span>
-        </div>
-        <span class="arrow-end">
-          <span data-zh>探索主菜</span><span data-en>Explore Mains</span> →
-        </span>
-      </a>
-
-      <a href="#" class="line-card l5 reveal delay-5">
-        <div class="num">05 / Sides</div>
-        <div class="icon">🥒</div>
-        <h3><span data-zh>健康小菜</span><span data-en>Healthy Sides</span></h3>
-        <div class="name-en"><span data-zh>Healthy Sides</span><span data-en>健康小菜</span></div>
-        <p class="desc">
-          <span data-zh>益生菌发酵 · 赣南螺丝椒加持</span>
-          <span data-en>Probiotic fermentation · Powered by Gannan chili</span>
-        </p>
-        <span class="skus">2+ SKUs</span>
-        <div class="reps">
-          <span class="reps-label"><span data-zh>代表产品</span><span data-en>Featured</span></span>
-          <span data-zh>发酵辣椒(油醋/经典) · 调味毛豆</span>
-          <span data-en>Fermented Chili (Oil & Classic) · Edamame</span>
-        </div>
-        <span class="arrow-end">
-          <span data-zh>探索小菜</span><span data-en>Explore Sides</span> →
-        </span>
-      </a>
-
-      <a href="#" class="line-card l6 reveal delay-6">
-        <div class="num">06 / Bakery</div>
-        <div class="icon">🥖</div>
-        <h3><span data-zh>烘焙食品</span><span data-en>Bakery</span></h3>
-        <div class="name-en"><span data-zh>Bakery</span><span data-en>烘焙食品</span></div>
-        <p class="desc">
-          <span data-zh>饼底 · 甜点 · 西餐特色原料</span>
-          <span data-en>Bases · Desserts · Specialty ingredients</span>
-        </p>
-        <span class="skus">8 SKUs</span>
-        <div class="reps">
-          <span class="reps-label"><span data-zh>代表产品</span><span data-en>Featured</span></span>
-          <span data-zh>披萨饼底 · 马苏里拉芝士碎 · 冷冻榴莲</span>
-          <span data-en>Pizza Bases · Mozzarella · Frozen Durian</span>
-        </div>
-        <span class="arrow-end">
-          <span data-zh>探索烘焙</span><span data-en>Explore Bakery</span> →
-        </span>
-      </a>
+      </div>
 
     </div>
 
@@ -890,34 +820,42 @@
 </section>
 
 <!-- ═══════════════════════════════════════════
-     SECTION 4 · Custom Development
+     SECTION 6 · Bottom CTA
      ═══════════════════════════════════════════ -->
-<section class="py-20 md:py-24 px-6 md:px-12">
+<section id="bottom-cta" class="py-28 md:py-32 px-6 md:px-12">
   <div class="max-w-[1440px] mx-auto">
-    <div class="custom-block reveal">
-      <div class="relative z-10 grid md:grid-cols-12 gap-10 items-center">
+    <div class="cta-block reveal">
+      <div class="relative z-10 max-w-3xl mx-auto text-center">
 
-        <div class="md:col-span-7">
-          <div class="section-no mb-6">03 / Custom Development</div>
-          <h2 class="font-serif-sc font-bold text-forest mb-6" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.15;">
-            <span data-zh>📋 按客户需求打样</span>
-            <span data-en>📋 Custom prototyping<br>per client needs</span>
-          </h2>
-          <p class="text-base md:text-lg text-forest/75 leading-relaxed max-w-2xl">
-            <span data-zh>每一个配方,都可以定制为你的专属版本。从口味偏好到包装规格,从单 SKU 试销到大单量量产 —— 让花花的米其林研发团队成为你的私人厨房。</span>
-            <span data-en>Every recipe can be customized as your private formula. From flavor profile to packaging spec, from pilot batches to large-scale production — let our Michelin R&D team become your private kitchen.</span>
-          </p>
+        <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6">
+          READY TO SOURCE FROM CHINA?
         </div>
 
-        <div class="md:col-span-5 text-left md:text-right">
-          <a href="#" class="btn-primary" data-foodvio-cta="custom_inquiry">
-            <span data-zh>启动定制开发</span>
-            <span data-en>Start a custom development</span>
+        <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size: clamp(36px, 4.5vw, 56px); line-height: 1.15;">
+          <span data-zh>是时候<br>从中国采购西餐</span>
+          <span data-en>Source Western<br>cuisine from China.</span>
+        </h2>
+
+        <p class="text-white/75 text-lg mb-12 leading-relaxed">
+          <span data-zh>访问我们的英文站 foodvio.com,获取完整产品手册、FOB 报价、参观预约。</span>
+          <span data-en>Visit our English site foodvio.com — full product catalog, FOB pricing, factory visit booking.</span>
+        </p>
+
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="#" class="btn-primary" data-foodvio-cta="general_contact">
+            <span data-zh>访问 foodvio.com</span><span data-en>Visit foodvio.com</span>
             <span class="arrow">→</span>
           </a>
-          <div class="mt-6 text-sm text-forest/60">
-            📞 400-6879-568 · 📧 huahuakefu1@foodvio.com.cn
-          </div>
+          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
+            <span data-zh>下载能力书</span><span data-en>Capability Deck</span>
+          </a>
+          <a href="#" class="btn-outline" data-foodvio-cta="general_contact">
+            <span data-zh>FOB 询价</span><span data-en>FOB Quote</span>
+          </a>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-white/15 text-white/60 text-sm">
+          📞 400-6879-568 · 📧 huahuakefu1@foodvio.com.cn
         </div>
 
       </div>
@@ -926,7 +864,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════
-     FOOTER (consistent w/ entire site)
+     FOOTER (consistent w/ homepage)
      ═══════════════════════════════════════════ -->
 <footer class="text-white/80">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
@@ -944,12 +882,10 @@
 
       <div class="md:col-span-2">
         <div class="footer-col-title">Products</div>
-        <a href="products-sauces-v62.html" class="footer-link">Sauces</a>
+        <a href="#" class="footer-link">Sauces</a>
         <a href="#" class="footer-link">Western Staples</a>
         <a href="#" class="footer-link">Fried Snacks</a>
         <a href="#" class="footer-link">Main Courses</a>
-        <a href="#" class="footer-link">Healthy Sides</a>
-        <a href="#" class="footer-link">Bakery</a>
       </div>
 
       <div class="md:col-span-2">
@@ -985,7 +921,9 @@
     <div class="footer-divider mb-6"></div>
 
     <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
-      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div>
+        © 2026 Beijing Foodvio Food Technology Co., Ltd.
+      </div>
       <div class="flex items-center gap-5">
         <span>京 ICP 备 2022025117 号-1</span>
         <a href="#" class="hover:text-gold transition"><span data-zh>隐私政策</span><span data-en>Privacy</span></a>
@@ -1010,7 +948,8 @@ const navbar = document.getElementById('navbar');
 function updateNav() {
   const scrolled = window.scrollY > 60;
   navbar.classList.toggle('scrolled', scrolled);
-  navbar.classList.toggle('dark-page', scrolled && window.scrollY > 600);
+  const heroHeight = 700;
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > heroHeight - 100);
 }
 window.addEventListener('scroll', updateNav);
 updateNav();
