@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Story · Foodvio 花花食界 — Every Bite Tells a Chinese Story</title>
+<meta name="description" content="花花食界品牌故事 · 3 大故事 · 8 大原料产地 · 6 国主厨学习 · 每一口都有中国故事" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'sans-sc': ['"Noto Sans SC"', 'sans-serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
+  }}}
+</script>
+
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.04; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
+  }
+
+  /* ════════ Editorial Hero (full screen, magazine cover style) ════════ */
+  .hero-editorial {
+    position: relative;
+    min-height: 100vh;
+    background: var(--ink);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .hero-editorial::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(199,62,58,0.20) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 80%, rgba(245,200,46,0.15) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 50%, rgba(129,178,154,0.10) 0%, transparent 60%);
+  }
+  .hero-editorial::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.08; mix-blend-mode: overlay;
+  }
+
+  /* Hero Magazine-style typography */
+  .hero-mag-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(245,200,46,0.85);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .hero-mag-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    color: #fff;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+  }
+  .hero-mag-title .em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--gold);
+  }
+  .hero-mag-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.01em;
+  }
+
+  /* Floating elements list */
+  .hero-meta {
+    display: inline-flex; gap: 20px; flex-wrap: wrap;
+    padding: 14px 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+  }
+  .hero-meta-item {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+  .hero-meta-item .num {
+    color: var(--gold);
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  /* Section number tag */
+  .section-no {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; color: var(--terra);
+    font-weight: 500; letter-spacing: 0.12em; font-size: 14px;
+  }
+  .section-no::before { content: '— '; margin-right: 6px; }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; } .delay-4 { transition-delay: 0.40s; }
+
+  /* Scroll hint */
+  .scroll-hint { animation: scrollPulse 2.5s ease-in-out infinite; }
+  @keyframes scrollPulse {
+    0%, 100% { transform: translateY(0); opacity: 0.4; }
+    50% { transform: translateY(8px); opacity: 0.9; }
+  }
+
+  /* ════════ STORY MAIN CARDS (large vertical) ════════ */
+  .story-card {
+    position: relative;
+    border-radius: 24px;
+    padding: 60px 48px;
+    transition: all 0.6s cubic-bezier(.16,.84,.28,.99);
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 480px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .story-card::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.06; mix-blend-mode: overlay; pointer-events: none;
+  }
+  .story-card:hover { transform: translateY(-8px); }
+
+  .story-card.s1 { background: linear-gradient(135deg, #f4ede0 0%, #e8d9b8 100%); color: var(--ink); }
+  .story-card.s2 { background: linear-gradient(135deg, #1B4332 0%, #0d2a1f 100%); color: #fff; }
+  .story-card.s3 { background: linear-gradient(135deg, #E07A5F 0%, #c25e44 100%); color: #fff; }
+
+  .story-card .visual-side {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 240px;
+  }
+  .story-card .visual-side .big-icon {
+    font-size: 160px;
+    line-height: 1;
+    opacity: 0.85;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15));
+  }
+  .story-card .text-side {
+    position: relative;
+    z-index: 1;
+  }
+  .story-card .story-no {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0.75;
+  }
+  .story-card h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .story-card .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    margin-bottom: 28px;
+    opacity: 0.85;
+  }
+  .story-card .opener {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 32px;
+    max-width: 540px;
+    font-weight: 400;
+  }
+  .story-card .opener-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.65;
+    margin-bottom: 32px;
+    max-width: 540px;
+    font-weight: 400;
+  }
+  .story-card .read-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 6px;
+    border-bottom: 1px solid currentColor;
+    transition: gap 0.4s;
+  }
+  .story-card:hover .read-cta { gap: 20px; }
+  .story-card.s1 .read-cta { color: var(--rust); border-color: var(--rust); }
+  .story-card.s2 .read-cta { color: var(--gold); border-color: var(--gold); }
+  .story-card.s3 .read-cta { color: #fff; }
+
+  /* ════════ Brand philosophy quote (centered, big) ════════ */
+  .philosophy-quote {
+    text-align: center;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    position: relative;
+  }
+  .philosophy-quote::before {
+    content: '"';
+    position: absolute;
+    top: -40px; left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 200px; line-height: 1;
+    color: var(--terra); opacity: 0.15;
+    pointer-events: none;
+  }
+  .philosophy-quote h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+  .philosophy-quote .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  .philosophy-quote .credo {
+    font-size: 16px;
+    color: rgba(13,42,31,0.65);
+    font-style: italic;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(13,42,31,0.1);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ════════ Numbers row ════════ */
+  .nums-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px 48px;
+    padding: 32px 24px;
+    border-top: 1px solid rgba(13,42,31,0.1);
+    border-bottom: 1px solid rgba(13,42,31,0.1);
+  }
+  .nums-row .item {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .nums-row .item .v {
+    font-weight: 600;
+    color: var(--forest);
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .nums-row .item .l {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 11px;
+    color: rgba(13,42,31,0.55);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .nums-row .div {
+    width: 1px; height: 28px;
+    background: rgba(13,42,31,0.15);
+  }
+
+  /* ════════ Timeline ════════ */
+  .timeline {
+    position: relative;
+    padding-left: 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 90px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, transparent 0%, rgba(27,67,50,0.2) 10%, rgba(27,67,50,0.2) 90%, transparent 100%);
+  }
+  .timeline-item {
+    position: relative;
+    padding: 24px 0 24px 130px;
+    transition: all 0.4s;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 84px; top: 36px;
+    width: 13px; height: 13px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 2px solid var(--terra);
+    transition: all 0.4s;
+  }
+  .timeline-item:hover::before {
+    background: var(--terra);
+    transform: scale(1.4);
+  }
+  .timeline-item .year {
+    position: absolute;
+    left: 0;
+    top: 28px;
+    width: 70px;
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--terra);
+    font-size: 22px;
+    line-height: 1;
+  }
+  .timeline-item .year .month {
+    font-style: italic;
+    font-size: 13px;
+    color: rgba(13,42,31,0.55);
+    margin-top: 4px;
+    display: block;
+  }
+  .timeline-item h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--forest);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .timeline-item p {
+    font-size: 14px;
+    color: rgba(13,42,31,0.65);
+    line-height: 1.55;
+  }
+
+  /* ════════ Buttons ════════ */
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px; background: var(--rust); color: #fff;
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+    box-shadow: 0 8px 24px -10px rgba(199,62,58,0.5);
+  }
+  .btn-primary:hover { background: #b03531; transform: translateY(-2px); }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand, .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+  .nav-link { position: relative; font-size: 14px; letter-spacing: 0.02em; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+  .mega-cta { display: block; padding: 14px 18px; background: var(--cream); border: 1px solid rgba(27,67,50,0.1); border-radius: 8px; font-size: 13px; color: var(--forest); transition: all 0.3s; margin-bottom: 10px; }
+  .mega-cta:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+  /* Footer */
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+
+  /* Lang switch */
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+
+  @media (max-width: 768px) {
+    .mega-menu { display: none; }
+    .story-card { grid-template-columns: 1fr; padding: 40px 28px; gap: 24px; min-height: auto; }
+    .story-card .visual-side { min-height: 140px; }
+    .story-card .visual-side .big-icon { font-size: 100px; }
+  }
+</style>
+</head>
+
+<body class="grain">
+
+<!-- NAV -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="foodvio-home-zh-v62.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown active" data-menu="story">Our Story</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+    </div>
+  </div>
+
+  <!-- Mega Menu (consistent w/ site) -->
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a>
+        <a href="#" class="mega-link">Western Staples</a><a href="#" class="mega-link">Fried Snacks</a>
+        <a href="#" class="mega-link">Main Courses</a><a href="#" class="mega-link">Healthy Sides</a>
+        <a href="#" class="mega-link">Bakery</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
+        <a href="products-index-v62.html" class="mega-link">花花食界 · Foodvio Pro</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="#" class="mega-link">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick Access</div>
+        <a href="#" class="mega-cta">📄 Catalog PDF</a><a href="#" class="mega-cta">🎁 Samples</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link featured">🔵 轻后厨(6)</a>
+        <a href="#" class="mega-link">🟢 全球连锁(4)</a>
+        <a href="#" class="mega-link">🟡 机构团餐(3)</a>
+        <a href="#" class="mega-link">🟠 新零售(3)</a>
+        <a href="#" class="mega-link">🟣 特殊业态(2)</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured Cases</div>
+        <a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡连锁 · 24 店</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Global Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a>
+        <a href="for-industrial-v62.html" class="mega-link">🏢 Industrial</a>
+        <a href="for-retail-v62.html" class="mega-link">🛒 Retail</a>
+        <a href="for-online-sales-v62.html" class="mega-link">💻 Online Sales</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 中国原料,世界品质</a>
+        <a href="#" class="mega-link featured">👨‍🍳 世界大师,中国研发</a>
+        <a href="#" class="mega-link featured">🌏 我们更懂中国客户</a></div>
+      <div class="col-span-4"><div class="mega-col-title">8 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link featured">🌶️ 江西 · 赣南螺丝椒</a>
+        <a href="#" class="mega-link">🍄 云南 · 黑松露</a>
+        <a href="#" class="mega-link">🌾 东北 · 五常大米</a>
+        <a href="#" class="mega-link">🐄 内蒙古 · 牛羊</a>
+        <a href="#" class="mega-link text-xs opacity-60">+ 4 more</a></div>
+      <div class="col-span-4"><div class="mega-col-title">6 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇪🇸 Spain</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a>
+        <a href="#" class="mega-link">🇯🇵 Japan</a>
+        <a href="#" class="mega-link">🌏 Southeast Asia</a>
+        <a href="#" class="mega-link">🇲🇽 Mexico</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Manufacturing</div><a href="#" class="mega-link">🏭 江西赣州</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Expertise</div><a href="#" class="mega-link">米其林研发</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Certifications</div><a href="#" class="mega-link">HACCP / ISO 22000</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════ SECTION 1 · EDITORIAL HERO ════════ -->
+<section class="hero-editorial">
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full py-20">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb mb-16 reveal">
+      <a href="foodvio-home-zh-v62.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <span class="text-white">Our Story</span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+
+      <!-- Left: title block -->
+      <div class="md:col-span-9">
+        <div class="hero-mag-label mb-8 reveal">OUR STORY · ISSUE 01</div>
+
+        <h1 class="hero-mag-title reveal delay-1" style="font-size: clamp(48px, 8vw, 112px);">
+          <span data-zh>每一口花花食界,<br>背后都有一个<span class="em">中国故事</span></span>
+          <span data-en class="block">Every bite of Foodvio<br>tells a <span class="em">Chinese story</span>.</span>
+        </h1>
+
+        <p class="hero-mag-en mt-10 reveal delay-2 max-w-2xl" style="font-size: clamp(18px, 1.6vw, 22px);" data-zh>
+          Every bite of Foodvio tells a Chinese story.
+        </p>
+        <p class="hero-mag-en mt-10 reveal delay-2 max-w-2xl font-serif-sc" style="font-size: clamp(16px, 1.4vw, 20px); font-style: normal;" data-en>
+          每一口花花食界,背后都有一个中国故事
+        </p>
+      </div>
+
+      <!-- Right: meta strip -->
+      <div class="md:col-span-3 reveal delay-3">
+        <div class="text-white/60 text-xs uppercase tracking-[0.2em] mb-4 font-display italic">In this issue</div>
+        <ul class="space-y-3 text-white/85 text-sm">
+          <li class="flex items-baseline gap-3">
+            <span class="font-display italic text-gold w-6">01</span>
+            <span><span data-zh>3 大品牌故事</span><span data-en>3 brand stories</span></span>
+          </li>
+          <li class="flex items-baseline gap-3">
+            <span class="font-display italic text-gold w-6">02</span>
+            <span><span data-zh>8 大原料产地</span><span data-en>8 sourcing origins</span></span>
+          </li>
+          <li class="flex items-baseline gap-3">
+            <span class="font-display italic text-gold w-6">03</span>
+            <span><span data-zh>6 国主厨学习</span><span data-en>6-country chef training</span></span>
+          </li>
+          <li class="flex items-baseline gap-3">
+            <span class="font-display italic text-gold w-6">04</span>
+            <span><span data-zh>1 个使命</span><span data-en>1 single mission</span></span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 text-xs scroll-hint">
+      <div class="flex flex-col items-center gap-2">
+        <span class="font-display italic tracking-[0.3em]">SCROLL TO READ</span>
+        <span class="text-base">↓</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 2 · 3 BIG STORY CARDS ════════ -->
+<section class="bg-cream py-28 md:py-36">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-20 reveal">
+      <div class="section-no mb-6 inline-block">01 / Three Stories</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(36px, 4.5vw, 60px); line-height: 1.1;">
+        <span data-zh>三个故事,无人能复制</span>
+        <span data-en>Three stories, none replicable</span>
+      </h2>
+      <p class="font-display italic text-terra text-xl">
+        <span data-zh>这是花花食界的核心差异。</span>
+        <span data-en>These are what set Foodvio apart.</span>
+      </p>
+    </div>
+
+    <div class="space-y-8">
+
+      <!-- Story 1: Chinese Roots -->
+      <a href="our-story-chinese-roots-v62.html" class="story-card s1 reveal delay-1">
+        <div class="visual-side">
+          <span class="big-icon">🌾</span>
+        </div>
+        <div class="text-side">
+          <div class="story-no">Story 01 · Chinese Roots</div>
+          <h3>
+            <span data-zh>中国原料,<br>世界品质</span>
+            <span data-en>Chinese Roots,<br>World-Class</span>
+          </h3>
+          <div class="subtitle">
+            <span data-zh>8 Origins, from field to plate</span>
+            <span data-en>8 origins, from field to plate</span>
+          </div>
+          <p class="opener" data-zh>
+            我们的番茄酱,番茄来自内蒙古的阳光;<br>
+            我们的披萨饼,面粉来自新疆的戈壁;<br>
+            我们的辣椒小菜,辣椒来自江西的赣南山地。
+          </p>
+          <p class="opener-en" data-en>
+            Our tomato sauce — tomatoes from Inner Mongolia sunshine.<br>
+            Our pizza base — wheat from Xinjiang's deserts.<br>
+            Our chili sides — peppers from Gannan's red soil.
+          </p>
+          <span class="read-cta">
+            <span data-zh>探索 8 大产地</span>
+            <span data-en>Explore the 8 origins</span>
+            <span>→</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Story 2: Global Masters -->
+      <a href="#" class="story-card s2 reveal delay-2">
+        <div class="visual-side">
+          <span class="big-icon">👨‍🍳</span>
+        </div>
+        <div class="text-side">
+          <div class="story-no" style="color: rgba(245,200,46,0.85);">Story 02 · Global Masters</div>
+          <h3>
+            <span data-zh>世界大师,<br>中国研发</span>
+            <span data-en>Global Masters,<br>Developed in China</span>
+          </h3>
+          <div class="subtitle">
+            <span data-zh>Trained across 6 countries</span>
+            <span data-en>Trained across 6 countries</span>
+          </div>
+          <p class="opener" data-zh>
+            我们的主厨在那不勒斯学披萨,在东京学寿司,<br>
+            在首尔学发酵,在墨西哥学 Mole,<br>
+            把世界各国的味道,带回中国厨房。
+          </p>
+          <p class="opener-en" data-en>
+            Our chefs trained in Naples for pizza,<br>
+            in Tokyo for sushi, Seoul for fermentation,<br>
+            in Oaxaca for mole — bringing world flavors home.
+          </p>
+          <span class="read-cta">
+            <span data-zh>认识我们的主厨</span>
+            <span data-en>Meet our chefs</span>
+            <span>→</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Story 3: China Insight -->
+      <a href="#" class="story-card s3 reveal delay-3">
+        <div class="visual-side">
+          <span class="big-icon">🌏</span>
+        </div>
+        <div class="text-side">
+          <div class="story-no">Story 03 · China Insight</div>
+          <h3>
+            <span data-zh>我们更懂<br>中国客户</span>
+            <span data-en>We don't translate.<br>We rebuild.</span>
+          </h3>
+          <div class="subtitle">
+            <span data-zh>We Speak Both Worlds</span>
+            <span data-en>We Speak Both Worlds</span>
+          </div>
+          <p class="opener" data-zh>
+            把国外产品搬到中国,不等于适合中国客户。<br>
+            我们做的,是深度重构 ——<br>
+            从辣度阈值到饼底嚼劲,从厨房设备到地方口味。
+          </p>
+          <p class="opener-en" data-en>
+            Importing foreign products to China isn't enough.<br>
+            We rebuild — from spice tolerance to crust bite,<br>
+            from kitchen equipment to regional palate.
+          </p>
+          <span class="read-cta">
+            <span data-zh>查看 4 大洞察</span>
+            <span data-en>See the insights</span>
+            <span>→</span>
+          </span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SECTION 3 · BRAND PHILOSOPHY ════════ -->
+<section class="bg-paper py-32 md:py-40">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+    <div class="philosophy-quote reveal">
+      <h2 style="font-size: clamp(28px, 3.5vw, 44px);">
+        <span data-zh>源自中国的<br>专业西餐食品品牌</span>
+        <span data-en>Western Cuisine.<br>Chinese Roots. Global Palate.</span>
+      </h2>
+      <div class="en mt-4" style="font-size: clamp(20px, 2.2vw, 28px);" data-zh>
+        Foodvio — Western Cuisine. Chinese Roots. Global Palate.
+      </div>
+      <div class="en mt-4 font-serif-sc" style="font-size: clamp(18px, 1.8vw, 22px); font-style: normal; color: var(--terra);" data-en>
+        花花食界 · 源自中国的专业西餐食品品牌
+      </div>
+      <p class="credo">
+        <span data-zh>这不是口号,这是我们每一次研发、选料、打样的准则。</span>
+        <span data-en>Not a tagline. A discipline — for every recipe, every ingredient, every prototype.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SECTION 4 · KEY NUMBERS ════════ -->
+<section class="bg-cream py-20 md:py-24">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+    <div class="text-center mb-12 reveal">
+      <div class="section-no mb-6 inline-block">02 / By the Numbers</div>
+    </div>
+    <div class="nums-row reveal delay-1">
+      <div class="item">
+        <div class="v">2021</div>
+        <div class="l"><span data-zh>创立</span><span data-en>Founded</span></div>
+      </div>
+      <div class="div"></div>
+      <div class="item">
+        <div class="v">100<span style="font-size: 18px;">+</span></div>
+        <div class="l">SKUs</div>
+      </div>
+      <div class="div"></div>
+      <div class="item">
+        <div class="v">3,000<span style="font-size: 18px;">+</span></div>
+        <div class="l"><span data-zh>合作伙伴</span><span data-en>Partners</span></div>
+      </div>
+      <div class="div"></div>
+      <div class="item">
+        <div class="v">100,000<span style="font-size: 18px;">㎡</span></div>
+        <div class="l"><span data-zh>自营工厂</span><span data-en>Owned facilities</span></div>
+      </div>
+      <div class="div"></div>
+      <div class="item">
+        <div class="v">FOB<span style="font-size: 18px;"> × 4</span></div>
+        <div class="l"><span data-zh>出口港口</span><span data-en>Export ports</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SECTION 5 · STORY TIMELINE ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-20 reveal">
+      <div class="section-no mb-6 inline-block">03 / Our Journey</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.1;">
+        <span data-zh>花花食界大事记</span>
+        <span data-en>The Foodvio journey</span>
+      </h2>
+      <p class="font-display italic text-terra text-lg">
+        <span data-zh>从 2021 到今天 · 一年一个里程碑</span>
+        <span data-en>From 2021 to today · one milestone a year</span>
+      </p>
+    </div>
+
+    <div class="timeline reveal delay-1">
+
+      <div class="timeline-item">
+        <div class="year">2021<span class="month">Aug.</span></div>
+        <h4><span data-zh>花花食界创立</span><span data-en>Foodvio founded</span></h4>
+        <p><span data-zh>北京望京 SOHO 起步,瞄准"源自中国的专业西餐食品"赛道。</span><span data-en>Founded at Wangjing SOHO, Beijing — targeting the "professional Western cuisine from China" lane.</span></p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2022</div>
+        <h4><span data-zh>首批 50 款西式产品通过 SC 认证</span><span data-en>First 50 Western SKUs SC-certified</span></h4>
+        <p><span data-zh>建立 6 大产品线雏形,服务首批 100+ 餐饮客户。</span><span data-en>Six product lines take shape, serving first 100+ F&B partners.</span></p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2023</div>
+        <h4><span data-zh>河北张家口工厂获 FDA 注册</span><span data-en>Zhangjiakou facility FDA-registered</span></h4>
+        <p><span data-zh>烘焙工厂打通海外通路,为出海打下合规基础。</span><span data-en>Bakery facility opens overseas channels, building export-ready compliance.</span></p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2024</div>
+        <h4><span data-zh>江西赣州工厂扩建至 6.66 万㎡</span><span data-en>Ganzhou facility expanded to 66,600㎡</span></h4>
+        <p><span data-zh>赣南螺丝椒供应链一体化,8 大类 SC 资质布局完成。</span><span data-en>Gannan chili supply chain integrated, 8 SC categories in place.</span></p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2025</div>
+        <h4><span data-zh>FOB 首批出货东南亚</span><span data-en>First FOB shipment to Southeast Asia</span></h4>
+        <p><span data-zh>从天津、青岛、上海、深圳 4 大港口起运,服务海外客户。</span><span data-en>Departing from Tianjin, Qingdao, Shanghai, Shenzhen — overseas customers go live.</span></p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2026</div>
+        <h4><span data-zh>双品牌矩阵正式发布</span><span data-en>Dual-brand matrix launched</span></h4>
+        <p><span data-zh>花花食界(B 端 80%)+ 华仔爸爸 ChinnPaPa(C 端 20%),双品牌完整矩阵成型。</span><span data-en>Foodvio (B2B · 80%) + ChinnPaPa (Consumer · 20%) — dual-brand matrix formally announced.</span></p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 6 · BOTTOM (back to homepage / CTA) ════════ -->
+<section class="bg-cream py-24 md:py-28 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto text-center reveal">
+    <p class="font-display italic text-terra text-lg mb-6">— That's our story.</p>
+    <h2 class="font-serif-sc font-bold text-forest mb-8" style="font-size: clamp(28px, 3.5vw, 44px); line-height: 1.2;">
+      <span data-zh>现在,让我们来听听你的</span>
+      <span data-en>Now, tell us yours.</span>
+    </h2>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="for-foodservice-v62.html" class="btn-primary">
+        <span data-zh>探索我们的方案</span>
+        <span data-en>Explore our solutions</span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。从田间到餐桌,世界风味,中国制造。</span>
+          <span data-en>The professional Western cuisine brand from China.</span>
+        </p>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a>
+        <a href="#" class="footer-link">Western Staples</a>
+        <a href="#" class="footer-link">Fried Snacks</a>
+        <a href="#" class="footer-link">Main Courses</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a>
+        <a href="for-industrial-v62.html" class="footer-link">Industrial</a>
+        <a href="for-retail-v62.html" class="footer-link">Retail</a>
+        <a href="for-online-sales-v62.html" class="footer-link">Online Sales</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div>
+        <a href="our-story-index-v62.html" class="footer-link">Our Story</a>
+        <a href="#" class="footer-link">Capabilities</a>
+        <a href="#" class="footer-link">Insights</a>
+        <a href="#" class="footer-link">About</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55 leading-relaxed">400-6879-568<br>huahuakefu1@<br>foodvio.com.cn</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div class="flex items-center gap-5"><span>京 ICP 备 2022025117 号-1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > window.innerHeight - 100);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

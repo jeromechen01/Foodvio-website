@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Italy · Master Story · Foodvio 花花食界 — Three Years in Naples</title>
+<meta name="description" content="花花食界意大利大师故事 · 主厨在那不勒斯学披萨 3 年 · 学习于 3 城市:那不勒斯 / 博洛尼亚 / 米兰 · 把意式工艺带回中国厨房" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0', 'italy': '#008C45' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
+  }}}
+</script>
+
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --cream: #F5F1EA; --paper: #FAF7F0; --italy-green: #008C45; --italy-red: #CD212A; }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.05; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
+  }
+
+  /* Magazine Hero */
+  .mag-hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--ink);
+    overflow: hidden;
+    display: flex; align-items: end;
+  }
+  .mag-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(0,140,69,0.20) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, rgba(205,33,42,0.15) 0%, transparent 55%),
+      linear-gradient(135deg, rgba(0,140,69,0.10) 0%, rgba(13,42,31,0.5) 100%);
+  }
+  .mag-hero::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.10; mix-blend-mode: overlay;
+  }
+  .deco-emoji {
+    position: absolute; opacity: 0.10; pointer-events: none;
+    color: #fff; line-height: 1;
+  }
+  .deco-pizza { top: 18%; right: 8%; font-size: 220px; transform: rotate(-12deg); }
+  .deco-pasta { bottom: 16%; right: 28%; font-size: 130px; transform: rotate(20deg); opacity: 0.07; }
+
+  .mag-label {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: rgba(245,200,46,0.85);
+    letter-spacing: 0.3em; text-transform: uppercase; font-size: 13px;
+  }
+  .mag-title {
+    font-family: 'Noto Serif SC', serif; font-weight: 900;
+    color: #fff; line-height: 0.95; letter-spacing: -0.02em;
+  }
+  .mag-subtitle {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: rgba(255,255,255,0.7); font-weight: 500;
+  }
+
+  .issue-tag {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    color: rgba(255,255,255,0.85); font-size: 12px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+  }
+  .issue-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--italy-green); }
+
+  /* Article typography */
+  .article-section { max-width: 760px; margin: 0 auto; }
+  .article-section.wide { max-width: 1100px; }
+  .article-num {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 14px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    margin-bottom: 12px; display: block;
+  }
+  .article-num::before { content: '— '; }
+  .article-h2 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    color: var(--forest); line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-size: clamp(28px, 3.5vw, 44px);
+    margin-bottom: 20px;
+  }
+  .article-h2-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-weight: 500;
+    font-size: clamp(20px, 2vw, 26px);
+    margin-bottom: 36px;
+  }
+  .article-p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px; line-height: 1.85;
+    color: rgba(13,42,31,0.85);
+    margin-bottom: 22px; font-weight: 400;
+  }
+  .article-p-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; line-height: 1.7;
+    color: rgba(13,42,31,0.85);
+    margin-bottom: 22px;
+    font-style: italic; font-weight: 500;
+  }
+  .article-p.first-para::first-letter,
+  .article-p-en.first-para::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700; font-style: italic;
+    color: var(--italy-green); font-size: 5em;
+    line-height: 0.85; float: left;
+    padding-right: 14px; padding-top: 6px;
+    margin-bottom: -8px;
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    border-left: 3px solid var(--italy-green);
+    padding: 12px 0 12px 32px;
+    margin: 48px 0;
+  }
+  .pull-quote .quote-text {
+    font-family: 'Noto Serif SC', serif; font-weight: 600;
+    color: var(--forest); font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35; letter-spacing: -0.005em;
+    margin-bottom: 12px;
+  }
+  .pull-quote .quote-text-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--forest); font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.4; margin-bottom: 12px;
+  }
+  .pull-quote .quote-byline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 14px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  /* 3 Cities row */
+  .city-card {
+    background: #fff;
+    border: 1px solid rgba(0,140,69,0.12);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+    height: 100%;
+    display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+  }
+  .city-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--italy-green);
+  }
+  .city-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px -16px rgba(0,140,69,0.18);
+  }
+  .city-card .city-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; color: var(--italy-green);
+    font-size: 13px; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .city-card h4 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 22px; color: var(--forest);
+    margin-bottom: 4px; line-height: 1.3;
+  }
+  .city-card .city-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .city-card .city-skill {
+    font-size: 14px; color: rgba(13,42,31,0.7);
+    line-height: 1.65; margin-bottom: 14px; flex-grow: 1;
+  }
+  .city-card .duration {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 12px; color: var(--italy-green);
+    padding-top: 12px;
+    border-top: 1px dashed rgba(0,140,69,0.2);
+  }
+
+  /* 3 lessons */
+  .lesson {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(13,42,31,0.08);
+  }
+  .lesson:last-child { border-bottom: none; }
+  .lesson-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700; color: var(--italy-green);
+    font-size: 56px; line-height: 1; font-style: italic;
+  }
+  .lesson h4 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 20px; color: var(--forest);
+    margin-bottom: 12px; line-height: 1.4;
+  }
+  .lesson p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px; line-height: 1.75;
+    color: rgba(13,42,31,0.75);
+  }
+
+  /* Comparison table (Italy vs China adaptation) */
+  .compare-table {
+    background: #fff;
+    border: 1px solid rgba(0,140,69,0.12);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    border-bottom: 1px solid rgba(13,42,31,0.06);
+  }
+  .compare-row:last-child { border-bottom: none; }
+  .compare-row.head {
+    background: linear-gradient(135deg, rgba(0,140,69,0.08) 0%, rgba(205,33,42,0.06) 100%);
+  }
+  .compare-row > div { padding: 20px 22px; }
+  .compare-row > div + div { border-left: 1px solid rgba(13,42,31,0.06); }
+  .compare-row.head > div {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 13px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--forest); font-weight: 600;
+  }
+  .compare-key {
+    font-family: 'Noto Serif SC', serif; font-weight: 600;
+    color: var(--forest); font-size: 14px;
+  }
+  .compare-val {
+    font-size: 13px; color: rgba(13,42,31,0.75);
+    line-height: 1.6;
+  }
+
+  /* Product cards (Italy line) */
+  .pwr-card {
+    background: #fff;
+    border: 1px solid rgba(27,67,50,0.06);
+    border-radius: 18px; overflow: hidden;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
+    cursor: pointer;
+  }
+  .pwr-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -16px rgba(0,140,69,0.18);
+    border-color: rgba(0,140,69,0.25);
+  }
+  .pwr-card .swatch {
+    aspect-ratio: 5/3; position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .pwr-card .swatch::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.18; mix-blend-mode: multiply;
+  }
+  .pwr-card .swatch-emoji {
+    font-size: 64px; opacity: 0.7; z-index: 1; position: relative;
+  }
+  .swatch-truffle { background: linear-gradient(135deg, #3E2712 0%, #1A0F08 100%); }
+  .swatch-bolognese { background: linear-gradient(135deg, #8B3A1F 0%, #5C2412 100%); }
+  .swatch-mushroom { background: linear-gradient(135deg, #F5D99F 0%, #D4A95E 100%); }
+  .pwr-card .info { padding: 24px 22px; }
+  .pwr-card h4 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 17px; color: var(--forest);
+    margin-bottom: 4px;
+  }
+  .pwr-card .name-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--italy-green); font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .pwr-card .role {
+    font-size: 13px; color: rgba(13,42,31,0.65);
+    line-height: 1.55;
+  }
+
+  /* Read card */
+  .read-card {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(13,42,31,0.1);
+    transition: padding 0.3s;
+    cursor: pointer;
+  }
+  .read-card:last-child { border-bottom: none; }
+  .read-card:hover { padding-left: 12px; }
+  .read-card .read-tag {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 11px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .read-card h5 {
+    font-family: 'Noto Serif SC', serif; font-weight: 600;
+    font-size: 18px; color: var(--forest);
+    line-height: 1.4; transition: color 0.3s;
+  }
+  .read-card:hover h5 { color: var(--italy-green); }
+
+  /* CTA block (Italian flag-themed) */
+  .cta-block {
+    background: linear-gradient(135deg, var(--italy-green) 0%, #034b25 50%, var(--italy-red) 100%);
+    border-radius: 28px;
+    padding: 56px 48px;
+    color: #fff;
+    position: relative; overflow: hidden;
+  }
+  .cta-block::before {
+    content: '🍕';
+    position: absolute;
+    bottom: -40px; right: -20px;
+    font-size: 240px;
+    opacity: 0.10;
+    transform: rotate(-15deg);
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px; background: #fff; color: var(--italy-green);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+  }
+  .btn-primary:hover { background: var(--gold); color: var(--ink); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: transparent; color: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand, .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+  .nav-link { position: relative; font-size: 14px; letter-spacing: 0.02em; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+
+  @media (max-width: 768px) {
+    .mega-menu { display: none; }
+    .lesson { grid-template-columns: 1fr; gap: 12px; }
+    .lesson-num { font-size: 40px; }
+    .compare-row { grid-template-columns: 1fr; }
+    .compare-row > div + div { border-left: none; border-top: 1px solid rgba(13,42,31,0.06); }
+  }
+</style>
+</head>
+
+<body class="grain">
+
+<!-- NAV -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="foodvio-home-zh-v62.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown active" data-menu="story">Our Story</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
+        <a href="products-index-v62.html" class="mega-link">花花食界</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="#" class="mega-link">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick Access</div><a href="#" class="mega-link">📄 Catalog</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link">🔵 轻后厨</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured</div>
+        <a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡 24 店</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 中国原料</a>
+        <a href="our-story-global-masters-v62.html" class="mega-link featured">👨‍🍳 世界大师</a>
+        <a href="#" class="mega-link featured">🌏 我们更懂中国</a></div>
+      <div class="col-span-4"><div class="mega-col-title">8 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link featured">🌶️ 江西 · 赣南螺丝椒</a></div>
+      <div class="col-span-4"><div class="mega-col-title">6 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇪🇸 Spain</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Manufacturing</div><a href="#" class="mega-link">🏭 江西赣州</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Expertise</div><a href="#" class="mega-link">米其林研发</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Certifications</div><a href="#" class="mega-link">HACCP</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- MAGAZINE HERO -->
+<section class="mag-hero">
+  <span class="deco-emoji deco-pizza">🍕</span>
+  <span class="deco-emoji deco-pasta">🍝</span>
+
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pb-24 pt-32">
+
+    <div class="breadcrumb mb-16 reveal">
+      <a href="foodvio-home-zh-v62.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <a href="our-story-index-v62.html">Our Story</a>
+      <span class="sep">›</span>
+      <a href="our-story-global-masters-v62.html"><span data-zh>世界大师</span><span data-en>Global Masters</span></a>
+      <span class="sep">›</span>
+      <span class="text-white">🇮🇹 Italy</span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+
+      <div class="md:col-span-9">
+        <div class="issue-tag mb-10 reveal">
+          <span class="dot"></span>
+          <span>MASTER STORY · 01 OF 6</span>
+        </div>
+
+        <div class="mag-label mb-8 reveal delay-1">🇮🇹 ITALIA · NAPOLI · BOLOGNA · MILANO</div>
+
+        <h1 class="mag-title reveal delay-1" style="font-size: clamp(48px, 9vw, 128px);">
+          <span data-zh>那不勒斯<br>三年</span>
+          <span data-en class="block">Three years<br>in Naples.</span>
+        </h1>
+
+        <p class="mag-subtitle reveal delay-2 mt-10" style="font-size: clamp(18px, 1.8vw, 26px); max-width: 580px;" data-zh>
+          How an Italian apprenticeship became a Chinese product line.
+        </p>
+        <p class="mag-subtitle reveal delay-2 mt-10 font-serif-sc" style="font-size: clamp(16px, 1.5vw, 22px); max-width: 580px; font-style: normal;" data-en>
+          意式学艺如何变成了中国生产线
+        </p>
+      </div>
+
+      <div class="md:col-span-3 reveal delay-3">
+        <div class="text-white/55 text-xs uppercase tracking-[0.2em] mb-3 font-display italic">Read time</div>
+        <div class="text-white/85 font-display italic text-2xl mb-6">10 min</div>
+        <div class="text-white/55 text-xs uppercase tracking-[0.2em] mb-3 font-display italic">In this issue</div>
+        <ul class="text-white/75 text-xs space-y-2">
+          <li>· <span data-zh>开篇:三年学徒</span><span data-en>Opening: 3 years of apprenticeship</span></li>
+          <li>· <span data-zh>三座城市</span><span data-en>Three cities</span></li>
+          <li>· <span data-zh>三个核心技艺</span><span data-en>Three core lessons</span></li>
+          <li>· <span data-zh>中国改良对比</span><span data-en>Italy vs China adaptation</span></li>
+          <li>· <span data-zh>三款旗舰产品</span><span data-en>Three flagship products</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OPENING -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">01 / Opening</span>
+      <h2 class="article-h2">
+        <span data-zh>2018 年的春天,我抵达那不勒斯</span>
+        <span data-en>I arrived in Naples in the spring of 2018.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>From a Beijing kitchen to a wood-fired oven in Naples.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">从北京的厨房到那不勒斯的石窑</span>
+      </div>
+    </div>
+
+    <div class="reveal delay-1">
+      <p class="article-p first-para" data-zh>
+        2018 年春天,我推开 Naples 老城区一家披萨店的木门时,Antonio 大师正在揉面。他扫了我一眼,说了句:"你不是意大利人,所以你要花更长时间。" 然后递给我一袋面粉。这是我意大利学艺的第一天。
+      </p>
+      <p class="article-p-en first-para" data-en>
+        Spring 2018. I pushed open the wooden door of a small pizzeria in old Naples. Master Antonio was kneading dough. He glanced at me and said: "You're not Italian. It will take you longer." Then he handed me a sack of flour. That was day one of my apprenticeship.
+      </p>
+
+      <p class="article-p" data-zh>
+        三年后,我带着一本翻烂了的笔记本回到北京。本子里记着 14 小时慢炖肉酱的火候曲线,记着石窑温度从 350°C 降到 280°C 的判断方法,记着帕尔玛奶酪 18 个月与 24 个月的味觉差异。这些笔记,后来成了花花食界 18 款意式产品的灵魂。
+      </p>
+      <p class="article-p-en" data-en>
+        Three years later, I came back to Beijing with a worn notebook. In it: temperature curves for 14-hour slow-cooked Bolognese; how to read a wood-fired oven dropping from 350°C to 280°C; the taste difference between 18-month and 24-month Parmigiano. Those notes became the soul of 18 Italian products at Foodvio.
+      </p>
+
+      <p class="article-p" data-zh>
+        本期 Master Story,我带你回到那段意式学艺旅程。
+      </p>
+      <p class="article-p-en" data-en>
+        In this Master Story, I'll take you back to that journey.
+      </p>
+    </div>
+
+    <div class="pull-quote reveal delay-2">
+      <div class="quote-text" data-zh>
+        "意大利菜不是配方,<br>
+        是对原料的尊重,加上对时间的耐心。"
+      </div>
+      <div class="quote-text-en" data-en>
+        "Italian cooking isn't a recipe.<br>
+        It's respect for ingredients,<br>
+        plus patience with time."
+      </div>
+      <div class="quote-byline">
+        <span data-zh>—— Master Antonio,那不勒斯</span>
+        <span data-en>— Master Antonio, Naples</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 3 CITIES -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section wide">
+
+    <div class="text-center mb-16 reveal">
+      <span class="article-num">02 / Three cities</span>
+      <h2 class="article-h2">
+        <span data-zh>三座城市,三种意大利</span>
+        <span data-en>Three cities, three Italys.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>Naples for fire. Bologna for time. Milan for technique.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">那不勒斯学火 · 博洛尼亚学时间 · 米兰学工艺</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="city-card reveal delay-1">
+        <div class="city-num">City 01 · South</div>
+        <h4><span data-zh>那不勒斯</span><span data-en>Naples</span></h4>
+        <div class="city-en"><span data-zh>Napoli</span><span data-en>那不勒斯</span></div>
+        <p class="city-skill">
+          <span data-zh>跟 Antonio 大师学披萨。重点学的是石窑控温与发酵—— 24 小时低温冷藏发酵后再常温醒发,这才是真正的那不勒斯披萨饼底嚼劲来源。</span>
+          <span data-en>With Master Antonio, learning pizza. The focus: wood-fired oven control and fermentation. 24-hour cold ferment, then room-temp rise — the true source of Neapolitan crust bite.</span>
+        </p>
+        <div class="duration"><span data-zh>停留</span><span data-en>Duration</span> · 18 <span data-zh>个月</span><span data-en>months</span></div>
+      </div>
+
+      <div class="city-card reveal delay-2">
+        <div class="city-num">City 02 · Center</div>
+        <h4><span data-zh>博洛尼亚</span><span data-en>Bologna</span></h4>
+        <div class="city-en"><span data-zh>Bologna</span><span data-en>博洛尼亚</span></div>
+        <p class="city-skill">
+          <span data-zh>跟 Nonna Maria 学家庭食谱。Ragù alla Bolognese 古法肉酱要慢炖 14 小时,加红酒、加牛奶。我学到的不是配方,是"等"的功夫。</span>
+          <span data-en>With Nonna Maria, learning home cooking. Ragù alla Bolognese — 14 hours of slow simmer, with red wine and milk. What I learned wasn't a recipe. It was the discipline of waiting.</span>
+        </p>
+        <div class="duration"><span data-zh>停留</span><span data-en>Duration</span> · 12 <span data-zh>个月</span><span data-en>months</span></div>
+      </div>
+
+      <div class="city-card reveal delay-3">
+        <div class="city-num">City 03 · North</div>
+        <h4><span data-zh>米兰</span><span data-en>Milan</span></h4>
+        <div class="city-en"><span data-zh>Milano</span><span data-en>米兰</span></div>
+        <p class="city-skill">
+          <span data-zh>在一家米其林二星餐厅做学徒。这里教会我的是工艺—— 怎么把家庭菜的灵感转化为标准化出品,这是后来量产的关键能力。</span>
+          <span data-en>An apprenticeship at a 2-Michelin-star kitchen. The lesson here: technique. How to translate home-cooking inspiration into standardized output — exactly the skill required for industrial scale-up.</span>
+        </p>
+        <div class="duration"><span data-zh>停留</span><span data-en>Duration</span> · 6 <span data-zh>个月</span><span data-en>months</span></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- 3 LESSONS -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">03 / Three lessons</span>
+      <h2 class="article-h2">
+        <span data-zh>带回中国的三个核心技艺</span>
+        <span data-en>Three core lessons brought home.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>From a chef's notebook.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">主厨笔记</span>
+      </div>
+    </div>
+
+    <div class="mt-12 reveal delay-1">
+
+      <div class="lesson">
+        <div class="lesson-num">01</div>
+        <div>
+          <h4>
+            <span data-zh>石窑发酵 —— 真正的披萨饼底始于面团</span>
+            <span data-en>Wood-fired fermentation — the real pizza begins with the dough</span>
+          </h4>
+          <p data-zh>
+            那不勒斯人对面团的执着到了苛刻的程度。他们坚信:配方再好,如果发酵不对,披萨就是失败的。我学到的关键是 24 小时冷藏低温发酵 + 常温 4 小时醒发的双段发酵法,以及面团下锅时的湿度控制(58%-62%)。这些细节后来全部转化成了我们工厂的标准化作业流程。
+          </p>
+          <p data-en>
+            Neapolitans treat dough with religious seriousness. Their conviction: no matter how good your recipe, bad fermentation kills the pizza. The key technique I learned: 24-hour cold ferment, then 4-hour warm rise — a two-stage method, with hydration controlled between 58%-62% before the oven. Those exact specifications now sit inside our factory SOPs.
+          </p>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <div class="lesson-num">02</div>
+        <div>
+          <h4>
+            <span data-zh>14 小时慢炖 —— 时间是最贵的调味料</span>
+            <span data-en>14 hours of slow simmer — time is the most expensive seasoning</span>
+          </h4>
+          <p data-zh>
+            Nonna Maria 的肉酱秘诀,听上去简单到让人怀疑:小火、加红酒、加牛奶、慢炖 14 小时。但当你看着她从早晨 6 点开始,每隔 30 分钟搅一次锅,直到下午 8 点,你才理解什么叫"功夫菜"。这种慢炖的火候控制,我们后来用工业化设备复刻了出来 —— 这是"古法肉酱意面"的基础。
+          </p>
+          <p data-en>
+            Nonna Maria's Bolognese sounded almost too simple: low heat, red wine, milk, 14 hours of simmer. But watching her start at 6 AM and stir every 30 minutes until 8 PM — you understand what slow cooking actually means. We later reverse-engineered that heat profile into industrial equipment. That's the backbone of our "Classic Bolognese Pasta."
+          </p>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <div class="lesson-num">03</div>
+        <div>
+          <h4>
+            <span data-zh>帕尔玛干酪 —— 18 个月与 24 个月的差异决定一切</span>
+            <span data-en>Parmigiano — the difference between 18 months and 24 months decides everything</span>
+          </h4>
+          <p data-zh>
+            米兰那家米其林餐厅,他们对帕尔玛奶酪有近乎偏执的标准:18 个月用于撒粉,24 个月用于切片直接入口,30 个月以上用于做酱。这种细分让我意识到原料分级的力量。我们今天的"奶油蘑菇酱""牛肝菌酱"严格按熟成期分级使用,正是这一课的延续。
+          </p>
+          <p data-en>
+            That Milan kitchen ran an obsessive Parmigiano protocol: 18-month for grating, 24-month sliced for direct eating, 30+ months reserved for sauces. The discipline of ingredient tiering became fundamental to me. Our Cream of Mushroom and Porcini sauces today still grade by aging — a direct legacy of that lesson.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ITALY VS CHINA COMPARISON -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section wide">
+
+    <div class="reveal">
+      <span class="article-num">04 / Adaptation</span>
+      <h2 class="article-h2">
+        <span data-zh>从意大利原版到中国版本</span>
+        <span data-en>From original to Chinese adaptation.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>What we kept. What we changed. What we know.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">保留什么,改变什么,理解什么</span>
+      </div>
+    </div>
+
+    <div class="mt-12 reveal delay-1">
+
+      <div class="compare-table">
+        <div class="compare-row head">
+          <div><span data-zh>维度</span><span data-en>Dimension</span></div>
+          <div><span data-zh>意大利原版</span><span data-en>🇮🇹 Italy original</span></div>
+          <div><span data-zh>花花中国版</span><span data-en>🇨🇳 Foodvio adaptation</span></div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-key"><span data-zh>披萨饼底厚度</span><span data-en>Pizza crust</span></div>
+          <div class="compare-val"><span data-zh>那不勒斯标准 0.3cm 极薄,中心微微下塌</span><span data-en>Neapolitan 0.3cm thin, center slightly soft</span></div>
+          <div class="compare-val"><span data-zh>0.4cm,适配中国客户对"嚼劲"的偏好,新疆面粉支持</span><span data-en>0.4cm — Chinese palate prefers more bite, supported by Xinjiang flour</span></div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-key"><span data-zh>肉酱辣度</span><span data-en>Bolognese spice</span></div>
+          <div class="compare-val"><span data-zh>原版无辣,加黑胡椒提风味</span><span data-en>Original: no chili, just black pepper</span></div>
+          <div class="compare-val"><span data-zh>加少量赣南螺丝椒提层次,辣度温和不刺激</span><span data-en>Subtle Gannan chili adds depth, gentle heat preserved</span></div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-key"><span data-zh>奶酪用量</span><span data-en>Cheese ratio</span></div>
+          <div class="compare-val"><span data-zh>意式标准比例,芝士覆盖 50%</span><span data-en>Italian standard: 50% cheese coverage</span></div>
+          <div class="compare-val"><span data-zh>降到 35-40%,中国客户对乳制品消化敏感度更高</span><span data-en>Reduced to 35-40% — Chinese consumers more sensitive to dairy load</span></div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-key"><span data-zh>分量</span><span data-en>Portion</span></div>
+          <div class="compare-val"><span data-zh>意大利标准单份意面 80g 干面</span><span data-en>Italian portion: 80g dry pasta</span></div>
+          <div class="compare-val"><span data-zh>120g 干面,适配中国餐饮"主菜要满"的预期</span><span data-en>120g — to meet the Chinese expectation of "a generous main"</span></div>
+        </div>
+
+        <div class="compare-row">
+          <div class="compare-key"><span data-zh>设备适配</span><span data-en>Equipment</span></div>
+          <div class="compare-val"><span data-zh>需要专业披萨石窑(450°C+)</span><span data-en>Requires wood-fired pizza oven (450°C+)</span></div>
+          <div class="compare-val"><span data-zh>预制披萨饼底,适配普通烤箱(220°C 即可)</span><span data-en>Pre-made base — works in regular ovens (220°C is enough)</span></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 3 FLAGSHIP PRODUCTS -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section wide">
+
+    <div class="text-center reveal mb-16">
+      <span class="article-num">05 / What it powers</span>
+      <h2 class="article-h2">
+        <span data-zh>这段学习,撑起了哪些产品?</span>
+        <span data-en>What this Italian journey powers today.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>From three years of apprenticeship — three flagship products.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">三年学习 · 三款旗舰产品</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <a href="#" class="pwr-card reveal delay-1">
+        <div class="swatch swatch-truffle">
+          <span class="swatch-emoji">🍕</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>黑松露披萨</span><span data-en>Black Truffle Pizza</span></h4>
+          <div class="name-en"><span data-zh>Pizza al Tartufo Nero</span><span data-en>黑松露披萨</span></div>
+          <p class="role">
+            <span data-zh>那不勒斯发酵法 + 云南黑松露 + 帕尔玛干酪 · 月销 500 片以上</span>
+            <span data-en>Neapolitan fermentation + Yunnan black truffle + Parmigiano · 500+ pies/month</span>
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="pwr-card reveal delay-2">
+        <div class="swatch swatch-bolognese">
+          <span class="swatch-emoji">🍝</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese</span></h4>
+          <div class="name-en"><span data-zh>Ragù alla Bolognese</span><span data-en>古法肉酱意面</span></div>
+          <p class="role">
+            <span data-zh>Nonna Maria 配方 · 14 小时慢炖 · 内蒙古牛肉</span>
+            <span data-en>Nonna Maria's recipe · 14-hour simmer · Inner Mongolia beef</span>
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="pwr-card reveal delay-3">
+        <div class="swatch swatch-mushroom">
+          <span class="swatch-emoji">🍲</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>奶油蘑菇意面</span><span data-en>Creamy Mushroom Pasta</span></h4>
+          <div class="name-en"><span data-zh>Pasta ai Funghi</span><span data-en>奶油蘑菇意面</span></div>
+          <p class="role">
+            <span data-zh>米兰餐厅工艺 · 24 个月帕尔玛 · 云南野生蘑菇</span>
+            <span data-en>Milan-trained technique · 24-month Parmigiano · Wild Yunnan mushrooms</span>
+          </p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="products-sauces-v62.html" class="font-display italic text-italy border-b border-italy/40 pb-1 hover:border-italy transition" style="color: var(--italy-green); border-bottom-color: rgba(0,140,69,0.4); font-size: 15px;">
+        <span data-zh>查看全部 18 款意式产品</span>
+        <span data-en>See all 18 Italian-line products</span>
+        →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- RELATED READING -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">06 / Related Reading</span>
+      <h2 class="article-h2">
+        <span data-zh>延伸阅读</span>
+        <span data-en>Continue reading.</span>
+      </h2>
+    </div>
+
+    <div class="mt-10 reveal delay-1">
+      <a href="our-story-chinese-roots-gannan-chili-v62.html" class="read-card block">
+        <div class="read-tag">Story 01 · Origin</div>
+        <h5><span data-zh>赣南螺丝椒:意式肉酱里的中国灵魂</span><span data-en>Gannan chili: the Chinese soul in our Italian sauces</span></h5>
+      </a>
+      <a href="our-story-global-masters-v62.html" class="read-card block">
+        <div class="read-tag">Story 02 · All Masters</div>
+        <h5><span data-zh>另外 5 位主厨,5 段学艺旅程</span><span data-en>Five other masters, five other journeys</span></h5>
+      </a>
+      <a href="#" class="read-card block">
+        <div class="read-tag">Story 03 · China Insight</div>
+        <h5><span data-zh>为什么我们把意大利披萨做厚了 0.1cm?</span><span data-en>Why we made our Italian pizza 0.1cm thicker</span></h5>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section id="bottom-cta" class="py-28 md:py-32 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto">
+    <div class="cta-block reveal">
+      <div class="relative z-10 max-w-2xl">
+        <div class="font-display italic text-white/80 text-sm tracking-[0.2em] mb-6">
+          07 / TASTE THE JOURNEY
+        </div>
+        <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.15;">
+          <span data-zh>三年学艺,<br>一份意式样品组合。</span>
+          <span data-en>Three years of training,<br>one Italian sample pack.</span>
+        </h2>
+        <p class="text-white/85 text-base md:text-lg mb-10 leading-relaxed">
+          <span data-zh>申请意式系列样品组合,从黑松露披萨到古法肉酱意面,亲身感受那不勒斯三年的成果。</span>
+          <span data-en>Request the Italian sample pack — from Truffle Pizza to Classic Bolognese, taste what three years in Naples produced.</span>
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#" class="btn-primary">
+            <span data-zh>申请意式样品组合</span>
+            <span data-en>Request Italian Sample Pack</span>
+            <span>→</span>
+          </a>
+          <a href="our-story-global-masters-v62.html" class="btn-outline">
+            <span data-zh>看其他 5 国故事</span>
+            <span data-en>See the other 5 countries</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。</span>
+          <span data-en>The professional Western cuisine brand from China.</span>
+        </p>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div>
+        <a href="our-story-index-v62.html" class="footer-link">Our Story</a>
+        <a href="our-story-global-masters-v62.html" class="footer-link">Global Masters</a>
+        <a href="our-story-global-masters-italy-v62.html" class="footer-link">Italy</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55">400-6879-568</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div><span>京 ICP 备 2022025117 号-1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > window.innerHeight - 100);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

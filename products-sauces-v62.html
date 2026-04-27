@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Innovation Sauces · Foodvio 花花食界 — 20+ Western Sauces, 4 Flavor Families</title>
+<meta name="description" content="花花食界西式创新酱料 · 20+ SKUs · 意式 / 美式 / 东南亚 / 日韩 4 大风味体系 · 按客户需求打样 · 米其林研发" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A',
+          'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0',
+        },
+        fontFamily: {
+          'serif-sc': ['"Noto Serif SC"', 'serif'],
+          'sans-sc': ['"Noto Sans SC"', 'sans-serif'],
+          'display': ['"Cormorant Garamond"', 'serif'],
+          'body': ['"Inter"', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  :root {
+    --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A;
+    --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0;
+  }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Sans SC', 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.04; pointer-events: none; z-index: 99;
+    mix-blend-mode: overlay;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: var(--ink);
+    overflow: hidden;
+  }
+  .hero-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(199,62,58,0.28) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 60%, rgba(245,200,46,0.15) 0%, transparent 55%);
+  }
+  .hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(180deg, transparent 0%, transparent 70%, rgba(13,42,31,0.6) 100%);
+  }
+
+  .section-no {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; color: var(--terra);
+    font-weight: 500; letter-spacing: 0.12em; font-size: 14px;
+  }
+  .section-no::before { content: '— '; margin-right: 6px; }
+
+  .reveal {
+    opacity: 0; transform: translateY(32px);
+    transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99),
+                transform 1.2s cubic-bezier(.16,.84,.28,.99);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; }
+  .delay-2 { transition-delay: 0.20s; }
+  .delay-3 { transition-delay: 0.30s; }
+  .delay-4 { transition-delay: 0.40s; }
+
+  .hero-title {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    line-height: 1.05; letter-spacing: -0.02em; color: #fff;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px; background: var(--rust); color: #fff;
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+    box-shadow: 0 8px 24px -10px rgba(199,62,58,0.5);
+  }
+  .btn-primary:hover { background: #b03531; transform: translateY(-2px); }
+  .btn-primary .arrow { transition: transform 0.4s; }
+  .btn-primary:hover .arrow { transform: translateX(4px); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: transparent; color: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: #fff; }
+
+  .btn-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--rust); font-size: 14px; font-weight: 500;
+    border-bottom: 1px solid rgba(199,62,58,0.4);
+    padding-bottom: 4px; transition: gap 0.3s;
+  }
+  .btn-link:hover { gap: 14px; border-bottom-color: var(--rust); }
+
+  /* Flavor family Tab */
+  .flavor-tabs {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 40px;
+    padding-bottom: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .flavor-tabs::-webkit-scrollbar { display: none; }
+  .flavor-tab {
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid rgba(27,67,50,0.15);
+    font-size: 14px;
+    color: var(--forest);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(.16,.84,.28,.99);
+    white-space: nowrap;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .flavor-tab:hover {
+    background: var(--cream);
+    border-color: var(--forest);
+  }
+  .flavor-tab.active {
+    background: var(--forest);
+    color: #fff;
+    border-color: var(--forest);
+  }
+  .flavor-tab .count {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    opacity: 0.7;
+  }
+  .flavor-tab.active .count { opacity: 1; color: var(--gold); }
+
+  /* Sauce panels */
+  .sauce-panel { display: none; }
+  .sauce-panel.active { display: grid; }
+
+  /* Sauce card */
+  .sauce-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
+    cursor: pointer;
+    border: 1px solid rgba(27,67,50,0.06);
+    display: flex;
+    flex-direction: column;
+  }
+  .sauce-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -16px rgba(13,42,31,0.18);
+    border-color: rgba(27,67,50,0.12);
+  }
+  .sauce-swatch {
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+  }
+  .sauce-swatch::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+  }
+  .sauce-swatch .badge {
+    position: absolute; top: 14px; left: 14px;
+    background: rgba(255,255,255,0.95);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    color: var(--forest);
+    font-weight: 500;
+    backdrop-filter: blur(8px);
+    z-index: 2;
+  }
+
+  /* Sauce colors */
+  .sauce-tomato { background: linear-gradient(135deg, #D84040 0%, #A92020 100%); }
+  .sauce-cream { background: linear-gradient(135deg, #F5D99F 0%, #D4A95E 100%); }
+  .sauce-meat { background: linear-gradient(135deg, #8B3A1F 0%, #5C2412 100%); }
+  .sauce-basil { background: linear-gradient(135deg, #5A8F3B 0%, #2F5920 100%); }
+  .sauce-porcini { background: linear-gradient(135deg, #6B4423 0%, #3E2712 100%); }
+  .sauce-bacon { background: linear-gradient(135deg, #3A3A3A 0%, #1A1A1A 100%); }
+  .sauce-pepper { background: linear-gradient(135deg, #2A2A2A 0%, #000 100%); }
+  .sauce-honey { background: linear-gradient(135deg, #F5C82E 0%, #B8922A 100%); }
+  .sauce-caesar { background: linear-gradient(135deg, #F0E5B8 0%, #C9B772 100%); }
+  .sauce-thousand { background: linear-gradient(135deg, #F5935C 0%, #C55F2E 100%); }
+  .sauce-curry { background: linear-gradient(135deg, #F5A623 0%, #C67513 100%); }
+  .sauce-sweet-sour { background: linear-gradient(135deg, #E8522E 0%, #A82A10 100%); }
+  .sauce-satay { background: linear-gradient(135deg, #B8723A 0%, #7A4418 100%); }
+  .sauce-yuzu { background: linear-gradient(135deg, #C9D942 0%, #7A8020 100%); }
+  .sauce-gochu { background: linear-gradient(135deg, #C72D1F 0%, #801515 100%); }
+  .sauce-teriyaki { background: linear-gradient(135deg, #5A3218 0%, #2A1608 100%); }
+  .sauce-tartar { background: linear-gradient(135deg, #F8F4E5 0%, #D9D1B8 100%); }
+  .sauce-salsa { background: linear-gradient(135deg, #D83C2E 0%, #8B1F15 100%); }
+
+  .sauce-card .info {
+    padding: 22px 22px 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .sauce-card h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--forest);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .sauce-card .name-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--terra);
+    margin-bottom: 12px;
+  }
+  .sauce-card .desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(13,42,31,0.7);
+    margin-bottom: 14px;
+    flex-grow: 1;
+  }
+  .sauce-card .spec {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--terra);
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed rgba(27,67,50,0.12);
+  }
+  .sauce-card .tags {
+    display: flex; flex-wrap: wrap; gap: 5px;
+    margin-bottom: 14px;
+  }
+  .sauce-card .tag {
+    padding: 3px 8px;
+    background: rgba(245,200,46,0.15);
+    border-radius: 999px;
+    font-size: 10px;
+    color: #c19818;
+    font-weight: 500;
+  }
+  .sauce-card .view-link {
+    color: var(--rust);
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s;
+  }
+  .sauce-card:hover .view-link { gap: 12px; }
+
+  /* Story embed banner */
+  .story-banner {
+    background: linear-gradient(135deg, #1B4332 0%, #0d2a1f 100%);
+    color: #fff;
+    border-radius: 24px;
+    padding: 40px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .story-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 80% 50%, rgba(199,62,58,0.25) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .story-banner .icon-big {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  /* Co-create cards */
+  .case-card {
+    background: #fff;
+    border: 1px solid rgba(27,67,50,0.08);
+    border-radius: 16px;
+    padding: 28px 26px;
+    transition: all 0.4s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px -16px rgba(13,42,31,0.18);
+    border-color: var(--terra);
+  }
+  .case-card .case-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--terra);
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+  }
+  .case-card .case-num::before { content: '— '; }
+  .case-card .case-quote {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--forest);
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+  .case-card .case-meta {
+    font-size: 12px;
+    color: rgba(13,42,31,0.55);
+    padding-top: 14px;
+    border-top: 1px solid rgba(27,67,50,0.08);
+  }
+  .case-card .case-stat {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--rust);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* Process timeline */
+  .process-step {
+    text-align: center;
+    position: relative;
+  }
+  .process-step .step-num {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--terra);
+    color: var(--terra);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 16px;
+    transition: all 0.4s;
+  }
+  .process-step:hover .step-num {
+    background: var(--terra);
+    color: #fff;
+    transform: scale(1.05);
+  }
+  .process-step .step-name {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--forest);
+    margin-bottom: 6px;
+  }
+  .process-step .step-time {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--terra);
+  }
+
+  /* Bottom CTA */
+  .cta-block {
+    background: var(--ink);
+    border-radius: 28px;
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-block::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(199,62,58,0.20) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 70%, rgba(245,200,46,0.10) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    font-size: 13px; color: rgba(255,255,255,0.55);
+    letter-spacing: 0.02em;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav (consistent w/ entire site) */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled {
+    background: rgba(13,42,31,0.95);
+    backdrop-filter: blur(20px) saturate(1.4);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-bar.dark-page.scrolled {
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .nav-bar.dark-page.scrolled .nav-link,
+  .nav-bar.dark-page.scrolled .nav-brand,
+  .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+
+  .nav-link {
+    position: relative; font-size: 14px;
+    letter-spacing: 0.02em; padding: 6px 0;
+    color: rgba(255,255,255,0.85); transition: color 0.3s;
+  }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after {
+    content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6;
+  }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu {
+    position: fixed; top: 64px; left: 0; right: 0;
+    background: #fff;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15);
+    border-top: 1px solid var(--gold);
+    padding: 48px 0;
+    opacity: 0; visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.3s cubic-bezier(.16,.84,.28,.99);
+    z-index: 60;
+  }
+  .mega-menu.open {
+    opacity: 1; visibility: visible; transform: translateY(0);
+  }
+  .mega-col-title {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 13px; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 16px;
+    padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .mega-link {
+    display: block; padding: 6px 0; font-size: 14px;
+    color: var(--ink); transition: all 0.2s;
+  }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+  .mega-cta {
+    display: block; padding: 14px 18px; background: var(--cream);
+    border: 1px solid rgba(27,67,50,0.1); border-radius: 8px;
+    font-size: 13px; color: var(--forest); transition: all 0.3s;
+    margin-bottom: 10px;
+  }
+  .mega-cta:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+  /* Footer */
+  footer { background: var(--ink); }
+  .footer-col-title {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--gold); font-size: 13px; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 20px;
+  }
+  .footer-link {
+    display: block; padding: 5px 0; color: rgba(255,255,255,0.65);
+    font-size: 13px; transition: color 0.25s;
+  }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%);
+  }
+
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle {
+    padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 999px; font-size: 11px; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.85); transition: all 0.3s;
+    cursor: pointer; background: transparent;
+  }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle {
+    color: var(--forest); border-color: rgba(27,67,50,0.25);
+  }
+
+  @media (max-width: 768px) {
+    .hero-title { font-size: clamp(36px, 8vw, 56px) !important; }
+    .mega-menu { display: none; }
+  }
+</style>
+</head>
+
+<body class="grain">
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+     ═══════════════════════════════════════════ -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="foodvio-home-zh-v62.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown active" data-menu="products">Products</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="story">Our Story</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+    </div>
+  </div>
+
+  <!-- Mega Menus same as products-index -->
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3">
+        <div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a>
+        <a href="#" class="mega-link">Western Staples</a>
+        <a href="#" class="mega-link">Fried Snacks</a>
+        <a href="#" class="mega-link">Main Courses</a>
+        <a href="#" class="mega-link">Healthy Sides</a>
+        <a href="#" class="mega-link">Bakery</a>
+      </div>
+      <div class="col-span-3">
+        <div class="mega-col-title">By Brand</div>
+        <a href="#" class="mega-link">花花食界 · Foodvio Pro</a>
+        <a href="#" class="mega-link mt-3">华仔爸爸 · ChinnPaPa</a>
+      </div>
+      <div class="col-span-3">
+        <div class="mega-col-title">Featured</div>
+        <a href="#" class="mega-link">赣南螺丝椒系列</a>
+        <a href="#" class="mega-link">Spring 2026 Sauces</a>
+      </div>
+      <div class="col-span-3">
+        <div class="mega-col-title">Quick Access</div>
+        <a href="#" class="mega-cta">📄 Product Catalog PDF</a>
+        <a href="#" class="mega-cta">🎁 Request Samples</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4">
+        <div class="mega-col-title">By Scenario</div>
+        <a href="#" class="mega-link featured">🔵 轻后厨(6)</a>
+        <a href="#" class="mega-link">🟢 全球连锁(4)</a>
+        <a href="#" class="mega-link">🟡 机构团餐(3)</a>
+        <a href="#" class="mega-link">🟠 新零售(3)</a>
+        <a href="#" class="mega-link">🟣 特殊业态(2)</a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Featured Cases</div>
+        <a href="#" class="mega-link">华东咖啡连锁 · 24 店</a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Global Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a>
+        <a href="for-industrial-v62.html" class="mega-link">🏢 Industrial</a>
+        <a href="for-retail-v62.html" class="mega-link">🛒 Retail</a>
+        <a href="for-online-sales-v62.html" class="mega-link">💻 Online Sales</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4">
+        <div class="mega-col-title">Three Stories</div>
+        <a href="#" class="mega-link featured">🌾 中国原料,世界品质</a>
+        <a href="#" class="mega-link featured">👨‍🍳 世界大师,中国研发</a>
+        <a href="#" class="mega-link featured">🌏 我们更懂中国客户</a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">8 Origins</div>
+        <a href="#" class="mega-link">🌶️ 江西 · 赣南螺丝椒</a>
+        <a href="#" class="mega-link">🍄 云南 · 黑松露</a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">6 Countries</div>
+        <a href="#" class="mega-link">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4">
+        <div class="mega-col-title">Manufacturing</div>
+        <a href="#" class="mega-link">🏭 江西赣州(6.66 万㎡)</a>
+        <a href="#" class="mega-link">🥖 河北张家口(1.6 万㎡)</a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Expertise</div>
+        <a href="#" class="mega-link">米其林级研发中心</a>
+        <a href="#" class="mega-link">柔性供应链</a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Certifications</div>
+        <a href="#" class="mega-link">HACCP · ISO 22000 · BSCI</a>
+        <a href="#" class="mega-link">US FDA Registered</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 1 · HERO (half screen)
+     ═══════════════════════════════════════════ -->
+<section class="relative min-h-[640px] flex items-end pb-20 pt-32 overflow-hidden">
+  <div class="hero-bg"></div>
+
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
+
+    <div class="breadcrumb mb-12 reveal">
+      <a href="foodvio-home-zh-v62.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <a href="products-index-v62.html">Products</a>
+      <span class="sep">›</span>
+      <span class="text-white">Innovation Sauces</span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+
+      <div class="md:col-span-8">
+        <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
+          PRODUCT LINE / 01 OF 6
+        </div>
+
+        <h1 class="hero-title reveal delay-1" style="font-size: clamp(44px, 6.5vw, 88px);">
+          <span data-zh>西式创新酱料</span>
+          <span data-en>Innovation Sauces</span>
+        </h1>
+
+        <p class="font-display italic text-white/65 mt-6 text-lg md:text-xl reveal delay-2" data-zh>
+          20+ Western Sauces. 4 Flavor Families.
+        </p>
+        <p class="font-serif-sc text-white/65 mt-6 text-base md:text-lg reveal delay-2" data-en>
+          20+ 款 · 4 大风味体系
+        </p>
+
+        <p class="text-white/75 text-base md:text-lg max-w-2xl mt-10 leading-relaxed reveal delay-3">
+          <span data-zh>意式 / 美式 / 东南亚 / 日韩 4 大风味体系 · 米其林研发 · 按客户需求打样</span>
+          <span data-en>Italian, American, Southeast Asian, Japanese & Korean — Michelin R&D, custom prototyping per client needs.</span>
+        </p>
+      </div>
+
+      <div class="md:col-span-4 reveal delay-3">
+        <div class="flex flex-col gap-3 md:items-end">
+          <a href="#" class="btn-primary">
+            <span data-zh>申请样品组合</span>
+            <span data-en>Request Sample Pack</span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="#" class="btn-outline">
+            <span data-zh>下载酱料目录</span>
+            <span data-en>Sauce Catalog PDF</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 2 · 4 Flavor Families (Tabs)
+     ═══════════════════════════════════════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="grid md:grid-cols-12 gap-8 mb-12 reveal">
+      <div class="md:col-span-5">
+        <div class="section-no mb-6">01 / Flavor Families</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(36px, 4.5vw, 56px);">
+          <span data-zh>四大风味体系</span>
+          <span data-en>Four flavor families</span>
+        </h2>
+      </div>
+      <div class="md:col-span-6 md:col-start-7 flex items-end">
+        <p class="font-display italic text-terra text-xl">
+          <span data-zh>世界各国主厨研发,中国客户审定。</span>
+          <span data-en>Developed by chefs from across the world. Validated by Chinese customers.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flavor-tabs reveal">
+      <button class="flavor-tab active" data-tab="italian">
+        <span>🇮🇹</span>
+        <span data-zh>意式系列</span><span data-en>Italian</span>
+        <span class="count">5</span>
+      </button>
+      <button class="flavor-tab" data-tab="american">
+        <span>🇺🇸</span>
+        <span data-zh>美式系列</span><span data-en>American</span>
+        <span class="count">5</span>
+      </button>
+      <button class="flavor-tab" data-tab="sea">
+        <span>🌶️</span>
+        <span data-zh>东南亚系列</span><span data-en>Southeast Asian</span>
+        <span class="count">4</span>
+      </button>
+      <button class="flavor-tab" data-tab="jpkr">
+        <span>🍜</span>
+        <span data-zh>日韩系列</span><span data-en>Japanese & Korean</span>
+        <span class="count">4</span>
+      </button>
+    </div>
+
+    <!-- ITALIAN PANEL -->
+    <div class="sauce-panel active grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5" id="panel-italian">
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-tomato"><div class="badge">⭐ Bestseller</div></div>
+        <div class="info">
+          <h3><span data-zh>番茄牛肉酱</span><span data-en>Tomato Bolognese</span></h3>
+          <div class="name-en"><span data-zh>Tomato Bolognese</span><span data-en>番茄牛肉酱</span></div>
+          <p class="desc"><span data-zh>那不勒斯经典,内蒙古牛肉与番茄深度炖煮 6 小时</span><span data-en>Naples classic, with Inner Mongolia beef slow-simmered with tomato for 6 hrs</span></p>
+          <div class="spec">150g × 50 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>意式</span><span data-en>Italian</span></span><span class="tag"><span data-zh>披萨必备</span><span data-en>Pizza</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-cream"></div>
+        <div class="info">
+          <h3><span data-zh>奶油蘑菇酱</span><span data-en>Creamy Mushroom</span></h3>
+          <div class="name-en"><span data-zh>Creamy Mushroom</span><span data-en>奶油蘑菇酱</span></div>
+          <p class="desc"><span data-zh>云南野生蘑菇与法式奶油的丝滑融合</span><span data-en>Wild Yunnan mushrooms blended with French-style cream</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>意式</span><span data-en>Italian</span></span><span class="tag"><span data-zh>意面</span><span data-en>Pasta</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-meat"></div>
+        <div class="info">
+          <h3><span data-zh>古法肉酱</span><span data-en>Classic Bolognese</span></h3>
+          <div class="name-en"><span data-zh>Classic Bolognese</span><span data-en>古法肉酱</span></div>
+          <p class="desc"><span data-zh>博洛尼亚原始配方 · 意大利主厨 3 年学艺归国调味</span><span data-en>Original Bologna recipe · refined after 3 years of Italian apprenticeship</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>意式</span><span data-en>Italian</span></span><span class="tag"><span data-zh>米其林</span><span data-en>Michelin</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-basil"></div>
+        <div class="info">
+          <h3><span data-zh>罗勒青酱</span><span data-en>Basil Pesto</span></h3>
+          <div class="name-en"><span data-zh>Basil Pesto</span><span data-en>罗勒青酱</span></div>
+          <p class="desc"><span data-zh>新鲜罗勒叶 + 帕尔玛干酪 + 松子,热那亚地道做法</span><span data-en>Fresh basil + Parmesan + pine nuts, authentic Genoese style</span></p>
+          <div class="spec">120g × 60 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>意式</span><span data-en>Italian</span></span><span class="tag"><span data-zh>三文治</span><span data-en>Sandwich</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-porcini"></div>
+        <div class="info">
+          <h3><span data-zh>牛肝菌酱</span><span data-en>Porcini Sauce</span></h3>
+          <div class="name-en"><span data-zh>Porcini Sauce</span><span data-en>牛肝菌酱</span></div>
+          <p class="desc"><span data-zh>云南野生牛肝菌与黑松露的高端组合</span><span data-en>Premium combo of Yunnan wild porcini and black truffle</span></p>
+          <div class="spec">180g × 30 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>意式</span><span data-en>Italian</span></span><span class="tag"><span data-zh>高端</span><span data-en>Premium</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- AMERICAN PANEL -->
+    <div class="sauce-panel grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5" id="panel-american">
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-bacon"></div>
+        <div class="info">
+          <h3><span data-zh>培根黑椒酱</span><span data-en>Bacon Black Pepper</span></h3>
+          <div class="name-en"><span data-zh>Bacon Black Pepper</span><span data-en>培根黑椒酱</span></div>
+          <p class="desc"><span data-zh>美式深邃黑椒香,适合烧烤、肉类、披萨</span><span data-en>Deep American black pepper warmth — for BBQ, meats, pizza</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>美式</span><span data-en>American</span></span><span class="tag">BBQ</span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-pepper"></div>
+        <div class="info">
+          <h3><span data-zh>美式黑椒汁</span><span data-en>Black Pepper Sauce</span></h3>
+          <div class="name-en"><span data-zh>Black Pepper Sauce</span><span data-en>美式黑椒汁</span></div>
+          <p class="desc"><span data-zh>经典牛排伴侣,层次感胡椒香气</span><span data-en>Classic steakhouse partner, layered peppercorn aroma</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>美式</span><span data-en>American</span></span><span class="tag"><span data-zh>牛排</span><span data-en>Steak</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-honey"></div>
+        <div class="info">
+          <h3><span data-zh>蜂蜜芥末</span><span data-en>Honey Mustard</span></h3>
+          <div class="name-en"><span data-zh>Honey Mustard</span><span data-en>蜂蜜芥末</span></div>
+          <p class="desc"><span data-zh>甜辣平衡,炸鸡黄金搭档</span><span data-en>Balanced sweet-spicy — perfect for fried chicken</span></p>
+          <div class="spec">150g × 50 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>美式</span><span data-en>American</span></span><span class="tag"><span data-zh>炸物</span><span data-en>Fried</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-caesar"></div>
+        <div class="info">
+          <h3><span data-zh>凯撒酱</span><span data-en>Caesar</span></h3>
+          <div class="name-en"><span data-zh>Caesar</span><span data-en>凯撒酱</span></div>
+          <p class="desc"><span data-zh>经典凯撒沙拉酱,鳀鱼+帕尔玛深度</span><span data-en>Classic Caesar with anchovy and Parmesan depth</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>美式</span><span data-en>American</span></span><span class="tag"><span data-zh>沙拉</span><span data-en>Salad</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-thousand"></div>
+        <div class="info">
+          <h3><span data-zh>千岛酱</span><span data-en>Thousand Island</span></h3>
+          <div class="name-en"><span data-zh>Thousand Island</span><span data-en>千岛酱</span></div>
+          <p class="desc"><span data-zh>美式经典,适用范围广,汉堡 / 沙拉 / 三文治</span><span data-en>Versatile American classic — burgers, salads, sandwiches</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>美式</span><span data-en>American</span></span><span class="tag"><span data-zh>汉堡</span><span data-en>Burger</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- SOUTHEAST ASIAN PANEL -->
+    <div class="sauce-panel grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5" id="panel-sea">
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-curry"></div>
+        <div class="info">
+          <h3><span data-zh>黄咖喱酱</span><span data-en>Yellow Curry</span></h3>
+          <div class="name-en"><span data-zh>Yellow Curry</span><span data-en>黄咖喱酱</span></div>
+          <p class="desc"><span data-zh>泰国南部地道配方,椰浆与香料平衡</span><span data-en>Authentic Southern Thai recipe, balanced coconut and spices</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>东南亚</span><span data-en>SEA</span></span><span class="tag"><span data-zh>泰式</span><span data-en>Thai</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-sweet-sour"></div>
+        <div class="info">
+          <h3><span data-zh>泰式酸辣酱</span><span data-en>Sweet & Sour Thai</span></h3>
+          <div class="name-en"><span data-zh>Sweet & Sour Thai</span><span data-en>泰式酸辣酱</span></div>
+          <p class="desc"><span data-zh>赣南螺丝椒带来的层次辣感,适合海鲜与炸物</span><span data-en>Layered heat from Gannan chili — for seafood and fried foods</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>东南亚</span><span data-en>SEA</span></span><span class="tag">⭐ <span data-zh>赣南螺丝椒</span><span data-en>Gannan Chili</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-satay"></div>
+        <div class="info">
+          <h3><span data-zh>沙茶酱</span><span data-en>Satay Sauce</span></h3>
+          <div class="name-en"><span data-zh>Satay Sauce</span><span data-en>沙茶酱</span></div>
+          <p class="desc"><span data-zh>马来西亚经典花生底,烤串 / 炒菜万能</span><span data-en>Malaysian classic peanut base — for skewers and stir-fry</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>东南亚</span><span data-en>SEA</span></span><span class="tag"><span data-zh>马来</span><span data-en>Malay</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-yuzu"></div>
+        <div class="info">
+          <h3><span data-zh>柚子椒酱</span><span data-en>Yuzu Pepper</span></h3>
+          <div class="name-en"><span data-zh>Yuzu Pepper</span><span data-en>柚子椒酱</span></div>
+          <p class="desc"><span data-zh>日式柚子皮 + 青椒清香,适合海鲜与冷盘</span><span data-en>Japanese yuzu zest + green pepper, ideal for seafood</span></p>
+          <div class="spec">100g × 60 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>东南亚</span><span data-en>SEA</span></span><span class="tag"><span data-zh>清新</span><span data-en>Fresh</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- JAPANESE & KOREAN PANEL -->
+    <div class="sauce-panel grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5" id="panel-jpkr">
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-gochu"><div class="badge">⭐ Bestseller</div></div>
+        <div class="info">
+          <h3><span data-zh>韩式辣酱</span><span data-en>Korean Gochujang</span></h3>
+          <div class="name-en"><span data-zh>Korean Gochujang</span><span data-en>韩式辣酱</span></div>
+          <p class="desc"><span data-zh>首尔学艺主厨配方 · 赣南螺丝椒 + 韩式发酵</span><span data-en>Recipe from Seoul-trained chef · Gannan chili + Korean fermentation</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>韩式</span><span data-en>Korean</span></span><span class="tag">⭐ <span data-zh>赣南螺丝椒</span><span data-en>Gannan Chili</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-teriyaki"></div>
+        <div class="info">
+          <h3><span data-zh>日式照烧酱</span><span data-en>Teriyaki</span></h3>
+          <div class="name-en"><span data-zh>Teriyaki</span><span data-en>日式照烧酱</span></div>
+          <p class="desc"><span data-zh>东京学艺归来 · 经典甜咸照烧</span><span data-en>From Tokyo training · classic sweet-savory teriyaki</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>日式</span><span data-en>Japanese</span></span><span class="tag"><span data-zh>烤鸡</span><span data-en>Chicken</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-tartar"></div>
+        <div class="info">
+          <h3><span data-zh>鞑靼酱</span><span data-en>Tartar Sauce</span></h3>
+          <div class="name-en"><span data-zh>Tartar Sauce</span><span data-en>鞑靼酱</span></div>
+          <p class="desc"><span data-zh>日式炸物的灵魂伴侣,酸黄瓜与蛋黄</span><span data-en>Soul mate of Japanese fried food — pickle and yolk</span></p>
+          <div class="spec">150g × 50 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>日式</span><span data-en>Japanese</span></span><span class="tag"><span data-zh>炸物</span><span data-en>Fried</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="sauce-card">
+        <div class="sauce-swatch sauce-salsa"></div>
+        <div class="info">
+          <h3><span data-zh>莎莎酱</span><span data-en>Salsa</span></h3>
+          <div class="name-en"><span data-zh>Salsa</span><span data-en>莎莎酱</span></div>
+          <p class="desc"><span data-zh>墨西哥学艺主厨配方 · 番茄、洋葱、青椒鲜炒</span><span data-en>From Mexico-trained chef · fresh tomato, onion, and green pepper</span></p>
+          <div class="spec">200g × 36 / 箱</div>
+          <div class="tags"><span class="tag"><span data-zh>墨西哥</span><span data-en>Mexican</span></span><span class="tag"><span data-zh>玉米片</span><span data-en>Tortilla</span></span></div>
+          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Custom prototyping callout -->
+    <div class="mt-12 text-center reveal">
+      <div class="inline-flex items-center gap-3 px-6 py-3 bg-gold/15 rounded-full text-forest">
+        <span class="text-xl">💡</span>
+        <span class="text-sm font-medium">
+          <span data-zh>按客户需求打样 · 客户专属配方</span>
+          <span data-en>Custom prototyping per client needs · Client-specific formulations</span>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3 · Story embed (Gannan Chili)
+     ═══════════════════════════════════════════ -->
+<section class="bg-paper py-24 md:py-28">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+    <div class="story-banner reveal">
+      <div class="relative z-10 grid md:grid-cols-12 gap-8 items-center">
+
+        <div class="md:col-span-8">
+          <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-3">
+            STORY EMBED · ORIGIN
+          </div>
+          <div class="icon-big">🌶️</div>
+          <h3 class="font-serif-sc font-bold text-3xl md:text-4xl mb-4 leading-tight">
+            <span data-zh>我们的酱料,源自赣南螺丝椒</span>
+            <span data-en>Our sauces begin with Luosijiao chili from Gannan, Jiangxi.</span>
+          </h3>
+          <p class="text-white/75 text-base md:text-lg max-w-2xl leading-relaxed">
+            <span data-zh>江西赣南红土地的螺丝椒,辣而不燥、香气浓郁,是我们东南亚和日韩系列酱料的灵魂之一。</span>
+            <span data-en>The chili from Gannan's red soil — fiery yet aromatic, deep yet balanced — is the soul of our SEA and Japanese-Korean sauces.</span>
+          </p>
+        </div>
+
+        <div class="md:col-span-4 text-left md:text-right">
+          <a href="#" class="btn-link" style="color: var(--gold); border-bottom-color: rgba(245,200,46,0.5);">
+            <span data-zh>探索原料故事</span>
+            <span data-en>Discover the origin story</span>
+            <span>→</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4 · Co-creation cases
+     ═══════════════════════════════════════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="grid md:grid-cols-12 gap-8 mb-16 reveal">
+      <div class="md:col-span-5">
+        <div class="section-no mb-6">02 / Co-creation</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(36px, 4.5vw, 56px);">
+          <span data-zh>与品牌共创<br>遍布全国</span>
+          <span data-en>Co-created with<br>brands across China</span>
+        </h2>
+      </div>
+      <div class="md:col-span-6 md:col-start-7 flex items-end">
+        <p class="font-display italic text-terra text-xl">
+          <span data-zh>每一款酱料,都可以为你定制专属配方。</span>
+          <span data-en>Every sauce can become your private formula.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+
+      <div class="case-card reveal delay-1">
+        <div class="case-num">Case 01</div>
+        <p class="case-quote">
+          <span data-zh>定制版番茄牛肉酱配方,新菜单推出后销量提升 40%。</span>
+          <span data-en>Custom Bolognese formula — sales up 40% after new menu launch.</span>
+        </p>
+        <div class="case-meta">
+          <span data-zh>某华东连锁披萨 · 28 店</span>
+          <span data-en>East China Pizza Chain · 28 stores</span>
+          <span class="case-stat">+40% sales</span>
+        </div>
+      </div>
+
+      <div class="case-card reveal delay-2">
+        <div class="case-num">Case 02</div>
+        <p class="case-quote">
+          <span data-zh>专属韩式辣酱方案,MOQ 5 吨大单量稳定供应。</span>
+          <span data-en>Dedicated Korean Gochujang formula — stable 5-ton MOQ supply.</span>
+        </p>
+        <div class="case-meta">
+          <span data-zh>某深圳亚洲餐饮集团</span>
+          <span data-en>Shenzhen Asian F&B Group</span>
+          <span class="case-stat">5 tons MOQ</span>
+        </div>
+      </div>
+
+      <div class="case-card reveal delay-3">
+        <div class="case-num">Case 03</div>
+        <p class="case-quote">
+          <span data-zh>3 级辣度分层方案,适配南北区域不同口味偏好。</span>
+          <span data-en>3-tier spice level system — adapted for North-South taste differences.</span>
+        </p>
+        <div class="case-meta">
+          <span data-zh>某航空配餐供应商</span>
+          <span data-en>Airline Catering Supplier</span>
+          <span class="case-stat">3 spice tiers</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5 · Custom Process Timeline
+     ═══════════════════════════════════════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-16 reveal">
+      <div class="section-no mb-6 inline-block">03 / Custom Process</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(36px, 4.5vw, 56px); line-height: 1.1;">
+        <span data-zh>按客户需求打样</span>
+        <span data-en>Custom prototyping<br>per client needs</span>
+      </h2>
+      <p class="font-display italic text-terra text-lg">
+        <span data-zh>典型周期 4-8 周 · 节奏由客户决定。</span>
+        <span data-en>Typical cycle 4-8 weeks · pace set by you.</span>
+      </p>
+    </div>
+
+    <!-- 6 step timeline -->
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-6 reveal">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-name"><span data-zh>需求沟通</span><span data-en>Briefing</span></div>
+        <div class="step-time">Week 1</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-name"><span data-zh>配方研发</span><span data-en>Recipe Dev</span></div>
+        <div class="step-time">Week 1-2</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-name"><span data-zh>样品制作</span><span data-en>Sampling</span></div>
+        <div class="step-time">Week 2-3</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-name"><span data-zh>试销验证</span><span data-en>Pilot</span></div>
+        <div class="step-time">Week 3-5</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">05</div>
+        <div class="step-name"><span data-zh>量产排期</span><span data-en>Production</span></div>
+        <div class="step-time">Week 5-7</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">06</div>
+        <div class="step-name"><span data-zh>交付上线</span><span data-en>Delivery</span></div>
+        <div class="step-time">Week 7-8</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 6 · Bottom CTA
+     ═══════════════════════════════════════════ -->
+<section id="bottom-cta" class="py-28 md:py-32 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="cta-block reveal">
+      <div class="relative z-10 max-w-3xl mx-auto text-center">
+
+        <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6">
+          READY TO EXPLORE OUR SAUCES?
+        </div>
+
+        <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size: clamp(36px, 4.5vw, 56px); line-height: 1.15;">
+          <span data-zh>选定一款,<br>或定制专属配方</span>
+          <span data-en>Pick a sauce,<br>or build your own.</span>
+        </h2>
+
+        <p class="text-white/75 text-lg mb-12 leading-relaxed">
+          <span data-zh>20+ 现成酱料 + 米其林研发团队的定制能力,等你来探索。</span>
+          <span data-en>20+ ready-to-go sauces + custom development from our Michelin R&D team.</span>
+        </p>
+
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="#" class="btn-primary">
+            <span data-zh>申请样品组合</span><span data-en>Request Sample Pack</span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="#" class="btn-outline">
+            <span data-zh>定制配方咨询</span><span data-en>Custom Recipe Inquiry</span>
+          </a>
+          <a href="#" class="btn-outline">
+            <span data-zh>下载完整目录</span><span data-en>Full Catalog PDF</span>
+          </a>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-white/15 text-white/60 text-sm">
+          📞 400-6879-568 · 📧 huahuakefu1@foodvio.com.cn
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════ -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。从田间到餐桌,世界风味,中国制造。</span>
+          <span data-en>The professional Western cuisine brand from China. From field to plate — world flavors, made in China.</span>
+        </p>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a>
+        <a href="#" class="footer-link">Western Staples</a>
+        <a href="#" class="footer-link">Fried Snacks</a>
+        <a href="#" class="footer-link">Main Courses</a>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a>
+        <a href="for-industrial-v62.html" class="footer-link">Industrial</a>
+        <a href="for-retail-v62.html" class="footer-link">Retail</a>
+        <a href="for-online-sales-v62.html" class="footer-link">Online Sales</a>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="footer-col-title">Discover</div>
+        <a href="#" class="footer-link">Our Story</a>
+        <a href="#" class="footer-link">Capabilities</a>
+        <a href="#" class="footer-link">Insights</a>
+        <a href="#" class="footer-link">About</a>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55 leading-relaxed">
+          400-6879-568<br>
+          huahuakefu1@<br>foodvio.com.cn
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-divider mb-6"></div>
+
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div class="flex items-center gap-5">
+        <span>京 ICP 备 2022025117 号-1</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') {
+  document.body.classList.add('lang-en');
+}
+
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > 600);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+
+// Flavor tabs
+const tabs = document.querySelectorAll('.flavor-tab');
+const panels = document.querySelectorAll('.sauce-panel');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+  });
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

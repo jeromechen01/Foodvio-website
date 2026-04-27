@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>China Insight · Foodvio 花花食界 — We Don't Translate. We Rebuild.</title>
+<meta name="description" content="花花食界中国洞察 · 4 大洞察:披萨嚼劲 / 辣度阈值 / 厨房设备 / 地方口味 · 我们不只是翻译,我们重构" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
+  }}}
+</script>
+
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.05; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
+  }
+
+  /* Hero (terra orange theme for Story 3) */
+  .hero-bg { position: absolute; inset: 0; background: var(--ink); overflow: hidden; }
+  .hero-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(224,122,95,0.25) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, rgba(245,200,46,0.12) 0%, transparent 55%);
+  }
+  .hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(180deg, transparent 0%, transparent 70%, rgba(13,42,31,0.6) 100%);
+  }
+
+  .section-no { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-weight: 500; letter-spacing: 0.12em; font-size: 14px; }
+  .section-no::before { content: '— '; margin-right: 6px; }
+
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; }
+  .delay-4 { transition-delay: 0.40s; }
+
+  .hero-title { font-family: 'Noto Serif SC', serif; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #fff; }
+
+  /* Insight card - large editorial */
+  .insight-card {
+    background: #fff;
+    border: 1px solid rgba(224,122,95,0.15);
+    border-radius: 24px;
+    padding: 48px 40px;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .insight-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--terra);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(.16,.84,.28,.99);
+  }
+  .insight-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px -20px rgba(224,122,95,0.22);
+  }
+  .insight-card:hover::before { transform: scaleX(1); }
+
+  .insight-card .insight-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700; font-style: italic;
+    color: var(--terra); font-size: 56px;
+    line-height: 1; margin-bottom: 16px;
+  }
+  .insight-card .insight-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; color: var(--terra);
+    font-size: 13px; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .insight-card h3 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 28px; color: var(--forest);
+    margin-bottom: 8px; line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+  .insight-card .insight-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; color: var(--terra);
+    font-size: 18px; margin-bottom: 24px;
+  }
+  .insight-card .insight-body {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px; line-height: 1.75;
+    color: rgba(13,42,31,0.78);
+    margin-bottom: 28px;
+    flex-grow: 1;
+  }
+  .insight-card .insight-body-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px; line-height: 1.65;
+    color: rgba(13,42,31,0.78);
+    margin-bottom: 28px; font-style: italic;
+    flex-grow: 1;
+  }
+  .insight-card .data-strip {
+    background: linear-gradient(135deg, #faf7f0 0%, #f0e6d2 100%);
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex; align-items: center; gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .insight-card .data-stat {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; color: var(--rust);
+    font-size: 22px; font-weight: 600;
+    line-height: 1;
+  }
+  .insight-card .data-stat-label {
+    font-size: 11px; color: rgba(13,42,31,0.55);
+    letter-spacing: 0.1em; text-transform: uppercase;
+    margin-top: 4px; display: block;
+  }
+  .insight-card .div-vert {
+    width: 1px; height: 36px;
+    background: rgba(13,42,31,0.15);
+  }
+  .insight-card .read-more {
+    color: var(--rust); font-size: 14px; font-weight: 500;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: gap 0.3s;
+    align-self: flex-start;
+  }
+  .insight-card:hover .read-more { gap: 14px; }
+
+  /* Adapted product card */
+  .adapted-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px 26px;
+    border: 1px solid rgba(27,67,50,0.08);
+    transition: all 0.4s;
+    height: 100%;
+  }
+  .adapted-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px -16px rgba(13,42,31,0.18);
+    border-color: var(--terra);
+  }
+  .adapted-card .ac-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; color: var(--terra);
+    font-size: 12px; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  .adapted-card h4 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 20px; color: var(--forest);
+    margin-bottom: 16px; line-height: 1.3;
+  }
+  .adapted-card .change-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(27,67,50,0.1);
+    font-size: 13px;
+  }
+  .adapted-card .change-row:last-child { border-bottom: none; }
+  .adapted-card .change-from {
+    color: rgba(13,42,31,0.5);
+    text-decoration: line-through;
+    flex: 1;
+  }
+  .adapted-card .arrow-mid { color: var(--terra); font-style: italic; }
+  .adapted-card .change-to {
+    color: var(--forest); font-weight: 500;
+    flex: 1;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px; background: var(--rust); color: #fff;
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+    box-shadow: 0 8px 24px -10px rgba(199,62,58,0.5);
+  }
+  .btn-primary:hover { background: #b03531; transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: transparent; color: var(--forest);
+    border: 1px solid rgba(27,67,50,0.3);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: var(--cream); border-color: var(--forest); }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand, .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+  .nav-link { position: relative; font-size: 14px; letter-spacing: 0.02em; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+
+  @media (max-width: 768px) { .mega-menu { display: none; } }
+</style>
+</head>
+
+<body class="grain">
+
+<!-- NAV -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="foodvio-home-zh-v62.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown active" data-menu="story">Our Story</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
+        <a href="products-index-v62.html" class="mega-link">花花食界</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="#" class="mega-link">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick Access</div><a href="#" class="mega-link">📄 Catalog</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link">🔵 轻后厨</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured</div>
+        <a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡 24 店</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 中国原料</a>
+        <a href="our-story-global-masters-v62.html" class="mega-link featured">👨‍🍳 世界大师</a>
+        <a href="our-story-china-insight-v62.html" class="mega-link featured">🌏 我们更懂中国</a></div>
+      <div class="col-span-4"><div class="mega-col-title">8 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link featured">🌶️ 江西 · 赣南螺丝椒</a></div>
+      <div class="col-span-4"><div class="mega-col-title">6 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Manufacturing</div><a href="#" class="mega-link">🏭 江西赣州</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Expertise</div><a href="#" class="mega-link">米其林研发</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Certifications</div><a href="#" class="mega-link">HACCP</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-[640px] flex items-end pb-20 pt-32 overflow-hidden">
+  <div class="hero-bg"></div>
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
+
+    <div class="breadcrumb mb-12 reveal">
+      <a href="foodvio-home-zh-v62.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <a href="our-story-index-v62.html">Our Story</a>
+      <span class="sep">›</span>
+      <span class="text-white"><span data-zh>中国洞察</span><span data-en>China Insight</span></span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-9">
+        <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
+          STORY 03 / CHINA INSIGHT
+        </div>
+        <h1 class="hero-title reveal delay-1" style="font-size: clamp(48px, 7vw, 100px);">
+          <span data-zh>我们不翻译<br>我们重构</span>
+          <span data-en>We don't translate.<br>We rebuild.</span>
+        </h1>
+        <p class="font-display italic text-white/65 mt-8 text-lg md:text-2xl reveal delay-2 max-w-2xl" data-zh>
+          We Speak Both Worlds.
+        </p>
+        <p class="font-serif-sc text-white/65 mt-8 text-base md:text-lg reveal delay-2 max-w-2xl" data-en>
+          我们说两种语言
+        </p>
+        <p class="text-white/75 text-base md:text-lg max-w-2xl mt-8 leading-relaxed reveal delay-3">
+          <span data-zh>把国外产品搬到中国,不等于适合中国客户。我们用 4 个深度洞察,把世界风味重构给中国厨房。</span>
+          <span data-en>Importing foreign products to China isn't enough. Through 4 deep insights, we rebuild world flavors for Chinese kitchens.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO PARAGRAPH -->
+<section class="bg-cream py-24 md:py-28">
+  <div class="max-w-[760px] mx-auto px-6 md:px-12">
+    <div class="reveal">
+      <div class="section-no mb-6">01 / Why this matters</div>
+      <h2 class="font-serif-sc font-bold text-forest leading-tight mb-8" style="font-size: clamp(30px, 4vw, 44px);">
+        <span data-zh>为什么"中国洞察"<br>是我们最大的护城河?</span>
+        <span data-en>Why "China Insight"<br>is our deepest moat.</span>
+      </h2>
+      <p class="font-serif-sc text-base md:text-lg leading-relaxed text-forest/80 mb-6">
+        <span data-zh>过去 5 年,我们见过太多失败的西餐方案——有的是因为产品本身没问题,但完全不适配中国厨房;有的是因为味道在原产地是对的,但对中国客户来说太"陌生"。</span>
+        <span data-en>Over the past 5 years, we've seen many Western food programs fail in China — not because the product was bad, but because it didn't fit Chinese kitchens, or its flavor was authentic but too unfamiliar to Chinese palates.</span>
+      </p>
+      <p class="font-serif-sc text-base md:text-lg leading-relaxed text-forest/80">
+        <span data-zh>我们的工作不是搬运,是重构。下面这 4 个洞察,是我们 5 年来在 3,000+ 客户厨房里得到的真知。</span>
+        <span data-en>Our job isn't to import — it's to rebuild. The 4 insights below are hard-won truths from 5 years inside 3,000+ Chinese kitchens.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 INSIGHTS -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-16 reveal">
+      <div class="section-no mb-6 inline-block">02 / The Four Insights</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.1;">
+        <span data-zh>4 个深度洞察</span>
+        <span data-en>Four deep insights.</span>
+      </h2>
+      <p class="font-display italic text-terra text-lg">
+        <span data-zh>来自 5 年 / 3,000+ 客户的真实数据。</span>
+        <span data-en>From 5 years and 3,000+ partner kitchens.</span>
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <a href="#" class="insight-card reveal delay-1">
+        <div class="insight-num">01</div>
+        <div class="insight-tag">Insight 01 · Texture</div>
+        <h3><span data-zh>披萨嚼劲</span><span data-en>Pizza Crust Bite</span></h3>
+        <div class="insight-en">
+          <span data-zh>Why 0.4cm beats 0.3cm in China.</span>
+          <span data-en>为什么中国客户更爱 0.4cm 而不是 0.3cm</span>
+        </div>
+        <p class="insight-body" data-zh>
+          那不勒斯标准披萨饼底是 0.3cm 极薄,中心微微下塌,意大利人爱这种"咬下去几乎在融化"的口感。但在中国,我们做了 1,000+ 次盲测,结论是:中国客户偏好饼底更厚一点(0.4cm),嚼劲更明显的版本。这不是"妥协",是"重构"——我们用新疆面粉的高蛋白特性来支撑这种嚼劲。
+        </p>
+        <p class="insight-body-en" data-en>
+          The Neapolitan pizza standard is 0.3cm — paper-thin, with a slightly soft center. Italians love that "almost melting" bite. But after 1,000+ blind tests in China, our finding: Chinese palates prefer 0.4cm — slightly thicker, with more pronounced chew. This isn't a compromise. It's a rebuild — using high-protein Xinjiang flour to support that bite.
+        </p>
+        <div class="data-strip">
+          <div>
+            <div class="data-stat">1,000+</div>
+            <div class="data-stat-label"><span data-zh>盲测次数</span><span data-en>Blind tests</span></div>
+          </div>
+          <div class="div-vert"></div>
+          <div>
+            <div class="data-stat">68%</div>
+            <div class="data-stat-label"><span data-zh>偏好 0.4cm</span><span data-en>Prefer 0.4cm</span></div>
+          </div>
+          <div class="div-vert"></div>
+          <div>
+            <div class="data-stat">+0.1cm</div>
+            <div class="data-stat-label"><span data-zh>差异决定一切</span><span data-en>Decides everything</span></div>
+          </div>
+        </div>
+        <span class="read-more"><span data-zh>读完整洞察</span><span data-en>Read full insight</span> →</span>
+      </a>
+
+      <a href="#" class="insight-card reveal delay-2">
+        <div class="insight-num">02</div>
+        <div class="insight-tag">Insight 02 · Spice</div>
+        <h3><span data-zh>辣度阈值</span><span data-en>Spice Threshold</span></h3>
+        <div class="insight-en">
+          <span data-zh>Why "spicy" means something different here.</span>
+          <span data-en>为什么中国客户的"辣"和你想的不一样</span>
+        </div>
+        <p class="insight-body" data-zh>
+          韩式辣酱在韩国常见的辣度是 80,000+ SHU。但我们做出口转内销的版本时,把辣度降到 30,000-50,000 SHU,反而获得了更广的客户接受度。原因是:中国客户的辣度容忍度高于欧美但低于韩国,需要的是"有辣感但不刺痛"。这正是赣南螺丝椒的优势。
+        </p>
+        <p class="insight-body-en" data-en>
+          Korean gochujang in Korea typically lands at 80,000+ SHU. But when we adapted it for the Chinese market, we dropped to 30,000-50,000 SHU — and broader acceptance followed. Reason: Chinese spice tolerance sits between Western and Korean. They want "heat that registers, but doesn't hurt." This is exactly where Gannan chili shines.
+        </p>
+        <div class="data-strip">
+          <div>
+            <div class="data-stat">30k-50k</div>
+            <div class="data-stat-label">SHU<span data-zh> · 中国甜区</span><span data-en> · China sweet zone</span></div>
+          </div>
+          <div class="div-vert"></div>
+          <div>
+            <div class="data-stat">+45%</div>
+            <div class="data-stat-label"><span data-zh>客户接受度</span><span data-en>Acceptance</span></div>
+          </div>
+          <div class="div-vert"></div>
+          <div>
+            <div class="data-stat">3 <span data-zh>级</span><span data-en>tiers</span></div>
+            <div class="data-stat-label"><span data-zh>分层方案</span><span data-en>Spice levels</span></div>
+          </div>
+        </div>
+        <span class="read-more"><span data-zh>读完整洞察</span><span data-en>Read full insight</span> →</span>
+      </a>
+
+      <a href="#" class="insight-card reveal delay-3">
+        <div class="insight-num">03</div>
+        <div class="insight-tag">Insight 03 · Equipment</div>
+        <h3><span data-zh>厨房设备现实</span><span data-en>Kitchen Equipment Reality</span></h3>
+        <div class="insight-en">
+          <span data-zh>Why "no specialty oven" is a feature.</span>
+          <span data-en>为什么"不需要专业烤箱"是一个卖点</span>
+        </div>
+        <p class="insight-body" data-zh>
+          一个残酷事实:中国 95% 以上的咖啡馆和西式简餐厅,**没有专业披萨石窑**(450°C+)。如果一款披萨产品只能在专业设备上做出最佳口感,它就只能服务前 5% 的客户。我们的工作是让产品在 220°C 的家用级烤箱里也能有 80% 的还原度——这是我们花了 2 年研发出来的"预制饼底"工艺的核心价值。
+        </p>
+        <p class="insight-body-en" data-en>
+          A hard truth: more than 95% of Chinese cafés and Western bistros do NOT have a professional pizza stone oven (450°C+). If your pizza product only shines on specialty equipment, you're stuck serving the top 5%. Our job is making products that deliver 80% of the original quality in a 220°C household-grade oven. That's the core value of our pre-made base process — two years to develop.
+        </p>
+        <div class="data-strip">
+          <div>
+            <div class="data-stat">95%</div>
+            <div class="data-stat-label"><span data-zh>店家无专业窑</span><span data-en>No specialty oven</span></div>
+          </div>
+          <div class="div-vert"></div>
+          <div>
+            <div class="data-stat">220°C</div>
+            <div class="data-stat-label"><span data-zh>普通烤箱</span><span data-en>Standard oven</span></div>
+          </div>
+          <div class="div-vert"></div>
+          <div>
+            <div class="data-stat">80%</div>
+            <div class="data-stat-label"><span data-zh>原版还原度</span><span data-en>Quality retained</span></div>
+          </div>
+        </div>
+        <span class="read-more"><span data-zh>读完整洞察</span><span data-en>Read full insight</span> →</span>
+      </a>
+
+      <a href="#" class="insight-card reveal delay-4">
+        <div class="insight-num">04</div>
+        <div class="insight-tag">Insight 04 · Regional</div>
+        <h3><span data-zh>地方口味差异</span><span data-en>Regional Palate Differences</span></h3>
+        <div class="insight-en">
+          <span data-zh>One product. Three Chinese regions.</span>
+          <span data-en>一个产品 · 中国三大区域差异</span>
+        </div>
+        <p class="insight-body" data-zh>
+          一个让海外品牌抓狂的事实:中国不是一个统一的市场,而是 N 个口味分区。同一款古法肉酱意面,北方客户希望咸度更高,华东客户希望甜度更平衡,西南客户偏好加少量辣味。我们做"地方版"配方分级—— 一款产品,3 个区域版本,共用同一条生产线,但风味曲线分层。这是真正的"中国化"。
+        </p>
+        <p class="insight-body-en" data-en>
+          A reality that drives overseas brands crazy: China isn't one market — it's N flavor regions. The same Classic Bolognese: Northern customers want it saltier; Eastern customers want sweetness balanced; Southwestern customers prefer light heat. We build regional formula tiers — same product, three regional versions, sharing one production line but with stratified flavor curves. That's real China-localization.
+        </p>
+        <div class="data-strip">
+          <div>
+            <div class="data-stat">3 <span data-zh>区</span><span data-en>regions</span></div>
+            <div class="data-stat-label"><span data-zh>北 / 东 / 西南</span><span data-en>North / East / SW</span></div>
+          </div>
+          <div class="div-vert"></div>
+          <div>
+            <div class="data-stat">1 <span data-zh>线</span><span data-en>line</span></div>
+            <div class="data-stat-label"><span data-zh>共用生产</span><span data-en>Shared production</span></div>
+          </div>
+          <div class="div-vert"></div>
+          <div>
+            <div class="data-stat">+38%</div>
+            <div class="data-stat-label"><span data-zh>跨区销量</span><span data-en>Cross-region sales</span></div>
+          </div>
+        </div>
+        <span class="read-more"><span data-zh>读完整洞察</span><span data-en>Read full insight</span> →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- 3 ADAPTED PRODUCT EXAMPLES -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-16 reveal">
+      <div class="section-no mb-6 inline-block">03 / Real Adaptations</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.1;">
+        <span data-zh>3 个真实改良案例</span>
+        <span data-en>3 real adaptations.</span>
+      </h2>
+      <p class="font-display italic text-terra text-lg">
+        <span data-zh>从原版到中国版,我们改了什么。</span>
+        <span data-en>From original to Chinese version — what we changed.</span>
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="adapted-card reveal delay-1">
+        <div class="ac-tag">Adaptation 01</div>
+        <h4><span data-zh>韩式辣酱</span><span data-en>Korean Gochujang</span></h4>
+        <div class="change-row">
+          <span class="change-from"><span data-zh>原版 80k SHU</span><span data-en>Original 80k SHU</span></span>
+          <span class="arrow-mid">→</span>
+          <span class="change-to"><span data-zh>40k SHU</span><span data-en>40k SHU</span></span>
+        </div>
+        <div class="change-row">
+          <span class="change-from"><span data-zh>韩国辣椒</span><span data-en>Korean chili</span></span>
+          <span class="arrow-mid">→</span>
+          <span class="change-to"><span data-zh>赣南螺丝椒</span><span data-en>Gannan Luosijiao</span></span>
+        </div>
+        <div class="change-row">
+          <span class="change-from"><span data-zh>1 个版本</span><span data-en>1 version</span></span>
+          <span class="arrow-mid">→</span>
+          <span class="change-to"><span data-zh>3 级辣度</span><span data-en>3 spice tiers</span></span>
+        </div>
+      </div>
+
+      <div class="adapted-card reveal delay-2">
+        <div class="ac-tag">Adaptation 02</div>
+        <h4><span data-zh>那不勒斯披萨</span><span data-en>Neapolitan Pizza</span></h4>
+        <div class="change-row">
+          <span class="change-from"><span data-zh>0.3cm 饼底</span><span data-en>0.3cm crust</span></span>
+          <span class="arrow-mid">→</span>
+          <span class="change-to"><span data-zh>0.4cm 饼底</span><span data-en>0.4cm crust</span></span>
+        </div>
+        <div class="change-row">
+          <span class="change-from"><span data-zh>450°C 石窑</span><span data-en>450°C wood oven</span></span>
+          <span class="arrow-mid">→</span>
+          <span class="change-to"><span data-zh>220°C 普通烤箱</span><span data-en>220°C standard oven</span></span>
+        </div>
+        <div class="change-row">
+          <span class="change-from"><span data-zh>50% 芝士</span><span data-en>50% cheese</span></span>
+          <span class="arrow-mid">→</span>
+          <span class="change-to"><span data-zh>35% 芝士</span><span data-en>35% cheese</span></span>
+        </div>
+      </div>
+
+      <div class="adapted-card reveal delay-3">
+        <div class="ac-tag">Adaptation 03</div>
+        <h4><span data-zh>古法肉酱</span><span data-en>Classic Bolognese</span></h4>
+        <div class="change-row">
+          <span class="change-from"><span data-zh>意面 80g</span><span data-en>Pasta 80g</span></span>
+          <span class="arrow-mid">→</span>
+          <span class="change-to"><span data-zh>意面 120g</span><span data-en>Pasta 120g</span></span>
+        </div>
+        <div class="change-row">
+          <span class="change-from"><span data-zh>1 种咸度</span><span data-en>1 saltiness</span></span>
+          <span class="arrow-mid">→</span>
+          <span class="change-to"><span data-zh>3 区域版本</span><span data-en>3 regional versions</span></span>
+        </div>
+        <div class="change-row">
+          <span class="change-from"><span data-zh>无辣度</span><span data-en>No spice</span></span>
+          <span class="arrow-mid">→</span>
+          <span class="change-to"><span data-zh>+ 螺丝椒微辣层次</span><span data-en>+ subtle chili</span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-paper py-24 md:py-28 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto text-center reveal">
+    <p class="font-display italic text-terra text-lg mb-6">— That's how we speak both worlds.</p>
+    <h2 class="font-serif-sc font-bold text-forest mb-8" style="font-size: clamp(28px, 3.5vw, 44px); line-height: 1.2;">
+      <span data-zh>用我们的洞察,做你的产品</span>
+      <span data-en>Use our insights for your product.</span>
+    </h2>
+    <p class="text-base md:text-lg text-forest/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+      <span data-zh>我们已经知道中国客户要什么,你要做的是把它变成你的菜单。让花花的米其林研发团队成为你的菜单顾问。</span>
+      <span data-en>We already know what Chinese customers want. Your job is making it into your menu. Let our Michelin R&D team be your menu consultant.</span>
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#" class="btn-primary">
+        <span data-zh>预约洞察咨询</span>
+        <span data-en>Book an insights consultation</span>
+        <span>→</span>
+      </a>
+      <a href="our-story-index-v62.html" class="btn-outline">
+        <span data-zh>回到故事总站</span>
+        <span data-en>Back to Our Story</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。</span>
+          <span data-en>The professional Western cuisine brand from China.</span>
+        </p>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div>
+        <a href="our-story-index-v62.html" class="footer-link">Our Story</a>
+        <a href="our-story-china-insight-v62.html" class="footer-link">China Insight</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55">400-6879-568</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div><span>京 ICP 备 2022025117 号-1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > 600);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

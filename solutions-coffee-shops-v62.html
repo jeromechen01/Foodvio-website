@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Coffee Shops · Foodvio 花花食界 — Western Light Meals for Premium Cafés</title>
+<meta name="description" content="花花食界精品咖啡馆方案 · 32 SKUs · 单店月销 500 片披萨 · 下午茶营收 +35% · 服务 300+ 精品咖啡品牌" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'sans-sc': ['"Noto Sans SC"', 'sans-serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
+  }}}
+</script>
+
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.04; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
+  }
+
+  .hero-bg { position: absolute; inset: 0; background: var(--ink); overflow: hidden; }
+  .hero-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(74,144,226,0.20) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 60%, rgba(224,122,95,0.18) 0%, transparent 55%);
+  }
+  .hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(180deg, transparent 0%, transparent 70%, rgba(13,42,31,0.6) 100%);
+  }
+
+  .section-no { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-weight: 500; letter-spacing: 0.12em; font-size: 14px; }
+  .section-no::before { content: '— '; margin-right: 6px; }
+
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; } .delay-4 { transition-delay: 0.40s; }
+
+  .hero-title { font-family: 'Noto Serif SC', serif; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #fff; }
+
+  .btn-primary { display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px; background: var(--rust); color: #fff; border-radius: 999px; font-weight: 500; font-size: 14px; transition: all 0.4s cubic-bezier(.16,.84,.28,.99); box-shadow: 0 8px 24px -10px rgba(199,62,58,0.5); }
+  .btn-primary:hover { background: #b03531; transform: translateY(-2px); }
+  .btn-primary .arrow { transition: transform 0.4s; }
+  .btn-primary:hover .arrow { transform: translateX(4px); }
+
+  .btn-outline { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; background: transparent; color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; font-weight: 500; font-size: 14px; transition: all 0.3s; }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: #fff; }
+
+  .btn-link { display: inline-flex; align-items: center; gap: 8px; color: var(--rust); font-size: 14px; font-weight: 500; border-bottom: 1px solid rgba(199,62,58,0.4); padding-bottom: 4px; transition: gap 0.3s; }
+  .btn-link:hover { gap: 14px; border-bottom-color: var(--rust); }
+
+  /* Customer profile card (4 typical) */
+  .profile-card {
+    background: #fff;
+    border: 1px solid rgba(27,67,50,0.06);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+    height: 100%;
+    display: flex; flex-direction: column;
+  }
+  .profile-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px -16px rgba(13,42,31,0.18);
+    border-color: rgba(74,144,226,0.25);
+  }
+  .profile-card .icon { font-size: 30px; margin-bottom: 16px; }
+  .profile-card h4 {
+    font-family: 'Noto Serif SC', serif; font-weight: 600;
+    font-size: 17px; color: var(--forest); margin-bottom: 8px;
+    line-height: 1.35;
+  }
+  .profile-card .desc {
+    font-size: 13px; color: rgba(13,42,31,0.65); line-height: 1.55;
+  }
+
+  /* Pain → Solution row */
+  .ps-row {
+    display: grid; grid-template-columns: 1fr 64px 1fr;
+    gap: 0;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(27,67,50,0.08);
+    margin-bottom: 16px;
+  }
+  .ps-row .pain {
+    padding: 24px 28px;
+    background: #fef5f2;
+    border-right: 1px solid rgba(199,62,58,0.1);
+  }
+  .ps-row .arrow-mid {
+    background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--rust);
+    font-size: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+  .ps-row .solution {
+    padding: 24px 28px;
+    background: #f5faf7;
+  }
+  .ps-row .ps-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .ps-row .pain .ps-label { color: var(--rust); }
+  .ps-row .solution .ps-label { color: var(--forest); }
+  .ps-row h5 {
+    font-family: 'Noto Serif SC', serif; font-weight: 600;
+    font-size: 15px; color: var(--forest);
+    line-height: 1.4;
+  }
+
+  /* Recommended product card */
+  .pro-card {
+    background: #fff;
+    border: 1px solid rgba(27,67,50,0.06);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+    cursor: pointer;
+    display: flex; flex-direction: column;
+  }
+  .pro-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px -16px rgba(13,42,31,0.18);
+  }
+  .pro-card .swatch {
+    aspect-ratio: 5/3;
+    position: relative;
+    overflow: hidden;
+  }
+  .pro-card .swatch::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.18; mix-blend-mode: multiply;
+  }
+  .pro-card .swatch .badge {
+    position: absolute; top: 10px; left: 10px;
+    background: rgba(255,255,255,0.95);
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    color: var(--forest); font-weight: 500;
+    z-index: 2;
+  }
+  .pc-truffle { background: linear-gradient(135deg, #3E2712 0%, #1A0F08 100%); }
+  .pc-cheese { background: linear-gradient(135deg, #E8A852 0%, #B87520 100%); }
+  .pc-bolognese { background: linear-gradient(135deg, #8B3A1F 0%, #5C2412 100%); }
+  .pc-chicken { background: linear-gradient(135deg, #5A8F3B 0%, #2F5920 100%); }
+  .pc-fermented { background: linear-gradient(135deg, #C72D1F 0%, #801515 100%); }
+  .pc-soup { background: linear-gradient(135deg, #F5D99F 0%, #D4A95E 100%); }
+  .pc-salad { background: linear-gradient(135deg, #C9D942 0%, #7A8020 100%); }
+  .pc-quiche { background: linear-gradient(135deg, #F5C82E 0%, #B8922A 100%); }
+  .pc-tiramisu { background: linear-gradient(135deg, #6B4423 0%, #3E2712 100%); }
+  .pc-croissant { background: linear-gradient(135deg, #E8A852 0%, #B87520 100%); }
+
+  .pro-card .info { padding: 16px 16px 18px; flex-grow: 1; display: flex; flex-direction: column; }
+  .pro-card h4 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 15px; color: var(--forest); margin-bottom: 4px; line-height: 1.3;
+  }
+  .pro-card .name-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 12px; color: var(--terra); margin-bottom: 10px;
+  }
+  .pro-card .meta {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 11px; color: rgba(13,42,31,0.55);
+    margin-bottom: 12px; flex-grow: 1;
+  }
+  .pro-card .view-link {
+    color: var(--rust); font-size: 12px; font-weight: 500;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: gap 0.3s;
+  }
+  .pro-card:hover .view-link { gap: 12px; }
+
+  /* Case study big card */
+  .case-big {
+    background: linear-gradient(160deg, #fff 0%, #faf7f0 100%);
+    border: 1px solid rgba(27,67,50,0.08);
+    border-radius: 24px;
+    padding: 40px 36px;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+  }
+  .case-big:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px -20px rgba(13,42,31,0.18);
+  }
+  .case-big .case-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; color: var(--terra);
+    font-size: 12px; letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .case-big h3 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 22px; color: var(--forest);
+    line-height: 1.3; margin-bottom: 16px;
+  }
+  .case-big .case-desc {
+    font-size: 14px; line-height: 1.65;
+    color: rgba(13,42,31,0.7); margin-bottom: 24px;
+  }
+  .case-big .case-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(27,67,50,0.1);
+  }
+  .case-big .stat-num {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    color: var(--rust); font-size: 24px; line-height: 1;
+  }
+  .case-big .stat-label {
+    font-size: 11px; color: rgba(13,42,31,0.55);
+    letter-spacing: 0.05em; margin-top: 6px;
+  }
+
+  /* Stat strip */
+  .stat-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; padding: 30px 0; border-top: 1px solid rgba(27,67,50,0.1); border-bottom: 1px solid rgba(27,67,50,0.1); }
+  .stat-block { text-align: center; }
+  .stat-block .num { font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--forest); font-size: 32px; line-height: 1; }
+  .stat-block .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(13,42,31,0.55); margin-top: 6px; }
+
+  /* Bottom CTA */
+  .cta-block { background: var(--ink); border-radius: 28px; padding: 56px 48px; position: relative; overflow: hidden; }
+  .cta-block::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(74,144,226,0.20) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 70%, rgba(224,122,95,0.18) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand, .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+  .nav-link { position: relative; font-size: 14px; letter-spacing: 0.02em; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+  .mega-cta { display: block; padding: 14px 18px; background: var(--cream); border: 1px solid rgba(27,67,50,0.1); border-radius: 8px; font-size: 13px; color: var(--forest); transition: all 0.3s; margin-bottom: 10px; }
+  .mega-cta:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+
+  @media (max-width: 768px) {
+    .hero-title { font-size: clamp(36px, 8vw, 56px) !important; }
+    .mega-menu { display: none; }
+    .ps-row { grid-template-columns: 1fr; }
+    .ps-row .pain { border-right: none; border-bottom: 1px solid rgba(199,62,58,0.1); }
+    .ps-row .arrow-mid { padding: 12px 0; }
+  }
+</style>
+</head>
+
+<body class="grain">
+
+<!-- NAV -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="foodvio-home-zh-v62.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown active" data-menu="solutions">Solutions</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="story">Our Story</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a>
+        <a href="#" class="mega-link">Western Staples</a><a href="#" class="mega-link">Fried Snacks</a>
+        <a href="#" class="mega-link">Main Courses</a><a href="#" class="mega-link">Healthy Sides</a>
+        <a href="#" class="mega-link">Bakery</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
+        <a href="products-index-v62.html" class="mega-link">花花食界 · Foodvio Pro</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div>
+        <a href="#" class="mega-link">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick Access</div>
+        <a href="#" class="mega-cta">📄 Catalog PDF</a><a href="#" class="mega-cta">🎁 Samples</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link featured">🔵 轻后厨(6)</a>
+        <a href="#" class="mega-link">🟢 全球连锁(4)</a>
+        <a href="#" class="mega-link">🟡 机构团餐(3)</a>
+        <a href="#" class="mega-link">🟠 新零售(3)</a>
+        <a href="#" class="mega-link">🟣 特殊业态(2)</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured Cases</div>
+        <a href="solutions-coffee-shops-v62.html" class="mega-link featured">华东咖啡连锁 · 24 店</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Global Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a>
+        <a href="for-industrial-v62.html" class="mega-link">🏢 Industrial</a>
+        <a href="for-retail-v62.html" class="mega-link">🛒 Retail</a>
+        <a href="for-online-sales-v62.html" class="mega-link">💻 Online Sales</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Three Stories</div>
+        <a href="#" class="mega-link featured">🌾 中国原料</a>
+        <a href="#" class="mega-link featured">👨‍🍳 世界大师</a>
+        <a href="#" class="mega-link featured">🌏 我们更懂中国</a></div>
+      <div class="col-span-4"><div class="mega-col-title">8 Origins</div><a href="#" class="mega-link">🌶️ 江西 · 赣南螺丝椒</a></div>
+      <div class="col-span-4"><div class="mega-col-title">6 Countries</div><a href="#" class="mega-link">🇮🇹 Italy</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Manufacturing</div><a href="#" class="mega-link">🏭 江西赣州</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Expertise</div><a href="#" class="mega-link">米其林研发</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Certifications</div><a href="#" class="mega-link">HACCP / ISO 22000</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="relative min-h-[640px] flex items-end pb-20 pt-32 overflow-hidden">
+  <div class="hero-bg"></div>
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
+
+    <div class="breadcrumb mb-12 reveal">
+      <a href="foodvio-home-zh-v62.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <a href="solutions-index-v62.html">Solutions</a>
+      <span class="sep">›</span>
+      <a href="solutions-light-kitchen-v62.html"><span data-zh>轻后厨</span><span data-en>Light Kitchen</span></a>
+      <span class="sep">›</span>
+      <span class="text-white"><span data-zh>精品咖啡馆</span><span data-en>Coffee Shops</span></span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-8">
+        <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
+          SCENARIO 01 / LIGHT KITCHEN
+        </div>
+        <h1 class="hero-title reveal delay-1" style="font-size: clamp(44px, 6.5vw, 88px);">
+          <span data-zh>精品咖啡馆<br>简餐方案</span>
+          <span data-en>Coffee Shops<br>Western light meals</span>
+        </h1>
+        <p class="font-display italic text-white/65 mt-6 text-lg md:text-xl reveal delay-2" data-zh>
+          From breakfast to afternoon tea — refined.
+        </p>
+        <p class="font-serif-sc text-white/65 mt-6 text-base md:text-lg reveal delay-2" data-en>
+          从早餐到下午茶 · 精致简餐
+        </p>
+        <p class="text-white/75 text-base md:text-lg max-w-2xl mt-10 leading-relaxed reveal delay-3">
+          <span data-zh>从早餐到下午茶,花花食界帮您的咖啡馆把"简餐"做精致 · 已服务 300+ 精品咖啡品牌</span>
+          <span data-en>From breakfast to afternoon tea — Foodvio elevates your café's light meal program. Trusted by 300+ premium coffee brands.</span>
+        </p>
+      </div>
+      <div class="md:col-span-4 reveal delay-3">
+        <div class="flex flex-col gap-3 md:items-end">
+          <a href="#bottom-cta" class="btn-primary">
+            <span data-zh>申请样品</span>
+            <span data-en>Request Samples</span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="#" class="btn-outline">
+            <span data-zh>下载案例研究</span>
+            <span data-en>Case Study PDF</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 2 · 4 Customer Profiles ═══════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="grid md:grid-cols-12 gap-8 mb-12 reveal">
+      <div class="md:col-span-5">
+        <div class="section-no mb-6">01 / Built for You</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(36px, 4.5vw, 56px);">
+          <span data-zh>4 种典型客户</span>
+          <span data-en>4 typical customers</span>
+        </h2>
+      </div>
+      <div class="md:col-span-6 md:col-start-7 flex items-end">
+        <p class="font-display italic text-terra text-xl">
+          <span data-zh>对号入座,看看这是不是你的咖啡馆。</span>
+          <span data-en>See which one looks like your café.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="profile-card reveal delay-1">
+        <div class="icon">🏬</div>
+        <h4><span data-zh>20-30 店精品连锁</span><span data-en>20-30 store premium chains</span></h4>
+        <p class="desc"><span data-zh>区域知名连锁,需要标准化菜单 + 季度新品保持新鲜感</span><span data-en>Regional chains needing standardized menus + quarterly innovation to stay fresh.</span></p>
+      </div>
+      <div class="profile-card reveal delay-2">
+        <div class="icon">☕</div>
+        <h4><span data-zh>3-5 店独立品牌</span><span data-en>3-5 store independents</span></h4>
+        <p class="desc"><span data-zh>调性鲜明的精品咖啡品牌,菜单需要差异化但又要利润</span><span data-en>Distinctive boutique brands needing differentiated menus that protect margin.</span></p>
+      </div>
+      <div class="profile-card reveal delay-3">
+        <div class="icon">🏭</div>
+        <h4><span data-zh>烘焙工厂 + 门店</span><span data-en>Coffee roastery + retail</span></h4>
+        <p class="desc"><span data-zh>烘焙工厂兼营门店,后厨简陋,需要"开盒即售"的成熟方案</span><span data-en>Roasteries with retail spaces — minimal kitchen, need open-and-serve solutions.</span></p>
+      </div>
+      <div class="profile-card reveal delay-4">
+        <div class="icon">🥗</div>
+        <h4><span data-zh>咖啡 + 简餐 hybrid</span><span data-en>Coffee × meal hybrid brands</span></h4>
+        <p class="desc"><span data-zh>正餐时段也想抓住客流的混合业态品牌</span><span data-en>Hybrid concepts capturing meal-time traffic, not just coffee hours.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 3 · Pain → Solution ═══════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="grid md:grid-cols-12 gap-8 mb-12 reveal">
+      <div class="md:col-span-5">
+        <div class="section-no mb-6">02 / Pain → Solution</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(36px, 4.5vw, 56px);">
+          <span data-zh>痛点对照<br>解决方案</span>
+          <span data-en>Pain points and<br>how we solve them.</span>
+        </h2>
+      </div>
+      <div class="md:col-span-6 md:col-start-7 flex items-end">
+        <p class="font-display italic text-terra text-xl">
+          <span data-zh>每个咖啡馆主理人都关心的问题。</span>
+          <span data-en>Questions every café owner asks us.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="reveal delay-1">
+
+      <div class="ps-row">
+        <div class="pain">
+          <span class="ps-label">😖 Pain 01</span>
+          <h5><span data-zh>早餐菜品差异化不够,客户记不住我们</span><span data-en>Breakfast lacks differentiation — customers don't remember us</span></h5>
+        </div>
+        <div class="arrow-mid">→</div>
+        <div class="solution">
+          <span class="ps-label">✓ Solution 01</span>
+          <h5><span data-zh>3 款独家早餐披萨 + 5 款芝士卷饼,让早餐菜单成为记忆点</span><span data-en>3 exclusive breakfast pizzas + 5 cheese wraps — make breakfast unforgettable</span></h5>
+        </div>
+      </div>
+
+      <div class="ps-row">
+        <div class="pain">
+          <span class="ps-label">😖 Pain 02</span>
+          <h5><span data-zh>下午茶时段客流多,但菜单老旧,客单价上不去</span><span data-en>Heavy afternoon traffic but stale menu — average ticket stays flat</span></h5>
+        </div>
+        <div class="arrow-mid">→</div>
+        <div class="solution">
+          <span class="ps-label">✓ Solution 02</span>
+          <h5><span data-zh>季度上新轻食 4 款,提鲜菜单同时拉高客单价 25-35%</span><span data-en>4 quarterly light-meal launches — refresh menu, lift ticket 25-35%</span></h5>
+        </div>
+      </div>
+
+      <div class="ps-row">
+        <div class="pain">
+          <span class="ps-label">😖 Pain 03</span>
+          <h5><span data-zh>后厨空间小,没有专业烤箱,做不了大菜</span><span data-en>Tiny kitchen, no professional oven — can't run real menus</span></h5>
+        </div>
+        <div class="arrow-mid">→</div>
+        <div class="solution">
+          <span class="ps-label">✓ Solution 03</span>
+          <h5><span data-zh>所有 SKU 均适配空气炸锅 + 微波炉,SOP 5 分钟上手</span><span data-en>All SKUs work with air fryer + microwave — SOP onboards in 5 min</span></h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 4 · 10 Recommended Products ═══════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="grid md:grid-cols-12 gap-8 mb-12 reveal">
+      <div class="md:col-span-5">
+        <div class="section-no mb-6">03 / Recommended SKUs</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(36px, 4.5vw, 56px);">
+          <span data-zh>10 款专属推荐</span>
+          <span data-en>10 must-have SKUs</span>
+        </h2>
+      </div>
+      <div class="md:col-span-6 md:col-start-7 flex items-end">
+        <p class="font-display italic text-terra text-xl">
+          <span data-zh>精选最适合咖啡馆场景的产品组合。</span>
+          <span data-en>Hand-picked combos for coffee shop kitchens.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+
+      <a href="#" class="pro-card reveal">
+        <div class="swatch pc-truffle"><div class="badge">⭐ Bestseller</div></div>
+        <div class="info">
+          <h4><span data-zh>黑松露披萨</span><span data-en>Black Truffle Pizza</span></h4>
+          <div class="name-en"><span data-zh>Black Truffle Pizza</span><span data-en>黑松露披萨</span></div>
+          <div class="meta">7"  · 240g · 18 / 箱</div>
+          <span class="view-link"><span data-zh>查看</span><span data-en>View</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="pro-card reveal">
+        <div class="swatch pc-cheese"></div>
+        <div class="info">
+          <h4><span data-zh>芝士牛肉卷</span><span data-en>Cheese Beef Wrap</span></h4>
+          <div class="name-en"><span data-zh>Cheese Beef Wrap</span><span data-en>芝士牛肉卷</span></div>
+          <div class="meta">180g · 30 / 箱</div>
+          <span class="view-link"><span data-zh>查看</span><span data-en>View</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="pro-card reveal">
+        <div class="swatch pc-bolognese"></div>
+        <div class="info">
+          <h4><span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese</span></h4>
+          <div class="name-en"><span data-zh>Classic Bolognese</span><span data-en>古法肉酱意面</span></div>
+          <div class="meta">280g · 24 / 箱</div>
+          <span class="view-link"><span data-zh>查看</span><span data-en>View</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="pro-card reveal">
+        <div class="swatch pc-chicken"></div>
+        <div class="info">
+          <h4><span data-zh>意式香草鸡</span><span data-en>Italian Herb Chicken</span></h4>
+          <div class="name-en"><span data-zh>Herb Chicken</span><span data-en>意式香草鸡</span></div>
+          <div class="meta">200g · 30 / 箱</div>
+          <span class="view-link"><span data-zh>查看</span><span data-en>View</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="pro-card reveal">
+        <div class="swatch pc-fermented"><div class="badge">⭐ 赣南螺丝椒</div></div>
+        <div class="info">
+          <h4><span data-zh>发酵辣椒小菜</span><span data-en>Fermented Chili Side</span></h4>
+          <div class="name-en"><span data-zh>Fermented Chili</span><span data-en>发酵辣椒小菜</span></div>
+          <div class="meta">100g · 50 / 箱</div>
+          <span class="view-link"><span data-zh>查看</span><span data-en>View</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="pro-card reveal">
+        <div class="swatch pc-soup"></div>
+        <div class="info">
+          <h4><span data-zh>奶油蘑菇汤</span><span data-en>Cream of Mushroom</span></h4>
+          <div class="name-en"><span data-zh>Mushroom Soup</span><span data-en>奶油蘑菇汤</span></div>
+          <div class="meta">300g · 30 / 箱</div>
+          <span class="view-link"><span data-zh>查看</span><span data-en>View</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="pro-card reveal">
+        <div class="swatch pc-salad"></div>
+        <div class="info">
+          <h4><span data-zh>凯撒沙拉鸡肉</span><span data-en>Caesar Chicken Salad</span></h4>
+          <div class="name-en"><span data-zh>Caesar Salad</span><span data-en>凯撒沙拉</span></div>
+          <div class="meta">200g · 30 / 箱</div>
+          <span class="view-link"><span data-zh>查看</span><span data-en>View</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="pro-card reveal">
+        <div class="swatch pc-quiche"></div>
+        <div class="info">
+          <h4><span data-zh>法式咸派</span><span data-en>French Quiche</span></h4>
+          <div class="name-en"><span data-zh>Quiche Lorraine</span><span data-en>法式咸派</span></div>
+          <div class="meta">180g · 24 / 箱</div>
+          <span class="view-link"><span data-zh>查看</span><span data-en>View</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="pro-card reveal">
+        <div class="swatch pc-tiramisu"></div>
+        <div class="info">
+          <h4><span data-zh>意式提拉米苏</span><span data-en>Tiramisu</span></h4>
+          <div class="name-en"><span data-zh>Tiramisu</span><span data-en>意式提拉米苏</span></div>
+          <div class="meta">100g · 60 / 箱</div>
+          <span class="view-link"><span data-zh>查看</span><span data-en>View</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="pro-card reveal">
+        <div class="swatch pc-croissant"></div>
+        <div class="info">
+          <h4><span data-zh>可颂底胚</span><span data-en>Croissant Base</span></h4>
+          <div class="name-en"><span data-zh>Croissant Base</span><span data-en>可颂底胚</span></div>
+          <div class="meta">80g · 60 / 箱</div>
+          <span class="view-link"><span data-zh>查看</span><span data-en>View</span> →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="#" class="btn-link">
+        <span data-zh>查看完整咖啡馆 SKU 列表(32 款)</span>
+        <span data-en>See all 32 café-recommended SKUs</span>
+        →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 5 · Success Cases ═══════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="grid md:grid-cols-12 gap-8 mb-12 reveal">
+      <div class="md:col-span-5">
+        <div class="section-no mb-6">04 / Success Stories</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(36px, 4.5vw, 56px);">
+          <span data-zh>真实案例<br>看看花花做了什么</span>
+          <span data-en>Real cases.<br>Real numbers.</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <div class="case-big reveal delay-1">
+        <div class="case-tag">CASE 01 · East China</div>
+        <h3>
+          <span data-zh>某华东精品咖啡连锁 · 24 店</span>
+          <span data-en>East China Premium Coffee Chain · 24 stores</span>
+        </h3>
+        <p class="case-desc">
+          <span data-zh>2024 年开始合作,导入花花全套早餐 + 下午茶方案。重点引入黑松露披萨作为下午茶招牌,辅以 8 款季节性轻食。</span>
+          <span data-en>Started in 2024 — Foodvio's full breakfast + afternoon tea program rolled out, anchored by Black Truffle Pizza as a signature, with 8 seasonal light-meal SKUs.</span>
+        </p>
+        <div class="case-stats">
+          <div>
+            <div class="stat-num">500</div>
+            <div class="stat-label"><span data-zh>单店月销披萨</span><span data-en>Pizzas / store / month</span></div>
+          </div>
+          <div>
+            <div class="stat-num">+35%</div>
+            <div class="stat-label"><span data-zh>下午茶营收</span><span data-en>Afternoon tea revenue</span></div>
+          </div>
+          <div>
+            <div class="stat-num">12</div>
+            <div class="stat-label"><span data-zh>导入花花 SKU</span><span data-en>Foodvio SKUs adopted</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-big reveal delay-2">
+        <div class="case-tag">CASE 02 · Beijing</div>
+        <h3>
+          <span data-zh>某北京独立精品咖啡 · 5 店</span>
+          <span data-en>Beijing Boutique Coffee · 5 stores</span>
+        </h3>
+        <p class="case-desc">
+          <span data-zh>独立品牌,主打"咖啡 + 早午餐"hybrid 模式。导入花花自有研发的早餐披萨与意式香草鸡,差异化定位带动客单价提升。</span>
+          <span data-en>Independent brand running coffee + brunch hybrid concept. Brought in Foodvio's signature breakfast pizza and herb chicken to power differentiated positioning.</span>
+        </p>
+        <div class="case-stats">
+          <div>
+            <div class="stat-num">+42%</div>
+            <div class="stat-label"><span data-zh>客单价提升</span><span data-en>Avg ticket lift</span></div>
+          </div>
+          <div>
+            <div class="stat-num">68%</div>
+            <div class="stat-label"><span data-zh>正餐时段占比</span><span data-en>Meal-time traffic share</span></div>
+          </div>
+          <div>
+            <div class="stat-num">3 mo</div>
+            <div class="stat-label"><span data-zh>实现 ROI 周期</span><span data-en>To breakeven</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 6 · Data + Voice ═══════════ -->
+<section class="bg-cream py-24 md:py-28">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-12 reveal">
+      <div class="section-no mb-6 inline-block">05 / By the Numbers</div>
+      <h2 class="font-serif-sc font-bold text-forest" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.15;">
+        <span data-zh>300+ 精品咖啡品牌的选择</span>
+        <span data-en>The choice of 300+ premium coffee brands</span>
+      </h2>
+    </div>
+
+    <div class="stat-row reveal delay-1 mb-12">
+      <div class="stat-block">
+        <div class="num">300+</div>
+        <div class="lbl"><span data-zh>合作咖啡品牌</span><span data-en>Coffee partners</span></div>
+      </div>
+      <div class="stat-block">
+        <div class="num">8-10</div>
+        <div class="lbl"><span data-zh>平均单店 SKU</span><span data-en>Avg SKUs / store</span></div>
+      </div>
+      <div class="stat-block">
+        <div class="num">85%</div>
+        <div class="lbl"><span data-zh>合作复购率</span><span data-en>Repeat order rate</span></div>
+      </div>
+      <div class="stat-block">
+        <div class="num">+30%</div>
+        <div class="lbl"><span data-zh>典型营收提升</span><span data-en>Typical revenue lift</span></div>
+      </div>
+    </div>
+
+    <!-- Featured testimonial -->
+    <div class="max-w-3xl mx-auto reveal delay-2">
+      <div class="bg-white rounded-2xl border border-forest/8 p-10 relative overflow-hidden">
+        <div class="font-display italic absolute -top-4 left-8 text-terra/30" style="font-size: 140px; line-height: 1;">"</div>
+        <p class="font-serif-sc text-lg text-forest italic leading-relaxed mb-6 relative z-10">
+          <span data-zh>米饭锁水效果很好,水分没有流失。出品稳定后,客户回头率提高了 30%。我们 24 家店已经全部用花花的方案。</span>
+          <span data-en>The output is consistent — moisture stays right, customers come back. Repeat rate up 30%. All 24 of our stores now run Foodvio's program.</span>
+        </p>
+        <div class="text-sm text-forest/65 pt-4 border-t border-forest/10">
+          <span data-zh>某华东连锁咖啡品牌 · 主理人</span>
+          <span data-en>East China Coffee Chain · Owner</span>
+          <span class="block font-display italic text-terra text-xs tracking-wider mt-1">East China · 24 stores · Featured Case</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 7 · Bottom CTA ═══════════ -->
+<section id="bottom-cta" class="py-28 md:py-32 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="cta-block reveal">
+      <div class="relative z-10 max-w-3xl mx-auto text-center">
+        <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6">
+          READY TO UPGRADE YOUR CAFÉ MENU?
+        </div>
+        <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size: clamp(36px, 4.5vw, 56px); line-height: 1.15;">
+          <span data-zh>是时候让咖啡馆<br>不只卖咖啡</span>
+          <span data-en>Time to make your café<br>more than coffee.</span>
+        </h2>
+        <p class="text-white/75 text-lg mb-12 leading-relaxed">
+          <span data-zh>从早餐到下午茶,让花花的米其林研发团队成为你的菜单顾问。</span>
+          <span data-en>From breakfast to afternoon tea — let our Michelin R&D team become your menu consultant.</span>
+        </p>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="#" class="btn-primary"><span data-zh>申请样品</span><span data-en>Request Samples</span><span class="arrow">→</span></a>
+          <a href="#" class="btn-outline"><span data-zh>下载案例研究</span><span data-en>Download Case Study</span></a>
+          <a href="#" class="btn-outline"><span data-zh>预约通话</span><span data-en>Book a Call</span></a>
+        </div>
+        <div class="mt-10 pt-8 border-t border-white/15 text-white/60 text-sm">
+          📞 400-6879-568 · 📧 huahuakefu1@foodvio.com.cn
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。从田间到餐桌,世界风味,中国制造。</span>
+          <span data-en>The professional Western cuisine brand from China.</span>
+        </p>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a>
+        <a href="#" class="footer-link">Western Staples</a>
+        <a href="#" class="footer-link">Fried Snacks</a>
+        <a href="#" class="footer-link">Main Courses</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a>
+        <a href="for-industrial-v62.html" class="footer-link">Industrial</a>
+        <a href="for-retail-v62.html" class="footer-link">Retail</a>
+        <a href="for-online-sales-v62.html" class="footer-link">Online Sales</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div>
+        <a href="#" class="footer-link">Our Story</a>
+        <a href="#" class="footer-link">Capabilities</a>
+        <a href="#" class="footer-link">Insights</a>
+        <a href="#" class="footer-link">About</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55 leading-relaxed">400-6879-568<br>huahuakefu1@<br>foodvio.com.cn</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div class="flex items-center gap-5"><span>京 ICP 备 2022025117 号-1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > 600);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

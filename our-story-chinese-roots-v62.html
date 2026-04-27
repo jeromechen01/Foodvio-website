@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chinese Roots · Foodvio 花花食界 — 8 Origins, From Field to Plate</title>
+<meta name="description" content="花花食界中国原料故事 · 8 大原料产地 · 江西赣南螺丝椒 / 云南黑松露 / 东北五常 / 内蒙古 / 新疆 / 福建 / 山东 / 粤桂" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'sans-sc': ['"Noto Sans SC"', 'sans-serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
+  }}}
+</script>
+
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.05; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
+  }
+
+  .hero-bg { position: absolute; inset: 0; background: var(--ink); overflow: hidden; }
+  .hero-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(245,200,46,0.15) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, rgba(129,178,154,0.18) 0%, transparent 55%);
+  }
+  .hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(180deg, transparent 0%, transparent 70%, rgba(13,42,31,0.6) 100%);
+  }
+
+  .section-no { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-weight: 500; letter-spacing: 0.12em; font-size: 14px; }
+  .section-no::before { content: '— '; margin-right: 6px; }
+
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.08s; } .delay-2 { transition-delay: 0.16s; } .delay-3 { transition-delay: 0.24s; }
+  .delay-4 { transition-delay: 0.32s; } .delay-5 { transition-delay: 0.40s; } .delay-6 { transition-delay: 0.48s; }
+  .delay-7 { transition-delay: 0.56s; } .delay-8 { transition-delay: 0.64s; }
+
+  .hero-title { font-family: 'Noto Serif SC', serif; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #fff; }
+
+  /* China map decoration (CSS-only abstract) */
+  .map-deco {
+    position: relative;
+    background:
+      radial-gradient(ellipse 200px 60px at 35% 45%, rgba(245,200,46,0.4) 0%, transparent 70%),
+      radial-gradient(circle 4px at 22% 38%, var(--sage) 0%, transparent 70%),
+      radial-gradient(circle 4px at 38% 28%, var(--sage) 0%, transparent 70%),
+      radial-gradient(circle 4px at 50% 32%, var(--sage) 0%, transparent 70%),
+      radial-gradient(circle 6px at 45% 65%, var(--rust) 0%, transparent 70%),
+      radial-gradient(circle 4px at 58% 60%, var(--sage) 0%, transparent 70%),
+      radial-gradient(circle 4px at 65% 52%, var(--sage) 0%, transparent 70%),
+      radial-gradient(circle 4px at 70% 70%, var(--sage) 0%, transparent 70%),
+      radial-gradient(circle 4px at 75% 78%, var(--sage) 0%, transparent 70%);
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    background-color: rgba(27,67,50,0.04);
+    border: 1px solid rgba(27,67,50,0.08);
+  }
+
+  /* Origin card */
+  .origin-card {
+    background: #fff;
+    border: 1px solid rgba(27,67,50,0.06);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .origin-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--sage);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(.16,.84,.28,.99);
+  }
+  .origin-card.featured::before { background: var(--rust); transform: scaleX(1); }
+  .origin-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -16px rgba(13,42,31,0.18);
+  }
+  .origin-card:hover::before { transform: scaleX(1); }
+  .origin-card .visual {
+    aspect-ratio: 5/3;
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .origin-card .visual::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.15; mix-blend-mode: multiply;
+  }
+  .origin-card .visual .icon-big {
+    font-size: 64px; line-height: 1;
+    z-index: 1; position: relative;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+  }
+  .origin-card .featured-badge {
+    position: absolute; top: 14px; right: 14px;
+    background: var(--rust); color: #fff;
+    padding: 4px 10px; border-radius: 999px;
+    font-size: 10px; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    z-index: 2;
+  }
+  /* 8 origin colors */
+  .ov-chili { background: linear-gradient(135deg, #B8231C 0%, #7a0f0a 100%); }
+  .ov-truffle { background: linear-gradient(135deg, #3E2712 0%, #1A0F08 100%); }
+  .ov-rice { background: linear-gradient(135deg, #f0d878 0%, #c19818 100%); }
+  .ov-meat { background: linear-gradient(135deg, #8B3A1F 0%, #5C2412 100%); }
+  .ov-flour { background: linear-gradient(135deg, #f5e8c5 0%, #d4b870 100%); }
+  .ov-seafood { background: linear-gradient(135deg, #4A90E2 0%, #1e5b9e 100%); }
+  .ov-poultry { background: linear-gradient(135deg, #E8A852 0%, #B87520 100%); }
+  .ov-marine { background: linear-gradient(135deg, #5a8f9e 0%, #2c5563 100%); }
+
+  .origin-card .info { padding: 24px 22px; flex-grow: 1; display: flex; flex-direction: column; }
+  .origin-card .region {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra);
+    font-size: 12px; letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .origin-card h3 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 19px; color: var(--forest);
+    margin-bottom: 4px; line-height: 1.3;
+  }
+  .origin-card .name-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .origin-card .desc {
+    font-size: 13px; color: rgba(13,42,31,0.7);
+    line-height: 1.6; margin-bottom: 14px; flex-grow: 1;
+  }
+  .origin-card .powers {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: rgba(13,42,31,0.55); font-size: 12px;
+    padding: 12px 0;
+    border-top: 1px dashed rgba(27,67,50,0.12);
+    margin-bottom: 14px;
+  }
+  .origin-card .powers .label {
+    color: var(--terra); margin-right: 6px;
+    text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px;
+  }
+  .origin-card .arrow {
+    color: var(--rust); font-size: 13px; font-weight: 500;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: gap 0.3s;
+  }
+  .origin-card:hover .arrow { gap: 12px; }
+
+  /* Promise items */
+  .promise-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(13,42,31,0.08);
+    align-items: flex-start;
+  }
+  .promise-row:last-child { border-bottom: none; }
+  .promise-icon {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 2px solid var(--sage);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+  .promise-row h4 {
+    font-family: 'Noto Serif SC', serif; font-weight: 600;
+    font-size: 18px; color: var(--forest); margin-bottom: 8px;
+  }
+  .promise-row p {
+    font-size: 14px; color: rgba(13,42,31,0.7);
+    line-height: 1.65;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px; background: var(--rust); color: #fff;
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+    box-shadow: 0 8px 24px -10px rgba(199,62,58,0.5);
+  }
+  .btn-primary:hover { background: #b03531; transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: transparent; color: var(--forest);
+    border: 1px solid rgba(27,67,50,0.3);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: var(--cream); border-color: var(--forest); }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand, .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+  .nav-link { position: relative; font-size: 14px; letter-spacing: 0.02em; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+
+  @media (max-width: 768px) {
+    .mega-menu { display: none; }
+  }
+</style>
+</head>
+
+<body class="grain">
+
+<!-- NAV -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="foodvio-home-zh-v62.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown active" data-menu="story">Our Story</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a>
+        <a href="#" class="mega-link">Western Staples</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
+        <a href="products-index-v62.html" class="mega-link">花花食界</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="#" class="mega-link">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick Access</div>
+        <a href="#" class="mega-link">📄 Catalog</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link">🔵 轻后厨(6)</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured</div>
+        <a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡 24 店</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 中国原料,世界品质</a>
+        <a href="#" class="mega-link featured">👨‍🍳 世界大师,中国研发</a>
+        <a href="#" class="mega-link featured">🌏 我们更懂中国客户</a></div>
+      <div class="col-span-4"><div class="mega-col-title">8 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link featured">🌶️ 江西 · 赣南螺丝椒</a>
+        <a href="#" class="mega-link">🍄 云南 · 黑松露</a>
+        <a href="#" class="mega-link">🌾 东北 · 五常大米</a></div>
+      <div class="col-span-4"><div class="mega-col-title">6 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Manufacturing</div><a href="#" class="mega-link">🏭 江西赣州</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Expertise</div><a href="#" class="mega-link">米其林研发</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Certifications</div><a href="#" class="mega-link">HACCP</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-[640px] flex items-end pb-20 pt-32 overflow-hidden">
+  <div class="hero-bg"></div>
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
+
+    <div class="breadcrumb mb-12 reveal">
+      <a href="foodvio-home-zh-v62.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <a href="our-story-index-v62.html">Our Story</a>
+      <span class="sep">›</span>
+      <span class="text-white"><span data-zh>中国原料</span><span data-en>Chinese Roots</span></span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-9">
+        <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
+          STORY 01 / CHINESE ROOTS
+        </div>
+        <h1 class="hero-title reveal delay-1" style="font-size: clamp(48px, 7vw, 100px);">
+          <span data-zh>中国原料<br>世界品质</span>
+          <span data-en>Chinese Roots,<br>World-Class Ingredients.</span>
+        </h1>
+        <p class="font-display italic text-white/65 mt-8 text-lg md:text-2xl reveal delay-2 max-w-2xl" data-zh>
+          8 origins, from field to plate.
+        </p>
+        <p class="font-serif-sc text-white/65 mt-8 text-base md:text-lg reveal delay-2 max-w-2xl" data-en>
+          8 大原料产地 · 从田间到餐桌
+        </p>
+        <p class="text-white/75 text-base md:text-lg max-w-2xl mt-8 leading-relaxed reveal delay-3">
+          <span data-zh>我们坚信,最好的西餐,始于最好的原料 —— 而最好的原料,常常就在中国的土地上。</span>
+          <span data-en>We believe world-class Western food begins with world-class ingredients — and the best ingredients are often found right here in China.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ MAP OVERVIEW ════════ -->
+<section class="bg-paper py-24 md:py-28">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
+
+      <div class="md:col-span-5 reveal">
+        <div class="section-no mb-6">01 / The Map</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight mb-6" style="font-size: clamp(32px, 4vw, 48px);">
+          <span data-zh>八个产地<br>遍布中国</span>
+          <span data-en>Eight origins<br>across China.</span>
+        </h2>
+        <p class="font-display italic text-terra text-lg mb-8">
+          <span data-zh>从赣南红土地到云南深山,从内蒙古草原到福建海岸。</span>
+          <span data-en>From Gannan's red soil to Yunnan's mountains, from Inner Mongolia's grasslands to Fujian's coast.</span>
+        </p>
+        <p class="text-base text-forest/75 leading-relaxed">
+          <span data-zh>每一个产地,都对应一种我们坚持深耕的食材。我们与产地的农户、合作社建立长期合作,从源头确保品质稳定。</span>
+          <span data-en>Each origin corresponds to an ingredient we commit to deeply. We build long-term partnerships with farmers and cooperatives, ensuring quality from the source.</span>
+        </p>
+      </div>
+
+      <div class="md:col-span-7 reveal delay-1">
+        <div class="map-deco">
+          <!-- Annotations -->
+          <div class="absolute" style="left: 20%; top: 22%;">
+            <div class="text-xs text-forest/70 font-display italic">新疆</div>
+          </div>
+          <div class="absolute" style="left: 38%; top: 18%;">
+            <div class="text-xs text-forest/70 font-display italic">内蒙古</div>
+          </div>
+          <div class="absolute" style="left: 50%; top: 22%;">
+            <div class="text-xs text-forest/70 font-display italic">东北</div>
+          </div>
+          <div class="absolute" style="left: 32%; top: 56%;">
+            <div class="text-xs text-rust font-display italic font-semibold">⭐ 江西赣南</div>
+          </div>
+          <div class="absolute" style="left: 24%; top: 70%;">
+            <div class="text-xs text-forest/70 font-display italic">云南</div>
+          </div>
+          <div class="absolute" style="left: 60%; top: 53%;">
+            <div class="text-xs text-forest/70 font-display italic">山东</div>
+          </div>
+          <div class="absolute" style="left: 65%; top: 70%;">
+            <div class="text-xs text-forest/70 font-display italic">福建</div>
+          </div>
+          <div class="absolute" style="left: 70%; top: 80%;">
+            <div class="text-xs text-forest/70 font-display italic">粤桂</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8 ORIGIN CARDS ════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-16 reveal">
+      <div class="section-no mb-6 inline-block">02 / The Eight</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.1;">
+        <span data-zh>八种食材,八个故事</span>
+        <span data-en>Eight ingredients, eight stories.</span>
+      </h2>
+      <p class="font-display italic text-terra text-lg">
+        <span data-zh>每一颗食材,都值得被认真讲述。</span>
+        <span data-en>Each ingredient deserves to be told properly.</span>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+
+      <a href="our-story-chinese-roots-gannan-chili-v62.html" class="origin-card featured reveal delay-1">
+        <div class="visual ov-chili">
+          <span class="featured-badge">⭐ Featured</span>
+          <span class="icon-big">🌶️</span>
+        </div>
+        <div class="info">
+          <div class="region"><span data-zh>江西 · 赣南</span><span data-en>Jiangxi · Gannan</span></div>
+          <h3><span data-zh>赣南螺丝椒</span><span data-en>Gannan Luosijiao</span></h3>
+          <div class="name-en"><span data-zh>Gannan Luosijiao Chili</span><span data-en>螺丝椒</span></div>
+          <p class="desc"><span data-zh>红土地辣椒,辣而不燥,是 20+ 款酱料与发酵小菜的灵魂。</span><span data-en>Red-soil chili — fiery yet aromatic, the soul of 20+ sauce & side products.</span></p>
+          <div class="powers"><span class="label">POWERS:</span><span data-zh>韩式辣酱 / 发酵小菜 / 黑椒披萨</span><span data-en>Gochujang / Fermented Side / Pizza</span></div>
+          <span class="arrow"><span data-zh>读完整故事</span><span data-en>Read full story</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="origin-card reveal delay-2">
+        <div class="visual ov-truffle">
+          <span class="icon-big">🍄</span>
+        </div>
+        <div class="info">
+          <div class="region"><span data-zh>云南 · 楚雄</span><span data-en>Yunnan · Chuxiong</span></div>
+          <h3><span data-zh>云南黑松露</span><span data-en>Yunnan Black Truffle</span></h3>
+          <div class="name-en"><span data-zh>Yunnan Black Truffle</span><span data-en>云南黑松露</span></div>
+          <p class="desc"><span data-zh>云南深山的野生黑松露,赋予披萨与牛肝菌酱高级感。</span><span data-en>Wild black truffle from Yunnan's mountains — gives premium pizzas & porcini sauce their depth.</span></p>
+          <div class="powers"><span class="label">POWERS:</span><span data-zh>黑松露披萨 / 牛肝菌酱</span><span data-en>Truffle Pizza / Porcini Sauce</span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="origin-card reveal delay-3">
+        <div class="visual ov-rice">
+          <span class="icon-big">🌾</span>
+        </div>
+        <div class="info">
+          <div class="region"><span data-zh>东北 · 五常</span><span data-en>Northeast · Wuchang</span></div>
+          <h3><span data-zh>五常大米</span><span data-en>Wuchang Rice</span></h3>
+          <div class="name-en"><span data-zh>Wuchang Rice</span><span data-en>五常大米</span></div>
+          <p class="desc"><span data-zh>黑龙江五常稻花香米,锁水力强,是炒饭与饭团的基底。</span><span data-en>Heilongjiang's premium rice — strong moisture retention, the base of our rice products.</span></p>
+          <div class="powers"><span class="label">POWERS:</span><span data-zh>日式炒饭 / 西式饭团</span><span data-en>Japanese Rice / Western Rice Bowls</span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="origin-card reveal delay-4">
+        <div class="visual ov-meat">
+          <span class="icon-big">🐄</span>
+        </div>
+        <div class="info">
+          <div class="region"><span data-zh>内蒙古 · 锡林郭勒</span><span data-en>Inner Mongolia · Xilingol</span></div>
+          <h3><span data-zh>内蒙古牛羊肉</span><span data-en>Inner Mongolia Beef & Lamb</span></h3>
+          <div class="name-en"><span data-zh>Inner Mongolia Meat</span><span data-en>内蒙牛羊</span></div>
+          <p class="desc"><span data-zh>草原放养牛羊肉,纤维清晰、风味浓郁,撑起西式肉酱与肋排。</span><span data-en>Free-range beef & lamb — clean fiber, deep flavor — anchoring our Bolognese and ribs.</span></p>
+          <div class="powers"><span class="label">POWERS:</span><span data-zh>古法肉酱 / 美式烤肋排</span><span data-en>Bolognese / American Ribs</span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="origin-card reveal delay-5">
+        <div class="visual ov-flour">
+          <span class="icon-big">🌾</span>
+        </div>
+        <div class="info">
+          <div class="region"><span data-zh>新疆 · 北疆</span><span data-en>Xinjiang · North</span></div>
+          <h3><span data-zh>新疆优质面粉</span><span data-en>Xinjiang Premium Flour</span></h3>
+          <div class="name-en"><span data-zh>Xinjiang Flour</span><span data-en>新疆面粉</span></div>
+          <p class="desc"><span data-zh>戈壁日晒小麦,蛋白质含量高,是披萨饼底嚼劲的关键。</span><span data-en>Gobi sun-grown wheat — high protein, the secret to our pizza bases' bite.</span></p>
+          <div class="powers"><span class="label">POWERS:</span><span data-zh>披萨饼底 / 可颂底胚</span><span data-en>Pizza Base / Croissant Base</span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="origin-card reveal delay-6">
+        <div class="visual ov-seafood">
+          <span class="icon-big">🐟</span>
+        </div>
+        <div class="info">
+          <div class="region"><span data-zh>福建 · 福州</span><span data-en>Fujian · Fuzhou</span></div>
+          <h3><span data-zh>福建深海产</span><span data-en>Fujian Deep-Sea Catch</span></h3>
+          <div class="name-en"><span data-zh>Fujian Deep-Sea</span><span data-en>福建海产</span></div>
+          <p class="desc"><span data-zh>福建沿海野生鳕鱼与小杂鱼,撑起西式炸品的核心鱼料。</span><span data-en>Wild cod and small fish from Fujian's coast — at the core of our fried seafood line.</span></p>
+          <div class="powers"><span class="label">POWERS:</span><span data-zh>黄金鳕鱼排 / 小食拼盘</span><span data-en>Cod Fillets / Seafood Snacks</span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="origin-card reveal delay-7">
+        <div class="visual ov-poultry">
+          <span class="icon-big">🐔</span>
+        </div>
+        <div class="info">
+          <div class="region"><span data-zh>山东 · 潍坊</span><span data-en>Shandong · Weifang</span></div>
+          <h3><span data-zh>山东禽类</span><span data-en>Shandong Poultry</span></h3>
+          <div class="name-en"><span data-zh>Shandong Poultry</span><span data-en>山东禽类</span></div>
+          <p class="desc"><span data-zh>山东标准化禽类养殖,鸡肉细腻紧实,是炸品与香草鸡的基础。</span><span data-en>Standardized poultry from Shandong — fine, firm chicken anchoring our fried snacks and herb chicken.</span></p>
+          <div class="powers"><span class="label">POWERS:</span><span data-zh>意式香草鸡 / 鸡肉锅巴</span><span data-en>Italian Herb Chicken / Chicken Snacks</span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="origin-card reveal delay-8">
+        <div class="visual ov-marine">
+          <span class="icon-big">🦐</span>
+        </div>
+        <div class="info">
+          <div class="region"><span data-zh>粤桂 · 北部湾</span><span data-en>Guangdong-Guangxi · Beibu Gulf</span></div>
+          <h3><span data-zh>粤桂海洋蛋白</span><span data-en>Guangdong-Guangxi Marine</span></h3>
+          <div class="name-en"><span data-zh>GD-GX Marine Protein</span><span data-en>粤桂海洋蛋白</span></div>
+          <p class="desc"><span data-zh>北部湾海域虾贝,鲜度高、口感弹润,用于跨境海产 OEM。</span><span data-en>Shrimp & shellfish from Beibu Gulf — high freshness, springy texture, used in cross-border seafood OEM.</span></p>
+          <div class="powers"><span class="label">POWERS:</span><span data-zh>海鲜披萨 / 海产小食</span><span data-en>Seafood Pizza / Marine Snacks</span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SOURCING PROMISE ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-16 reveal">
+      <div class="section-no mb-6 inline-block">03 / Our Promise</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.1;">
+        <span data-zh>溯源承诺</span>
+        <span data-en>Our sourcing promise.</span>
+      </h2>
+      <p class="font-display italic text-terra text-lg">
+        <span data-zh>对每一颗原料,我们都做到这三件事。</span>
+        <span data-en>For every ingredient, we promise three things.</span>
+      </p>
+    </div>
+
+    <div class="reveal delay-1">
+
+      <div class="promise-row">
+        <div class="promise-icon">🔬</div>
+        <div>
+          <h4><span data-zh>第三方独立检测</span><span data-en>Third-party verification</span></h4>
+          <p><span data-zh>每一批次原料,均经过 SGS 或 BV 等独立第三方检测机构进行品质与安全检验,报告随产品同步交付。</span><span data-en>Every batch is tested by independent SGS or BV facilities for quality and safety. Reports delivered alongside product.</span></p>
+        </div>
+      </div>
+
+      <div class="promise-row">
+        <div class="promise-icon">📋</div>
+        <div>
+          <h4><span data-zh>批次全链路可追溯</span><span data-en>Full-chain batch traceability</span></h4>
+          <p><span data-zh>从原料田间到成品出厂,每一批次都有完整的追溯记录。任何一袋花花产品,都能查到它来自哪一片土地。</span><span data-en>From field to finished product, every batch carries a complete traceability log. Any Foodvio package — we can tell you what soil it came from.</span></p>
+        </div>
+      </div>
+
+      <div class="promise-row">
+        <div class="promise-icon">🚜</div>
+        <div>
+          <h4><span data-zh>每年 2 次产地访查</span><span data-en>Twice-yearly origin audit</span></h4>
+          <p><span data-zh>我们的供应链团队每年至少 2 次实地访查每个核心产地,与农户、合作社建立直接联系,长期合作并不通过中间商。</span><span data-en>Our supply chain team visits each core origin at least twice per year — building direct, long-term partnerships without middlemen.</span></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ CTA ════════ -->
+<section class="bg-cream py-24 md:py-28 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto text-center reveal">
+    <p class="font-display italic text-terra text-lg mb-6">— Your turn now.</p>
+    <h2 class="font-serif-sc font-bold text-forest mb-8" style="font-size: clamp(28px, 3.5vw, 44px); line-height: 1.2;">
+      <span data-zh>想亲眼看看这些产地?</span>
+      <span data-en>Want to see these origins for yourself?</span>
+    </h2>
+    <p class="text-base md:text-lg text-forest/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+      <span data-zh>我们提供溯源访查、农场参观、第三方检测报告下载。让你的客户也能讲述这些故事。</span>
+      <span data-en>We offer origin tours, farm visits, and downloadable third-party test reports — so your customers can tell these stories too.</span>
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#" class="btn-primary">
+        <span data-zh>预约产地访查</span>
+        <span data-en>Book an origin tour</span>
+        <span>→</span>
+      </a>
+      <a href="#" class="btn-outline">
+        <span data-zh>下载溯源报告 PDF</span>
+        <span data-en>Download origin report</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。从田间到餐桌,世界风味,中国制造。</span>
+          <span data-en>The professional Western cuisine brand from China.</span>
+        </p>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a>
+        <a href="#" class="footer-link">Healthy Sides</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a>
+        <a href="for-industrial-v62.html" class="footer-link">Industrial</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div>
+        <a href="our-story-index-v62.html" class="footer-link">Our Story</a>
+        <a href="our-story-chinese-roots-v62.html" class="footer-link">Chinese Roots</a>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="footer-link">Gannan Chili</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55 leading-relaxed">400-6879-568<br>huahuakefu1@<br>foodvio.com.cn</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div class="flex items-center gap-5"><span>京 ICP 备 2022025117 号-1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > 600);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

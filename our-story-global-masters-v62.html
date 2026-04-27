@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Global Masters · Foodvio 花花食界 — Trained Across 6 Countries</title>
+<meta name="description" content="花花食界世界大师故事 · 主厨在那不勒斯学披萨 / 在东京学寿司 / 在首尔学发酵 / 在墨西哥学 Mole · 6 国学习,中国研发" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
+  }}}
+</script>
+
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.05; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
+  }
+
+  .hero-bg { position: absolute; inset: 0; background: var(--ink); overflow: hidden; }
+  .hero-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(74,144,226,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, rgba(245,200,46,0.12) 0%, transparent 55%);
+  }
+  .hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(180deg, transparent 0%, transparent 70%, rgba(13,42,31,0.6) 100%);
+  }
+
+  .section-no { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-weight: 500; letter-spacing: 0.12em; font-size: 14px; }
+  .section-no::before { content: '— '; margin-right: 6px; }
+
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; }
+  .delay-4 { transition-delay: 0.40s; } .delay-5 { transition-delay: 0.50s; } .delay-6 { transition-delay: 0.60s; }
+
+  .hero-title { font-family: 'Noto Serif SC', serif; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #fff; }
+
+  /* World map decoration */
+  .world-deco {
+    position: relative;
+    aspect-ratio: 16/7;
+    background:
+      radial-gradient(circle 8px at 18% 50%, var(--sage) 0%, transparent 70%),  /* Mexico */
+      radial-gradient(circle 6px at 38% 32%, var(--terra) 0%, transparent 70%), /* Spain */
+      radial-gradient(circle 6px at 42% 35%, var(--rust) 0%, transparent 70%),  /* Italy */
+      radial-gradient(circle 6px at 65% 36%, var(--sage) 0%, transparent 70%),  /* China */
+      radial-gradient(circle 6px at 75% 40%, var(--gold) 0%, transparent 70%),  /* Korea */
+      radial-gradient(circle 6px at 78% 42%, var(--gold) 0%, transparent 70%),  /* Japan */
+      radial-gradient(circle 6px at 70% 60%, var(--sky) 0%, transparent 70%);   /* SEA */
+    background-color: rgba(27,67,50,0.04);
+    border: 1px solid rgba(27,67,50,0.08);
+    border-radius: 12px;
+  }
+
+  /* Master/country card */
+  .master-card {
+    background: #fff;
+    border: 1px solid rgba(27,67,50,0.06);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .master-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(.16,.84,.28,.99);
+  }
+  .master-card.featured::before { transform: scaleX(1); }
+  .master-card.c-italy::before, .master-card.c-italy.featured::before { background: #008C45; }
+  .master-card.c-spain::before { background: #C60B1E; }
+  .master-card.c-korea::before { background: #003478; }
+  .master-card.c-japan::before { background: #BC002D; }
+  .master-card.c-sea::before { background: #FFD700; }
+  .master-card.c-mexico::before { background: #006847; }
+  .master-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -16px rgba(13,42,31,0.18);
+  }
+  .master-card:hover::before { transform: scaleX(1); }
+
+  .master-card .visual {
+    aspect-ratio: 5/3;
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+  }
+  .master-card .visual::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.18; mix-blend-mode: multiply;
+  }
+  .master-card .flag-big {
+    font-size: 72px; line-height: 1;
+    z-index: 1; position: relative;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+  }
+  .v-italy { background: linear-gradient(135deg, #008C45 0%, #034b25 50%, #CD212A 100%); }
+  .v-spain { background: linear-gradient(135deg, #FFC400 0%, #C60B1E 100%); }
+  .v-korea { background: linear-gradient(135deg, #003478 0%, #C60C30 100%); }
+  .v-japan { background: linear-gradient(135deg, #BC002D 0%, #6e0019 100%); }
+  .v-sea { background: linear-gradient(135deg, #2c5563 0%, #1a3a44 100%); }
+  .v-mexico { background: linear-gradient(135deg, #006847 0%, #CE1126 100%); }
+
+  .master-card .featured-badge {
+    position: absolute; top: 14px; right: 14px;
+    background: #fff; color: var(--rust);
+    padding: 4px 12px; border-radius: 999px;
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    z-index: 2; font-weight: 600;
+  }
+
+  .master-card .info { padding: 26px 24px; flex-grow: 1; display: flex; flex-direction: column; }
+  .master-card .country-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 13px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .master-card h3 {
+    font-family: 'Noto Serif SC', serif; font-weight: 700;
+    font-size: 22px; color: var(--forest);
+    margin-bottom: 6px; line-height: 1.3;
+  }
+  .master-card .city {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: rgba(13,42,31,0.55); font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .master-card .quote {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 14px; line-height: 1.65;
+    color: rgba(13,42,31,0.75);
+    font-style: italic;
+    padding: 16px 0;
+    border-top: 1px dashed rgba(27,67,50,0.12);
+    border-bottom: 1px dashed rgba(27,67,50,0.12);
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+  .master-card .duration {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    color: var(--terra); font-size: 12px;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+  }
+  .master-card .duration .num {
+    color: var(--rust); font-weight: 600;
+    font-size: 14px;
+  }
+  .master-card .arrow {
+    color: var(--rust); font-size: 13px; font-weight: 500;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: gap 0.3s;
+  }
+  .master-card:hover .arrow { gap: 12px; }
+
+  /* Process step */
+  .ps-step {
+    text-align: center;
+    position: relative;
+  }
+  .ps-step .step-num {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--terra);
+    color: var(--terra);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 18px;
+    transition: all 0.4s;
+  }
+  .ps-step:hover .step-num {
+    background: var(--terra);
+    color: #fff;
+    transform: scale(1.05);
+  }
+  .ps-step h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--forest);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .ps-step p {
+    font-size: 13px;
+    color: rgba(13,42,31,0.65);
+    line-height: 1.55;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px; background: var(--rust); color: #fff;
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+    box-shadow: 0 8px 24px -10px rgba(199,62,58,0.5);
+  }
+  .btn-primary:hover { background: #b03531; transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: transparent; color: var(--forest);
+    border: 1px solid rgba(27,67,50,0.3);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: var(--cream); border-color: var(--forest); }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand, .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+  .nav-link { position: relative; font-size: 14px; letter-spacing: 0.02em; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+
+  @media (max-width: 768px) { .mega-menu { display: none; } }
+</style>
+</head>
+
+<body class="grain">
+
+<!-- NAV -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="foodvio-home-zh-v62.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown active" data-menu="story">Our Story</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
+        <a href="products-index-v62.html" class="mega-link">花花食界</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="#" class="mega-link">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick Access</div><a href="#" class="mega-link">📄 Catalog</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link">🔵 轻后厨</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured</div>
+        <a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡 24 店</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 中国原料</a>
+        <a href="our-story-global-masters-v62.html" class="mega-link featured">👨‍🍳 世界大师</a>
+        <a href="#" class="mega-link featured">🌏 我们更懂中国</a></div>
+      <div class="col-span-4"><div class="mega-col-title">8 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link featured">🌶️ 江西 · 赣南螺丝椒</a></div>
+      <div class="col-span-4"><div class="mega-col-title">6 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇪🇸 Spain</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Manufacturing</div><a href="#" class="mega-link">🏭 江西赣州</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Expertise</div><a href="#" class="mega-link">米其林研发</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Certifications</div><a href="#" class="mega-link">HACCP</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-[640px] flex items-end pb-20 pt-32 overflow-hidden">
+  <div class="hero-bg"></div>
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
+
+    <div class="breadcrumb mb-12 reveal">
+      <a href="foodvio-home-zh-v62.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <a href="our-story-index-v62.html">Our Story</a>
+      <span class="sep">›</span>
+      <span class="text-white"><span data-zh>世界大师</span><span data-en>Global Masters</span></span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-9">
+        <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
+          STORY 02 / GLOBAL MASTERS
+        </div>
+        <h1 class="hero-title reveal delay-1" style="font-size: clamp(48px, 7vw, 100px);">
+          <span data-zh>世界大师<br>中国研发</span>
+          <span data-en>Global Masters,<br>Developed in China.</span>
+        </h1>
+        <p class="font-display italic text-white/65 mt-8 text-lg md:text-2xl reveal delay-2 max-w-2xl" data-zh>
+          Our chefs trained across 6 countries.
+        </p>
+        <p class="font-serif-sc text-white/65 mt-8 text-base md:text-lg reveal delay-2 max-w-2xl" data-en>
+          我们的主厨,在 6 个国家学艺
+        </p>
+        <p class="text-white/75 text-base md:text-lg max-w-2xl mt-8 leading-relaxed reveal delay-3">
+          <span data-zh>那不勒斯学披萨,东京学寿司,首尔学发酵,墨西哥学 Mole —— 把世界各国的味道,带回中国厨房。</span>
+          <span data-en>Naples for pizza. Tokyo for sushi. Seoul for fermentation. Oaxaca for mole. We bring world flavors home — to be remade in Chinese kitchens.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORLD MAP OVERVIEW -->
+<section class="bg-paper py-24 md:py-28">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
+
+      <div class="md:col-span-5 reveal">
+        <div class="section-no mb-6">01 / The Map</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight mb-6" style="font-size: clamp(32px, 4vw, 48px);">
+          <span data-zh>六个国家<br>跨越四大洲</span>
+          <span data-en>Six countries,<br>across four continents.</span>
+        </h2>
+        <p class="font-display italic text-terra text-lg mb-8">
+          <span data-zh>真正的全球风味,需要真正的现场学习。</span>
+          <span data-en>Real global flavor demands real on-site learning.</span>
+        </p>
+        <p class="text-base text-forest/75 leading-relaxed">
+          <span data-zh>我们不依赖二手食谱、不依赖网络搜索。我们的研发主厨,都曾亲赴当地,跟当地大师学艺,从根源理解这些菜系。</span>
+          <span data-en>We don't rely on secondhand recipes or internet research. Our R&D chefs travel to each origin and learn from local masters — understanding cuisines from the root.</span>
+        </p>
+      </div>
+
+      <div class="md:col-span-7 reveal delay-1">
+        <div class="world-deco">
+          <div class="absolute" style="left: 16%; top: 50%;"><div class="text-xs text-forest/70 font-display italic">🇲🇽 Mexico</div></div>
+          <div class="absolute" style="left: 36%; top: 28%;"><div class="text-xs text-forest/70 font-display italic">🇪🇸 Spain</div></div>
+          <div class="absolute" style="left: 41%; top: 38%;"><div class="text-xs text-rust font-display italic font-semibold">⭐ 🇮🇹 Italy</div></div>
+          <div class="absolute" style="left: 62%; top: 32%;"><div class="text-xs text-forest/70 font-display italic">📍 China</div></div>
+          <div class="absolute" style="left: 75%; top: 36%;"><div class="text-xs text-forest/70 font-display italic">🇰🇷 Korea</div></div>
+          <div class="absolute" style="left: 79%; top: 45%;"><div class="text-xs text-forest/70 font-display italic">🇯🇵 Japan</div></div>
+          <div class="absolute" style="left: 68%; top: 65%;"><div class="text-xs text-forest/70 font-display italic">🌏 SEA</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 6 COUNTRIES -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-16 reveal">
+      <div class="section-no mb-6 inline-block">02 / The Six</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.1;">
+        <span data-zh>六个国家,六位大师</span>
+        <span data-en>Six countries, six masters.</span>
+      </h2>
+      <p class="font-display italic text-terra text-lg">
+        <span data-zh>每一站,都是一段独立的学习旅程。</span>
+        <span data-en>Each stop is its own journey.</span>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <a href="our-story-global-masters-italy-v62.html" class="master-card c-italy featured reveal delay-1">
+        <div class="visual v-italy">
+          <span class="featured-badge">⭐ Featured</span>
+          <span class="flag-big">🇮🇹</span>
+        </div>
+        <div class="info">
+          <div class="country-en"><span data-zh>意大利</span><span data-en>Italy</span></div>
+          <h3><span data-zh>那不勒斯 · 披萨之乡</span><span data-en>Naples · Home of Pizza</span></h3>
+          <div class="city">Naples · Bologna · Milan</div>
+          <p class="quote">
+            <span data-zh>"在那不勒斯,披萨不是一种食物,是一种生活方式。我用 3 年才真正学懂这一点。"</span>
+            <span data-en>"In Naples, pizza isn't food. It's a way of life. It took me three years to understand this."</span>
+          </p>
+          <div class="duration"><span data-zh>学艺时长</span><span data-en>Duration</span> · <span class="num">3 <span data-zh>年</span><span data-en>years</span></span></div>
+          <span class="arrow"><span data-zh>读完整故事</span><span data-en>Read full story</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="master-card c-spain reveal delay-2">
+        <div class="visual v-spain">
+          <span class="flag-big">🇪🇸</span>
+        </div>
+        <div class="info">
+          <div class="country-en"><span data-zh>西班牙</span><span data-en>Spain</span></div>
+          <h3><span data-zh>圣塞 · 米其林之都</span><span data-en>San Sebastián · Michelin City</span></h3>
+          <div class="city">San Sebastián · Madrid · Barcelona</div>
+          <p class="quote">
+            <span data-zh>"火腿、海鲜饭、Tapas —— 西班牙菜的精髓是分享,这恰好与中国餐桌文化呼应。"</span>
+            <span data-en>"Jamón, paella, tapas — Spanish cuisine is built on sharing. That spirit echoes Chinese dining culture."</span>
+          </p>
+          <div class="duration"><span data-zh>学艺时长</span><span data-en>Duration</span> · <span class="num">2 <span data-zh>年</span><span data-en>years</span></span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="master-card c-korea reveal delay-3">
+        <div class="visual v-korea">
+          <span class="flag-big">🇰🇷</span>
+        </div>
+        <div class="info">
+          <div class="country-en"><span data-zh>韩国</span><span data-en>Korea</span></div>
+          <h3><span data-zh>首尔 · 发酵之都</span><span data-en>Seoul · Capital of Fermentation</span></h3>
+          <div class="city">Seoul · Jeonju · Busan</div>
+          <p class="quote">
+            <span data-zh>"韩国厨房教会我:发酵不只是工艺,是时间与微生物的协作。"</span>
+            <span data-en>"Korean kitchens taught me: fermentation isn't just technique. It's time partnering with microbes."</span>
+          </p>
+          <div class="duration"><span data-zh>学艺时长</span><span data-en>Duration</span> · <span class="num">2 <span data-zh>年</span><span data-en>years</span></span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="master-card c-japan reveal delay-4">
+        <div class="visual v-japan">
+          <span class="flag-big">🇯🇵</span>
+        </div>
+        <div class="info">
+          <div class="country-en"><span data-zh>日本</span><span data-en>Japan</span></div>
+          <h3><span data-zh>东京 · 极致工艺</span><span data-en>Tokyo · Craftsmanship</span></h3>
+          <div class="city">Tokyo · Kyoto · Osaka</div>
+          <p class="quote">
+            <span data-zh>"在东京,我学到的是'减法'—— 去掉一切多余的,只留必要。这改变了我对调味的整个看法。"</span>
+            <span data-en>"In Tokyo I learned subtraction — strip everything until only the necessary remains. It rewired how I season."</span>
+          </p>
+          <div class="duration"><span data-zh>学艺时长</span><span data-en>Duration</span> · <span class="num">2.5 <span data-zh>年</span><span data-en>years</span></span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="master-card c-sea reveal delay-5">
+        <div class="visual v-sea">
+          <span class="flag-big">🌏</span>
+        </div>
+        <div class="info">
+          <div class="country-en"><span data-zh>东南亚</span><span data-en>Southeast Asia</span></div>
+          <h3><span data-zh>曼谷 · 香料之乡</span><span data-en>Bangkok · Land of Spices</span></h3>
+          <div class="city">Bangkok · Hanoi · Penang</div>
+          <p class="quote">
+            <span data-zh>"东南亚菜的核心是'不平衡的平衡'—— 酸辣咸甜各占其位,缺一不可。"</span>
+            <span data-en>"SEA cuisine is balanced imbalance — sour, spicy, salty, sweet — each demanding its place."</span>
+          </p>
+          <div class="duration"><span data-zh>学艺时长</span><span data-en>Duration</span> · <span class="num">2 <span data-zh>年</span><span data-en>years</span></span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+      <a href="#" class="master-card c-mexico reveal delay-6">
+        <div class="visual v-mexico">
+          <span class="flag-big">🇲🇽</span>
+        </div>
+        <div class="info">
+          <div class="country-en"><span data-zh>墨西哥</span><span data-en>Mexico</span></div>
+          <h3><span data-zh>瓦哈卡 · Mole 之乡</span><span data-en>Oaxaca · Home of Mole</span></h3>
+          <div class="city">Oaxaca · Mexico City · Puebla</div>
+          <p class="quote">
+            <span data-zh>"瓦哈卡的 Mole 有 30 多种原料,煮 8 小时。它教会我'复杂'也是一种克制。"</span>
+            <span data-en>"Oaxacan mole — 30+ ingredients, 8 hours of slow cook. It taught me complexity is also restraint."</span>
+          </p>
+          <div class="duration"><span data-zh>学艺时长</span><span data-en>Duration</span> · <span class="num">1 <span data-zh>年</span><span data-en>year</span></span></div>
+          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- R&D PROCESS -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-16 reveal">
+      <div class="section-no mb-6 inline-block">03 / The Method</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.1;">
+        <span data-zh>从学艺到产品的过程</span>
+        <span data-en>From training to product.</span>
+      </h2>
+      <p class="font-display italic text-terra text-lg">
+        <span data-zh>我们不只是搬来配方,而是真正理解再重构。</span>
+        <span data-en>We don't import recipes. We understand, then rebuild.</span>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 reveal delay-1">
+      <div class="ps-step">
+        <div class="step-num">01</div>
+        <h4><span data-zh>当地学艺</span><span data-en>Local training</span></h4>
+        <p><span data-zh>1-3 年现场学习,跟当地大师工作</span><span data-en>1-3 years on-site, learning from local masters</span></p>
+      </div>
+      <div class="ps-step">
+        <div class="step-num">02</div>
+        <h4><span data-zh>原始配方</span><span data-en>Original recipe</span></h4>
+        <p><span data-zh>记录原始配方与技法,不做简化</span><span data-en>Document originals fully, no shortcuts</span></p>
+      </div>
+      <div class="ps-step">
+        <div class="step-num">03</div>
+        <h4><span data-zh>中国适配</span><span data-en>China adaptation</span></h4>
+        <p><span data-zh>根据中国客户口味与设备调整</span><span data-en>Adapt for Chinese palates and equipment</span></p>
+      </div>
+      <div class="ps-step">
+        <div class="step-num">04</div>
+        <h4><span data-zh>工厂量产化</span><span data-en>Industrialize</span></h4>
+        <p><span data-zh>转化为可量产的标准 SKU</span><span data-en>Translate to scalable SKUs</span></p>
+      </div>
+      <div class="ps-step">
+        <div class="step-num">05</div>
+        <h4><span data-zh>客户共创</span><span data-en>Co-create</span></h4>
+        <p><span data-zh>与具体客户做差异化定制</span><span data-en>Customize per partner brand</span></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-cream py-24 md:py-28 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto text-center reveal">
+    <p class="font-display italic text-terra text-lg mb-6">— Want to taste these journeys?</p>
+    <h2 class="font-serif-sc font-bold text-forest mb-8" style="font-size: clamp(28px, 3.5vw, 44px); line-height: 1.2;">
+      <span data-zh>想品尝这些旅程?</span>
+      <span data-en>Want to taste these journeys?</span>
+    </h2>
+    <p class="text-base md:text-lg text-forest/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+      <span data-zh>6 国风味样品组合,让你一次性体验 6 国大师的研发成果。</span>
+      <span data-en>A 6-country sample pack — taste the research from all six masters in one shot.</span>
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#" class="btn-primary">
+        <span data-zh>申请 6 国样品组合</span>
+        <span data-en>Request 6-country sample pack</span>
+        <span>→</span>
+      </a>
+      <a href="our-story-global-masters-italy-v62.html" class="btn-outline">
+        <span data-zh>从意大利开始读</span>
+        <span data-en>Start with Italy</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。</span>
+          <span data-en>The professional Western cuisine brand from China.</span>
+        </p>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div>
+        <a href="our-story-index-v62.html" class="footer-link">Our Story</a>
+        <a href="our-story-global-masters-v62.html" class="footer-link">Global Masters</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55">400-6879-568</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div><span>京 ICP 备 2022025117 号-1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > 600);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
