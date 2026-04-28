@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>内蒙古牛羊肉 · Origin Story · Foodvio 花花食界</title>
+<meta name="description" content="内蒙古牛羊肉 · 中国草原顶级肉类 · 锡林郭勒与呼伦贝尔的天然牧场 · 花花食界中西融合主菜套餐的核心原料" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'sans-sc': ['"Noto Sans SC"', 'sans-serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
+  }}}
+</script>
+
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; --chili-red: #C73E3A; }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.05; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
+  }
+
+  /* ════════ MAGAZINE HERO (full screen) ════════ */
+  .mag-hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--ink);
+    overflow: hidden;
+    display: flex; align-items: end;
+  }
+  .mag-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(184,35,28,0.30) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, rgba(245,200,46,0.10) 0%, transparent 55%),
+      linear-gradient(135deg, rgba(184,35,28,0.10) 0%, rgba(13,42,31,0.5) 100%);
+  }
+  .mag-hero::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.10; mix-blend-mode: overlay;
+  }
+
+  /* Floating chili emoji */
+  .chili-deco {
+    position: absolute;
+    font-size: 280px;
+    line-height: 1;
+    opacity: 0.12;
+    color: #fff;
+    pointer-events: none;
+  }
+  .chili-1 { top: 20%; right: 8%; transform: rotate(-15deg); }
+  .chili-2 { bottom: 18%; right: 30%; font-size: 140px; transform: rotate(25deg); opacity: 0.08; }
+
+  .mag-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: rgba(245,200,46,0.85);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+  .mag-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    color: #fff;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .mag-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+
+  /* Issue meta tag */
+  .issue-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    color: rgba(255,255,255,0.85);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+  .issue-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+  /* ════════ ARTICLE TYPOGRAPHY (editorial) ════════ */
+  .article-section {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .article-section.wide {
+    max-width: 1100px;
+  }
+  .article-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .article-num::before { content: '— '; }
+  .article-h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-size: clamp(28px, 3.5vw, 44px);
+    margin-bottom: 20px;
+  }
+  .article-h2-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-weight: 500;
+    font-size: clamp(20px, 2vw, 26px);
+    margin-bottom: 36px;
+  }
+  .article-p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    line-height: 1.85;
+    color: rgba(13,42,31,0.85);
+    margin-bottom: 22px;
+    font-weight: 400;
+  }
+  .article-p-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(13,42,31,0.85);
+    margin-bottom: 22px;
+    font-style: italic;
+    font-weight: 500;
+  }
+  /* Drop cap */
+  .article-p.first-para::first-letter,
+  .article-p-en.first-para::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--chili-red);
+    font-size: 5em;
+    line-height: 0.85;
+    float: left;
+    padding-right: 14px;
+    padding-top: 6px;
+    margin-bottom: -8px;
+  }
+
+  /* ════════ Pull quote (large editorial quote) ════════ */
+  .pull-quote {
+    border-left: 3px solid var(--chili-red);
+    padding: 12px 0 12px 32px;
+    margin: 48px 0;
+  }
+  .pull-quote .quote-text {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    color: var(--forest);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+    margin-bottom: 12px;
+  }
+  .pull-quote .quote-text-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--forest);
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .pull-quote .quote-byline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ════════ Spec card (data sheet) ════════ */
+  .spec-card {
+    background: linear-gradient(135deg, #faf7f0 0%, #f0e6d2 100%);
+    border: 1px solid rgba(184,35,28,0.15);
+    border-radius: 20px;
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .spec-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--chili-red);
+  }
+  .spec-card::after {
+    content: '🌶️';
+    position: absolute;
+    top: 24px; right: 28px;
+    font-size: 32px;
+    opacity: 0.4;
+  }
+  .spec-card .spec-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--chili-red);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .spec-card h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    color: var(--forest);
+    font-size: 22px;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+  .spec-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(13,42,31,0.12);
+    align-items: baseline;
+  }
+  .spec-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .spec-row .key {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+  .spec-row .val {
+    font-size: 14px;
+    color: var(--forest);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* ════════ Reasons (numbered editorial) ════════ */
+  .reason {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(13,42,31,0.08);
+  }
+  .reason:last-child { border-bottom: none; }
+  .reason-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: var(--chili-red);
+    font-size: 56px;
+    line-height: 1;
+    font-style: italic;
+  }
+  .reason h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--forest);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .reason p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(13,42,31,0.75);
+  }
+
+  /* ════════ Product cards (it powers these) ════════ */
+  .pwr-card {
+    background: #fff;
+    border: 1px solid rgba(27,67,50,0.06);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
+    cursor: pointer;
+  }
+  .pwr-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -16px rgba(184,35,28,0.18);
+    border-color: rgba(184,35,28,0.25);
+  }
+  .pwr-card .swatch {
+    aspect-ratio: 5/3;
+    position: relative;
+    overflow: hidden;
+  }
+  .pwr-card .swatch::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.18; mix-blend-mode: multiply;
+  }
+  .pwr-card .swatch-emoji {
+    position: absolute;
+    inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 64px;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  .swatch-pizza { background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%); }
+  .swatch-side { background: linear-gradient(135deg, #B8231C 0%, #7a0f0a 100%); }
+  .swatch-sauce { background: linear-gradient(135deg, #C72D1F 0%, #801515 100%); }
+  .pwr-card .info { padding: 24px 22px; }
+  .pwr-card h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+  .pwr-card .name-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .pwr-card .role {
+    font-size: 13px;
+    color: rgba(13,42,31,0.65);
+    line-height: 1.55;
+  }
+
+  /* ════════ Field-to-factory timeline ════════ */
+  .field-step {
+    display: flex; gap: 20px;
+    padding: 24px 0;
+    align-items: flex-start;
+  }
+  .field-step .step-num {
+    flex-shrink: 0;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 2px solid var(--chili-red);
+    color: var(--chili-red);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1;
+  }
+  .field-step .step-info {
+    flex-grow: 1;
+    padding-top: 8px;
+  }
+  .field-step h5 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--forest);
+    margin-bottom: 6px;
+  }
+  .field-step p {
+    font-size: 14px;
+    color: rgba(13,42,31,0.7);
+    line-height: 1.6;
+  }
+  .field-arrow {
+    margin-left: 28px;
+    height: 24px;
+    border-left: 1px dashed rgba(184,35,28,0.4);
+  }
+
+  /* ════════ Cert badge ════════ */
+  .cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 22px;
+    background: #fff;
+    border: 1px solid rgba(184,35,28,0.2);
+    border-radius: 12px;
+    font-size: 13px;
+    color: var(--forest);
+  }
+  .cert-badge .icon { color: var(--chili-red); font-size: 20px; }
+
+  /* ════════ Related reading ════════ */
+  .read-card {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(13,42,31,0.1);
+    transition: padding 0.3s;
+    cursor: pointer;
+  }
+  .read-card:last-child { border-bottom: none; }
+  .read-card:hover { padding-left: 12px; }
+  .read-card .read-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .read-card h5 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--forest);
+    line-height: 1.4;
+    transition: color 0.3s;
+  }
+  .read-card:hover h5 { color: var(--chili-red); }
+
+  /* ════════ CTA at bottom ════════ */
+  .cta-block {
+    background: linear-gradient(135deg, var(--chili-red) 0%, #7a0f0a 100%);
+    border-radius: 28px;
+    padding: 56px 48px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-block::before {
+    content: '🌶️';
+    position: absolute;
+    bottom: -40px; right: -20px;
+    font-size: 240px;
+    opacity: 0.10;
+    transform: rotate(-15deg);
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px; background: #fff; color: var(--chili-red);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+  }
+  .btn-primary:hover { background: var(--gold); color: var(--ink); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: transparent; color: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+
+  /* ════════ Reveal ════════ */
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand, .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+  .nav-link { position: relative; font-size: 14px; letter-spacing: 0.02em; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+  .mega-cta { display: block; padding: 14px 18px; background: var(--cream); border: 1px solid rgba(27,67,50,0.1); border-radius: 8px; font-size: 13px; color: var(--forest); transition: all 0.3s; margin-bottom: 10px; }
+  .mega-cta:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+  /* Footer */
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+
+  /* Lang switch */
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+
+  @media (max-width: 768px) {
+    .mega-menu { display: none; }
+    .reason { grid-template-columns: 1fr; gap: 12px; }
+    .reason-num { font-size: 40px; }
+    .spec-row { grid-template-columns: 1fr; gap: 4px; padding: 10px 0; }
+  }
+</style>
+<script src="lead-capture.js" defer></script>
+</head>
+
+<body class="grain">
+
+<!-- NAV -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown active" data-menu="story">Our Story</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a>
+        <a href="#" class="mega-link">Western Staples</a><a href="#" class="mega-link">Healthy Sides</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
+        <a href="products-index-v62.html" class="mega-link">花花食界 · Foodvio Pro</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="#" class="mega-link featured">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick Access</div>
+        <a href="#" class="mega-cta">📄 Catalog</a><a href="#" class="mega-cta">🎁 Samples</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link featured">🔵 轻后厨(6)</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured Cases</div><a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡 · 24 店</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Global Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a></div>
+    </div>
+  </div>
+
+    <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 中国原料,世界品质</a>
+        <a href="our-story-global-masters-v62.html" class="mega-link featured">👨‍🍳 世界大师,中国研发</a>
+        <a href="our-story-china-insight-v62.html" class="mega-link featured">🌏 我们更懂中国客户</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link">🌶️ 江西 · 赣南螺丝椒</a>
+        <a href="our-story-chinese-roots-xinjiang-v62.html" class="mega-link">🍅 新疆 · 番茄 · 面粉</a>
+        <a href="our-story-chinese-roots-inner-mongolia-v62.html" class="mega-link featured">🐑 内蒙古 · 牛羊肉</a>
+        <a href="our-story-chinese-roots-wuchang-v62.html" class="mega-link">🌾 东北 · 五常大米</a>
+        <a href="our-story-chinese-roots-yunnan-v62.html" class="mega-link">🍄 云南 · 松露 · 迷迭香</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇪🇸 Spain</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a>
+        <a href="#" class="mega-link">🇯🇵 Japan</a>
+        <a href="#" class="mega-link">🇲🇽 Mexico</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Manufacturing</div><a href="#" class="mega-link">🏭 江西赣州</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Expertise</div><a href="#" class="mega-link">米其林研发</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Certifications</div><a href="#" class="mega-link">HACCP / ISO 22000</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════ SECTION 1 · MAGAZINE HERO ════════ -->
+<section class="mag-hero">
+  <span class="chili-deco chili-1">🐑</span>
+  <span class="chili-deco chili-2">🌾</span>
+
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pb-24 pt-32">
+
+    <div class="breadcrumb mb-16 reveal">
+      <a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <a href="our-story-index-v62.html">Our Story</a>
+      <span class="sep">›</span>
+      <a href="our-story-chinese-roots-v62.html"><span data-zh>中国原料</span><span data-en>Chinese Roots</span></a>
+      <span class="sep">›</span>
+      <span class="text-white"><span data-zh>内蒙古牛羊肉</span><span data-en>Inner Mongolia Beef &amp; Lamb</span></span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+
+      <div class="md:col-span-9">
+        <div class="issue-tag mb-10 reveal">
+          <span class="dot"></span>
+          <span>ORIGIN STORY · 03 OF 5</span>
+        </div>
+
+        <div class="mag-label mb-8 reveal delay-1">内蒙古 · INNER MONGOLIA, CHINA</div>
+
+        <h1 class="mag-title reveal delay-1" style="font-size: clamp(48px, 9vw, 128px);">
+          <span data-zh>内蒙<br>牛羊肉</span>
+          <span data-en class="block">Inner Mongolia<br>Beef &amp; Lamb</span>
+        </h1>
+
+        <p class="mag-subtitle reveal delay-2 mt-10" style="font-size: clamp(18px, 1.8vw, 26px); max-width: 580px;" data-zh>
+          Where the grasslands feed the table — China's last great pasture.
+        </p>
+        <p class="mag-subtitle reveal delay-2 mt-10 font-serif-sc" style="font-size: clamp(16px, 1.5vw, 22px); max-width: 580px; font-style: normal;" data-en>
+          中国最后的天然牧场 · 草原上长大的肉,有草原的味道
+        </p>
+      </div>
+
+      <div class="md:col-span-3 reveal delay-3">
+        <div class="text-white/55 text-xs uppercase tracking-[0.2em] mb-3 font-display italic">Read time</div>
+        <div class="text-white/85 font-display italic text-2xl mb-6">8 min</div>
+        <div class="text-white/55 text-xs uppercase tracking-[0.2em] mb-3 font-display italic">In this issue</div>
+        <ul class="text-white/75 text-xs space-y-2">
+          <li>· <span data-zh>故事开场</span><span data-en>Opening</span></li>
+          <li>· <span data-zh>产地背景</span><span data-en>Origin</span></li>
+          <li>· <span data-zh>3 个理由</span><span data-en>3 reasons</span></li>
+          <li>· <span data-zh>支撑产品</span><span data-en>Powered products</span></li>
+          <li>· <span data-zh>延伸阅读</span><span data-en>Related reading</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 1 · OPENING ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">01 / Opening</span>
+      <h2 class="article-h2">
+        <span data-zh>草原是世界上最大的厨房</span>
+        <span data-en>The grassland is the world's largest kitchen.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>The grassland is the world's largest kitchen.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">草原是世界上最大的厨房</span>
+      </div>
+    </div>
+
+    <div class="reveal delay-1">
+      <p class="article-p first-para" data-zh>
+        锡林郭勒、呼伦贝尔、乌兰察布——这三个名字串起来,就是中国 90% 优质牛羊肉的来源地。这里没有围栏,牛羊靠走、靠跑、靠吃天然牧草长大。一只锡林郭勒草原羊,从出生到出栏要走上千公里。这不是营销话术——这是肉质的物理基础。
+      </p>
+      <p class="article-p-en first-para" data-en>
+        Xilingol, Hulunbuir, Ulanqab — three names that together account for 90% of China's premium beef and lamb. No fences, no pens. The animals walk, run, and graze on wild pasture. A Xilingol grass-fed lamb walks over a thousand kilometers from birth to slaughter. This isn't a marketing line — it's the physical basis of the meat's texture.
+      </p>
+
+      <p class="article-p" data-zh>
+        在花花食界的产品矩阵里,牛羊肉是最特殊的一个品类。它不是"佐料",不是"配菜",而是"主菜"——客单价最高、存在感最强、与花花酱料体系协同最深。一份¥168 的"迷迭香烤羊排 + 黑松露牛排"套餐,肉是主体,但定义这道菜身份的是花花的酱料。
+      </p>
+      <p class="article-p-en" data-en>
+        In our portfolio, beef and lamb is the rarest category. Not seasoning. Not side. Main course. Highest ticket price, strongest presence, deepest synergy with our sauce line. In a ¥168 "rosemary roast lamb + truffle beef" set, the meat is the bulk — but the dish's identity comes from our sauces.
+      </p>
+
+      <p class="article-p" data-zh>
+        草原长出的肉,撞上花花的酱——这是花花食界完整产品矩阵的最后一块拼图。
+      </p>
+      <p class="article-p-en" data-en>
+        Grassland meat meets our sauces — the final piece of the Foodvio portfolio.
+      </p>
+    </div>
+
+    <div class="pull-quote reveal delay-2">
+      <div class="quote-text" data-zh>
+        &ldquo;肉的成本占套餐 60%。<br>但定义这道菜身份的,是酱。&rdquo;
+      </div>
+      <div class="quote-text-en" data-en>
+        &ldquo;The meat is 60% of the cost.<br>But the sauce gives the dish its identity.&rdquo;
+      </div>
+      <div class="quote-byline">
+        <span data-zh>—— 花花食界研发主厨</span>
+        <span data-en>— Foodvio R&amp;D Chef</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 2 · ORIGIN ════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">02 / Origin</span>
+      <h2 class="article-h2">
+        <span data-zh>三片草原,三种性格</span>
+        <span data-en>Three pastures, three temperaments.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>Three pastures, three temperaments.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">三片草原,三种性格</span>
+      </div>
+    </div>
+
+    <div class="reveal delay-1">
+      <p class="article-p" data-zh>
+        锡林郭勒草原产羊为主——这里的羊是中国地理标志保护产品。草场的针茅、羊草让羊肉有特殊的青草香气和淡淡的甘甜回味,是吃过的人忘不掉的味道。
+      </p>
+      <p class="article-p-en" data-en>
+        Xilingol is lamb country — its grass-fed lamb is a Geographical Indication product. The needle grass and sheep grass on these pastures give the meat a distinctive herbal aroma and a faint sweet finish that people who've tasted it never forget.
+      </p>
+
+      <p class="article-p" data-zh>
+        呼伦贝尔草原产牛为主——这里的呼伦贝尔牛,肉质大理石纹路明显,脂肪与瘦肉比例接近日本和牛 A4 级别,但价格只有进口和牛的 1/5。这是中国为数不多能在牛肉品质上对标顶级进口的产区。
+      </p>
+      <p class="article-p-en" data-en>
+        Hulunbuir is beef country — its native cattle show clear marbling, with a fat-to-lean ratio approaching Japanese A4 wagyu, at one-fifth the import price. One of the few Chinese regions that can compete with top imports on beef quality alone.
+      </p>
+
+      <p class="article-p" data-zh>
+        乌兰察布产羊肉的不同——半舍饲半放牧,肉质均匀稳定,适合做西式批量产品。三片草原的分工,刚好覆盖了我们从高端套餐到日常出餐的全场景。
+      </p>
+      <p class="article-p-en" data-en>
+        Ulanqab takes a hybrid approach — half pasture, half pen — producing lamb with uniform texture, ideal for batch Western preparation. Three pastures, three roles, covering everything from premium plating to daily service.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 3 · WHY WE CHOSE IT ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">03 / Why we chose it</span>
+      <h2 class="article-h2">
+        <span data-zh>为什么花花选择这片草原?</span>
+        <span data-en>Why we chose these grasslands.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>Three reasons. From a chef's notebook.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">三个理由 · 来自主厨笔记</span>
+      </div>
+    </div>
+
+    <div class="mt-12 reveal delay-1">
+
+      <div class="reason">
+        <div class="reason-num">01</div>
+        <div>
+          <h4>
+            <span data-zh>天然草饲 —— 西餐主菜要的就是这种风味基底</span>
+            <span data-en>Grass-fed by nature — exactly the flavor base Western mains require</span>
+          </h4>
+          <p data-zh>
+            西餐主菜对肉的要求和中餐不一样。西餐讲究"肉本身的风味",所以肉的草饲基底、运动量、屠宰应激度,都直接决定了菜品上限。内蒙草原牛羊从生到死全程草饲,与新西兰、澳洲的草饲牛羊在风味基底上是同一个维度——这就让花花的牛排、羊排,从底子上就成立。
+          </p>
+          <p data-en>
+            Western mains demand something Chinese cuisine doesn't — the flavor of the meat itself. The grass-fed base, the animal's movement, the slaughter stress — all of it sets the ceiling. Inner Mongolian cattle and lamb are grass-fed cradle to slaughter, putting them on the same flavor axis as New Zealand and Australian grass-fed. Our steaks and lamb chops succeed because the foundation is right.
+          </p>
+        </div>
+      </div>
+
+      <div class="reason">
+        <div class="reason-num">02</div>
+        <div>
+          <h4>
+            <span data-zh>酱料协同 —— 牛羊肉是花花酱料体系的最佳载体</span>
+            <span data-en>Sauce synergy — beef and lamb are the perfect vehicle for our sauce system</span>
+          </h4>
+          <p data-zh>
+            花花有 20+ 款西式酱料——黑椒酱、迷迭香酱、黑松露油、蓝纹奶酪酱……这些酱料的最佳载体不是面条、不是米饭,而是"一块好的肉"。当客户问"为什么要用花花酱",最有说服力的答案不是配方说明,而是把酱料浇在内蒙草饲羊排上,让客户尝一口。
+          </p>
+          <p data-en>
+            We make 20+ Western sauces — black pepper, rosemary, truffle oil, blue cheese reduction. Their best stage isn't pasta or rice. It's a good piece of meat. When clients ask why they need Foodvio sauces, the most convincing answer isn't a spec sheet — it's pouring rosemary jus over a Xilingol lamb chop and watching them taste it.
+          </p>
+        </div>
+      </div>
+
+      <div class="reason">
+        <div class="reason-num">03</div>
+        <div>
+          <h4>
+            <span data-zh>中西融合 —— 中国客户买套餐的逻辑,需要主菜</span>
+            <span data-en>Fusion logic — Chinese customers buy by the set, and sets need a main</span>
+          </h4>
+          <p data-zh>
+            中国餐饮做西餐套餐,核心是"凑齐一桌"——前菜 + 主菜 + 主食 + 酱料 + 甜点。其他都好办,主菜最难——既要西式造型、又要中国客户接受的口味、还要价格落在套餐预算里。内蒙古牛羊肉刚好命中这三点:肉本身够西式,与花花酱料配合后口味中国化,价格比进口低 40%。
+          </p>
+          <p data-en>
+            Chinese Western-set meals are built around assembly — appetizer, main, staple, sauce, dessert. Everything is solvable except the main course: it has to look Western, taste right to Chinese palates, and fit a set's budget. Inner Mongolian beef and lamb hits all three — Western enough by form, Chinese-friendly with our sauces, 40% below imported pricing.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 4 · WHAT IT POWERS ════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section wide">
+
+    <div class="text-center reveal mb-16">
+      <span class="article-num">04 / What it powers</span>
+      <h2 class="article-h2">
+        <span data-zh>它支撑了哪些产品?</span>
+        <span data-en>What these grasslands power.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>From the grassland — three signature mains.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">一片草原 · 三道招牌主菜</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <a href="#" class="pwr-card reveal delay-1">
+        <div class="swatch swatch-side">
+          <span class="swatch-emoji">🥩</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>迷迭香草饲羊排</span><span data-en>Rosemary Grass-Fed Lamb Chop</span></h4>
+          <div class="name-en"><span data-zh>Rosemary Lamb Chop</span><span data-en>迷迭香草饲羊排</span></div>
+          <p class="role">
+            <span data-zh>锡林郭勒草饲羊 · 云南迷迭香腌制 · 西式工艺,中国客单价</span>
+            <span data-en>Xilingol grass-fed lamb · Yunnan rosemary marinade · Western technique, Chinese price point</span>
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="pwr-card reveal delay-2">
+        <div class="swatch swatch-pizza">
+          <span class="swatch-emoji">🥩</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>黑椒草原牛排</span><span data-en>Black Pepper Grassland Steak</span></h4>
+          <div class="name-en"><span data-zh>Grassland Black Pepper Steak</span><span data-en>黑椒草原牛排</span></div>
+          <p class="role">
+            <span data-zh>呼伦贝尔牛 · 大理石纹路明显 · 黑椒酱画龙点睛</span>
+            <span data-en>Hulunbuir beef · clear marbling · finished with our black pepper reduction</span>
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="pwr-card reveal delay-3">
+        <div class="swatch swatch-sauce">
+          <span class="swatch-emoji">🍖</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>黑松露牛肉套餐</span><span data-en>Truffle Beef Set</span></h4>
+          <div class="name-en"><span data-zh>Truffle Beef Set</span><span data-en>黑松露牛肉套餐</span></div>
+          <p class="role">
+            <span data-zh>呼伦贝尔牛 + 云南黑松露 · 双地标组合 · ¥188 客单价</span>
+            <span data-en>Hulunbuir beef + Yunnan black truffle · double-GI set · ¥188 ticket price</span>
+          </p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="products-sauces-v62.html" class="font-display italic text-rust border-b border-rust/40 pb-1 hover:border-rust transition" style="font-size: 15px;">
+        <span data-zh>查看全部 12+ 款内蒙系列产品</span>
+        <span data-en>See all 12+ products powered by Inner Mongolia</span>
+        →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 5 · RELATED READING ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">05 / Related Reading</span>
+      <h2 class="article-h2">
+        <span data-zh>延伸阅读</span>
+        <span data-en>Continue reading.</span>
+      </h2>
+    </div>
+
+    <div class="mt-10 reveal delay-1">
+      <a href="#" class="read-card block">
+        <div class="read-tag">Story 01 · Origin</div>
+        <h5><span data-zh>云南黑松露:中国厨房里的黑钻石</span><span data-en>Yunnan Black Truffle: the black diamond in Chinese kitchens</span></h5>
+      </a>
+      <a href="our-story-global-masters-italy-v62.html" class="read-card block">
+        <div class="read-tag">Story 02 · Italy</div>
+        <h5><span data-zh>意大利主厨如何用内蒙羊排做意式 Bistecca?</span><span data-en>How our Italy-trained chef makes Bistecca with Inner Mongolian lamb</span></h5>
+      </a>
+      <a href="our-story-china-insight-v62.html" class="read-card block">
+        <div class="read-tag">Story 03 · China Insight</div>
+        <h5><span data-zh>中国客户买西餐套餐的逻辑:为什么主菜最重要?</span><span data-en>Why Chinese diners build Western sets around the main</span></h5>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 6 · CTA ════════ -->
+<section id="bottom-cta" class="py-28 md:py-32 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto">
+    <div class="cta-block reveal">
+      <div class="relative z-10 max-w-2xl">
+        <div class="font-display italic text-white/80 text-sm tracking-[0.2em] mb-6">
+          06 / TASTE THE STORY
+        </div>
+        <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.15;">
+          <span data-zh>故事讲完了。<br>现在,让你尝一口?</span>
+          <span data-en>The story is told.<br>Now, would you like to taste it?</span>
+        </h2>
+        <p class="text-white/85 text-base md:text-lg mb-10 leading-relaxed">
+          <span data-zh>12+ 款使用内蒙古草饲牛羊肉的产品 · 从迷迭香羊排到黑松露牛排套餐 · 申请样品组合,感受草原的力量。</span>
+          <span data-en>12+ products powered by Inner Mongolian grass-fed beef and lamb — from rosemary lamb chops to truffle beef sets. Request a sample pack and feel the grassland.</span>
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#" class="btn-primary" data-foodvio-cta="sample_request">
+            <span data-zh>申请内蒙系列样品</span>
+            <span data-en>Request Inner Mongolia Sample Pack</span>
+            <span>→</span>
+          </a>
+          <a href="#" class="btn-outline" data-foodvio-cta="origin_tour">
+            <span data-zh>预约草原牧场参观</span>
+            <span data-en>Book grassland farm visit</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。从田间到餐桌,世界风味,中国制造。</span>
+          <span data-en>The professional Western cuisine brand from China.</span>
+        </p>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a>
+        <a href="#" class="footer-link">Healthy Sides</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a>
+        <a href="for-industrial-v62.html" class="footer-link">Industrial</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div>
+        <a href="our-story-index-v62.html" class="footer-link">Our Story</a>
+        <a href="our-story-chinese-roots-v62.html" class="footer-link">Chinese Roots</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55 leading-relaxed">400-6879-568<br>huahuakefu1@<br>foodvio.com.cn</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div class="flex items-center gap-5"><span>京 ICP 备 2022025117 号-1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > window.innerHeight - 100);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

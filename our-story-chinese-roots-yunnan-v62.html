@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>云南黑松露与迷迭香 · Origin Story · Foodvio 花花食界</title>
+<meta name="description" content="云南黑松露与迷迭香 · 中国独有食材的全球叙事 · 占全球黑松露 80% 产量 · 花花食界从国产替代升级到全球叙事的关键支点" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'sans-sc': ['"Noto Sans SC"', 'sans-serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
+  }}}
+</script>
+
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; --chili-red: #1B4332; }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.05; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
+  }
+
+  /* ════════ MAGAZINE HERO (full screen) ════════ */
+  .mag-hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--ink);
+    overflow: hidden;
+    display: flex; align-items: end;
+  }
+  .mag-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(184,35,28,0.30) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, rgba(245,200,46,0.10) 0%, transparent 55%),
+      linear-gradient(135deg, rgba(184,35,28,0.10) 0%, rgba(13,42,31,0.5) 100%);
+  }
+  .mag-hero::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.10; mix-blend-mode: overlay;
+  }
+
+  /* Floating chili emoji */
+  .chili-deco {
+    position: absolute;
+    font-size: 280px;
+    line-height: 1;
+    opacity: 0.12;
+    color: #fff;
+    pointer-events: none;
+  }
+  .chili-1 { top: 20%; right: 8%; transform: rotate(-15deg); }
+  .chili-2 { bottom: 18%; right: 30%; font-size: 140px; transform: rotate(25deg); opacity: 0.08; }
+
+  .mag-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: rgba(245,200,46,0.85);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+  .mag-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    color: #fff;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .mag-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+
+  /* Issue meta tag */
+  .issue-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    color: rgba(255,255,255,0.85);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+  .issue-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+  /* ════════ ARTICLE TYPOGRAPHY (editorial) ════════ */
+  .article-section {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .article-section.wide {
+    max-width: 1100px;
+  }
+  .article-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .article-num::before { content: '— '; }
+  .article-h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-size: clamp(28px, 3.5vw, 44px);
+    margin-bottom: 20px;
+  }
+  .article-h2-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-weight: 500;
+    font-size: clamp(20px, 2vw, 26px);
+    margin-bottom: 36px;
+  }
+  .article-p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    line-height: 1.85;
+    color: rgba(13,42,31,0.85);
+    margin-bottom: 22px;
+    font-weight: 400;
+  }
+  .article-p-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(13,42,31,0.85);
+    margin-bottom: 22px;
+    font-style: italic;
+    font-weight: 500;
+  }
+  /* Drop cap */
+  .article-p.first-para::first-letter,
+  .article-p-en.first-para::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--chili-red);
+    font-size: 5em;
+    line-height: 0.85;
+    float: left;
+    padding-right: 14px;
+    padding-top: 6px;
+    margin-bottom: -8px;
+  }
+
+  /* ════════ Pull quote (large editorial quote) ════════ */
+  .pull-quote {
+    border-left: 3px solid var(--chili-red);
+    padding: 12px 0 12px 32px;
+    margin: 48px 0;
+  }
+  .pull-quote .quote-text {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    color: var(--forest);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+    margin-bottom: 12px;
+  }
+  .pull-quote .quote-text-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--forest);
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .pull-quote .quote-byline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ════════ Spec card (data sheet) ════════ */
+  .spec-card {
+    background: linear-gradient(135deg, #faf7f0 0%, #f0e6d2 100%);
+    border: 1px solid rgba(184,35,28,0.15);
+    border-radius: 20px;
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .spec-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--chili-red);
+  }
+  .spec-card::after {
+    content: '🌶️';
+    position: absolute;
+    top: 24px; right: 28px;
+    font-size: 32px;
+    opacity: 0.4;
+  }
+  .spec-card .spec-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--chili-red);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .spec-card h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    color: var(--forest);
+    font-size: 22px;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+  .spec-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(13,42,31,0.12);
+    align-items: baseline;
+  }
+  .spec-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .spec-row .key {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+  .spec-row .val {
+    font-size: 14px;
+    color: var(--forest);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* ════════ Reasons (numbered editorial) ════════ */
+  .reason {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(13,42,31,0.08);
+  }
+  .reason:last-child { border-bottom: none; }
+  .reason-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: var(--chili-red);
+    font-size: 56px;
+    line-height: 1;
+    font-style: italic;
+  }
+  .reason h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--forest);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .reason p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(13,42,31,0.75);
+  }
+
+  /* ════════ Product cards (it powers these) ════════ */
+  .pwr-card {
+    background: #fff;
+    border: 1px solid rgba(27,67,50,0.06);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
+    cursor: pointer;
+  }
+  .pwr-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -16px rgba(184,35,28,0.18);
+    border-color: rgba(184,35,28,0.25);
+  }
+  .pwr-card .swatch {
+    aspect-ratio: 5/3;
+    position: relative;
+    overflow: hidden;
+  }
+  .pwr-card .swatch::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.18; mix-blend-mode: multiply;
+  }
+  .pwr-card .swatch-emoji {
+    position: absolute;
+    inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 64px;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  .swatch-pizza { background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%); }
+  .swatch-side { background: linear-gradient(135deg, #B8231C 0%, #7a0f0a 100%); }
+  .swatch-sauce { background: linear-gradient(135deg, #C72D1F 0%, #801515 100%); }
+  .pwr-card .info { padding: 24px 22px; }
+  .pwr-card h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+  .pwr-card .name-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .pwr-card .role {
+    font-size: 13px;
+    color: rgba(13,42,31,0.65);
+    line-height: 1.55;
+  }
+
+  /* ════════ Field-to-factory timeline ════════ */
+  .field-step {
+    display: flex; gap: 20px;
+    padding: 24px 0;
+    align-items: flex-start;
+  }
+  .field-step .step-num {
+    flex-shrink: 0;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 2px solid var(--chili-red);
+    color: var(--chili-red);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1;
+  }
+  .field-step .step-info {
+    flex-grow: 1;
+    padding-top: 8px;
+  }
+  .field-step h5 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--forest);
+    margin-bottom: 6px;
+  }
+  .field-step p {
+    font-size: 14px;
+    color: rgba(13,42,31,0.7);
+    line-height: 1.6;
+  }
+  .field-arrow {
+    margin-left: 28px;
+    height: 24px;
+    border-left: 1px dashed rgba(184,35,28,0.4);
+  }
+
+  /* ════════ Cert badge ════════ */
+  .cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 22px;
+    background: #fff;
+    border: 1px solid rgba(184,35,28,0.2);
+    border-radius: 12px;
+    font-size: 13px;
+    color: var(--forest);
+  }
+  .cert-badge .icon { color: var(--chili-red); font-size: 20px; }
+
+  /* ════════ Related reading ════════ */
+  .read-card {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(13,42,31,0.1);
+    transition: padding 0.3s;
+    cursor: pointer;
+  }
+  .read-card:last-child { border-bottom: none; }
+  .read-card:hover { padding-left: 12px; }
+  .read-card .read-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .read-card h5 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--forest);
+    line-height: 1.4;
+    transition: color 0.3s;
+  }
+  .read-card:hover h5 { color: var(--chili-red); }
+
+  /* ════════ CTA at bottom ════════ */
+  .cta-block {
+    background: linear-gradient(135deg, var(--chili-red) 0%, #7a0f0a 100%);
+    border-radius: 28px;
+    padding: 56px 48px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-block::before {
+    content: '🌶️';
+    position: absolute;
+    bottom: -40px; right: -20px;
+    font-size: 240px;
+    opacity: 0.10;
+    transform: rotate(-15deg);
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px; background: #fff; color: var(--chili-red);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+  }
+  .btn-primary:hover { background: var(--gold); color: var(--ink); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: transparent; color: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+
+  /* ════════ Reveal ════════ */
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand, .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+  .nav-link { position: relative; font-size: 14px; letter-spacing: 0.02em; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+  .mega-cta { display: block; padding: 14px 18px; background: var(--cream); border: 1px solid rgba(27,67,50,0.1); border-radius: 8px; font-size: 13px; color: var(--forest); transition: all 0.3s; margin-bottom: 10px; }
+  .mega-cta:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+  /* Footer */
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+
+  /* Lang switch */
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+
+  @media (max-width: 768px) {
+    .mega-menu { display: none; }
+    .reason { grid-template-columns: 1fr; gap: 12px; }
+    .reason-num { font-size: 40px; }
+    .spec-row { grid-template-columns: 1fr; gap: 4px; padding: 10px 0; }
+  }
+</style>
+<script src="lead-capture.js" defer></script>
+</head>
+
+<body class="grain">
+
+<!-- NAV -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown active" data-menu="story">Our Story</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a>
+        <a href="#" class="mega-link">Western Staples</a><a href="#" class="mega-link">Healthy Sides</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
+        <a href="products-index-v62.html" class="mega-link">花花食界 · Foodvio Pro</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="#" class="mega-link featured">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick Access</div>
+        <a href="#" class="mega-cta">📄 Catalog</a><a href="#" class="mega-cta">🎁 Samples</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link featured">🔵 轻后厨(6)</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured Cases</div><a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡 · 24 店</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Global Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a></div>
+    </div>
+  </div>
+
+    <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 中国原料,世界品质</a>
+        <a href="our-story-global-masters-v62.html" class="mega-link featured">👨‍🍳 世界大师,中国研发</a>
+        <a href="our-story-china-insight-v62.html" class="mega-link featured">🌏 我们更懂中国客户</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link">🌶️ 江西 · 赣南螺丝椒</a>
+        <a href="our-story-chinese-roots-xinjiang-v62.html" class="mega-link">🍅 新疆 · 番茄 · 面粉</a>
+        <a href="our-story-chinese-roots-inner-mongolia-v62.html" class="mega-link">🐑 内蒙古 · 牛羊肉</a>
+        <a href="our-story-chinese-roots-wuchang-v62.html" class="mega-link">🌾 东北 · 五常大米</a>
+        <a href="our-story-chinese-roots-yunnan-v62.html" class="mega-link featured">🍄 云南 · 松露 · 迷迭香</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇪🇸 Spain</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a>
+        <a href="#" class="mega-link">🇯🇵 Japan</a>
+        <a href="#" class="mega-link">🇲🇽 Mexico</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Manufacturing</div><a href="#" class="mega-link">🏭 江西赣州</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Expertise</div><a href="#" class="mega-link">米其林研发</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Certifications</div><a href="#" class="mega-link">HACCP / ISO 22000</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════ SECTION 1 · MAGAZINE HERO ════════ -->
+<section class="mag-hero">
+  <span class="chili-deco chili-1">🍄</span>
+  <span class="chili-deco chili-2">🌿</span>
+
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pb-24 pt-32">
+
+    <div class="breadcrumb mb-16 reveal">
+      <a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <a href="our-story-index-v62.html">Our Story</a>
+      <span class="sep">›</span>
+      <a href="our-story-chinese-roots-v62.html"><span data-zh>中国原料</span><span data-en>Chinese Roots</span></a>
+      <span class="sep">›</span>
+      <span class="text-white"><span data-zh>云南黑松露与迷迭香</span><span data-en>Yunnan Truffle &amp; Rosemary</span></span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+
+      <div class="md:col-span-9">
+        <div class="issue-tag mb-10 reveal">
+          <span class="dot"></span>
+          <span>ORIGIN STORY · 05 OF 5</span>
+        </div>
+
+        <div class="mag-label mb-8 reveal delay-1">云南 · YUNNAN, CHINA</div>
+
+        <h1 class="mag-title reveal delay-1" style="font-size: clamp(48px, 9vw, 128px);">
+          <span data-zh>云南<br>松露 · 迷迭香</span>
+          <span data-en class="block">Yunnan<br>Truffle &amp; Rosemary</span>
+        </h1>
+
+        <p class="mag-subtitle reveal delay-2 mt-10" style="font-size: clamp(18px, 1.8vw, 26px); max-width: 580px;" data-zh>
+          Where China grows what Europe cannot match.
+        </p>
+        <p class="mag-subtitle reveal delay-2 mt-10 font-serif-sc" style="font-size: clamp(16px, 1.5vw, 22px); max-width: 580px; font-style: normal;" data-en>
+          在这片土地上,中国种出了欧洲也复制不了的东西
+        </p>
+      </div>
+
+      <div class="md:col-span-3 reveal delay-3">
+        <div class="text-white/55 text-xs uppercase tracking-[0.2em] mb-3 font-display italic">Read time</div>
+        <div class="text-white/85 font-display italic text-2xl mb-6">10 min</div>
+        <div class="text-white/55 text-xs uppercase tracking-[0.2em] mb-3 font-display italic">In this issue</div>
+        <ul class="text-white/75 text-xs space-y-2">
+          <li>· <span data-zh>故事开场</span><span data-en>Opening</span></li>
+          <li>· <span data-zh>产地背景</span><span data-en>Origin</span></li>
+          <li>· <span data-zh>3 个理由</span><span data-en>3 reasons</span></li>
+          <li>· <span data-zh>支撑产品</span><span data-en>Powered products</span></li>
+          <li>· <span data-zh>延伸阅读</span><span data-en>Related reading</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 1 · OPENING ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">01 / Opening</span>
+      <h2 class="article-h2">
+        <span data-zh>中国厨房里的两块黑钻石</span>
+        <span data-en>Two black diamonds in the Chinese kitchen.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>Two black diamonds in the Chinese kitchen.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">中国厨房里的两块黑钻石</span>
+      </div>
+    </div>
+
+    <div class="reveal delay-1">
+      <p class="article-p first-para" data-zh>
+        云南黑松露,年产 100-300 吨,占全国 70%、全球 80%。这个数字意味着——法国年产量是云南的十分之一。每公斤云南黑松露批发价 ¥586,法国黑松露 ¥5,157,价差 8-9 倍。同一种风味、同一个学名、巨大的价格鸿沟。
+      </p>
+      <p class="article-p-en first-para" data-en>
+        Yunnan produces 100-300 tonnes of black truffle annually — 70% of China's total, 80% of the world's. France produces a tenth of what Yunnan does. Yunnan wholesale: ¥586/kg. French wholesale: ¥5,157/kg. An 8 to 9-fold price gap. Same flavor, same scientific name, vast price chasm.
+      </p>
+
+      <p class="article-p" data-zh>
+        再往南一点,昭通、玉溪、保山,是云南迷迭香的种植带。中国 70% 的迷迭香原料来自这里——但迷迭香的故事更复杂:云南负责种植和初加工,真正的精深加工和出口枢纽,在海南自贸港。这是"云南种植 + 海南加工出口"的天然产业分工。
+      </p>
+      <p class="article-p-en" data-en>
+        Further south — Zhaotong, Yuxi, Baoshan — runs Yunnan's rosemary belt. 70% of China's rosemary raw material comes from this strip. But rosemary has a more complex story. Yunnan handles cultivation and primary processing; the deep processing and export hub sits in Hainan's free trade port. A natural division of labor: Yunnan grows, Hainan refines.
+      </p>
+
+      <p class="article-p" data-zh>
+        黑松露是花花食界从"对标进口的国产替代"升级为"中国独占资源的全球叙事"的关键支点。迷迭香是花花从中国市场走向全球贸易的实战载体。
+      </p>
+      <p class="article-p-en" data-en>
+        Black truffle is our pivot — from "China replacement of imports" to "Chinese-only resource on the global stage." Rosemary is our practical vehicle for moving from the China market into global trade.
+      </p>
+    </div>
+
+    <div class="pull-quote reveal delay-2">
+      <div class="quote-text" data-zh>
+        &ldquo;罗勒和迷迭香的故事,<br>是花花在中国做"国产替代"。<br>黑松露的故事,<br>是花花向全球讲一个欧洲也无法复制的中国故事。&rdquo;
+      </div>
+      <div class="quote-text-en" data-en>
+        &ldquo;Basil and rosemary tell a story of replacing imports inside China.<br>Black truffle tells the world a Chinese story that Europe cannot copy.&rdquo;
+      </div>
+      <div class="quote-byline">
+        <span data-zh>—— 花花食界研发主厨</span>
+        <span data-en>— Foodvio R&amp;D Chef</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 2 · ORIGIN ════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">02 / Origin</span>
+      <h2 class="article-h2">
+        <span data-zh>一座山脉,两条产业线</span>
+        <span data-en>One mountain range, two product lines.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>One mountain range, two product lines.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">一座山脉,两条产业线</span>
+      </div>
+    </div>
+
+    <div class="reveal delay-1">
+      <p class="article-p" data-zh>
+        云南楚雄、永仁、丽江——黑松露的核心产区。海拔 1,800-2,800 米的横断山脉、典型的 "高原低纬度" 气候、橡树和栎树形成的天然共生森林——这些条件让云南成为全球最大的黑松露产地。这不是任何商业行为的结果,而是地质和气候的礼物。
+      </p>
+      <p class="article-p-en" data-en>
+        Chuxiong, Yongren, Lijiang — Yunnan's truffle core. Hengduan Mountains at 1,800-2,800m, the rare "high-altitude low-latitude" climate, natural symbiosis with oak forests. Together, the conditions that made Yunnan the world's largest truffle producer. Not a commercial achievement — a geological and climatic gift.
+      </p>
+
+      <p class="article-p" data-zh>
+        牟定、昭通、玉溪——迷迭香的种植带。云南山地的酸性红壤、海拔差产生的层次温度、充足光照——这是迷迭香生长的理想区。但云南的产业链止步于初加工,真正的精油提取、活性物质分离、欧美出口认证,在海南自贸港完成——这一段产业分工,是中国日报 2022 年公开报道过的事实。
+      </p>
+      <p class="article-p-en" data-en>
+        Mouding, Zhaotong, Yuxi — Yunnan's rosemary belt. Acidic red soil, altitude-driven temperature gradients, abundant sunlight — ideal growing conditions. But the value chain stops at primary processing in Yunnan. Essential oil extraction, active compound isolation, EU/US export certification — all of that happens in Hainan's free trade port. A division of labor reported by China Daily in 2022.
+      </p>
+
+      <p class="article-p" data-zh>
+        云南给我们的,不只是两种原料,是两种叙事——"中国独有"和"中国 + 全球加工链路"。
+      </p>
+      <p class="article-p-en" data-en>
+        Yunnan gives us more than two ingredients. It gives us two narratives — "only in China," and "China plus a global processing route."
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 3 · WHY WE CHOSE IT ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">03 / Why we chose it</span>
+      <h2 class="article-h2">
+        <span data-zh>为什么花花把云南放在最后?</span>
+        <span data-en>Why we saved Yunnan for last.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>Three reasons. From a chef's notebook.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">三个理由 · 来自主厨笔记</span>
+      </div>
+    </div>
+
+    <div class="mt-12 reveal delay-1">
+
+      <div class="reason">
+        <div class="reason-num">01</div>
+        <div>
+          <h4>
+            <span data-zh>全球叙事 —— 黑松露重新定义品牌天花板</span>
+            <span data-en>Global narrative — black truffle resets our brand ceiling</span>
+          </h4>
+          <p data-zh>
+            在花花做赣南辣椒、新疆番茄、内蒙牛羊肉的时候,叙事都是"中国能做出对标进口的好东西"。但云南黑松露不一样——它本身就是世界第一,法国都做不到这个量级。当我们对全球客户讲"花花用的黑松露,世界上 80% 都来自我们的合作产区",这一刻,品牌天花板就被重新定义了。
+          </p>
+          <p data-en>
+            Building Gannan chili, Xinjiang tomato, and Inner Mongolian beef, the narrative was always "China can match imports." Yunnan truffle changes the frame. It is the world leader — France can't approach the volume. When we tell global buyers "80% of the world's black truffle comes from our partner zones," the brand ceiling resets in that sentence.
+          </p>
+        </div>
+      </div>
+
+      <div class="reason">
+        <div class="reason-num">02</div>
+        <div>
+          <h4>
+            <span data-zh>价格优势 —— 让进口主厨第一次愿意用国产</span>
+            <span data-en>Price gap — for the first time, imported-chef territory uses Chinese ingredient</span>
+          </h4>
+          <p data-zh>
+            8-9 倍的价差不是宣传话术——这是写在批发市场报价单上的事实。一道意式黑松露烩饭,用法国黑松露成本 ¥80,用云南黑松露成本 ¥10。当成本压到这个水平,不仅本土西餐厅愿意用,我们做出口时,东南亚和中东的高端餐饮也开始问"你们的黑松露是不是来自云南?"——这个问题在五年前是不存在的。
+          </p>
+          <p data-en>
+            An 8-9x price gap isn't a marketing line — it's the wholesale market quote. A truffle risotto plate costs ¥80 with French truffle, ¥10 with Yunnan. At that delta, not only do domestic Western restaurants switch, but when we export, premium operators in Southeast Asia and the Middle East ask "is your truffle from Yunnan?" — a question no one was asking five years ago.
+          </p>
+        </div>
+      </div>
+
+      <div class="reason">
+        <div class="reason-num">03</div>
+        <div>
+          <h4>
+            <span data-zh>云南-海南枢纽 —— 全球化路径已经存在</span>
+            <span data-en>Yunnan-Hainan hub — the global route already exists</span>
+          </h4>
+          <p data-zh>
+            迷迭香的产业链早就分工好了:云南种植、海南加工、欧美出口。我们做的事不是开创新路径,而是把这条已经存在的产业链整合进花花的产品矩阵。这意味着——花花的迷迭香系列产品,从第一天起就具备出海能力。我们不需要再花十年建一条出口链路。
+          </p>
+          <p data-en>
+            The rosemary value chain is already split: Yunnan grows, Hainan processes, exports flow to Europe and the US. We don't have to build new infrastructure — we plug into what already exists. From day one, our rosemary products are export-capable. We don't need to spend a decade building outbound logistics.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 4 · WHAT IT POWERS ════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section wide">
+
+    <div class="text-center reveal mb-16">
+      <span class="article-num">04 / What it powers</span>
+      <h2 class="article-h2">
+        <span data-zh>它支撑了哪些产品?</span>
+        <span data-en>What Yunnan powers.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>From one province — three premium lines.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">一个省份 · 三条高端产品线</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <a href="#" class="pwr-card reveal delay-1">
+        <div class="swatch swatch-side">
+          <span class="swatch-emoji">🍄</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>云南黑松露油</span><span data-en>Yunnan Black Truffle Oil</span></h4>
+          <div class="name-en"><span data-zh>Truffle Oil</span><span data-en>云南黑松露油</span></div>
+          <p class="role">
+            <span data-zh>云南野生黑松露 · 法式工艺浸渍 · 比进口便宜 70%</span>
+            <span data-en>Wild Yunnan black truffle · French-style infusion · 70% below imported</span>
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="pwr-card reveal delay-2">
+        <div class="swatch swatch-pizza">
+          <span class="swatch-emoji">🌿</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>迷迭香烤鸡腌料</span><span data-en>Rosemary Roast Chicken Marinade</span></h4>
+          <div class="name-en"><span data-zh>Rosemary Marinade</span><span data-en>迷迭香烤鸡腌料</span></div>
+          <p class="role">
+            <span data-zh>云南牟定迷迭香 · 海南精深加工 · 走量主力,出海主推</span>
+            <span data-en>Yunnan Mouding rosemary · Hainan deep processing · volume driver, export flagship</span>
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="pwr-card reveal delay-3">
+        <div class="swatch swatch-sauce">
+          <span class="swatch-emoji">🥩</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>黑松露牛排酱</span><span data-en>Truffle Steak Sauce</span></h4>
+          <div class="name-en"><span data-zh>Truffle Steak Sauce</span><span data-en>黑松露牛排酱</span></div>
+          <p class="role">
+            <span data-zh>云南黑松露 + 内蒙牛肉的天然搭档 · 双地标组合</span>
+            <span data-en>Yunnan truffle + Inner Mongolian beef's natural pair · double-GI combination</span>
+          </p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="products-sauces-v62.html" class="font-display italic text-rust border-b border-rust/40 pb-1 hover:border-rust transition" style="font-size: 15px;">
+        <span data-zh>查看全部 18+ 款云南系列产品</span>
+        <span data-en>See all 18+ products powered by Yunnan</span>
+        →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 5 · RELATED READING ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">05 / Related Reading</span>
+      <h2 class="article-h2">
+        <span data-zh>延伸阅读</span>
+        <span data-en>Continue reading.</span>
+      </h2>
+    </div>
+
+    <div class="mt-10 reveal delay-1">
+      <a href="our-story-chinese-roots-inner-mongolia-v62.html" class="read-card block">
+        <div class="read-tag">Story 01 · Origin</div>
+        <h5><span data-zh>内蒙古牛羊肉:草原上长出的,是肉也是身份</span><span data-en>Inner Mongolia beef &amp; lamb: grass-fed identity</span></h5>
+      </a>
+      <a href="our-story-global-masters-italy-v62.html" class="read-card block">
+        <div class="read-tag">Story 02 · Italy</div>
+        <h5><span data-zh>意大利主厨如何评价云南黑松露?</span><span data-en>What our Italy-trained chef thinks of Yunnan black truffle</span></h5>
+      </a>
+      <a href="our-story-china-insight-v62.html" class="read-card block">
+        <div class="read-tag">Story 03 · China Insight</div>
+        <h5><span data-zh>中国独有资源,是不是中国 B2B 品牌的全球护城河?</span><span data-en>Are China-only resources the moat for Chinese B2B brands going global?</span></h5>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 6 · CTA ════════ -->
+<section id="bottom-cta" class="py-28 md:py-32 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto">
+    <div class="cta-block reveal">
+      <div class="relative z-10 max-w-2xl">
+        <div class="font-display italic text-white/80 text-sm tracking-[0.2em] mb-6">
+          06 / TASTE THE STORY
+        </div>
+        <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.15;">
+          <span data-zh>故事讲完了。<br>现在,让你尝一口?</span>
+          <span data-en>The story is told.<br>Now, would you like to taste it?</span>
+        </h2>
+        <p class="text-white/85 text-base md:text-lg mb-10 leading-relaxed">
+          <span data-zh>18+ 款使用云南黑松露与迷迭香的产品 · 从黑松露油到迷迭香腌料 · 申请样品组合,体会中国独占资源的力量。</span>
+          <span data-en>18+ products powered by Yunnan truffle and rosemary — from truffle oil to rosemary marinade. Request a sample pack and feel what only-in-China means.</span>
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#" class="btn-primary" data-foodvio-cta="sample_request">
+            <span data-zh>申请云南系列样品</span>
+            <span data-en>Request Yunnan Sample Pack</span>
+            <span>→</span>
+          </a>
+          <a href="#" class="btn-outline" data-foodvio-cta="origin_tour">
+            <span data-zh>预约云南产区参观</span>
+            <span data-en>Book Yunnan field visit</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。从田间到餐桌,世界风味,中国制造。</span>
+          <span data-en>The professional Western cuisine brand from China.</span>
+        </p>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a>
+        <a href="#" class="footer-link">Healthy Sides</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a>
+        <a href="for-industrial-v62.html" class="footer-link">Industrial</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div>
+        <a href="our-story-index-v62.html" class="footer-link">Our Story</a>
+        <a href="our-story-chinese-roots-v62.html" class="footer-link">Chinese Roots</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55 leading-relaxed">400-6879-568<br>huahuakefu1@<br>foodvio.com.cn</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div class="flex items-center gap-5"><span>京 ICP 备 2022025117 号-1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > window.innerHeight - 100);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

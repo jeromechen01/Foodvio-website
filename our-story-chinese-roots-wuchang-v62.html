@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>五常大米 · Origin Story · Foodvio 花花食界</title>
+<meta name="description" content="五常大米 · 中国地理标志大米 · 黑龙江寒地黑土 · 稻花香 2 号 · 花花食界中西融合主食赛道的核心原料" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'sans-sc': ['"Noto Sans SC"', 'sans-serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
+  }}}
+</script>
+
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; --chili-red: #1B4332; }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.05; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
+  }
+
+  /* ════════ MAGAZINE HERO (full screen) ════════ */
+  .mag-hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--ink);
+    overflow: hidden;
+    display: flex; align-items: end;
+  }
+  .mag-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(184,35,28,0.30) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, rgba(245,200,46,0.10) 0%, transparent 55%),
+      linear-gradient(135deg, rgba(184,35,28,0.10) 0%, rgba(13,42,31,0.5) 100%);
+  }
+  .mag-hero::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.10; mix-blend-mode: overlay;
+  }
+
+  /* Floating chili emoji */
+  .chili-deco {
+    position: absolute;
+    font-size: 280px;
+    line-height: 1;
+    opacity: 0.12;
+    color: #fff;
+    pointer-events: none;
+  }
+  .chili-1 { top: 20%; right: 8%; transform: rotate(-15deg); }
+  .chili-2 { bottom: 18%; right: 30%; font-size: 140px; transform: rotate(25deg); opacity: 0.08; }
+
+  .mag-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: rgba(245,200,46,0.85);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+  .mag-title {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    color: #fff;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .mag-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+
+  /* Issue meta tag */
+  .issue-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    color: rgba(255,255,255,0.85);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+  .issue-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+  /* ════════ ARTICLE TYPOGRAPHY (editorial) ════════ */
+  .article-section {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .article-section.wide {
+    max-width: 1100px;
+  }
+  .article-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .article-num::before { content: '— '; }
+  .article-h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-size: clamp(28px, 3.5vw, 44px);
+    margin-bottom: 20px;
+  }
+  .article-h2-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-weight: 500;
+    font-size: clamp(20px, 2vw, 26px);
+    margin-bottom: 36px;
+  }
+  .article-p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    line-height: 1.85;
+    color: rgba(13,42,31,0.85);
+    margin-bottom: 22px;
+    font-weight: 400;
+  }
+  .article-p-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(13,42,31,0.85);
+    margin-bottom: 22px;
+    font-style: italic;
+    font-weight: 500;
+  }
+  /* Drop cap */
+  .article-p.first-para::first-letter,
+  .article-p-en.first-para::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--chili-red);
+    font-size: 5em;
+    line-height: 0.85;
+    float: left;
+    padding-right: 14px;
+    padding-top: 6px;
+    margin-bottom: -8px;
+  }
+
+  /* ════════ Pull quote (large editorial quote) ════════ */
+  .pull-quote {
+    border-left: 3px solid var(--chili-red);
+    padding: 12px 0 12px 32px;
+    margin: 48px 0;
+  }
+  .pull-quote .quote-text {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    color: var(--forest);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+    margin-bottom: 12px;
+  }
+  .pull-quote .quote-text-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--forest);
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .pull-quote .quote-byline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ════════ Spec card (data sheet) ════════ */
+  .spec-card {
+    background: linear-gradient(135deg, #faf7f0 0%, #f0e6d2 100%);
+    border: 1px solid rgba(184,35,28,0.15);
+    border-radius: 20px;
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .spec-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--chili-red);
+  }
+  .spec-card::after {
+    content: '🌶️';
+    position: absolute;
+    top: 24px; right: 28px;
+    font-size: 32px;
+    opacity: 0.4;
+  }
+  .spec-card .spec-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--chili-red);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .spec-card h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    color: var(--forest);
+    font-size: 22px;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+  .spec-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(13,42,31,0.12);
+    align-items: baseline;
+  }
+  .spec-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .spec-row .key {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+  .spec-row .val {
+    font-size: 14px;
+    color: var(--forest);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* ════════ Reasons (numbered editorial) ════════ */
+  .reason {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(13,42,31,0.08);
+  }
+  .reason:last-child { border-bottom: none; }
+  .reason-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: var(--chili-red);
+    font-size: 56px;
+    line-height: 1;
+    font-style: italic;
+  }
+  .reason h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--forest);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .reason p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(13,42,31,0.75);
+  }
+
+  /* ════════ Product cards (it powers these) ════════ */
+  .pwr-card {
+    background: #fff;
+    border: 1px solid rgba(27,67,50,0.06);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
+    cursor: pointer;
+  }
+  .pwr-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -16px rgba(184,35,28,0.18);
+    border-color: rgba(184,35,28,0.25);
+  }
+  .pwr-card .swatch {
+    aspect-ratio: 5/3;
+    position: relative;
+    overflow: hidden;
+  }
+  .pwr-card .swatch::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.18; mix-blend-mode: multiply;
+  }
+  .pwr-card .swatch-emoji {
+    position: absolute;
+    inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 64px;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  .swatch-pizza { background: linear-gradient(135deg, #c2410c 0%, #7c2d12 100%); }
+  .swatch-side { background: linear-gradient(135deg, #B8231C 0%, #7a0f0a 100%); }
+  .swatch-sauce { background: linear-gradient(135deg, #C72D1F 0%, #801515 100%); }
+  .pwr-card .info { padding: 24px 22px; }
+  .pwr-card h4 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+  .pwr-card .name-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .pwr-card .role {
+    font-size: 13px;
+    color: rgba(13,42,31,0.65);
+    line-height: 1.55;
+  }
+
+  /* ════════ Field-to-factory timeline ════════ */
+  .field-step {
+    display: flex; gap: 20px;
+    padding: 24px 0;
+    align-items: flex-start;
+  }
+  .field-step .step-num {
+    flex-shrink: 0;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 2px solid var(--chili-red);
+    color: var(--chili-red);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1;
+  }
+  .field-step .step-info {
+    flex-grow: 1;
+    padding-top: 8px;
+  }
+  .field-step h5 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--forest);
+    margin-bottom: 6px;
+  }
+  .field-step p {
+    font-size: 14px;
+    color: rgba(13,42,31,0.7);
+    line-height: 1.6;
+  }
+  .field-arrow {
+    margin-left: 28px;
+    height: 24px;
+    border-left: 1px dashed rgba(184,35,28,0.4);
+  }
+
+  /* ════════ Cert badge ════════ */
+  .cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 22px;
+    background: #fff;
+    border: 1px solid rgba(184,35,28,0.2);
+    border-radius: 12px;
+    font-size: 13px;
+    color: var(--forest);
+  }
+  .cert-badge .icon { color: var(--chili-red); font-size: 20px; }
+
+  /* ════════ Related reading ════════ */
+  .read-card {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(13,42,31,0.1);
+    transition: padding 0.3s;
+    cursor: pointer;
+  }
+  .read-card:last-child { border-bottom: none; }
+  .read-card:hover { padding-left: 12px; }
+  .read-card .read-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .read-card h5 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--forest);
+    line-height: 1.4;
+    transition: color 0.3s;
+  }
+  .read-card:hover h5 { color: var(--chili-red); }
+
+  /* ════════ CTA at bottom ════════ */
+  .cta-block {
+    background: linear-gradient(135deg, var(--chili-red) 0%, #7a0f0a 100%);
+    border-radius: 28px;
+    padding: 56px 48px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-block::before {
+    content: '🌶️';
+    position: absolute;
+    bottom: -40px; right: -20px;
+    font-size: 240px;
+    opacity: 0.10;
+    transform: rotate(-15deg);
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px; background: #fff; color: var(--chili-red);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+  }
+  .btn-primary:hover { background: var(--gold); color: var(--ink); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: transparent; color: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+
+  /* ════════ Reveal ════════ */
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand, .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+  .nav-link { position: relative; font-size: 14px; letter-spacing: 0.02em; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+  .mega-cta { display: block; padding: 14px 18px; background: var(--cream); border: 1px solid rgba(27,67,50,0.1); border-radius: 8px; font-size: 13px; color: var(--forest); transition: all 0.3s; margin-bottom: 10px; }
+  .mega-cta:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+  /* Footer */
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+
+  /* Lang switch */
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+
+  @media (max-width: 768px) {
+    .mega-menu { display: none; }
+    .reason { grid-template-columns: 1fr; gap: 12px; }
+    .reason-num { font-size: 40px; }
+    .spec-row { grid-template-columns: 1fr; gap: 4px; padding: 10px 0; }
+  }
+</style>
+<script src="lead-capture.js" defer></script>
+</head>
+
+<body class="grain">
+
+<!-- NAV -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown active" data-menu="story">Our Story</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a>
+        <a href="#" class="mega-link">Western Staples</a><a href="#" class="mega-link">Healthy Sides</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
+        <a href="products-index-v62.html" class="mega-link">花花食界 · Foodvio Pro</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="#" class="mega-link featured">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick Access</div>
+        <a href="#" class="mega-cta">📄 Catalog</a><a href="#" class="mega-cta">🎁 Samples</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link featured">🔵 轻后厨(6)</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured Cases</div><a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡 · 24 店</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Global Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a></div>
+    </div>
+  </div>
+
+    <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 中国原料,世界品质</a>
+        <a href="our-story-global-masters-v62.html" class="mega-link featured">👨‍🍳 世界大师,中国研发</a>
+        <a href="our-story-china-insight-v62.html" class="mega-link featured">🌏 我们更懂中国客户</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link">🌶️ 江西 · 赣南螺丝椒</a>
+        <a href="our-story-chinese-roots-xinjiang-v62.html" class="mega-link">🍅 新疆 · 番茄 · 面粉</a>
+        <a href="our-story-chinese-roots-inner-mongolia-v62.html" class="mega-link">🐑 内蒙古 · 牛羊肉</a>
+        <a href="our-story-chinese-roots-wuchang-v62.html" class="mega-link featured">🌾 东北 · 五常大米</a>
+        <a href="our-story-chinese-roots-yunnan-v62.html" class="mega-link">🍄 云南 · 松露 · 迷迭香</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇪🇸 Spain</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a>
+        <a href="#" class="mega-link">🇯🇵 Japan</a>
+        <a href="#" class="mega-link">🇲🇽 Mexico</a></div>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Manufacturing</div><a href="#" class="mega-link">🏭 江西赣州</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Expertise</div><a href="#" class="mega-link">米其林研发</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Certifications</div><a href="#" class="mega-link">HACCP / ISO 22000</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════ SECTION 1 · MAGAZINE HERO ════════ -->
+<section class="mag-hero">
+  <span class="chili-deco chili-1">🌾</span>
+  <span class="chili-deco chili-2">🍚</span>
+
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pb-24 pt-32">
+
+    <div class="breadcrumb mb-16 reveal">
+      <a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <a href="our-story-index-v62.html">Our Story</a>
+      <span class="sep">›</span>
+      <a href="our-story-chinese-roots-v62.html"><span data-zh>中国原料</span><span data-en>Chinese Roots</span></a>
+      <span class="sep">›</span>
+      <span class="text-white"><span data-zh>五常大米</span><span data-en>Wuchang Rice</span></span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+
+      <div class="md:col-span-9">
+        <div class="issue-tag mb-10 reveal">
+          <span class="dot"></span>
+          <span>ORIGIN STORY · 04 OF 5</span>
+        </div>
+
+        <div class="mag-label mb-8 reveal delay-1">黑龙江 · WUCHANG, CHINA</div>
+
+        <h1 class="mag-title reveal delay-1" style="font-size: clamp(48px, 9vw, 128px);">
+          <span data-zh>五常<br>大米</span>
+          <span data-en class="block">Wuchang<br>Rice</span>
+        </h1>
+
+        <p class="mag-subtitle reveal delay-2 mt-10" style="font-size: clamp(18px, 1.8vw, 26px); max-width: 580px;" data-zh>
+          From the black soil of Heilongjiang — China's most named rice.
+        </p>
+        <p class="mag-subtitle reveal delay-2 mt-10 font-serif-sc" style="font-size: clamp(16px, 1.5vw, 22px); max-width: 580px; font-style: normal;" data-en>
+          黑龙江寒地黑土上长出的、中国最有名字的大米
+        </p>
+      </div>
+
+      <div class="md:col-span-3 reveal delay-3">
+        <div class="text-white/55 text-xs uppercase tracking-[0.2em] mb-3 font-display italic">Read time</div>
+        <div class="text-white/85 font-display italic text-2xl mb-6">8 min</div>
+        <div class="text-white/55 text-xs uppercase tracking-[0.2em] mb-3 font-display italic">In this issue</div>
+        <ul class="text-white/75 text-xs space-y-2">
+          <li>· <span data-zh>故事开场</span><span data-en>Opening</span></li>
+          <li>· <span data-zh>产地背景</span><span data-en>Origin</span></li>
+          <li>· <span data-zh>3 个理由</span><span data-en>3 reasons</span></li>
+          <li>· <span data-zh>支撑产品</span><span data-en>Powered products</span></li>
+          <li>· <span data-zh>延伸阅读</span><span data-en>Related reading</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 1 · OPENING ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">01 / Opening</span>
+      <h2 class="article-h2">
+        <span data-zh>一颗有名字的米</span>
+        <span data-en>A grain with a name.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>A grain with a name.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">一颗有名字的米</span>
+      </div>
+    </div>
+
+    <div class="reveal delay-1">
+      <p class="article-p first-para" data-zh>
+        中国人吃饭吃了几千年,但绝大多数米都没有名字。米就是米——白白的、煮熟、上桌。但有一种米例外。它有自己的产区、自己的品种、自己的香气、自己的支持者——这就是五常大米。
+      </p>
+      <p class="article-p-en first-para" data-en>
+        The Chinese have eaten rice for thousands of years, but most rice doesn't have a name. Rice is just rice — white, cooked, served. With one exception. There is a rice that has its own region, its own cultivar, its own aroma, its own followers. That rice is Wuchang.
+      </p>
+
+      <p class="article-p" data-zh>
+        更准确地说,是"五常稻花香 2 号"。它生长在黑龙江五常市那一片寒地黑土上,生长周期长达 138-145 天,是普通水稻的 1.5 倍。一年只有一季,产量很低——但煮饭时打开锅盖那一刻,扑面而来的香气,是这片土地的签名。
+      </p>
+      <p class="article-p-en" data-en>
+        More precisely: Wuchang Daohuaxiang No. 2. It grows on the cold-region black soil of Wuchang City, Heilongjiang. Its growing cycle stretches to 138-145 days — one-and-a-half times an ordinary rice. One harvest a year, low yield. But the moment you lift the lid of a freshly-cooked pot, the aroma that fills the room is this land's signature.
+      </p>
+
+      <p class="article-p" data-zh>
+        在花花食界的产品矩阵里,五常大米是"主食类"原料的代表。它支撑的不是单一菜品,而是一整个品类——中西融合主食。
+      </p>
+      <p class="article-p-en" data-en>
+        In our portfolio, Wuchang anchors the staple category. It doesn't power a single dish — it powers a whole product line: fusion staples.
+      </p>
+    </div>
+
+    <div class="pull-quote reveal delay-2">
+      <div class="quote-text" data-zh>
+        &ldquo;米饭可以是配角,<br>也可以是这道菜的主角。<br>五常大米给了我们这个选择权。&rdquo;
+      </div>
+      <div class="quote-text-en" data-en>
+        &ldquo;Rice can be the supporting actor.<br>Or it can carry the dish.<br>Wuchang rice gives us that choice.&rdquo;
+      </div>
+      <div class="quote-byline">
+        <span data-zh>—— 花花食界研发主厨</span>
+        <span data-en>— Foodvio R&amp;D Chef</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 2 · ORIGIN ════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">02 / Origin</span>
+      <h2 class="article-h2">
+        <span data-zh>寒地黑土,长出的不只是米</span>
+        <span data-en>Cold black soil grows more than just rice.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>Cold black soil grows more than just rice.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">寒地黑土,长出的不只是米</span>
+      </div>
+    </div>
+
+    <div class="reveal delay-1">
+      <p class="article-p" data-zh>
+        五常市在黑龙江省哈尔滨南面,北纬 45 度上下。这个纬度的水稻种植区,在世界范围内只有日本北海道、美国加州北部、中国东北少数几片土地。寒地、长日照、昼夜温差大、土壤是 100 万年才形成 1 厘米的黑土——这些条件叠加起来,就是稻米品质的物理基础。
+      </p>
+      <p class="article-p-en" data-en>
+        Wuchang sits south of Harbin in Heilongjiang Province, around 45° north. Rice fields at this latitude exist in only a few places in the world: Hokkaido, Northern California, a sliver of Northeast China. Cold climate, long daylight, sharp temperature swings, and black soil that takes a million years to deposit a single centimeter — together, the physical foundation of rice quality.
+      </p>
+
+      <p class="article-p" data-zh>
+        五常稻花香 2 号是中国农业科学院培育的品种,但它只在五常长成它该有的样子。把同样的种子搬到江苏、河南,长出来的米已经不是稻花香了——这是"原产地保护"四个字背后的科学事实。
+      </p>
+      <p class="article-p-en" data-en>
+        Daohuaxiang No. 2 was bred by the Chinese Academy of Agricultural Sciences. But it only becomes what it is in Wuchang. Plant the same seed in Jiangsu or Henan and what grows isn't Daohuaxiang anymore. That's the scientific fact behind "region of origin protection."
+      </p>
+
+      <p class="article-p" data-zh>
+        五常大米也是中国市场上仿冒最严重的农产品之一。我们做的第一件事,是把溯源做到地块——每一袋花花用的五常米,都能追到具体哪个合作农场、哪一季。
+      </p>
+      <p class="article-p-en" data-en>
+        Wuchang is also among the most counterfeited agricultural products in China. The first thing we did was trace every bag back to plot level — every kilo of Wuchang rice we use is tied to a specific cooperative farm and harvest season.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 3 · WHY WE CHOSE IT ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">03 / Why we chose it</span>
+      <h2 class="article-h2">
+        <span data-zh>为什么花花选择这款米?</span>
+        <span data-en>Why we chose this rice.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>Three reasons. From a chef's notebook.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">三个理由 · 来自主厨笔记</span>
+      </div>
+    </div>
+
+    <div class="mt-12 reveal delay-1">
+
+      <div class="reason">
+        <div class="reason-num">01</div>
+        <div>
+          <h4>
+            <span data-zh>应用边界 —— 我们诚实地承认它的局限</span>
+            <span data-en>Application boundary — we're honest about the limits</span>
+          </h4>
+          <p data-zh>
+            大米在西餐里的应用范围,比番茄、罗勒窄得多。核心场景就是 Risotto(意式烩饭)、Paella(西班牙海鲜饭)、Pilaf(中东抓饭)、Jambalaya(美式什锦饭)、焗饭。我们不会假装五常米能用在所有西餐里——但在这几类"米饭主导"的西式品类里,它几乎是最优解。
+          </p>
+          <p data-en>
+            Rice has a much narrower role in Western cuisine than tomato or basil. The core dishes are limited: risotto, paella, pilaf, jambalaya, baked rice. We won't pretend Wuchang rice fits everywhere — but for these few rice-driven Western categories, it's nearly the optimal answer.
+          </p>
+        </div>
+      </div>
+
+      <div class="reason">
+        <div class="reason-num">02</div>
+        <div>
+          <h4>
+            <span data-zh>中西融合 —— 大米是融合菜的最佳载体</span>
+            <span data-en>Fusion logic — rice is the best vehicle for cross-cuisine cooking</span>
+          </h4>
+          <p data-zh>
+            我们选这款米,真正的战略原因是——它特别适合做"中西融合主食"。中餐基础(米饭)+ 西餐风味(黑松露 / 番茄 / 黑椒酱)+ 顶级食材(五常),这三层组合,在中国餐饮里几乎没有竞争对手。中餐厅做西式米饭很难有信服力,西餐厅又拿不到顶级中国地标米——花花同时拿到了原料和工艺。
+          </p>
+          <p data-en>
+            The real strategic reason: Wuchang is the perfect vehicle for fusion staples. A Chinese base (rice), Western flavors (truffle, tomato, black pepper), top-tier ingredient (Wuchang) — this three-layer combination has almost no competitor in Chinese F&amp;B. Chinese restaurants can't credibly do Western rice; Western restaurants can't access top Chinese GI rice. We have both the ingredient and the technique.
+          </p>
+        </div>
+      </div>
+
+      <div class="reason">
+        <div class="reason-num">03</div>
+        <div>
+          <h4>
+            <span data-zh>溯源诚信 —— 仿冒最严重的赛道,我们做最真的产品</span>
+            <span data-en>Provenance honesty — we make the real thing in the most counterfeited category</span>
+          </h4>
+          <p data-zh>
+            市面上 80% 的"五常大米"不是真的。我们花了一年时间,从合作农场到加工厂,把每一个环节的溯源做到可验证。客户拿到我们的产品,扫码能看到地块、采收日期、加工批次——这是我们能讲"五常"两个字的底气。
+          </p>
+          <p data-en>
+            An estimated 80% of "Wuchang rice" on the market isn't real. We spent a year building verifiable traceability from cooperative farm to mill. Every product we ship carries a code that returns plot, harvest date, milling batch. This is what gives us the right to write "Wuchang" on the label.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 4 · WHAT IT POWERS ════════ -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section wide">
+
+    <div class="text-center reveal mb-16">
+      <span class="article-num">04 / What it powers</span>
+      <h2 class="article-h2">
+        <span data-zh>它支撑了哪些产品?</span>
+        <span data-en>What this rice powers.</span>
+      </h2>
+      <div class="article-h2-en">
+        <span data-zh>One grain — three fusion staples.</span>
+        <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">一种米 · 三款融合主食</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <a href="#" class="pwr-card reveal delay-1">
+        <div class="swatch swatch-pizza">
+          <span class="swatch-emoji">🍚</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>黑松露五常烩饭</span><span data-en>Truffle Wuchang Risotto</span></h4>
+          <div class="name-en"><span data-zh>Truffle Risotto</span><span data-en>黑松露五常烩饭</span></div>
+          <p class="role">
+            <span data-zh>稻花香 2 号 + 云南黑松露 · 中式米的西式烩饭做法 · 双地标组合</span>
+            <span data-en>Daohuaxiang No. 2 + Yunnan black truffle · Chinese rice, Italian technique · double-GI</span>
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="pwr-card reveal delay-2">
+        <div class="swatch swatch-side">
+          <span class="swatch-emoji">🥘</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>西班牙海鲜饭</span><span data-en>Spanish Paella</span></h4>
+          <div class="name-en"><span data-zh>Spanish Paella</span><span data-en>西班牙海鲜饭</span></div>
+          <p class="role">
+            <span data-zh>稻花香 2 号 + 西班牙学艺主厨配方 · 比传统短粒米更香</span>
+            <span data-en>Daohuaxiang No. 2 + Spain-trained chef recipe · more aromatic than traditional short-grain</span>
+          </p>
+        </div>
+      </a>
+
+      <a href="#" class="pwr-card reveal delay-3">
+        <div class="swatch swatch-sauce">
+          <span class="swatch-emoji">🍳</span>
+        </div>
+        <div class="info">
+          <h4><span data-zh>新疆番茄炒饭</span><span data-en>Xinjiang Tomato Fried Rice</span></h4>
+          <div class="name-en"><span data-zh>Tomato Fried Rice</span><span data-en>新疆番茄炒饭</span></div>
+          <p class="role">
+            <span data-zh>稻花香 2 号 + 新疆番茄酱 · 中西融合的入门级产品 · 走量主力</span>
+            <span data-en>Daohuaxiang No. 2 + Xinjiang tomato paste · entry-level fusion · volume driver</span>
+          </p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="products-sauces-v62.html" class="font-display italic text-rust border-b border-rust/40 pb-1 hover:border-rust transition" style="font-size: 15px;">
+        <span data-zh>查看全部 10+ 款五常系列产品</span>
+        <span data-en>See all 10+ products powered by Wuchang</span>
+        →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 5 · RELATED READING ════════ -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+
+    <div class="reveal">
+      <span class="article-num">05 / Related Reading</span>
+      <h2 class="article-h2">
+        <span data-zh>延伸阅读</span>
+        <span data-en>Continue reading.</span>
+      </h2>
+    </div>
+
+    <div class="mt-10 reveal delay-1">
+      <a href="#" class="read-card block">
+        <div class="read-tag">Story 01 · Origin</div>
+        <h5><span data-zh>云南黑松露:中国厨房里的黑钻石</span><span data-en>Yunnan Black Truffle: the black diamond in Chinese kitchens</span></h5>
+      </a>
+      <a href="#" class="read-card block">
+        <div class="read-tag">Story 02 · Spain</div>
+        <h5><span data-zh>西班牙主厨如何用五常米做真正的 Paella?</span><span data-en>How our Spain-trained chef makes real paella with Wuchang rice</span></h5>
+      </a>
+      <a href="our-story-china-insight-v62.html" class="read-card block">
+        <div class="read-tag">Story 03 · China Insight</div>
+        <h5><span data-zh>中国客户买地标产品,看的是溯源,不是包装</span><span data-en>Chinese buyers grade GI products by provenance, not packaging</span></h5>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════ SECTION 6 · CTA ════════ -->
+<section id="bottom-cta" class="py-28 md:py-32 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto">
+    <div class="cta-block reveal">
+      <div class="relative z-10 max-w-2xl">
+        <div class="font-display italic text-white/80 text-sm tracking-[0.2em] mb-6">
+          06 / TASTE THE STORY
+        </div>
+        <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.15;">
+          <span data-zh>故事讲完了。<br>现在,让你尝一口?</span>
+          <span data-en>The story is told.<br>Now, would you like to taste it?</span>
+        </h2>
+        <p class="text-white/85 text-base md:text-lg mb-10 leading-relaxed">
+          <span data-zh>10+ 款使用五常稻花香 2 号的产品 · 从黑松露烩饭到番茄炒饭 · 申请样品组合,感受这片黑土地的味道。</span>
+          <span data-en>10+ products powered by Wuchang Daohuaxiang No. 2 — from truffle risotto to tomato fried rice. Request a sample pack and taste the black soil.</span>
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#" class="btn-primary" data-foodvio-cta="sample_request">
+            <span data-zh>申请五常系列样品</span>
+            <span data-en>Request Wuchang Sample Pack</span>
+            <span>→</span>
+          </a>
+          <a href="#" class="btn-outline" data-foodvio-cta="origin_tour">
+            <span data-zh>预约五常稻田参观</span>
+            <span data-en>Book Wuchang field visit</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。从田间到餐桌,世界风味,中国制造。</span>
+          <span data-en>The professional Western cuisine brand from China.</span>
+        </p>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a>
+        <a href="#" class="footer-link">Healthy Sides</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a>
+        <a href="for-industrial-v62.html" class="footer-link">Industrial</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div>
+        <a href="our-story-index-v62.html" class="footer-link">Our Story</a>
+        <a href="our-story-chinese-roots-v62.html" class="footer-link">Chinese Roots</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55 leading-relaxed">400-6879-568<br>huahuakefu1@<br>foodvio.com.cn</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div class="flex items-center gap-5"><span>京 ICP 备 2022025117 号-1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > window.innerHeight - 100);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
