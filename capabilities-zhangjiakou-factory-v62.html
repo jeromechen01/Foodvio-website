@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>河北张家口工厂 · Capabilities · Foodvio 花花食界</title>
+<meta name="description" content="花花食界河北张家口工厂 · 1.6 万㎡ 烘焙生产基地 · 美国 FDA 注册 · 专业西式烘焙产线 · 出海合规先锋" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0', 'steel': '#4A6271' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'mono': ['"JetBrains Mono"', 'monospace'] }
+  }}}
+</script>
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --cream: #F5F1EA; --paper: #FAF7F0; --steel: #4A6271; --steel-dark: #2D3D47; --bake-amber: #C4843D; }
+  * { -webkit-font-smoothing: antialiased; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+  .grain::after { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E"); opacity: 0.04; pointer-events: none; z-index: 99; mix-blend-mode: overlay; }
+  .mag-hero { position: relative; min-height: 80vh; background: var(--ink); overflow: hidden; display: flex; align-items: end; }
+  .mag-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 30%, rgba(196,132,61,0.30) 0%, transparent 55%), radial-gradient(ellipse at 70% 70%, rgba(74,98,113,0.20) 0%, transparent 55%); }
+  .mag-hero::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 60px 60px; }
+  .mag-label { font-family: 'Cormorant Garamond', serif; font-style: italic; color: rgba(245,200,46,0.85); letter-spacing: 0.3em; text-transform: uppercase; font-size: 13px; }
+  .mag-title { font-family: 'Noto Serif SC', serif; font-weight: 900; color: #fff; line-height: 0.95; letter-spacing: -0.02em; }
+  .mag-subtitle { font-family: 'Cormorant Garamond', serif; font-style: italic; color: rgba(255,255,255,0.7); }
+  .issue-tag { display: inline-flex; align-items: center; gap: 12px; padding: 10px 18px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; backdrop-filter: blur(8px); color: rgba(255,255,255,0.85); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Cormorant Garamond', serif; font-style: italic; }
+  .issue-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--bake-amber); }
+  .article-section { max-width: 1100px; margin: 0 auto; }
+  .article-num { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; display: block; }
+  .article-num::before { content: '— '; }
+  .article-h2 { font-family: 'Noto Serif SC', serif; font-weight: 700; color: var(--forest); line-height: 1.15; font-size: clamp(28px, 3.5vw, 44px); margin-bottom: 16px; }
+  .article-h2-en { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: clamp(20px, 2vw, 26px); margin-bottom: 36px; }
+  .spec-sheet { background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%); border: 1px solid rgba(196,132,61,0.15); border-radius: 20px; padding: 36px 32px; position: relative; overflow: hidden; }
+  .spec-sheet::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--bake-amber); }
+  .spec-sheet::after { content: '🥖'; position: absolute; top: 24px; right: 28px; font-size: 32px; opacity: 0.4; }
+  .spec-sheet .label { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--bake-amber); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+  .spec-sheet h3 { font-family: 'Noto Serif SC', serif; font-weight: 700; color: var(--forest); font-size: 22px; margin-bottom: 24px; }
+  .spec-row { display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px dashed rgba(13,42,31,0.12); align-items: baseline; }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-row .key { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; }
+  .spec-row .val { font-size: 14px; color: var(--forest); font-weight: 500; }
+  .spec-row .val.mono { font-family: 'JetBrains Mono', monospace; color: var(--steel-dark); }
+  .fda-highlight { background: linear-gradient(135deg, #fff5e6 0%, #ffe9c8 100%); border: 1px solid rgba(196,132,61,0.3); border-radius: 18px; padding: 32px; }
+  .fda-highlight h3 { font-family: 'Noto Serif SC', serif; font-weight: 700; color: var(--forest); font-size: 22px; margin-bottom: 12px; }
+  .line-card { background: #fff; border: 1px solid rgba(13,42,31,0.06); border-radius: 18px; padding: 24px 22px; transition: all 0.4s; height: 100%; }
+  .line-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px -16px rgba(196,132,61,0.18); }
+  .line-card .icon { font-size: 32px; margin-bottom: 12px; }
+  .line-card h4 { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 16px; color: var(--forest); margin-bottom: 6px; }
+  .line-card .area { font-family: 'JetBrains Mono', monospace; color: var(--bake-amber); font-size: 12px; margin-bottom: 12px; }
+  .line-card p { font-size: 13px; color: rgba(13,42,31,0.7); line-height: 1.6; }
+  .pwr-item { background: #fff; border: 1px solid rgba(196,132,61,0.15); border-radius: 14px; padding: 18px 20px; transition: all 0.3s; }
+  .pwr-item:hover { border-color: var(--bake-amber); transform: translateY(-2px); }
+  .pwr-item h5 { font-family: 'Noto Serif SC', serif; font-weight: 600; font-size: 14px; color: var(--forest); margin-bottom: 4px; }
+  .pwr-item p { font-size: 12px; color: rgba(13,42,31,0.6); }
+  .cert-pill { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; background: #fff; border: 1px solid rgba(13,42,31,0.12); border-radius: 999px; font-size: 13px; color: var(--forest); }
+  .cert-pill.featured { background: linear-gradient(135deg, #fff5e6 0%, #ffe9c8 100%); border-color: var(--bake-amber); font-weight: 500; }
+  .cta-block { background: linear-gradient(135deg, var(--bake-amber) 0%, #8c5a24 100%); border-radius: 28px; padding: 56px 48px; color: #fff; position: relative; overflow: hidden; }
+  .cta-block::before { content: '🥖'; position: absolute; bottom: -30px; right: -10px; font-size: 220px; opacity: 0.10; transform: rotate(-15deg); }
+  .btn-primary { display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px; background: #fff; color: var(--bake-amber); border-radius: 999px; font-weight: 500; font-size: 14px; transition: all 0.4s; }
+  .btn-primary:hover { background: var(--gold); color: var(--ink); transform: translateY(-2px); }
+  .btn-outline { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; background: transparent; color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; font-weight: 500; font-size: 14px; }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; }
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+  .nav-bar { transition: all 0.4s; }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand { color: var(--forest); }
+  .nav-link { font-size: 14px; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transition: all 0.3s; z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; color: rgba(255,255,255,0.85); cursor: pointer; background: transparent; }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+  @media (max-width: 768px) { .mega-menu { display: none; } .spec-row { grid-template-columns: 1fr; gap: 4px; } }
+</style>
+</head>
+<body class="grain">
+
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 text-white nav-brand">
+      <span class="font-display text-xl font-semibold">Foodvio</span><span class="w-px h-3 bg-white/30 mx-1"></span><span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown" data-menu="story">Our Story</a>
+      <a href="capabilities-index-v62.html" class="nav-link has-dropdown active" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a><a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white" data-foodvio-cta="general_contact">Contact</a>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div><a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div><a href="products-index-v62.html" class="mega-link">花花食界</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="#" class="mega-link">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick</div><a href="#" class="mega-link">📄 Catalog</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">Scenario</div><a href="solutions-light-kitchen-v62.html" class="mega-link">🔵 轻后厨</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured</div><a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Channels</div><a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">三个故事 · Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 5 大特色原料</a>
+        <a href="our-story-global-masters-v62.html" class="mega-link featured">👨‍🍳 5 国大师灵感</a>
+        <a href="our-story-china-insight-v62.html" class="mega-link featured">🌏 5 大中国洞察</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link featured">🌶️ 江西 · 赣南螺丝椒</a>
+        <a href="#" class="mega-link">🍅🌾 新疆 · 番茄 + 高筋面粉</a>
+        <a href="#" class="mega-link">🍄🌿 云南 · 黑松露 + 迷迭香</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇩🇪 Germany</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Manufacturing</div>
+        <a href="capabilities-ganzhou-factory-v62.html" class="mega-link featured">🏭 江西赣州</a>
+        <a href="capabilities-zhangjiakou-factory-v62.html" class="mega-link featured">🥖 河北张家口</a>
+        <a href="capabilities-huairou-factory-v62.html" class="mega-link">🏢 北京怀柔</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Expertise</div><a href="capabilities-rd-team-v62.html" class="mega-link featured">👨‍🍳 米其林研发</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Supply</div><a href="capabilities-supply-chain-v62.html" class="mega-link">🚢 4 港口</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Compliance</div><a href="capabilities-certifications-v62.html" class="mega-link featured">🏅 HACCP · FDA</a></div>
+    </div>
+  </div>
+</nav>
+
+<section class="mag-hero">
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pb-24 pt-32">
+    <div class="breadcrumb mb-12 reveal">
+      <a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a><span class="sep">›</span>
+      <a href="capabilities-index-v62.html">Capabilities</a><span class="sep">›</span>
+      <span class="text-white"><span data-zh>河北张家口工厂</span><span data-en>Zhangjiakou Factory</span></span>
+    </div>
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-9">
+        <div class="issue-tag mb-10 reveal"><span class="dot"></span><span>FACTORY 02 OF 3 · BAKERY · FDA</span></div>
+        <div class="mag-label mb-8 reveal delay-1">河北 · ZHANGJIAKOU, HEBEI</div>
+        <h1 class="mag-title reveal delay-1" style="font-size: clamp(48px, 8vw, 100px);">
+          <span data-zh>河北张家口<br>烘焙工厂</span>
+          <span data-en>Zhangjiakou<br>Bakery Plant</span>
+        </h1>
+        <p class="mag-subtitle reveal delay-2 mt-10" style="font-size: clamp(18px, 1.6vw, 24px); max-width: 600px;" data-zh>
+          The first FDA-registered facility. Where overseas trust begins.
+        </p>
+        <p class="mag-subtitle reveal delay-2 mt-10 font-serif-sc" style="font-size: clamp(16px, 1.4vw, 20px); max-width: 600px; font-style: normal;" data-en>
+          首座 FDA 注册基地 · 海外信任的起点
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-24 md:py-28">
+  <div class="article-section">
+    <div class="reveal max-w-[760px] mx-auto">
+      <span class="article-num">01 / Why Zhangjiakou</span>
+      <h2 class="article-h2"><span data-zh>为什么把烘焙工厂建在张家口?</span><span data-en>Why Zhangjiakou for our bakery.</span></h2>
+      <p class="text-base md:text-lg leading-relaxed text-forest/80 font-serif-sc mb-5">
+        <span data-zh>张家口位于京北,空气干燥、温度稳定—— **这是天然的烘焙气候**。我们在这里建成 1.6 万㎡ 的烘焙专业工厂,核心原因不是地理位置,而是出海合规:这是花花的**第一座 FDA 注册工厂**。</span>
+        <span data-en>Zhangjiakou sits north of Beijing — dry air, stable temperature, **a natural bakery climate**. We built our 16,000㎡ specialized bakery here. But the real reason isn't geography — it's compliance: this is Foodvio's **first FDA-registered facility**.</span>
+      </p>
+      <p class="text-base md:text-lg leading-relaxed text-forest/80 font-serif-sc">
+        <span data-zh>通过美国 FDA 食品工厂注册,意味着我们可以合法向北美客户出口烘焙产品 ——披萨饼底、可颂底胚、烘焙小食。这是花花真正的"出海第一仗"。</span>
+        <span data-en>FDA food facility registration means we can legally export baked goods to North American clients — pizza bases, croissant blanks, baked snacks. This was Foodvio's true "first overseas battle."</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream py-24 md:py-28">
+  <div class="article-section">
+    <div class="grid md:grid-cols-2 gap-8 max-w-[1100px] mx-auto">
+      <div class="reveal">
+        <span class="article-num">02 / Factory Profile</span>
+        <h2 class="article-h2"><span data-zh>工厂数据档案</span><span data-en>Factory profile.</span></h2>
+        <div class="spec-sheet">
+          <div class="label">Specifications</div>
+          <h3><span data-zh>张家口烘焙工厂</span><span data-en>Zhangjiakou Bakery</span></h3>
+          <div class="spec-row"><span class="key"><span data-zh>地址</span><span data-en>Location</span></span><span class="val"><span data-zh>河北省张家口市</span><span data-en>Zhangjiakou, Hebei</span></span></div>
+          <div class="spec-row"><span class="key"><span data-zh>占地面积</span><span data-en>Area</span></span><span class="val mono">16,000 ㎡</span></div>
+          <div class="spec-row"><span class="key"><span data-zh>专业方向</span><span data-en>Specialty</span></span><span class="val"><span data-zh>烘焙食品(B 端)</span><span data-en>Bakery (B2B)</span></span></div>
+          <div class="spec-row"><span class="key">FDA</span><span class="val"><span data-zh>已注册</span><span data-en>Registered</span></span></div>
+          <div class="spec-row"><span class="key"><span data-zh>SC 资质</span><span data-en>SC license</span></span><span class="val"><span data-zh>烘焙类 + 方便食品类</span><span data-en>Bakery + Convenience</span></span></div>
+          <div class="spec-row"><span class="key"><span data-zh>所有制</span><span data-en>Ownership</span></span><span class="val"><span data-zh>100% 自营</span><span data-en>100% owned</span></span></div>
+        </div>
+      </div>
+
+      <div class="reveal delay-1">
+        <span class="article-num">03 / The FDA Story</span>
+        <h2 class="article-h2"><span data-zh>FDA 这件事</span><span data-en>The FDA story.</span></h2>
+        <div class="fda-highlight">
+          <div class="font-display italic text-bake-amber" style="color: var(--bake-amber);">— US FDA REGISTRATION</div>
+          <h3 class="mt-3"><span data-zh>美国 FDA 食品工厂注册</span><span data-en>US FDA Food Facility Registration</span></h3>
+          <p class="text-base text-forest/75 leading-relaxed mt-4 font-serif-sc">
+            <span data-zh>FDA 注册不是认证,是**前置条件**——没有它,你的烘焙产品根本进不了美国海关。我们走完了完整的合规流程,包括工厂硬件改造、生产记录电子化、过敏原管控体系建立、第三方审核。</span>
+            <span data-en>FDA registration isn't a certification — it's a **prerequisite**. Without it, your baked goods can't even clear US customs. We completed the full compliance process: hardware upgrades, electronic batch records, allergen control program, third-party audits.</span>
+          </p>
+          <p class="text-base text-forest/75 leading-relaxed mt-4 font-serif-sc">
+            <span data-zh>这座工厂的产品通过 4 大港口出货,服务北美客户。这是花花真正打开海外市场的钥匙。</span>
+            <span data-en>Products from this plant ship through our 4 export ports to North American clients. This is Foodvio's real key to overseas markets.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+    <div class="text-center reveal mb-12">
+      <span class="article-num">04 / 3 Production Lines</span>
+      <h2 class="article-h2"><span data-zh>3 大烘焙产线</span><span data-en>3 bakery production lines.</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 reveal delay-1">
+      <div class="line-card">
+        <div class="icon">🍕</div>
+        <h4><span data-zh>披萨饼底产线</span><span data-en>Pizza Base Line</span></h4>
+        <p><span data-zh>新疆面粉为主料 · 适合中国市场的披萨饼底专属工艺。</span><span data-en>Xinjiang flour as primary · pizza base crafted for the China market.</span></p>
+      </div>
+      <div class="line-card">
+        <div class="icon">🥐</div>
+        <h4><span data-zh>可颂底胚产线</span><span data-en>Croissant Blank</span></h4>
+        <p><span data-zh>欧式烘焙工艺 · 速冻分装。咖啡馆轻后厨直接烘焙的预制底胚。</span><span data-en>European technique · IQF packing. Pre-made blanks for café light-kitchen ovens.</span></p>
+      </div>
+      <div class="line-card">
+        <div class="icon">🥨</div>
+        <h4><span data-zh>烘焙小食产线</span><span data-en>Baked Snacks</span></h4>
+        <p><span data-zh>饼干 / 曲奇 / 烘焙小食。FDA 标准过敏原管控,标签合规多语言。</span><span data-en>Cookies / biscuits / baked snacks. FDA-grade allergen control, multilingual compliant labels.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream py-24 md:py-28">
+  <div class="article-section">
+    <div class="text-center reveal mb-10">
+      <span class="article-num">05 / Powered Here</span>
+      <h2 class="article-h2"><span data-zh>这里诞生的产品</span><span data-en>Born in Zhangjiakou.</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4 reveal delay-1">
+      <div class="pwr-item"><h5><span data-zh>预制披萨饼底</span><span data-en>Pizza Base</span></h5><p><span data-zh>多规格 · 适合中国市场</span><span data-en>Multi-spec · for China</span></p></div>
+      <div class="pwr-item"><h5><span data-zh>可颂底胚</span><span data-en>Croissant Blank</span></h5><p><span data-zh>原味与含馅 · 速冻</span><span data-en>Plain & filled · IQF</span></p></div>
+      <div class="pwr-item"><h5><span data-zh>美式饼干</span><span data-en>American Cookies</span></h5><p><span data-zh>FDA 出口规格</span><span data-en>FDA export grade</span></p></div>
+      <div class="pwr-item"><h5><span data-zh>咸味曲奇</span><span data-en>Savory Biscuits</span></h5><p><span data-zh>烘焙小食线</span><span data-en>Snack line</span></p></div>
+      <div class="pwr-item"><h5><span data-zh>欧式法棍</span><span data-en>European Baguette</span></h5><p><span data-zh>速冻分装</span><span data-en>IQF packed</span></p></div>
+      <div class="pwr-item"><h5><span data-zh>烘焙小食</span><span data-en>Baked Snacks</span></h5><p><span data-zh>多品类</span><span data-en>Multiple types</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-24 md:py-28">
+  <div class="article-section">
+    <div class="max-w-[760px] mx-auto reveal">
+      <span class="article-num">06 / Certifications</span>
+      <h2 class="article-h2"><span data-zh>本厂认证</span><span data-en>Certifications.</span></h2>
+    </div>
+    <div class="max-w-[760px] mx-auto reveal delay-1 mt-8 flex flex-wrap gap-3">
+      <div class="cert-pill featured"><span>🇺🇸</span><span><span data-zh>US FDA 注册</span><span data-en>US FDA Registered</span></span></div>
+      <div class="cert-pill"><span>🏅</span><span>HACCP</span></div>
+      <div class="cert-pill"><span>🏅</span><span>ISO 22000</span></div>
+      <div class="cert-pill"><span>🇨🇳</span><span><span data-zh>SC 烘焙类</span><span data-en>SC Bakery</span></span></div>
+      <div class="cert-pill"><span>🔬</span><span>SGS / BV</span></div>
+      <div class="cert-pill"><span>🌾</span><span><span data-zh>过敏原管控</span><span data-en>Allergen control</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="bottom-cta" class="py-28 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto">
+    <div class="cta-block reveal">
+      <div class="relative z-10 max-w-2xl">
+        <div class="font-display italic text-white/80 text-sm tracking-[0.2em] mb-6">07 / OVERSEAS-READY</div>
+        <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size: clamp(28px, 4vw, 44px);">
+          <span data-zh>FDA 注册的烘焙工厂<br>已经准备好出海</span>
+          <span data-en>FDA-registered bakery,<br>ready to ship overseas.</span>
+        </h2>
+        <p class="text-white/85 text-base md:text-lg mb-10 leading-relaxed">
+          <span data-zh>北美客户:从 9 寸预制披萨饼底到欧式可颂底胚,我们已经合规出海。来看看产品规格书 + FDA 注册证明。</span>
+          <span data-en>North American buyers: from 9" pizza bases to European croissant blanks, we ship compliant. See spec sheets + FDA registration cert.</span>
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#" class="btn-primary" data-foodvio-cta="custom_inquiry"><span data-zh>启动出口洽谈</span><span data-en>Start export talks</span><span>→</span></a>
+          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download"><span data-zh>下载烘焙目录</span><span data-en>Bakery catalog</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Capabilities</div><a href="capabilities-index-v62.html" class="footer-link">Overview</a><a href="capabilities-ganzhou-factory-v62.html" class="footer-link">Ganzhou</a><a href="capabilities-zhangjiakou-factory-v62.html" class="footer-link">Zhangjiakou</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div><a href="our-story-index-v62.html" class="footer-link">Our Story</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div><a href="products-sauces-v62.html" class="footer-link">Sauces</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div><p class="text-xs text-white/55">400-6879-568</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div><div>京 ICP 备 2022025117 号-1</div>
+    </div>
+  </div>
+</footer>
+
+<script src="lead-capture.js" defer></script>
+<script>
+function toggleLang() { document.body.classList.toggle('lang-en'); const isEn = document.body.classList.contains('lang-en'); document.documentElement.lang = isEn ? 'en' : 'zh-CN'; localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh'); }
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+const navbar = document.getElementById('navbar');
+function updateNav() { const s = window.scrollY > 60; navbar.classList.toggle('scrolled', s); navbar.classList.toggle('dark-page', s && window.scrollY > window.innerHeight - 100); }
+window.addEventListener('scroll', updateNav); updateNav();
+const mt = document.querySelectorAll('[data-menu]'); const mp = document.querySelectorAll('.mega-menu'); let menuTimer = null;
+mt.forEach(t => { t.addEventListener('mouseenter', () => { clearTimeout(menuTimer); const id = 'mega-' + t.dataset.menu; mp.forEach(p => p.classList.toggle('open', p.id === id)); }); t.addEventListener('mouseleave', () => { menuTimer = setTimeout(() => mp.forEach(p => p.classList.remove('open')), 200); }); });
+mp.forEach(p => { p.addEventListener('mouseenter', () => clearTimeout(menuTimer)); p.addEventListener('mouseleave', () => { menuTimer = setTimeout(() => p.classList.remove('open'), 200); }); });
+const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }), { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Capabilities · Foodvio 花花食界 — From Field to Global Market</title>
+<meta name="description" content="花花食界制造能力 · 3 大自营工厂 100,000㎡ · 米其林研发 · 4 港口 FOB · 8 大类 SC + HACCP / ISO22000 / BSCI / FDA 认证" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sage': '#81B29A', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0', 'steel': '#4A6271' },
+    fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'], 'mono': ['"JetBrains Mono"', 'monospace'] }
+  }}}
+</script>
+
+<style>
+  :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; --steel: #4A6271; --steel-dark: #2D3D47; }
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+  .grain::after {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.04; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
+  }
+
+  /* HERO - industrial blueprint feel */
+  .hero-bg { position: absolute; inset: 0; background: var(--ink); overflow: hidden; }
+  .hero-bg::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(74,98,113,0.30) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, rgba(245,200,46,0.10) 0%, transparent 55%),
+      linear-gradient(135deg, rgba(74,98,113,0.10) 0%, rgba(13,42,31,0.5) 100%);
+  }
+  .hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .section-no { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-weight: 500; letter-spacing: 0.12em; font-size: 14px; }
+  .section-no::before { content: '— '; margin-right: 6px; }
+
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; }
+  .delay-4 { transition-delay: 0.40s; }
+
+  .hero-title { font-family: 'Noto Serif SC', serif; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #fff; }
+
+  /* ════════ Capability cards (4 large) ════════ */
+  .cap-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid rgba(74,98,113,0.12);
+    border-radius: 24px;
+    padding: 48px 40px;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
+    cursor: pointer;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .cap-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(.16,.84,.28,.99);
+  }
+  .cap-card.c1::before { background: var(--steel); }
+  .cap-card.c2::before { background: var(--terra); }
+  .cap-card.c3::before { background: var(--sky); }
+  .cap-card.c4::before { background: var(--gold); }
+  .cap-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px -20px rgba(13,42,31,0.18);
+  }
+  .cap-card:hover::before { transform: scaleX(1); }
+
+  .cap-card .cap-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 600;
+    font-size: 13px; letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .cap-card.c1 .cap-num { color: var(--steel); }
+  .cap-card.c2 .cap-num { color: var(--terra); }
+  .cap-card.c3 .cap-num { color: var(--sky); }
+  .cap-card.c4 .cap-num { color: #b39510; }
+
+  .cap-card .cap-icon {
+    font-size: 48px; line-height: 1;
+    margin-bottom: 20px;
+  }
+  .cap-card h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--forest);
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+  .cap-card .cap-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .cap-card .cap-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(13,42,31,0.75);
+    margin-bottom: 24px;
+    flex-grow: 1;
+  }
+  .cap-card .cap-stats {
+    display: flex; gap: 24px;
+    padding: 18px 0;
+    margin-bottom: 24px;
+    border-top: 1px dashed rgba(13,42,31,0.12);
+    border-bottom: 1px dashed rgba(13,42,31,0.12);
+  }
+  .cap-card .cap-stat {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .cap-card .cap-stat .v {
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--forest);
+    line-height: 1;
+  }
+  .cap-card .cap-stat .l {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: rgba(13,42,31,0.55);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .cap-card .cap-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 14px; font-weight: 500;
+    transition: gap 0.3s;
+  }
+  .cap-card.c1 .cap-link { color: var(--steel); }
+  .cap-card.c2 .cap-link { color: var(--terra); }
+  .cap-card.c3 .cap-link { color: var(--sky); }
+  .cap-card.c4 .cap-link { color: #b39510; }
+  .cap-card:hover .cap-link { gap: 14px; }
+
+  /* ════════ Sub-link grid for index ════════ */
+  .sub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+  }
+  .sub-link {
+    background: rgba(245,241,234,0.5);
+    border: 1px solid rgba(13,42,31,0.08);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .sub-link:hover {
+    background: #fff;
+    border-color: var(--steel);
+    transform: translateX(4px);
+  }
+  .sub-link h5 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+  .sub-link p {
+    font-size: 12px;
+    color: rgba(13,42,31,0.6);
+  }
+  .sub-link .arrow {
+    color: var(--steel);
+    font-size: 14px;
+    margin-left: 4px;
+  }
+
+  /* ════════ Numbers band (key metrics) ════════ */
+  .nums-band {
+    background: linear-gradient(135deg, var(--steel-dark) 0%, var(--ink) 100%);
+    border-radius: 28px;
+    padding: 48px 40px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .nums-band::after {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+  .nums-band-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    position: relative; z-index: 1;
+  }
+  .nums-band .item {
+    text-align: center;
+  }
+  .nums-band .item .v {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600; font-style: italic;
+    color: var(--gold);
+    font-size: 56px; line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .nums-band .item .v sup {
+    font-size: 24px; vertical-align: top; margin-left: 4px;
+  }
+  .nums-band .item .l {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 12px;
+  }
+
+  /* ════════ Cert badges row ════════ */
+  .cert-row {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    margin-top: 24px;
+  }
+  .cert-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 20px;
+    background: #fff;
+    border: 1px solid rgba(13,42,31,0.12);
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--forest);
+    transition: all 0.3s;
+  }
+  .cert-pill:hover {
+    background: var(--cream);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .cert-pill .icon { font-size: 18px; }
+
+  /* ════════ Buttons ════════ */
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 32px; background: var(--rust); color: #fff;
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
+    box-shadow: 0 8px 24px -10px rgba(199,62,58,0.5);
+  }
+  .btn-primary:hover { background: #b03531; transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: transparent; color: var(--forest);
+    border: 1px solid rgba(27,67,50,0.3);
+    border-radius: 999px; font-weight: 500; font-size: 14px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: var(--cream); border-color: var(--forest); }
+
+  /* Breadcrumb */
+  .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
+  .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+
+  /* Nav (沿用 17 页一致设计) */
+  .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
+  .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-bar.dark-page.scrolled { background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-bar.dark-page.scrolled .nav-link, .nav-bar.dark-page.scrolled .nav-brand, .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
+  .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
+  .nav-link { position: relative; font-size: 14px; letter-spacing: 0.02em; padding: 6px 0; color: rgba(255,255,255,0.85); transition: color 0.3s; }
+  .nav-link:hover { color: var(--gold); }
+  .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
+  .nav-link.active { color: var(--gold); }
+  .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
+
+  .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
+  .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .mega-link { display: block; padding: 6px 0; font-size: 14px; color: var(--ink); transition: all 0.2s; }
+  .mega-link:hover { color: var(--rust); padding-left: 6px; }
+  .mega-link.featured { color: var(--rust); font-weight: 500; }
+  .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
+
+  footer { background: var(--ink); }
+  .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
+  .footer-link:hover { color: var(--gold); }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
+
+  [data-en] { display: none; }
+  body.lang-en [data-zh] { display: none; }
+  body.lang-en [data-en] { display: inline; }
+  body.lang-en [data-en].block { display: block; }
+  .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
+  .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
+
+  @media (max-width: 768px) { .mega-menu { display: none; } }
+</style>
+</head>
+
+<body class="grain">
+
+<!-- NAV -->
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 nav-brand text-white">
+      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
+      <span class="w-px h-3 bg-white/30 mx-1"></span>
+      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown" data-menu="story">Our Story</a>
+      <a href="capabilities-index-v62.html" class="nav-link has-dropdown active" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a>
+      <a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition" data-foodvio-cta="general_contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
+        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a></div>
+      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
+        <a href="products-index-v62.html" class="mega-link">花花食界</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="#" class="mega-link">赣南螺丝椒系列</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Quick Access</div><a href="#" class="mega-link">📄 Catalog</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link">🔵 轻后厨</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Featured</div>
+        <a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡 24 店</a></div>
+      <div class="col-span-4"><div class="mega-col-title">Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">三个故事 · Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 5 大特色原料</a>
+        <a href="our-story-global-masters-v62.html" class="mega-link featured">👨‍🍳 5 国大师灵感</a>
+        <a href="our-story-china-insight-v62.html" class="mega-link featured">🌏 5 大中国洞察</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link featured">🌶️ 江西 · 赣南螺丝椒</a>
+        <a href="#" class="mega-link">🍅🌾 新疆 · 番茄 + 高筋面粉</a>
+        <a href="#" class="mega-link">🍄🌿 云南 · 黑松露 + 迷迭香</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇩🇪 Germany</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-3"><div class="mega-col-title">Manufacturing</div>
+        <a href="capabilities-ganzhou-factory-v62.html" class="mega-link featured">🏭 江西赣州 · 6.66 万㎡</a>
+        <a href="capabilities-zhangjiakou-factory-v62.html" class="mega-link">🥖 河北张家口 · FDA</a>
+        <a href="capabilities-huairou-factory-v62.html" class="mega-link">🏢 北京怀柔基地</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Expertise</div>
+        <a href="capabilities-rd-team-v62.html" class="mega-link featured">👨‍🍳 米其林研发团队</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Supply Chain</div>
+        <a href="capabilities-supply-chain-v62.html" class="mega-link">🚢 4 港口 FOB · 冷链</a></div>
+      <div class="col-span-3"><div class="mega-col-title">Compliance</div>
+        <a href="capabilities-certifications-v62.html" class="mega-link featured">🏅 HACCP · ISO · FDA</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-[640px] flex items-end pb-20 pt-32 overflow-hidden">
+  <div class="hero-bg"></div>
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
+
+    <div class="breadcrumb mb-12 reveal">
+      <a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a>
+      <span class="sep">›</span>
+      <span class="text-white">Capabilities</span>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-9">
+        <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
+          INDUSTRIAL CAPABILITIES · ESTABLISHED 2021
+        </div>
+        <h1 class="hero-title reveal delay-1" style="font-size: clamp(48px, 7vw, 100px);">
+          <span data-zh>从田间到全球<br>我们建好了路</span>
+          <span data-en>From field to global market,<br>we built the rails.</span>
+        </h1>
+        <p class="font-display italic text-white/65 mt-8 text-lg md:text-2xl reveal delay-2 max-w-2xl" data-zh>
+          3 owned factories. Michelin R&D. 4 export ports. 8 SC categories.
+        </p>
+        <p class="font-serif-sc text-white/65 mt-8 text-base md:text-lg reveal delay-2 max-w-2xl" data-en>
+          3 自营工厂 · 米其林研发 · 4 港口出海 · 8 大类 SC
+        </p>
+        <p class="text-white/75 text-base md:text-lg max-w-2xl mt-8 leading-relaxed reveal delay-3">
+          <span data-zh>从创立至今,我们自建了完整的西餐供应链 ——从原料田间到客户餐桌,每一环节都在我们的掌控之中。</span>
+          <span data-en>Since our founding, we built a complete Western cuisine supply chain — every link, from farm to client plate, is under our control.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY NUMBERS BAND -->
+<section class="bg-cream py-16 md:py-20">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+    <div class="nums-band reveal">
+      <div class="nums-band-grid">
+        <div class="item">
+          <div class="v">100,000<sup>㎡</sup></div>
+          <div class="l"><span data-zh>自营工厂</span><span data-en>Owned facilities</span></div>
+        </div>
+        <div class="item">
+          <div class="v">3</div>
+          <div class="l"><span data-zh>生产基地</span><span data-en>Production bases</span></div>
+        </div>
+        <div class="item">
+          <div class="v">8</div>
+          <div class="l"><span data-zh>SC 大类资质</span><span data-en>SC categories</span></div>
+        </div>
+        <div class="item">
+          <div class="v">4</div>
+          <div class="l"><span data-zh>出口港口</span><span data-en>Export ports</span></div>
+        </div>
+        <div class="item">
+          <div class="v">100<sup>+</sup></div>
+          <div class="l">SKUs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 CAPABILITY CARDS -->
+<section class="bg-paper py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-16 reveal">
+      <div class="section-no mb-6 inline-block">01 / Four Pillars</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.1;">
+        <span data-zh>四大能力支柱</span>
+        <span data-en>Four pillars of capability.</span>
+      </h2>
+      <p class="font-display italic text-terra text-lg">
+        <span data-zh>制造 · 研发 · 供应链 · 合规 —— 缺一不可。</span>
+        <span data-en>Manufacturing · R&D · Supply Chain · Compliance — none replaceable.</span>
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Pillar 1: Manufacturing -->
+      <a href="capabilities-ganzhou-factory-v62.html" class="cap-card c1 reveal delay-1">
+        <div class="cap-num">Pillar 01 · Manufacturing</div>
+        <div class="cap-icon">🏭</div>
+        <h3><span data-zh>3 大自营工厂</span><span data-en>3 owned factories</span></h3>
+        <div class="cap-en">
+          <span data-zh>One million square feet under our roof.</span>
+          <span data-en>10 万㎡,全部自营</span>
+        </div>
+        <p class="cap-desc">
+          <span data-zh>江西赣州 6.66 万㎡ 综合工厂 · 河北张家口 1.6 万㎡ 烘焙(FDA 注册)· 北京怀柔基地。所有产能 100% 自营,不外包。</span>
+          <span data-en>Ganzhou 66,600㎡ integrated facility · Zhangjiakou 16,000㎡ bakery (FDA-registered) · Huairou Beijing base. 100% in-house, never outsourced.</span>
+        </p>
+        <div class="cap-stats">
+          <div class="cap-stat">
+            <div class="v">100,000㎡</div>
+            <div class="l"><span data-zh>总面积</span><span data-en>Total</span></div>
+          </div>
+          <div class="cap-stat">
+            <div class="v">3</div>
+            <div class="l"><span data-zh>基地</span><span data-en>Bases</span></div>
+          </div>
+          <div class="cap-stat">
+            <div class="v">100%</div>
+            <div class="l"><span data-zh>自营</span><span data-en>Owned</span></div>
+          </div>
+        </div>
+        <span class="cap-link">
+          <span data-zh>探索 3 大工厂</span>
+          <span data-en>Explore 3 factories</span>
+          →
+        </span>
+      </a>
+
+      <!-- Pillar 2: R&D -->
+      <a href="capabilities-rd-team-v62.html" class="cap-card c2 reveal delay-2">
+        <div class="cap-num">Pillar 02 · R&D</div>
+        <div class="cap-icon">👨‍🍳</div>
+        <h3><span data-zh>米其林研发团队</span><span data-en>Michelin R&D team</span></h3>
+        <div class="cap-en">
+          <span data-zh>From 6 countries, into one Beijing kitchen.</span>
+          <span data-en>从 5 国大师,到 1 个北京厨房</span>
+        </div>
+        <p class="cap-desc">
+          <span data-zh>研发主厨在意大利 / 西班牙 / 韩国 / 日本 / 东南亚 / 墨西哥学艺归来,把世界风味重构为适合中国客户的标准化产品。</span>
+          <span data-en>R&D chefs trained across Italy / Spain / Korea / Japan / SEA / Mexico, then rebuild world flavors into standardized products for Chinese palates.</span>
+        </p>
+        <div class="cap-stats">
+          <div class="cap-stat">
+            <div class="v">6</div>
+            <div class="l"><span data-zh>国家</span><span data-en>Countries</span></div>
+          </div>
+          <div class="cap-stat">
+            <div class="v">100<sup>+</sup></div>
+            <div class="l">SKU</div>
+          </div>
+        </div>
+        <span class="cap-link">
+          <span data-zh>认识研发团队</span>
+          <span data-en>Meet the team</span>
+          →
+        </span>
+      </a>
+
+      <!-- Pillar 3: Supply Chain -->
+      <a href="capabilities-supply-chain-v62.html" class="cap-card c3 reveal delay-3">
+        <div class="cap-num">Pillar 03 · Supply Chain</div>
+        <div class="cap-icon">🚢</div>
+        <h3><span data-zh>供应链 & 全球出口</span><span data-en>Supply chain & exports</span></h3>
+        <div class="cap-en">
+          <span data-zh>From 8 origins to 4 export ports.</span>
+          <span data-en>从 5 大原料到 4 大港口</span>
+        </div>
+        <p class="cap-desc">
+          <span data-zh>赣南 / 新疆 / 内蒙古 / 五常 / 云南 5 大特色原料直采,全程冷链;天津 / 青岛 / 上海 / 深圳 4 港口 FOB 出海,服务东南亚 / 北美 / 欧洲。</span>
+          <span data-en>Direct sourcing from 8 origins (Gannan / Yunnan / Inner Mongolia / Xinjiang etc.), full cold-chain; FOB from Tianjin / Qingdao / Shanghai / Shenzhen ports, serving SEA / NA / EU.</span>
+        </p>
+        <div class="cap-stats">
+          <div class="cap-stat">
+            <div class="v">8</div>
+            <div class="l"><span data-zh>产地</span><span data-en>Origins</span></div>
+          </div>
+          <div class="cap-stat">
+            <div class="v">4</div>
+            <div class="l"><span data-zh>港口</span><span data-en>Ports</span></div>
+          </div>
+          <div class="cap-stat">
+            <div class="v">3,000<sup>+</sup></div>
+            <div class="l"><span data-zh>合作伙伴</span><span data-en>Partners</span></div>
+          </div>
+        </div>
+        <span class="cap-link">
+          <span data-zh>查看供应链网络</span>
+          <span data-en>See supply network</span>
+          →
+        </span>
+      </a>
+
+      <!-- Pillar 4: Compliance -->
+      <a href="capabilities-certifications-v62.html" class="cap-card c4 reveal delay-4">
+        <div class="cap-num">Pillar 04 · Compliance</div>
+        <div class="cap-icon">🏅</div>
+        <h3><span data-zh>认证 & 合规</span><span data-en>Certifications & Compliance</span></h3>
+        <div class="cap-en">
+          <span data-zh>Trust, but verify — and we welcome the audit.</span>
+          <span data-en>信任,但要验证 · 我们欢迎审核</span>
+        </div>
+        <p class="cap-desc">
+          <span data-zh>HACCP / ISO 22000 / BSCI / US FDA 全套国际认证 · 8 大类 SC 食品生产许可 · 第三方检测每批次。</span>
+          <span data-en>Full international certification suite — HACCP / ISO 22000 / BSCI / US FDA · 8-category SC food production license · per-batch third-party testing.</span>
+        </p>
+        <div class="cap-stats">
+          <div class="cap-stat">
+            <div class="v">4<span style="font-size:14px">国际</span></div>
+            <div class="l"><span data-zh>国际认证</span><span data-en>Intl certs</span></div>
+          </div>
+          <div class="cap-stat">
+            <div class="v">8</div>
+            <div class="l"><span data-zh>SC 大类</span><span data-en>SC types</span></div>
+          </div>
+          <div class="cap-stat">
+            <div class="v">100%</div>
+            <div class="l"><span data-zh>批次检测</span><span data-en>Per batch</span></div>
+          </div>
+        </div>
+        <span class="cap-link">
+          <span data-zh>查看认证清单</span>
+          <span data-en>See full credentials</span>
+          →
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ALL 7 PAGES INDEX (deep-link grid) -->
+<section class="bg-cream py-28 md:py-32">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-12 reveal">
+      <div class="section-no mb-6 inline-block">02 / Quick Access</div>
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(28px, 3.5vw, 44px); line-height: 1.1;">
+        <span data-zh>能力速查</span>
+        <span data-en>Quick capability access.</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 reveal delay-1">
+
+      <!-- Manufacturing column -->
+      <div>
+        <div class="font-display italic text-steel text-sm tracking-[0.15em] uppercase mb-4 pb-2 border-b border-steel/20">
+          <span data-zh>制造能力</span><span data-en>Manufacturing</span>
+        </div>
+        <a href="capabilities-ganzhou-factory-v62.html" class="sub-link block mb-3">
+          <h5><span data-zh>🏭 江西赣州工厂</span><span data-en>🏭 Ganzhou Factory</span><span class="arrow">→</span></h5>
+          <p><span data-zh>6.66 万㎡ · 综合产能旗舰</span><span data-en>66,600㎡ · Flagship plant</span></p>
+        </a>
+        <a href="capabilities-zhangjiakou-factory-v62.html" class="sub-link block mb-3">
+          <h5><span data-zh>🥖 河北张家口工厂</span><span data-en>🥖 Zhangjiakou Factory</span><span class="arrow">→</span></h5>
+          <p><span data-zh>1.6 万㎡ · 烘焙 · FDA 注册</span><span data-en>16,000㎡ · Bakery · FDA</span></p>
+        </a>
+        <a href="capabilities-huairou-factory-v62.html" class="sub-link block">
+          <h5><span data-zh>🏢 北京怀柔基地</span><span data-en>🏢 Huairou Beijing Base</span><span class="arrow">→</span></h5>
+          <p><span data-zh>研发与样品打样基地</span><span data-en>R&D & prototype base</span></p>
+        </a>
+      </div>
+
+      <!-- Expertise + Supply -->
+      <div>
+        <div class="font-display italic text-terra text-sm tracking-[0.15em] uppercase mb-4 pb-2 border-b border-terra/20">
+          <span data-zh>研发与供应链</span><span data-en>R&D + Supply</span>
+        </div>
+        <a href="capabilities-rd-team-v62.html" class="sub-link block mb-3">
+          <h5><span data-zh>👨‍🍳 米其林研发团队</span><span data-en>👨‍🍳 Michelin R&D Team</span><span class="arrow">→</span></h5>
+          <p><span data-zh>6 国学艺 · 中国研发</span><span data-en>6 countries trained</span></p>
+        </a>
+        <a href="capabilities-supply-chain-v62.html" class="sub-link block">
+          <h5><span data-zh>🚢 供应链 & 全球出口</span><span data-en>🚢 Supply Chain & Exports</span><span class="arrow">→</span></h5>
+          <p><span data-zh>4 港口 · 全程冷链</span><span data-en>4 ports · cold chain</span></p>
+        </a>
+      </div>
+
+      <!-- Compliance -->
+      <div>
+        <div class="font-display italic text-gold text-sm tracking-[0.15em] uppercase mb-4 pb-2 border-b border-gold/40" style="color: #b39510;">
+          <span data-zh>合规认证</span><span data-en>Compliance</span>
+        </div>
+        <a href="capabilities-certifications-v62.html" class="sub-link block mb-3">
+          <h5><span data-zh>🏅 国际 & 国家认证</span><span data-en>🏅 Intl & National Certs</span><span class="arrow">→</span></h5>
+          <p><span data-zh>HACCP · ISO22000 · FDA · 8 SC</span><span data-en>HACCP · ISO · FDA · 8 SC</span></p>
+        </a>
+        <a href="#" class="sub-link block">
+          <h5><span data-zh>📋 第三方检测报告</span><span data-en>📋 Third-party Reports</span><span class="arrow">→</span></h5>
+          <p><span data-zh>SGS / BV · 每批次</span><span data-en>SGS / BV · per batch</span></p>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CERT BADGES -->
+<section class="bg-paper py-24 md:py-28">
+  <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+
+    <div class="text-center mb-10 reveal">
+      <div class="section-no mb-6 inline-block">03 / Certifications at a glance</div>
+      <h2 class="font-serif-sc font-bold text-forest" style="font-size: clamp(28px, 3.2vw, 40px); line-height: 1.2;">
+        <span data-zh>我们持有的认证</span>
+        <span data-en>The credentials we hold.</span>
+      </h2>
+    </div>
+
+    <div class="cert-row justify-center reveal delay-1">
+      <div class="cert-pill"><span class="icon">🏅</span><span>HACCP</span></div>
+      <div class="cert-pill"><span class="icon">🏅</span><span>ISO 22000</span></div>
+      <div class="cert-pill"><span class="icon">🏅</span><span>BSCI</span></div>
+      <div class="cert-pill"><span class="icon">🇺🇸</span><span>US FDA</span></div>
+      <div class="cert-pill"><span class="icon">🇨🇳</span><span>SC × 8 类</span></div>
+      <div class="cert-pill"><span class="icon">🌱</span><span><span data-zh>有机产品</span><span data-en>Organic</span></span></div>
+      <div class="cert-pill"><span class="icon">🔬</span><span>SGS / BV</span></div>
+      <div class="cert-pill"><span class="icon">🏷</span><span><span data-zh>赣南 GI</span><span data-en>Gannan GI</span></span></div>
+    </div>
+
+    <div class="text-center mt-10 reveal delay-2">
+      <a href="capabilities-certifications-v62.html" class="font-display italic text-rust border-b border-rust/40 pb-1 hover:border-rust transition" style="font-size: 15px;">
+        <span data-zh>查看所有认证详情与年限</span>
+        <span data-en>See all certs & validity</span>
+        →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section id="bottom-cta" class="bg-cream py-24 md:py-28 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto text-center reveal">
+    <p class="font-display italic text-terra text-lg mb-6">— Want to see for yourself?</p>
+    <h2 class="font-serif-sc font-bold text-forest mb-8" style="font-size: clamp(28px, 3.5vw, 44px); line-height: 1.2;">
+      <span data-zh>欢迎来工厂走一走</span>
+      <span data-en>Come walk our factories.</span>
+    </h2>
+    <p class="text-base md:text-lg text-forest/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+      <span data-zh>提供工厂参观、产线现场考察、研发样品打样、第三方检测报告下载。让你亲眼看见每一颗食材如何变成你的产品。</span>
+      <span data-en>Factory tours, production line site visits, R&D prototype sampling, third-party test report downloads. See for yourself how each ingredient becomes your product.</span>
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#" class="btn-primary" data-foodvio-cta="meeting_booking">
+        <span data-zh>预约工厂参观</span>
+        <span data-en>Book a factory tour</span>
+        <span>→</span>
+      </a>
+      <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
+        <span data-zh>下载能力书 PDF</span>
+        <span data-en>Download Capability Deck</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
+        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
+          <span data-zh>源自中国的专业西餐食品品牌。</span>
+          <span data-en>The professional Western cuisine brand from China.</span>
+        </p>
+      </div>
+      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+        <a href="products-sauces-v62.html" class="footer-link">Sauces</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Capabilities</div>
+        <a href="capabilities-index-v62.html" class="footer-link">Overview</a>
+        <a href="capabilities-ganzhou-factory-v62.html" class="footer-link">Ganzhou Factory</a>
+        <a href="capabilities-rd-team-v62.html" class="footer-link">R&D Team</a>
+        <a href="capabilities-certifications-v62.html" class="footer-link">Certifications</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <p class="text-xs text-white/55">400-6879-568</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+      <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
+      <div><span>京 ICP 备 2022025117 号-1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="lead-capture.js" defer></script>
+<script>
+function toggleLang() {
+  document.body.classList.toggle('lang-en');
+  const isEn = document.body.classList.contains('lang-en');
+  document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+  localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
+}
+if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
+const navbar = document.getElementById('navbar');
+function updateNav() {
+  const scrolled = window.scrollY > 60;
+  navbar.classList.toggle('scrolled', scrolled);
+  navbar.classList.toggle('dark-page', scrolled && window.scrollY > 600);
+}
+window.addEventListener('scroll', updateNav);
+updateNav();
+const menuTriggers = document.querySelectorAll('[data-menu]');
+const megaPanels = document.querySelectorAll('.mega-menu');
+let menuTimer = null;
+menuTriggers.forEach(trigger => {
+  trigger.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    const id = 'mega-' + trigger.dataset.menu;
+    megaPanels.forEach(p => p.classList.toggle('open', p.id === id));
+  });
+  trigger.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => megaPanels.forEach(p => p.classList.remove('open')), 200);
+  });
+});
+megaPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
+  panel.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
+  });
+});
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

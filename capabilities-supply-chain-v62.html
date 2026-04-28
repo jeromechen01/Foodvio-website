@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>供应链 & 全球出口 · Capabilities · Foodvio 花花食界</title>
+<meta name="description" content="花花食界供应链与全球出口能力 · 5 大原料直采 · 4 港口 FOB 出海 · 全程冷链 · 服务东南亚 / 北美 / 欧洲" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'sky': '#4A90E2', 'cream': '#F5F1EA', 'paper': '#FAF7F0' }, fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'mono': ['"JetBrains Mono"', 'monospace'] }}}}</script>
+<style>
+  :root{--ink:#0d2a1f;--forest:#1B4332;--terra:#E07A5F;--rust:#C73E3A;--gold:#F5C82E;--sky:#4A90E2;--cream:#F5F1EA;--paper:#FAF7F0}
+  *{-webkit-font-smoothing:antialiased} html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans SC',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+  .grain::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");opacity:.04;pointer-events:none;z-index:99;mix-blend-mode:overlay}
+  .mag-hero{position:relative;min-height:80vh;background:var(--ink);overflow:hidden;display:flex;align-items:end}
+  .mag-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 30%,rgba(74,144,226,.30) 0%,transparent 55%),radial-gradient(ellipse at 70% 70%,rgba(245,200,46,.10) 0%,transparent 55%)}
+  .mag-hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:60px 60px}
+  .mag-label{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(245,200,46,.85);letter-spacing:.3em;text-transform:uppercase;font-size:13px}
+  .mag-title{font-family:'Noto Serif SC',serif;font-weight:900;color:#fff;line-height:.95;letter-spacing:-.02em}
+  .mag-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.7)}
+  .issue-tag{display:inline-flex;align-items:center;gap:12px;padding:10px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:999px;color:rgba(255,255,255,.85);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-family:'Cormorant Garamond',serif;font-style:italic}
+  .issue-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--sky)}
+  .article-section{max-width:1100px;margin:0 auto}
+  .article-num{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-size:14px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px;display:block}
+  .article-num::before{content:'— '}
+  .article-h2{font-family:'Noto Serif SC',serif;font-weight:700;color:var(--forest);line-height:1.15;font-size:clamp(28px,3.5vw,44px);margin-bottom:16px}
+  .port-card{background:#fff;border:1px solid rgba(74,144,226,.15);border-radius:18px;padding:28px 26px;transition:all .4s;height:100%;position:relative;overflow:hidden}
+  .port-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--sky);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+  .port-card:hover::before{transform:scaleX(1)}
+  .port-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px -16px rgba(74,144,226,.18)}
+  .port-card .icon{font-size:36px;margin-bottom:14px}
+  .port-card h4{font-family:'Noto Serif SC',serif;font-weight:700;font-size:18px;color:var(--forest);margin-bottom:6px}
+  .port-card .city-en{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--sky);font-size:14px;margin-bottom:16px}
+  .port-card .routes{padding:14px 0;border-top:1px dashed rgba(74,144,226,.2);font-size:13px;color:rgba(13,42,31,.7);line-height:1.7}
+  .port-card .routes .label{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--sky);font-size:11px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:6px}
+  .origin-tile{background:#fff;border:1px solid rgba(13,42,31,.08);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px;transition:all .3s}
+  .origin-tile:hover{border-color:var(--sky);transform:translateX(4px)}
+  .origin-tile .num{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;color:var(--sky);font-size:22px;line-height:1;min-width:28px}
+  .origin-tile h5{font-family:'Noto Serif SC',serif;font-weight:600;font-size:14px;color:var(--forest);margin-bottom:4px}
+  .origin-tile p{font-size:12px;color:rgba(13,42,31,.6);line-height:1.5}
+  .timeline-step{padding:24px 0;display:grid;grid-template-columns:80px 1fr;gap:24px;border-bottom:1px solid rgba(13,42,31,.08)}
+  .timeline-step:last-child{border-bottom:none}
+  .timeline-step .day{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;color:var(--sky);font-size:24px;line-height:1}
+  .timeline-step h5{font-family:'Noto Serif SC',serif;font-weight:600;font-size:16px;color:var(--forest);margin-bottom:6px}
+  .timeline-step p{font-size:13px;color:rgba(13,42,31,.7);line-height:1.6}
+  .stat-band{background:linear-gradient(135deg,#1B4332 0%,#0d2a1f 100%);border-radius:24px;padding:40px;color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px}
+  .stat-band .item{text-align:center}
+  .stat-band .item .v{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;color:var(--gold);font-size:48px;line-height:1}
+  .stat-band .item .l{font-size:12px;color:rgba(255,255,255,.7);letter-spacing:.1em;text-transform:uppercase;margin-top:10px}
+  .cta-block{background:linear-gradient(135deg,var(--sky) 0%,#1e5b9e 100%);border-radius:28px;padding:56px 48px;color:#fff;position:relative;overflow:hidden}
+  .cta-block::before{content:'🚢';position:absolute;bottom:-30px;right:-10px;font-size:220px;opacity:.10}
+  .btn-primary{display:inline-flex;align-items:center;gap:12px;padding:16px 32px;background:#fff;color:var(--sky);border-radius:999px;font-weight:500;font-size:14px;transition:all .4s}
+  .btn-primary:hover{background:var(--gold);color:var(--ink);transform:translateY(-2px)}
+  .btn-outline{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;background:transparent;color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.4);border-radius:999px;font-weight:500;font-size:14px}
+  .btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+  .reveal{opacity:0;transform:translateY(32px);transition:opacity 1.2s cubic-bezier(.16,.84,.28,.99),transform 1.2s cubic-bezier(.16,.84,.28,.99)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .delay-1{transition-delay:.10s}.delay-2{transition-delay:.20s}.delay-3{transition-delay:.30s}.delay-4{transition-delay:.40s}
+  .breadcrumb{font-size:13px;color:rgba(255,255,255,.55)}
+  .breadcrumb a{color:rgba(255,255,255,.7)}.breadcrumb a:hover{color:var(--gold)}
+  .breadcrumb .sep{margin:0 10px;opacity:.5}
+  .nav-bar{transition:all .4s}
+  .nav-bar.scrolled{background:rgba(13,42,31,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav-bar.dark-page.scrolled{background:rgba(255,255,255,.96);border-bottom:1px solid rgba(0,0,0,.05)}
+  .nav-bar.dark-page.scrolled .nav-link,.nav-bar.dark-page.scrolled .nav-brand{color:var(--forest)}
+  .nav-link{font-size:14px;padding:6px 0;color:rgba(255,255,255,.85);transition:color .3s}
+  .nav-link:hover{color:var(--gold)}
+  .nav-link.has-dropdown::after{content:'⌄';margin-left:4px;font-size:12px;opacity:.6}
+  .nav-link.active{color:var(--gold)}
+  .nav-bar.dark-page.scrolled .nav-link.active{color:var(--rust)}
+  .mega-menu{position:fixed;top:64px;left:0;right:0;background:#fff;box-shadow:0 30px 60px -20px rgba(0,0,0,.15);border-top:1px solid var(--gold);padding:48px 0;opacity:0;visibility:hidden;transition:all .3s;z-index:60}
+  .mega-menu.open{opacity:1;visibility:visible}
+  .mega-col-title{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,.06)}
+  .mega-link{display:block;padding:6px 0;font-size:14px;color:var(--ink);transition:all .2s}
+  .mega-link:hover{color:var(--rust);padding-left:6px}
+  .mega-link.featured{color:var(--rust);font-weight:500}
+  .mega-link.featured::before{content:'★';margin-right:6px;color:var(--gold)}
+  footer{background:var(--ink)}
+  .footer-col-title{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
+  .footer-link{display:block;padding:5px 0;color:rgba(255,255,255,.65);font-size:13px}
+  .footer-link:hover{color:var(--gold)}
+  .footer-divider{height:1px;background:linear-gradient(90deg,transparent 0%,rgba(245,200,46,.3) 50%,transparent 100%)}
+  [data-en]{display:none}body.lang-en [data-zh]{display:none}body.lang-en [data-en]{display:inline}
+  .lang-toggle{padding:5px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:11px;color:rgba(255,255,255,.85);cursor:pointer;background:transparent}
+  .nav-bar.dark-page.scrolled .lang-toggle{color:var(--forest);border-color:rgba(27,67,50,.25)}
+  @media(max-width:768px){.mega-menu{display:none}.timeline-step{grid-template-columns:1fr;gap:6px}}
+</style>
+</head>
+<body class="grain">
+
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 text-white nav-brand"><span class="font-display text-xl font-semibold">Foodvio</span><span class="w-px h-3 bg-white/30 mx-1"></span><span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span></a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown" data-menu="story">Our Story</a>
+      <a href="capabilities-index-v62.html" class="nav-link has-dropdown active" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a><a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4"><button onclick="toggleLang()" class="lang-toggle">中 / EN</button><a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white" data-foodvio-cta="general_contact">Contact</a></div>
+  </div>
+  <div class="mega-menu" id="mega-products"><div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8"><div class="col-span-3"><div class="mega-col-title">Products</div><a href="products-sauces-v62.html" class="mega-link featured">Sauces</a></div><div class="col-span-9"><div class="mega-col-title">Featured</div><a href="#" class="mega-link">赣南螺丝椒系列</a></div></div></div>
+  <div class="mega-menu" id="mega-solutions"><div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8"><div class="col-span-12"><div class="mega-col-title">By Channel</div><a href="solutions-light-kitchen-v62.html" class="mega-link">轻后厨</a></div></div></div>
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">三个故事 · Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 5 大特色原料</a>
+        <a href="our-story-global-masters-v62.html" class="mega-link featured">👨‍🍳 5 国大师灵感</a>
+        <a href="our-story-china-insight-v62.html" class="mega-link featured">🌏 5 大中国洞察</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link featured">🌶️ 江西 · 赣南螺丝椒</a>
+        <a href="#" class="mega-link">🍅🌾 新疆 · 番茄 + 高筋面粉</a>
+        <a href="#" class="mega-link">🍄🌿 云南 · 黑松露 + 迷迭香</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇩🇪 Germany</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-capabilities"><div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+    <div class="col-span-3"><div class="mega-col-title">Manufacturing</div><a href="capabilities-ganzhou-factory-v62.html" class="mega-link">🏭 江西赣州</a><a href="capabilities-zhangjiakou-factory-v62.html" class="mega-link">🥖 河北张家口</a><a href="capabilities-huairou-factory-v62.html" class="mega-link">🏢 北京怀柔</a></div>
+    <div class="col-span-3"><div class="mega-col-title">Expertise</div><a href="capabilities-rd-team-v62.html" class="mega-link featured">👨‍🍳 米其林研发</a></div>
+    <div class="col-span-3"><div class="mega-col-title">Supply</div><a href="capabilities-supply-chain-v62.html" class="mega-link featured">🚢 4 港口</a></div>
+    <div class="col-span-3"><div class="mega-col-title">Compliance</div><a href="capabilities-certifications-v62.html" class="mega-link featured">🏅 认证</a></div></div></div>
+</nav>
+
+<section class="mag-hero">
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pb-24 pt-32">
+    <div class="breadcrumb mb-12 reveal"><a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a><span class="sep">›</span><a href="capabilities-index-v62.html">Capabilities</a><span class="sep">›</span><span class="text-white"><span data-zh>供应链 & 全球出口</span><span data-en>Supply Chain & Exports</span></span></div>
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-9">
+        <div class="issue-tag mb-10 reveal"><span class="dot"></span><span>SUPPLY CHAIN · FROM FIELD TO PORT</span></div>
+        <div class="mag-label mb-8 reveal delay-1">8 ORIGINS · 4 EXPORT PORTS</div>
+        <h1 class="mag-title reveal delay-1" style="font-size:clamp(48px,8vw,100px);"><span data-zh>从产地到港口<br>我们建好了路</span><span data-en>Field to port,<br>we built the route.</span></h1>
+        <p class="mag-subtitle reveal delay-2 mt-10" style="font-size:clamp(18px,1.6vw,24px);max-width:600px;" data-zh>8 origins direct sourcing. 4 ports FOB. Full cold chain.</p>
+        <p class="mag-subtitle reveal delay-2 mt-10 font-serif-sc" style="font-size:clamp(16px,1.4vw,20px);max-width:600px;font-style:normal;" data-en>5 大原料 · 4 港口 FOB · 全程冷链</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-24 md:py-28">
+  <div class="article-section">
+    <div class="reveal max-w-[760px] mx-auto">
+      <span class="article-num">01 / The Network</span>
+      <h2 class="article-h2"><span data-zh>一体化供应链</span><span data-en>An integrated supply network.</span></h2>
+      <p class="text-base md:text-lg leading-relaxed text-forest/80 font-serif-sc mb-5">
+        <span data-zh>很多西餐品牌的痛点是供应链碎片化:原料外采、生产外包、物流外包——质量没法控,成本没法降,出问题没法追溯。我们走了**完全相反的路**:从产地到客户端,所有环节自营或长期独家合作。</span>
+        <span data-en>Most Western food brands suffer from fragmented supply chains: outsourced sourcing, outsourced production, outsourced logistics. Quality slips, costs balloon, traceability vanishes. We took **the exact opposite path**: from origin to client, every link is owned or long-term exclusive.</span>
+      </p>
+      <p class="text-base md:text-lg leading-relaxed text-forest/80 font-serif-sc">
+        <span data-zh>结果就是:**3,000+ 客户**,不需要担心断货 / 串货 / 来源不明。</span>
+        <span data-en>Result: **3,000+ partners** never worry about stockouts, channel conflict, or unknown sourcing.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section">
+    <div class="text-center reveal mb-12">
+      <span class="article-num">02 / 5 Origins</span>
+      <h2 class="article-h2"><span data-zh>5 大特色原料产地</span><span data-en>5 distinctive origins, direct-source.</span></h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 reveal delay-1">
+      <a href="our-story-chinese-roots-gannan-chili-v62.html" class="origin-tile"><div class="num">01</div><div><h5><span data-zh>🌶️ 江西 · 赣南螺丝椒</span><span data-en>🌶️ Jiangxi · Gannan Chili</span></h5><p><span data-zh>地理标志产品</span><span data-en>GI-protected</span></p></div></a>
+      <div class="origin-tile"><div class="num">02</div><div><h5><span data-zh>🍅🌾 新疆 · 番茄 + 高筋面粉</span><span data-en>🍅🌾 Xinjiang · Tomato + Flour</span></h5><p><span data-zh>戈壁日晒</span><span data-en>Gobi sun-dried</span></p></div></div>
+      <div class="origin-tile"><div class="num">03</div><div><h5><span data-zh>🐄 内蒙古 · 牛羊肉</span><span data-en>🐄 Inner Mongolia · Beef & Lamb</span></h5><p><span data-zh>草原放养</span><span data-en>Grass-fed</span></p></div></div>
+      <div class="origin-tile"><div class="num">04</div><div><h5><span data-zh>🌾 东北 · 五常大米</span><span data-en>🌾 NE · Wuchang Rice</span></h5><p><span data-zh>优质粳米</span><span data-en>Premium japonica</span></p></div></div>
+      <div class="origin-tile"><div class="num">05</div><div><h5><span data-zh>🍄🌿 云南 · 黑松露 + 迷迭香</span><span data-en>🍄🌿 Yunnan · Truffle + Rosemary</span></h5><p><span data-zh>楚雄高原</span><span data-en>Chuxiong highland</span></p></div></div>
+    </div>
+    <div class="text-center mt-8 reveal delay-2">
+      <a href="our-story-chinese-roots-v62.html" class="font-display italic text-rust border-b border-rust/40 pb-1 hover:border-rust transition" style="font-size:15px;"><span data-zh>读 5 大原料完整故事</span><span data-en>Read 5 origin stories</span> →</a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+    <div class="text-center reveal mb-12">
+      <span class="article-num">03 / 4 Export Ports</span>
+      <h2 class="article-h2"><span data-zh>4 大港口 FOB 出海</span><span data-en>4 export ports, FOB-ready.</span></h2>
+      <p class="text-base text-forest/75 font-serif-sc max-w-[760px] mx-auto">
+        <span data-zh>我们与 4 大港口建立长期 FOB 出海通道,根据客户目的地就近匹配最优港口。</span>
+        <span data-en>Long-term FOB partnerships with 4 ports — we route to the closest one based on your destination.</span>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 reveal delay-1">
+      <div class="port-card">
+        <div class="icon">⚓</div>
+        <h4><span data-zh>天津港</span><span data-en>Tianjin Port</span></h4>
+        <div class="city-en">North China</div>
+        <div class="routes"><span class="label">主要航线</span><span data-zh>北亚 · 日韩 · 北美西岸</span><span data-en>NE Asia · JP/KR · NA West</span></div>
+      </div>
+      <div class="port-card">
+        <div class="icon">⚓</div>
+        <h4><span data-zh>青岛港</span><span data-en>Qingdao Port</span></h4>
+        <div class="city-en">East China</div>
+        <div class="routes"><span class="label">主要航线</span><span data-zh>北亚 · 韩国 · 欧洲北线</span><span data-en>NE Asia · Korea · EU North</span></div>
+      </div>
+      <div class="port-card">
+        <div class="icon">⚓</div>
+        <h4><span data-zh>上海港</span><span data-en>Shanghai Port</span></h4>
+        <div class="city-en">East China · Hub</div>
+        <div class="routes"><span class="label">主要航线</span><span data-zh>全球枢纽 · 北美东岸 · 欧洲</span><span data-en>Global hub · NA East · EU</span></div>
+      </div>
+      <div class="port-card">
+        <div class="icon">⚓</div>
+        <h4><span data-zh>深圳港</span><span data-en>Shenzhen Port</span></h4>
+        <div class="city-en">South China</div>
+        <div class="routes"><span class="label">主要航线</span><span data-zh>东南亚 · 大洋洲 · 中东</span><span data-en>SEA · Oceania · Middle East</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section">
+    <div class="max-w-[760px] mx-auto reveal mb-12">
+      <span class="article-num">04 / Cold Chain</span>
+      <h2 class="article-h2"><span data-zh>全程冷链保障</span><span data-en>Full cold chain guarantee.</span></h2>
+      <p class="text-base text-forest/75 font-serif-sc">
+        <span data-zh>从原料采摘到客户接货,全链路温度可监控、可追溯。</span>
+        <span data-en>From harvest to client delivery — temperature monitored and traceable end-to-end.</span>
+      </p>
+    </div>
+    <div class="max-w-[760px] mx-auto reveal delay-1">
+      <div class="timeline-step">
+        <div class="day">01</div>
+        <div><h5><span data-zh>产地 → 工厂</span><span data-en>Field → Factory</span></h5><p><span data-zh>原料采摘后冷链直送工厂,鲜度不流失</span><span data-en>Cold-chain delivery from harvest to factory — freshness preserved</span></p></div>
+      </div>
+      <div class="timeline-step">
+        <div class="day">02</div>
+        <div><h5><span data-zh>工厂内冷冻仓储</span><span data-en>Factory cold storage</span></h5><p><span data-zh>速冻产品恒温保存 · ISO 22000 标准</span><span data-en>IQF products held at constant temperature · ISO 22000 standard</span></p></div>
+      </div>
+      <div class="timeline-step">
+        <div class="day">03</div>
+        <div><h5><span data-zh>港口冷链运输</span><span data-en>Port cold transport</span></h5><p><span data-zh>恒温集装箱直送港口 · 全程温度监控</span><span data-en>Reefer container direct to port · temperature tracking</span></p></div>
+      </div>
+      <div class="timeline-step">
+        <div class="day">04</div>
+        <div><h5><span data-zh>海运冷藏集装箱</span><span data-en>Reefer ocean shipping</span></h5><p><span data-zh>全程冷藏船 · 温度记录随货物交付</span><span data-en>Full reefer voyage · temperature log delivered with goods</span></p></div>
+      </div>
+      <div class="timeline-step">
+        <div class="day">05</div>
+        <div><h5><span data-zh>客户最终接货</span><span data-en>Final client delivery</span></h5><p><span data-zh>覆盖东南亚 / 北美 / 欧洲 / 大洋洲等主要市场</span><span data-en>Covers SEA / NA / EU / Oceania and other major markets</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-24 md:py-28">
+  <div class="article-section">
+    <div class="reveal">
+      <div class="stat-band">
+        <div class="item"><div class="v">8</div><div class="l"><span data-zh>产地</span><span data-en>Origins</span></div></div>
+        <div class="item"><div class="v">4</div><div class="l"><span data-zh>出口港口</span><span data-en>Ports</span></div></div>
+        <div class="item"><div class="v">3,000<span style="font-size:24px">+</span></div><div class="l"><span data-zh>合作伙伴</span><span data-en>Partners</span></div></div>
+        <div class="item"><div class="v">100%</div><div class="l"><span data-zh>批次可追溯</span><span data-en>Batch traceable</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bottom-cta" class="py-28 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto">
+    <div class="cta-block reveal">
+      <div class="relative z-10 max-w-2xl">
+        <div class="font-display italic text-white/80 text-sm tracking-[0.2em] mb-6">05 / SHIP TO YOUR PORT</div>
+        <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size:clamp(28px,4vw,44px);"><span data-zh>告诉我们你的<br>目的地港口</span><span data-en>Tell us your<br>destination port.</span></h2>
+        <p class="text-white/85 text-base md:text-lg mb-10 leading-relaxed"><span data-zh>给我们目的地港口 + 产品清单,我们快速回复 FOB 报价、航期、冷链方案。</span><span data-en>Give us your destination port + product list — we'll respond with FOB quote, schedule, and cold-chain plan.</span></p>
+        <div class="flex flex-wrap gap-3">
+          <a href="for-global-v62.html" class="btn-primary" data-foodvio-cta="custom_inquiry"><span data-zh>启动 FOB 报价</span><span data-en>Start FOB quote</span><span>→</span></a>
+          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download"><span data-zh>下载出口能力书</span><span data-en>Export capability deck</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4"><div class="font-display text-3xl text-white mb-2">Foodvio</div><div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Capabilities</div><a href="capabilities-index-v62.html" class="footer-link">Overview</a><a href="capabilities-supply-chain-v62.html" class="footer-link">Supply Chain</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Channels</div><a href="for-global-v62.html" class="footer-link">For Global</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Discover</div><a href="our-story-chinese-roots-v62.html" class="footer-link">5 Origins</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div><p class="text-xs text-white/55">400-6879-568</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40"><div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div><div>京 ICP 备 2022025117 号-1</div></div>
+  </div>
+</footer>
+
+<script src="lead-capture.js" defer></script>
+<script>
+function toggleLang(){document.body.classList.toggle('lang-en');const i=document.body.classList.contains('lang-en');document.documentElement.lang=i?'en':'zh-CN';localStorage.setItem('foodvio-lang',i?'en':'zh')}
+if(localStorage.getItem('foodvio-lang')==='en')document.body.classList.add('lang-en');
+const navbar=document.getElementById('navbar');
+function updateNav(){const s=window.scrollY>60;navbar.classList.toggle('scrolled',s);navbar.classList.toggle('dark-page',s&&window.scrollY>window.innerHeight-100)}
+window.addEventListener('scroll',updateNav);updateNav();
+const mt=document.querySelectorAll('[data-menu]');const mp=document.querySelectorAll('.mega-menu');let menuTimer=null;
+mt.forEach(t=>{t.addEventListener('mouseenter',()=>{clearTimeout(menuTimer);const id='mega-'+t.dataset.menu;mp.forEach(p=>p.classList.toggle('open',p.id===id))});t.addEventListener('mouseleave',()=>{menuTimer=setTimeout(()=>mp.forEach(p=>p.classList.remove('open')),200)})});
+mp.forEach(p=>{p.addEventListener('mouseenter',()=>clearTimeout(menuTimer));p.addEventListener('mouseleave',()=>{menuTimer=setTimeout(()=>p.classList.remove('open'),200)})});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}}),{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

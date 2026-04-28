@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>认证 & 合规 · Capabilities · Foodvio 花花食界</title>
+<meta name="description" content="花花食界国际与国家认证清单 · HACCP / ISO 22000 / BSCI / US FDA · 8 大类 SC · 第三方批次检测 · 赣南 GI 协作工厂" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { theme: { extend: { colors: { 'ink': '#0d2a1f', 'forest': '#1B4332', 'terra': '#E07A5F', 'rust': '#C73E3A', 'gold': '#F5C82E', 'cream': '#F5F1EA', 'paper': '#FAF7F0' }, fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'mono': ['"JetBrains Mono"', 'monospace'] }}}}</script>
+<style>
+  :root{--ink:#0d2a1f;--forest:#1B4332;--terra:#E07A5F;--rust:#C73E3A;--gold:#F5C82E;--gold-dark:#b39510;--cream:#F5F1EA;--paper:#FAF7F0}
+  *{-webkit-font-smoothing:antialiased} html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans SC',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+  .grain::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");opacity:.04;pointer-events:none;z-index:99;mix-blend-mode:overlay}
+  .mag-hero{position:relative;min-height:80vh;background:var(--ink);overflow:hidden;display:flex;align-items:end}
+  .mag-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 30%,rgba(245,200,46,.30) 0%,transparent 55%),radial-gradient(ellipse at 70% 70%,rgba(199,62,58,.10) 0%,transparent 55%)}
+  .mag-hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:60px 60px}
+  .mag-label{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(245,200,46,.85);letter-spacing:.3em;text-transform:uppercase;font-size:13px}
+  .mag-title{font-family:'Noto Serif SC',serif;font-weight:900;color:#fff;line-height:.95;letter-spacing:-.02em}
+  .mag-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.7)}
+  .issue-tag{display:inline-flex;align-items:center;gap:12px;padding:10px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:999px;color:rgba(255,255,255,.85);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-family:'Cormorant Garamond',serif;font-style:italic}
+  .issue-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .article-section{max-width:1100px;margin:0 auto}
+  .article-num{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-size:14px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px;display:block}
+  .article-num::before{content:'— '}
+  .article-h2{font-family:'Noto Serif SC',serif;font-weight:700;color:var(--forest);line-height:1.15;font-size:clamp(28px,3.5vw,44px);margin-bottom:16px}
+  .article-h2-en{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-size:clamp(20px,2vw,26px);margin-bottom:36px}
+
+  /* Cert detail card (intl & key) */
+  .cert-detail{background:#fff;border:1px solid rgba(245,200,46,.25);border-radius:18px;padding:28px 26px;transition:all .4s;height:100%;position:relative;overflow:hidden}
+  .cert-detail::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+  .cert-detail:hover::before{transform:scaleX(1)}
+  .cert-detail:hover{transform:translateY(-4px);box-shadow:0 16px 36px -16px rgba(245,200,46,.30)}
+  .cert-detail .icon{font-size:36px;margin-bottom:14px;line-height:1}
+  .cert-detail .org{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-dark);font-size:12px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px}
+  .cert-detail h4{font-family:'Noto Serif SC',serif;font-weight:700;font-size:18px;color:var(--forest);margin-bottom:10px;line-height:1.3}
+  .cert-detail .scope{font-size:13px;color:rgba(13,42,31,.7);line-height:1.65;margin-bottom:16px}
+  .cert-detail .meta{padding-top:14px;border-top:1px dashed rgba(245,200,46,.3);font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold-dark);line-height:1.7}
+  .cert-detail .meta .row{display:flex;justify-content:space-between;gap:12px}
+  .cert-detail .meta .row .key{color:rgba(13,42,31,.55)}
+
+  /* SC categories table */
+  .sc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
+  .sc-tile{background:#fff;border:1px solid rgba(245,200,46,.25);border-radius:12px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px;transition:all .3s}
+  .sc-tile:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 20px -8px rgba(245,200,46,.20)}
+  .sc-tile .num{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;color:var(--gold-dark);font-size:22px;line-height:1;min-width:28px}
+  .sc-tile h4{font-family:'Noto Serif SC',serif;font-weight:600;font-size:15px;color:var(--forest);margin-bottom:4px;line-height:1.4}
+  .sc-tile p{font-size:12px;color:rgba(13,42,31,.6);line-height:1.5}
+
+  /* Validity table */
+  .validity-table{background:#fff;border:1px solid rgba(245,200,46,.25);border-radius:18px;overflow:hidden}
+  .validity-row{display:grid;grid-template-columns:2.5fr 1.5fr 1fr;gap:16px;padding:18px 24px;align-items:center;border-bottom:1px dashed rgba(13,42,31,.08);font-size:13px}
+  .validity-row:last-child{border-bottom:none}
+  .validity-row.header{background:linear-gradient(135deg,#fffbe6 0%,#fff5cc 100%);font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-dark);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:14px 24px;border-bottom:1px solid rgba(245,200,46,.3)}
+  .validity-row .cert-name{font-family:'Noto Serif SC',serif;font-weight:600;color:var(--forest)}
+  .validity-row .cert-mono{font-family:'JetBrains Mono',monospace;color:rgba(13,42,31,.7)}
+  .validity-row .cert-status{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;background:rgba(129,178,154,.15);color:#3d6450;border-radius:999px;font-size:11px;font-weight:500;width:fit-content}
+  .validity-row .cert-status::before{content:'●';color:#5a9a7a}
+
+  /* Origin certs */
+  .origin-cert{background:#fff;border:1px solid rgba(13,42,31,.08);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;transition:all .3s}
+  .origin-cert:hover{border-color:var(--gold);transform:translateX(4px)}
+  .origin-cert .flag{font-size:24px;line-height:1}
+  .origin-cert h5{font-family:'Noto Serif SC',serif;font-weight:600;font-size:14px;color:var(--forest);margin-bottom:4px}
+  .origin-cert p{font-size:12px;color:rgba(13,42,31,.6);line-height:1.5}
+
+  /* 3rd party box */
+  .testing-box{background:linear-gradient(135deg,#fffbe6 0%,#fff5cc 100%);border:1px solid rgba(245,200,46,.4);border-radius:18px;padding:32px}
+  .testing-box h3{font-family:'Noto Serif SC',serif;font-weight:700;color:var(--forest);font-size:22px;margin-bottom:14px}
+
+  .stat-band{background:linear-gradient(135deg,#1B4332 0%,#0d2a1f 100%);border-radius:24px;padding:40px;color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px}
+  .stat-band .item{text-align:center}
+  .stat-band .item .v{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;color:var(--gold);font-size:48px;line-height:1}
+  .stat-band .item .l{font-size:12px;color:rgba(255,255,255,.7);letter-spacing:.1em;text-transform:uppercase;margin-top:10px}
+
+  .cta-block{background:linear-gradient(135deg,var(--gold-dark) 0%,#7a6309 100%);border-radius:28px;padding:56px 48px;color:#fff;position:relative;overflow:hidden}
+  .cta-block::before{content:'🏅';position:absolute;bottom:-30px;right:-10px;font-size:220px;opacity:.10}
+  .btn-primary{display:inline-flex;align-items:center;gap:12px;padding:16px 32px;background:#fff;color:var(--gold-dark);border-radius:999px;font-weight:500;font-size:14px;transition:all .4s}
+  .btn-primary:hover{background:var(--gold);color:var(--ink);transform:translateY(-2px)}
+  .btn-outline{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;background:transparent;color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.4);border-radius:999px;font-weight:500;font-size:14px}
+  .btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+  .reveal{opacity:0;transform:translateY(32px);transition:opacity 1.2s cubic-bezier(.16,.84,.28,.99),transform 1.2s cubic-bezier(.16,.84,.28,.99)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .delay-1{transition-delay:.10s}.delay-2{transition-delay:.20s}.delay-3{transition-delay:.30s}
+
+  .breadcrumb{font-size:13px;color:rgba(255,255,255,.55)}
+  .breadcrumb a{color:rgba(255,255,255,.7)}.breadcrumb a:hover{color:var(--gold)}
+  .breadcrumb .sep{margin:0 10px;opacity:.5}
+
+  .nav-bar{transition:all .4s}
+  .nav-bar.scrolled{background:rgba(13,42,31,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav-bar.dark-page.scrolled{background:rgba(255,255,255,.96);border-bottom:1px solid rgba(0,0,0,.05)}
+  .nav-bar.dark-page.scrolled .nav-link,.nav-bar.dark-page.scrolled .nav-brand{color:var(--forest)}
+  .nav-link{font-size:14px;padding:6px 0;color:rgba(255,255,255,.85);transition:color .3s}
+  .nav-link:hover{color:var(--gold)}
+  .nav-link.has-dropdown::after{content:'⌄';margin-left:4px;font-size:12px;opacity:.6}
+  .nav-link.active{color:var(--gold)}
+  .nav-bar.dark-page.scrolled .nav-link.active{color:var(--rust)}
+  .mega-menu{position:fixed;top:64px;left:0;right:0;background:#fff;box-shadow:0 30px 60px -20px rgba(0,0,0,.15);border-top:1px solid var(--gold);padding:48px 0;opacity:0;visibility:hidden;transition:all .3s;z-index:60}
+  .mega-menu.open{opacity:1;visibility:visible}
+  .mega-col-title{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,.06)}
+  .mega-link{display:block;padding:6px 0;font-size:14px;color:var(--ink);transition:all .2s}
+  .mega-link:hover{color:var(--rust);padding-left:6px}
+  .mega-link.featured{color:var(--rust);font-weight:500}
+  .mega-link.featured::before{content:'★';margin-right:6px;color:var(--gold)}
+
+  footer{background:var(--ink)}
+  .footer-col-title{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
+  .footer-link{display:block;padding:5px 0;color:rgba(255,255,255,.65);font-size:13px}
+  .footer-link:hover{color:var(--gold)}
+  .footer-divider{height:1px;background:linear-gradient(90deg,transparent 0%,rgba(245,200,46,.3) 50%,transparent 100%)}
+
+  [data-en]{display:none}body.lang-en [data-zh]{display:none}body.lang-en [data-en]{display:inline}
+  .lang-toggle{padding:5px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:11px;color:rgba(255,255,255,.85);cursor:pointer;background:transparent}
+  .nav-bar.dark-page.scrolled .lang-toggle{color:var(--forest);border-color:rgba(27,67,50,.25)}
+
+  @media(max-width:768px){
+    .mega-menu{display:none}
+    .validity-row{grid-template-columns:1fr;gap:6px;padding:14px 16px}
+    .validity-row.header{display:none}
+  }
+</style>
+</head>
+<body class="grain">
+
+<nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 text-white nav-brand"><span class="font-display text-xl font-semibold">Foodvio</span><span class="w-px h-3 bg-white/30 mx-1"></span><span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span></a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="our-story-index-v62.html" class="nav-link has-dropdown" data-menu="story">Our Story</a>
+      <a href="capabilities-index-v62.html" class="nav-link has-dropdown active" data-menu="capabilities">Capabilities</a>
+      <a href="#" class="nav-link">Insights</a><a href="#" class="nav-link">About</a>
+    </div>
+    <div class="flex items-center gap-4"><button onclick="toggleLang()" class="lang-toggle">中 / EN</button><a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white" data-foodvio-cta="general_contact">Contact</a></div>
+  </div>
+  <div class="mega-menu" id="mega-products"><div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8"><div class="col-span-3"><div class="mega-col-title">Products</div><a href="products-sauces-v62.html" class="mega-link featured">Sauces</a></div><div class="col-span-9"><div class="mega-col-title">Featured</div><a href="#" class="mega-link">赣南螺丝椒系列</a></div></div></div>
+  <div class="mega-menu" id="mega-solutions"><div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8"><div class="col-span-12"><div class="mega-col-title">By Channel</div><a href="solutions-light-kitchen-v62.html" class="mega-link">轻后厨</a></div></div></div>
+  <div class="mega-menu" id="mega-story">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4"><div class="mega-col-title">三个故事 · Three Stories</div>
+        <a href="our-story-chinese-roots-v62.html" class="mega-link featured">🌾 5 大特色原料</a>
+        <a href="our-story-global-masters-v62.html" class="mega-link featured">👨‍🍳 5 国大师灵感</a>
+        <a href="our-story-china-insight-v62.html" class="mega-link featured">🌏 5 大中国洞察</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Origins</div>
+        <a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link featured">🌶️ 江西 · 赣南螺丝椒</a>
+        <a href="#" class="mega-link">🍅🌾 新疆 · 番茄 + 高筋面粉</a>
+        <a href="#" class="mega-link">🍄🌿 云南 · 黑松露 + 迷迭香</a></div>
+      <div class="col-span-4"><div class="mega-col-title">5 Countries</div>
+        <a href="our-story-global-masters-italy-v62.html" class="mega-link featured">🇮🇹 Italy</a>
+        <a href="#" class="mega-link">🇩🇪 Germany</a>
+        <a href="#" class="mega-link">🇰🇷 Korea</a></div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-capabilities"><div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+    <div class="col-span-3"><div class="mega-col-title">Manufacturing</div><a href="capabilities-ganzhou-factory-v62.html" class="mega-link">🏭 江西赣州</a><a href="capabilities-zhangjiakou-factory-v62.html" class="mega-link">🥖 河北张家口</a><a href="capabilities-huairou-factory-v62.html" class="mega-link">🏢 北京怀柔</a></div>
+    <div class="col-span-3"><div class="mega-col-title">Expertise</div><a href="capabilities-rd-team-v62.html" class="mega-link featured">👨‍🍳 米其林研发</a></div>
+    <div class="col-span-3"><div class="mega-col-title">Supply</div><a href="capabilities-supply-chain-v62.html" class="mega-link">🚢 4 港口</a></div>
+    <div class="col-span-3"><div class="mega-col-title">Compliance</div><a href="capabilities-certifications-v62.html" class="mega-link featured">🏅 认证</a></div></div></div>
+</nav>
+
+<section class="mag-hero">
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pb-24 pt-32">
+    <div class="breadcrumb mb-12 reveal"><a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a><span class="sep">›</span><a href="capabilities-index-v62.html">Capabilities</a><span class="sep">›</span><span class="text-white"><span data-zh>认证 & 合规</span><span data-en>Certifications & Compliance</span></span></div>
+    <div class="grid md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-9">
+        <div class="issue-tag mb-10 reveal"><span class="dot"></span><span>COMPLIANCE · TRUST, BUT VERIFY</span></div>
+        <div class="mag-label mb-8 reveal delay-1">CERTIFICATIONS · ALL VERIFIED</div>
+        <h1 class="mag-title reveal delay-1" style="font-size:clamp(48px,8vw,100px);"><span data-zh>认证不是装饰<br>是可验证的承诺</span><span data-en>Certs aren't decoration.<br>They're verifiable claims.</span></h1>
+        <p class="mag-subtitle reveal delay-2 mt-10" style="font-size:clamp(18px,1.6vw,24px);max-width:600px;" data-zh>HACCP · ISO 22000 · BSCI · US FDA · 8 SC categories.</p>
+        <p class="mag-subtitle reveal delay-2 mt-10 font-serif-sc" style="font-size:clamp(16px,1.4vw,20px);max-width:600px;font-style:normal;" data-en>HACCP · ISO 22000 · BSCI · US FDA · 8 大类 SC</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-24 md:py-28">
+  <div class="article-section">
+    <div class="reveal max-w-[760px] mx-auto">
+      <span class="article-num">01 / Why we welcome the audit</span>
+      <h2 class="article-h2"><span data-zh>我们欢迎你审核</span><span data-en>We welcome the audit.</span></h2>
+      <p class="text-base md:text-lg leading-relaxed text-forest/80 font-serif-sc mb-5">
+        <span data-zh>食品行业有太多"自我宣称":自称健康、自称无添加、自称源头直采。**我们的态度不一样**:我们不只列认证,我们公布证书号、有效期、发证机构,欢迎你随时核验或派第三方来工厂审核。</span>
+        <span data-en>The food industry has too many "self-claims" — self-proclaimed healthy, self-proclaimed clean-label, self-proclaimed origin-sourced. **Our stance is different**: we don't just list certs — we publish numbers, expiry dates, issuing bodies. Verify any time. Send your auditor to our plant.</span>
+      </p>
+      <p class="text-base md:text-lg leading-relaxed text-forest/80 font-serif-sc">
+        <span data-zh>这不是"我们值得信任",这是"你不需要信任我们,你可以验证"。</span>
+        <span data-en>This isn't "trust us." This is "you don't have to trust us — you can verify."</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section">
+    <div class="text-center reveal mb-12">
+      <span class="article-num">02 / International Certifications</span>
+      <h2 class="article-h2"><span data-zh>4 大国际认证详情</span><span data-en>4 international certifications.</span></h2>
+      <p class="text-base text-forest/75 font-serif-sc max-w-[760px] mx-auto"><span data-zh>每一项都附证书号 + 有效期 + 发证机构。</span><span data-en>Each with cert number, expiry, issuing body.</span></p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 reveal delay-1">
+      <div class="cert-detail">
+        <div class="icon">🏅</div>
+        <div class="org">Codex Alimentarius</div>
+        <h4>HACCP</h4>
+        <p class="scope"><span data-zh>食品安全危害分析与关键控制点。覆盖全部 3 工厂。</span><span data-en>Hazard Analysis and Critical Control Points. Across all 3 factories.</span></p>
+        <div class="meta">
+          <div class="row"><span class="key"><span data-zh>覆盖</span><span data-en>Scope</span></span><span><span data-zh>3 厂</span><span data-en>3 plants</span></span></div>
+          <div class="row"><span class="key"><span data-zh>状态</span><span data-en>Status</span></span><span><span data-zh>有效</span><span data-en>Active</span></span></div>
+        </div>
+      </div>
+      <div class="cert-detail">
+        <div class="icon">🏅</div>
+        <div class="org">ISO</div>
+        <h4>ISO 22000</h4>
+        <p class="scope"><span data-zh>食品安全管理体系国际标准。覆盖全部 3 工厂。</span><span data-en>International food safety management system. Across all 3 factories.</span></p>
+        <div class="meta">
+          <div class="row"><span class="key"><span data-zh>覆盖</span><span data-en>Scope</span></span><span><span data-zh>3 厂</span><span data-en>3 plants</span></span></div>
+          <div class="row"><span class="key"><span data-zh>状态</span><span data-en>Status</span></span><span><span data-zh>有效</span><span data-en>Active</span></span></div>
+        </div>
+      </div>
+      <div class="cert-detail">
+        <div class="icon">🤝</div>
+        <div class="org">amfori</div>
+        <h4>BSCI</h4>
+        <p class="scope"><span data-zh>商业社会责任倡议 · 劳工权益与社会合规审核。出口欧洲必备。</span><span data-en>Business Social Compliance Initiative — labor rights audit. Required for EU exports.</span></p>
+        <div class="meta">
+          <div class="row"><span class="key"><span data-zh>覆盖</span><span data-en>Scope</span></span><span><span data-zh>赣州 / 张家口</span><span data-en>GZ / ZJK</span></span></div>
+          <div class="row"><span class="key"><span data-zh>状态</span><span data-en>Status</span></span><span><span data-zh>有效</span><span data-en>Active</span></span></div>
+        </div>
+      </div>
+      <div class="cert-detail">
+        <div class="icon">🇺🇸</div>
+        <div class="org">US Food & Drug Admin.</div>
+        <h4>US FDA Registered</h4>
+        <p class="scope"><span data-zh>美国食品工厂注册 · 出口北美必备前置条件。张家口烘焙工厂持有。</span><span data-en>US food facility registration — prerequisite for NA exports. Held at Zhangjiakou bakery.</span></p>
+        <div class="meta">
+          <div class="row"><span class="key"><span data-zh>覆盖</span><span data-en>Scope</span></span><span><span data-zh>张家口</span><span data-en>Zhangjiakou</span></span></div>
+          <div class="row"><span class="key"><span data-zh>状态</span><span data-en>Status</span></span><span><span data-zh>已注册</span><span data-en>Registered</span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+    <div class="text-center reveal mb-12">
+      <span class="article-num">03 / National Certifications</span>
+      <h2 class="article-h2"><span data-zh>8 大类 SC 食品生产许可</span><span data-en>8 SC food production licenses.</span></h2>
+      <p class="text-base text-forest/75 font-serif-sc max-w-[760px] mx-auto"><span data-zh>SC 资质不是泛泛而论,而是按 8 大类食品逐一获批。我们覆盖完整 8 类,意味着你需要的几乎所有西餐成品类型,我们都能合规生产。</span><span data-en>SC licenses aren't general — they're granted category by category. We hold all 8 categories, meaning we can legally produce nearly any Western food product type you need.</span></p>
+    </div>
+    <div class="sc-grid reveal delay-1">
+      <div class="sc-tile"><div class="num">01</div><div><h4><span data-zh>调味品</span><span data-en>Condiments & Sauces</span></h4><p><span data-zh>酱料 / 调味酱 / 复合调味料</span><span data-en>Sauces / paste / compound</span></p></div></div>
+      <div class="sc-tile"><div class="num">02</div><div><h4><span data-zh>酱腌菜</span><span data-en>Pickles & Fermented</span></h4><p><span data-zh>益生菌发酵 / 酱腌</span><span data-en>Probiotic fermented</span></p></div></div>
+      <div class="sc-tile"><div class="num">03</div><div><h4><span data-zh>速冻食品</span><span data-en>Frozen Foods</span></h4><p><span data-zh>速冻肉 / 海产 / 主食</span><span data-en>Frozen meat / seafood</span></p></div></div>
+      <div class="sc-tile"><div class="num">04</div><div><h4><span data-zh>肉制品</span><span data-en>Meat Products</span></h4><p><span data-zh>腌制 / 熟制肉品</span><span data-en>Cured / cooked meat</span></p></div></div>
+      <div class="sc-tile"><div class="num">05</div><div><h4><span data-zh>水产制品</span><span data-en>Aquatic Products</span></h4><p><span data-zh>调味鱼制品 / 海产小食</span><span data-en>Seasoned fish / snacks</span></p></div></div>
+      <div class="sc-tile"><div class="num">06</div><div><h4><span data-zh>方便食品</span><span data-en>Convenience Foods</span></h4><p><span data-zh>即食 / 配料包 / 复合产品</span><span data-en>RTE / kit / compound</span></p></div></div>
+      <div class="sc-tile"><div class="num">07</div><div><h4><span data-zh>炒货 & 坚果</span><span data-en>Roasted & Nuts</span></h4><p><span data-zh>炸物 / 烘烤小食</span><span data-en>Fried / baked snacks</span></p></div></div>
+      <div class="sc-tile"><div class="num">08</div><div><h4><span data-zh>蔬菜制品</span><span data-en>Vegetable Products</span></h4><p><span data-zh>脱水 / 速冻 / 即食蔬菜</span><span data-en>Dehydrated / frozen / RTE</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream py-28 md:py-32">
+  <div class="article-section">
+    <div class="grid md:grid-cols-2 gap-8 max-w-[1100px] mx-auto">
+      <div class="reveal">
+        <span class="article-num">04 / Third-party Testing</span>
+        <h2 class="article-h2"><span data-zh>第三方检测体系</span><span data-en>Third-party testing.</span></h2>
+        <div class="testing-box">
+          <h3><span data-zh>每批次,每检测</span><span data-en>Every batch, every test.</span></h3>
+          <p class="text-base text-forest/75 font-serif-sc leading-relaxed mb-4">
+            <span data-zh>SGS / Bureau Veritas 等国际第三方机构合作。每个出厂批次随机抽检以下项目:</span>
+            <span data-en>Partner with SGS / Bureau Veritas. Each outgoing batch randomly tested for:</span>
+          </p>
+          <ul class="text-sm text-forest/80 font-serif-sc space-y-2 leading-relaxed">
+            <li>· <span data-zh>微生物指标(菌落总数 / 大肠菌群 / 致病菌)</span><span data-en>Microbiological (total count / coliform / pathogens)</span></li>
+            <li>· <span data-zh>重金属残留(铅 / 镉 / 汞 / 砷)</span><span data-en>Heavy metals (Pb / Cd / Hg / As)</span></li>
+            <li>· <span data-zh>农药残留(对原料蔬菜 / 香料)</span><span data-en>Pesticide residue (vegetables / spices)</span></li>
+            <li>· <span data-zh>食品添加剂限量</span><span data-en>Food additive limits</span></li>
+            <li>· <span data-zh>过敏原管控(尤其烘焙线)</span><span data-en>Allergen control (esp. bakery)</span></li>
+          </ul>
+          <p class="text-sm text-gold-dark font-serif-sc mt-4 pt-4 border-t border-dashed border-gold-dark/30" style="color: var(--gold-dark);">
+            <span data-zh>📋 客户索取 → 提供该批次检测报告</span>
+            <span data-en>📋 Client request → batch test report provided</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="reveal delay-1">
+        <span class="article-num">05 / Origin Certs</span>
+        <h2 class="article-h2"><span data-zh>产地与有机认证</span><span data-en>Origin & organic certs.</span></h2>
+        <div class="space-y-3">
+          <div class="origin-cert">
+            <div class="flag">🏷️</div>
+            <div><h5><span data-zh>赣南 GI 协作工厂</span><span data-en>Gannan GI Partner Facility</span></h5><p><span data-zh>赣南螺丝椒地理标志保护产品</span><span data-en>Gannan Luosijiao GI-protected origin</span></p></div>
+          </div>
+          <div class="origin-cert">
+            <div class="flag">🌱</div>
+            <div><h5><span data-zh>有机产品认证(部分批次)</span><span data-en>Organic Certified (selected batches)</span></h5><p><span data-zh>客户指定有机线 SKU 走有机认证</span><span data-en>Client-specified organic SKUs</span></p></div>
+          </div>
+          <div class="origin-cert">
+            <div class="flag">🍶</div>
+            <div><h5><span data-zh>新疆面粉地标对接</span><span data-en>Xinjiang flour origin</span></h5><p><span data-zh>戈壁日晒高蛋白小麦</span><span data-en>Gobi sun-dried high-protein wheat</span></p></div>
+          </div>
+          <div class="origin-cert">
+            <div class="flag">🐄</div>
+            <div><h5><span data-zh>内蒙古草饲牛羊</span><span data-en>Inner Mongolia grass-fed</span></h5><p><span data-zh>锡林郭勒草原放养追溯</span><span data-en>Xilingol grassland traceable</span></p></div>
+          </div>
+          <div class="origin-cert">
+            <div class="flag">🌾</div>
+            <div><h5><span data-zh>东北五常产地认证</span><span data-en>Wuchang origin certified</span></h5><p><span data-zh>稻花香品种保护</span><span data-en>Daohuaxiang variety protected</span></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-28 md:py-32">
+  <div class="article-section">
+    <div class="text-center reveal mb-10">
+      <span class="article-num">06 / Validity Overview</span>
+      <h2 class="article-h2"><span data-zh>认证清单一览</span><span data-en>Certification overview.</span></h2>
+      <div class="article-h2-en">
+        <span data-zh>All current. All available for verification.</span>
+        <span data-en class="font-serif-sc not-italic" style="color:var(--terra);">全部有效 · 可索证书副本</span>
+      </div>
+    </div>
+    <div class="validity-table reveal delay-1">
+      <div class="validity-row header">
+        <div><span data-zh>认证</span><span data-en>Certification</span></div>
+        <div><span data-zh>覆盖范围</span><span data-en>Coverage</span></div>
+        <div><span data-zh>状态</span><span data-en>Status</span></div>
+      </div>
+      <div class="validity-row">
+        <div class="cert-name">🏅 HACCP</div>
+        <div><span data-zh>3 工厂</span><span data-en>3 plants</span></div>
+        <div><span class="cert-status"><span data-zh>有效</span><span data-en>Active</span></span></div>
+      </div>
+      <div class="validity-row">
+        <div class="cert-name">🏅 ISO 22000</div>
+        <div><span data-zh>3 工厂</span><span data-en>3 plants</span></div>
+        <div><span class="cert-status"><span data-zh>有效</span><span data-en>Active</span></span></div>
+      </div>
+      <div class="validity-row">
+        <div class="cert-name">🤝 BSCI</div>
+        <div><span data-zh>赣州 + 张家口</span><span data-en>GZ + ZJK</span></div>
+        <div><span class="cert-status"><span data-zh>有效</span><span data-en>Active</span></span></div>
+      </div>
+      <div class="validity-row">
+        <div class="cert-name">🇺🇸 US FDA Reg.</div>
+        <div><span data-zh>张家口</span><span data-en>Zhangjiakou</span></div>
+        <div><span class="cert-status"><span data-zh>有效</span><span data-en>Active</span></span></div>
+      </div>
+      <div class="validity-row">
+        <div class="cert-name">🇨🇳 SC × 8 categories</div>
+        <div><span data-zh>赣州主厂</span><span data-en>Ganzhou main</span></div>
+        <div><span class="cert-status"><span data-zh>有效</span><span data-en>Active</span></span></div>
+      </div>
+      <div class="validity-row">
+        <div class="cert-name">🏷️ <span data-zh>赣南 GI</span><span data-en>Gannan GI</span></div>
+        <div><span data-zh>赣州协作</span><span data-en>Ganzhou partner</span></div>
+        <div><span class="cert-status"><span data-zh>有效</span><span data-en>Active</span></span></div>
+      </div>
+      <div class="validity-row">
+        <div class="cert-name">🌱 <span data-zh>有机产品(部分)</span><span data-en>Organic (partial)</span></div>
+        <div><span data-zh>指定 SKU</span><span data-en>Specified SKUs</span></div>
+        <div><span class="cert-status"><span data-zh>有效</span><span data-en>Active</span></span></div>
+      </div>
+      <div class="validity-row">
+        <div class="cert-name">🔬 SGS / BV <span data-zh>检测</span><span data-en>testing</span></div>
+        <div><span data-zh>每出厂批次</span><span data-en>Every outgoing batch</span></div>
+        <div><span class="cert-status"><span data-zh>持续</span><span data-en>Ongoing</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-cream py-24 md:py-28">
+  <div class="article-section">
+    <div class="reveal">
+      <div class="stat-band">
+        <div class="item"><div class="v">4</div><div class="l"><span data-zh>国际认证</span><span data-en>Intl certs</span></div></div>
+        <div class="item"><div class="v">8</div><div class="l"><span data-zh>SC 大类</span><span data-en>SC categories</span></div></div>
+        <div class="item"><div class="v">100%</div><div class="l"><span data-zh>批次检测</span><span data-en>Per-batch testing</span></div></div>
+        <div class="item"><div class="v">100%</div><div class="l"><span data-zh>欢迎审核</span><span data-en>Audit-welcome</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bottom-cta" class="py-28 px-6 md:px-12">
+  <div class="max-w-[1100px] mx-auto">
+    <div class="cta-block reveal">
+      <div class="relative z-10 max-w-2xl">
+        <div class="font-display italic text-white/80 text-sm tracking-[0.2em] mb-6">07 / VERIFY ANY TIME</div>
+        <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size:clamp(28px,4vw,44px);"><span data-zh>需要核验?<br>我们准备好了</span><span data-en>Need to verify?<br>We're ready.</span></h2>
+        <p class="text-white/85 text-base md:text-lg mb-10 leading-relaxed"><span data-zh>索取证书副本 → 我们提供。派第三方审核员到工厂 → 我们配合接待。任何问题 → 直接联系合规负责人。</span><span data-en>Request cert copies — we provide. Send your auditor to our plant — we host. Any question — talk to our compliance lead directly.</span></p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#" class="btn-primary" data-foodvio-cta="catalog_download"><span data-zh>索取认证证书</span><span data-en>Request cert copies</span><span>→</span></a>
+          <a href="#" class="btn-outline" data-foodvio-cta="meeting_booking"><span data-zh>预约工厂审核</span><span data-en>Book audit visit</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-white/80">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4"><div class="font-display text-3xl text-white mb-2">Foodvio</div><div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Capabilities</div><a href="capabilities-index-v62.html" class="footer-link">Overview</a><a href="capabilities-certifications-v62.html" class="footer-link">Certifications</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Manufacturing</div><a href="capabilities-ganzhou-factory-v62.html" class="footer-link">Ganzhou</a><a href="capabilities-zhangjiakou-factory-v62.html" class="footer-link">Zhangjiakou</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Supply</div><a href="capabilities-supply-chain-v62.html" class="footer-link">Supply Chain</a></div>
+      <div class="md:col-span-2"><div class="footer-col-title">Contact</div><p class="text-xs text-white/55">400-6879-568</p></div>
+    </div>
+    <div class="footer-divider mb-6"></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40"><div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div><div>京 ICP 备 2022025117 号-1</div></div>
+  </div>
+</footer>
+
+<script src="lead-capture.js" defer></script>
+<script>
+function toggleLang(){document.body.classList.toggle('lang-en');const i=document.body.classList.contains('lang-en');document.documentElement.lang=i?'en':'zh-CN';localStorage.setItem('foodvio-lang',i?'en':'zh')}
+if(localStorage.getItem('foodvio-lang')==='en')document.body.classList.add('lang-en');
+const navbar=document.getElementById('navbar');
+function updateNav(){const s=window.scrollY>60;navbar.classList.toggle('scrolled',s);navbar.classList.toggle('dark-page',s&&window.scrollY>window.innerHeight-100)}
+window.addEventListener('scroll',updateNav);updateNav();
+const mt=document.querySelectorAll('[data-menu]');const mp=document.querySelectorAll('.mega-menu');let menuTimer=null;
+mt.forEach(t=>{t.addEventListener('mouseenter',()=>{clearTimeout(menuTimer);const id='mega-'+t.dataset.menu;mp.forEach(p=>p.classList.toggle('open',p.id===id))});t.addEventListener('mouseleave',()=>{menuTimer=setTimeout(()=>mp.forEach(p=>p.classList.remove('open')),200)})});
+mp.forEach(p=>{p.addEventListener('mouseenter',()=>clearTimeout(menuTimer));p.addEventListener('mouseleave',()=>{menuTimer=setTimeout(()=>p.classList.remove('open'),200)})});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}}),{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
