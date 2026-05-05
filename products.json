@@ -1,0 +1,801 @@
+{
+  "_schema_version": "1.0",
+  "_generated_at": "2026-05-02",
+  "_notes": "Foodvio 花花食界 + 华仔爸爸 ChinnPaPa 全产品数据。改这个文件就更新前端。",
+  "categories": [
+    {
+      "id": "sauces",
+      "brand": "foodvio",
+      "icon": "🥫",
+      "name_zh": "西式酱料",
+      "name_en": "Sauces",
+      "page_url": "products-sauces-v62.html",
+      "tagline_zh": "意式 / 美式 / 东南亚 / 日韩 4 大风味体系",
+      "tagline_en": "4 flavor families",
+      "sku_count": 18,
+      "sort_order": 1
+    },
+    {
+      "id": "staples",
+      "brand": "foodvio",
+      "icon": "🍕",
+      "name_zh": "西式主食",
+      "name_en": "Staples",
+      "page_url": "products-staples-v62.html",
+      "tagline_zh": "披萨 / 意面 / 炒饭 / 汉堡",
+      "tagline_en": "Pizza / pasta / rice / burger",
+      "sku_count": 11,
+      "sort_order": 2
+    },
+    {
+      "id": "snacks",
+      "brand": "foodvio",
+      "icon": "🍟",
+      "name_zh": "炸品小食",
+      "name_en": "Snacks",
+      "page_url": "products-snacks-v62.html",
+      "tagline_zh": "薯类 / 海鲜 / 禽类",
+      "tagline_en": "Potato / seafood / poultry",
+      "sku_count": 6,
+      "sort_order": 3
+    },
+    {
+      "id": "mains",
+      "brand": "foodvio",
+      "icon": "🍖",
+      "name_zh": "主菜大餐",
+      "name_en": "Mains",
+      "page_url": "products-mains-v62.html",
+      "tagline_zh": "烤鸡 / 猪肘 / 排骨 / 拼盘",
+      "tagline_en": "Roast / knuckle / ribs / platter",
+      "sku_count": 4,
+      "sort_order": 4
+    },
+    {
+      "id": "chinpapa",
+      "brand": "chinpapa",
+      "icon": "👶",
+      "name_zh": "华仔爸爸 ChinnPaPa",
+      "name_en": "ChinnPaPa Kids",
+      "page_url": "products-chinpapa-v62.html",
+      "tagline_zh": "中国儿童健康营养早餐品牌",
+      "tagline_en": "Healthy nutrition for Chinese kids",
+      "sku_count": 8,
+      "sort_order": 5
+    }
+  ],
+  "products": [
+    {
+      "id": "tomato-bolognese",
+      "category_id": "sauces",
+      "brand": "foodvio",
+      "name_zh": "番茄牛肉酱",
+      "name_en": "Tomato Bolognese",
+      "emoji_placeholder": "🥫",
+      "image": null,
+      "tagline_zh": "意式经典 · 慢炖牛肉风味",
+      "tagline_en": "Italian classic · slow-simmered beef",
+      "specs": {
+        "weight": "1kg / 5kg",
+        "shelf_life": "12 个月",
+        "moq": "* 待定"
+      },
+      "highlights_zh": [
+        "新疆加工番茄",
+        "慢炖工艺锁住肉香",
+        "适配披萨/意面/烤盘"
+      ],
+      "highlights_en": [
+        "Xinjiang tomatoes",
+        "Slow-simmered for depth",
+        "For pizza/pasta/baking"
+      ],
+      "scenarios": [
+        "foodservice",
+        "industrial"
+      ],
+      "featured": true,
+      "sort_order": 1,
+      "status": "active"
+    },
+    {
+      "id": "creamy-mushroom",
+      "category_id": "sauces",
+      "brand": "foodvio",
+      "name_zh": "奶油蘑菇酱",
+      "name_en": "Creamy Mushroom",
+      "emoji_placeholder": "🍄",
+      "image": null,
+      "tagline_zh": "云南松露 · 奶油基底",
+      "tagline_en": "Yunnan truffle · creamy base",
+      "specs": {
+        "weight": "1kg / 5kg",
+        "shelf_life": "12 个月",
+        "moq": "* 待定"
+      },
+      "highlights_zh": [
+        "* 待补充"
+      ],
+      "highlights_en": [
+        "* TBD"
+      ],
+      "scenarios": [
+        "foodservice"
+      ],
+      "featured": true,
+      "sort_order": 2,
+      "status": "active"
+    },
+    {
+      "id": "basil-pesto",
+      "category_id": "sauces",
+      "brand": "foodvio",
+      "name_zh": "罗勒松子青酱",
+      "name_en": "Basil Pesto",
+      "emoji_placeholder": "🌿",
+      "image": null,
+      "tagline_zh": "意式罗勒 · 松子青酱",
+      "tagline_en": "Italian basil · pine nut pesto",
+      "specs": {
+        "weight": "1kg / 5kg",
+        "shelf_life": "12 个月",
+        "moq": "* 待定"
+      },
+      "highlights_zh": [
+        "* 待补充"
+      ],
+      "highlights_en": [
+        "* TBD"
+      ],
+      "scenarios": [
+        "foodservice"
+      ],
+      "featured": true,
+      "sort_order": 3,
+      "status": "active"
+    },
+    {
+      "id": "smoked-pepper",
+      "category_id": "sauces",
+      "brand": "foodvio",
+      "name_zh": "烟熏彩椒酱",
+      "name_en": "Smoked Pepper Sauce",
+      "emoji_placeholder": "🌶️",
+      "image": null,
+      "tagline_zh": "赣南螺丝椒 · 烟熏工艺",
+      "tagline_en": "Gannan Luosijiao · smoked",
+      "specs": {
+        "weight": "1kg / 5kg",
+        "shelf_life": "12 个月",
+        "moq": "* 待定"
+      },
+      "highlights_zh": [
+        "江西赣南螺丝椒"
+      ],
+      "highlights_en": [
+        "Gannan Luosijiao chili"
+      ],
+      "scenarios": [
+        "foodservice"
+      ],
+      "featured": true,
+      "sort_order": 4,
+      "status": "active"
+    },
+    {
+      "id": "black-truffle-pizza",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "黑松露披萨",
+      "name_en": "Black Truffle Pizza",
+      "emoji_placeholder": "🍕",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 1,
+      "status": "draft"
+    },
+    {
+      "id": "meat-bomb-pizza",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "肉食炸弹披萨",
+      "name_en": "Meat Bomb Pizza",
+      "emoji_placeholder": "🍕",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": false,
+      "sort_order": 2,
+      "status": "draft"
+    },
+    {
+      "id": "hawaiian-pizza",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "夏威夷披萨",
+      "name_en": "Hawaiian Pizza",
+      "emoji_placeholder": "🍍",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": false,
+      "sort_order": 3,
+      "status": "draft"
+    },
+    {
+      "id": "wagyu-bolognese-pizza",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "和牛肉酱披萨",
+      "name_en": "Wagyu Bolognese Pizza",
+      "emoji_placeholder": "🥩",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": false,
+      "sort_order": 4,
+      "status": "draft"
+    },
+    {
+      "id": "durian-pizza",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "榴莲披萨",
+      "name_en": "Durian Pizza",
+      "emoji_placeholder": "🍈",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": false,
+      "sort_order": 5,
+      "status": "draft"
+    },
+    {
+      "id": "cheese-beef-patty",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "芝士牛肉饼",
+      "name_en": "Cheese Beef Patty",
+      "emoji_placeholder": "🥩",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 6,
+      "status": "draft"
+    },
+    {
+      "id": "cheese-beef-roll",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "芝士牛肉卷",
+      "name_en": "Cheese Beef Roll",
+      "emoji_placeholder": "🌯",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": false,
+      "sort_order": 7,
+      "status": "draft"
+    },
+    {
+      "id": "classic-bolognese",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "古法肉酱意面",
+      "name_en": "Classic Bolognese Pasta",
+      "emoji_placeholder": "🍝",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 8,
+      "status": "draft"
+    },
+    {
+      "id": "creamy-mushroom-pasta",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "奶油蘑菇意面",
+      "name_en": "Creamy Mushroom Pasta",
+      "emoji_placeholder": "🍝",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": false,
+      "sort_order": 9,
+      "status": "draft"
+    },
+    {
+      "id": "japanese-squid-rice",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "日式鱿鱼炒饭",
+      "name_en": "Japanese Squid Fried Rice",
+      "emoji_placeholder": "🍱",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 10,
+      "status": "draft"
+    },
+    {
+      "id": "angus-beef-burger",
+      "category_id": "staples",
+      "brand": "foodvio",
+      "name_zh": "安格斯牛肉汉堡",
+      "name_en": "Angus Beef Burger",
+      "emoji_placeholder": "🍔",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": false,
+      "sort_order": 11,
+      "status": "draft"
+    },
+    {
+      "id": "sweet-potato-fries",
+      "category_id": "snacks",
+      "brand": "foodvio",
+      "name_zh": "原切红薯条",
+      "name_en": "Cut Sweet Potato Fries",
+      "emoji_placeholder": "🍠",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 1,
+      "status": "draft"
+    },
+    {
+      "id": "crispy-potato",
+      "category_id": "snacks",
+      "brand": "foodvio",
+      "name_zh": "香酥土豆块",
+      "name_en": "Crispy Potato Cubes",
+      "emoji_placeholder": "🥔",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 2,
+      "status": "draft"
+    },
+    {
+      "id": "golden-cod",
+      "category_id": "snacks",
+      "brand": "foodvio",
+      "name_zh": "黄金鳕鱼排",
+      "name_en": "Golden Cod Fillet",
+      "emoji_placeholder": "🐟",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 3,
+      "status": "draft"
+    },
+    {
+      "id": "phoenix-shrimp",
+      "category_id": "snacks",
+      "brand": "foodvio",
+      "name_zh": "黄金凤尾虾",
+      "name_en": "Golden Phoenix Shrimp",
+      "emoji_placeholder": "🦐",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": false,
+      "sort_order": 4,
+      "status": "draft"
+    },
+    {
+      "id": "thai-lemongrass-wing",
+      "category_id": "snacks",
+      "brand": "foodvio",
+      "name_zh": "泰式香茅鸡翅根",
+      "name_en": "Thai Lemongrass Drumettes",
+      "emoji_placeholder": "🍗",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": false,
+      "sort_order": 5,
+      "status": "draft"
+    },
+    {
+      "id": "chicken-bites",
+      "category_id": "snacks",
+      "brand": "foodvio",
+      "name_zh": "鸡肉锅巴",
+      "name_en": "Chicken Crispy Bites",
+      "emoji_placeholder": "🍗",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 6,
+      "status": "draft"
+    },
+    {
+      "id": "italian-roast-chicken",
+      "category_id": "mains",
+      "brand": "foodvio",
+      "name_zh": "意式烤鸡",
+      "name_en": "Italian Roast Chicken",
+      "emoji_placeholder": "🍗",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 1,
+      "status": "draft"
+    },
+    {
+      "id": "german-pork-knuckle",
+      "category_id": "mains",
+      "brand": "foodvio",
+      "name_zh": "德式脆皮猪肘",
+      "name_en": "German Crispy Pork Knuckle",
+      "emoji_placeholder": "🍖",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 2,
+      "status": "draft"
+    },
+    {
+      "id": "american-bbq-ribs",
+      "category_id": "mains",
+      "brand": "foodvio",
+      "name_zh": "美式炭烤猪肋排",
+      "name_en": "American BBQ Pork Ribs",
+      "emoji_placeholder": "🥩",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 3,
+      "status": "draft"
+    },
+    {
+      "id": "german-classic-platter",
+      "category_id": "mains",
+      "brand": "foodvio",
+      "name_zh": "德国经典拼盘",
+      "name_en": "German Classic Platter",
+      "emoji_placeholder": "🌭",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [],
+      "featured": true,
+      "sort_order": 4,
+      "status": "draft"
+    },
+    {
+      "id": "cp-black-pepper-beef-pizza",
+      "category_id": "chinpapa",
+      "brand": "chinpapa",
+      "name_zh": "黑椒牛肉披萨",
+      "name_en": "Black Pepper Beef Pizza",
+      "emoji_placeholder": "🍕",
+      "image": null,
+      "tagline_zh": "经典黑椒牛柳风味,跃然饼上!中西合璧的味觉狂欢",
+      "tagline_en": "Classic black pepper beef on pizza — East meets West.",
+      "specs": {
+        "weight": "110g(约 4.5 寸)",
+        "shelf_life": "* 待定",
+        "moq": "* 待定"
+      },
+      "highlights_zh": [
+        "黑椒牛柳风味",
+        "中西合璧"
+      ],
+      "highlights_en": [
+        "Black pepper beef",
+        "East meets West"
+      ],
+      "scenarios": [
+        "retail",
+        "online"
+      ],
+      "featured": true,
+      "sort_order": 1,
+      "status": "active",
+      "kid_friendly": true,
+      "tags": [
+        "HOT"
+      ]
+    },
+    {
+      "id": "cp-wagyu-bolognese-pizza",
+      "category_id": "chinpapa",
+      "brand": "chinpapa",
+      "name_zh": "和牛肉酱披萨",
+      "name_en": "Wagyu Bolognese Pizza",
+      "emoji_placeholder": "🥩",
+      "image": null,
+      "tagline_zh": "甄选高品质和牛制成意式肉酱,搭配浓郁马苏里拉",
+      "tagline_en": "Premium wagyu Bolognese with rich mozzarella.",
+      "specs": {
+        "weight": "110g(约 4.5 寸)",
+        "shelf_life": "* 待定",
+        "moq": "* 待定"
+      },
+      "highlights_zh": [
+        "高品质和牛",
+        "意式肉酱",
+        "马苏里拉"
+      ],
+      "highlights_en": [
+        "Premium wagyu",
+        "Italian Bolognese",
+        "Mozzarella"
+      ],
+      "scenarios": [
+        "retail",
+        "online"
+      ],
+      "featured": true,
+      "sort_order": 2,
+      "status": "active",
+      "kid_friendly": true,
+      "tags": [
+        "HOT"
+      ]
+    },
+    {
+      "id": "cp-black-truffle-pizza",
+      "category_id": "chinpapa",
+      "brand": "chinpapa",
+      "name_zh": "黑松露披萨",
+      "name_en": "Black Truffle Pizza",
+      "emoji_placeholder": "🍄",
+      "image": null,
+      "tagline_zh": "云南黑松露 · 奶油芝士基底 · 高端口味儿童版",
+      "tagline_en": "Yunnan black truffle on creamy cheese base — premium kid version.",
+      "specs": {
+        "weight": "110g(约 4.5 寸)",
+        "shelf_life": "* 待定",
+        "moq": "* 待定"
+      },
+      "highlights_zh": [
+        "云南黑松露",
+        "奶油芝士基底"
+      ],
+      "highlights_en": [
+        "Yunnan black truffle",
+        "Creamy cheese base"
+      ],
+      "scenarios": [
+        "retail",
+        "online"
+      ],
+      "featured": false,
+      "sort_order": 3,
+      "status": "active",
+      "kid_friendly": true,
+      "tags": []
+    },
+    {
+      "id": "cp-american-bbq-ribs",
+      "category_id": "chinpapa",
+      "brand": "chinpapa",
+      "name_zh": "美式炭烤猪肋排",
+      "name_en": "American BBQ Pork Ribs",
+      "emoji_placeholder": "🥩",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [
+        "retail",
+        "online"
+      ],
+      "featured": false,
+      "sort_order": 4,
+      "status": "draft",
+      "kid_friendly": true,
+      "tags": []
+    },
+    {
+      "id": "cp-classic-bolognese",
+      "category_id": "chinpapa",
+      "brand": "chinpapa",
+      "name_zh": "古法肉酱意面",
+      "name_en": "Classic Bolognese Pasta",
+      "emoji_placeholder": "🍝",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [
+        "retail",
+        "online"
+      ],
+      "featured": false,
+      "sort_order": 5,
+      "status": "draft",
+      "kid_friendly": true,
+      "tags": []
+    },
+    {
+      "id": "cp-japanese-squid-rice",
+      "category_id": "chinpapa",
+      "brand": "chinpapa",
+      "name_zh": "日式鱿鱼炒饭",
+      "name_en": "Japanese Squid Fried Rice",
+      "emoji_placeholder": "🍱",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [
+        "retail",
+        "online"
+      ],
+      "featured": false,
+      "sort_order": 6,
+      "status": "draft",
+      "kid_friendly": true,
+      "tags": []
+    },
+    {
+      "id": "cp-italian-herb-chicken",
+      "category_id": "chinpapa",
+      "brand": "chinpapa",
+      "name_zh": "意式香草萌萌鸡",
+      "name_en": "Italian Herb Mini Chicken",
+      "emoji_placeholder": "🍗",
+      "image": null,
+      "tagline_zh": "* 待补充",
+      "tagline_en": "* TBD",
+      "specs": {},
+      "highlights_zh": [],
+      "highlights_en": [],
+      "scenarios": [
+        "retail",
+        "online"
+      ],
+      "featured": true,
+      "sort_order": 7,
+      "status": "draft",
+      "kid_friendly": true,
+      "tags": [
+        "NEW"
+      ]
+    },
+    {
+      "id": "cp-fermented-chili",
+      "category_id": "chinpapa",
+      "brand": "chinpapa",
+      "name_zh": "健康发酵辣椒",
+      "name_en": "Healthy Fermented Chili",
+      "emoji_placeholder": "🌶️",
+      "image": null,
+      "tagline_zh": "江西赣南螺丝椒 · 益生菌发酵 · 30-50K SHU 温和辣度",
+      "tagline_en": "Gannan Luosijiao · probiotic fermented · 30-50K SHU mild.",
+      "specs": {
+        "shu": "30,000-50,000",
+        "shelf_life": "* 待定",
+        "moq": "* 待定"
+      },
+      "highlights_zh": [
+        "江西赣南螺丝椒",
+        "益生菌发酵工艺",
+        "儿童可接受温和辣度"
+      ],
+      "highlights_en": [
+        "Gannan Luosijiao chili",
+        "Probiotic fermentation",
+        "Kid-friendly mild heat"
+      ],
+      "scenarios": [
+        "retail",
+        "online"
+      ],
+      "featured": true,
+      "sort_order": 8,
+      "status": "active",
+      "kid_friendly": true,
+      "tags": [
+        "FEATURED",
+        "HEALTHY"
+      ]
+    }
+  ]
+}

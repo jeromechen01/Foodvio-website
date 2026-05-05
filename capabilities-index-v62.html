@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Capabilities · Foodvio 花花食界 — From Field to Global Market</title>
-<meta name="description" content="花花食界制造能力 · 3 大自营工厂 100,000㎡ · 米其林研发 · 4 港口 FOB · 8 大类 SC + HACCP / ISO22000 / BSCI / FDA 认证" />
+<meta name="description" content="花花食界制造能力 · 近 10 万平米自建及托管厂房 · 米其林研发 · 4 港口 FOB · 8 大类 SC + HACCP / ISO22000 / BSCI / FDA 认证" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -325,6 +325,39 @@
   .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
 
   @media (max-width: 768px) { .mega-menu { display: none; } }
+
+  /* === Brand Logo (R1) === */
+  .brand-logo{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;line-height:1;text-decoration:none;color:inherit;transition:opacity .25s}
+  .brand-logo:hover{opacity:.8}
+  .brand-logo .zh{font-family:'Noto Serif SC',serif;font-weight:900;font-size:18px;letter-spacing:.08em;color:var(--forest);line-height:1.1;display:block}
+  .brand-logo .en{font-family:'Inter',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.46em;color:var(--forest);line-height:1;margin-top:4px;display:block;padding-right:.46em}
+  /* nav 上的 logo 在深色背景上 */
+  nav .brand-logo .zh, nav .brand-logo .en{color:#fff}
+  nav.scrolled .brand-logo .zh, nav.scrolled .brand-logo .en{color:var(--forest)}
+  /* footer 上的 logo */
+  footer .brand-logo .zh, footer .brand-logo .en{color:#fff}
+  /* hero/marketing 区里的大版 */
+  .brand-logo.lg .zh{font-size:26px;letter-spacing:.08em}
+  .brand-logo.lg .en{font-size:13.5px;letter-spacing:.46em;margin-top:6px;padding-right:.46em}
+  @media (max-width:768px){
+    .brand-logo .zh{font-size:16px;letter-spacing:.08em}
+    .brand-logo .en{font-size:8.5px;letter-spacing:.42em;padding-right:.42em}
+  }
+
+
+  /* === Standard H2 Section Title (R5) === */
+  .h2-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-weight:500;letter-spacing:.18em;font-size:14px;margin-bottom:18px;display:inline-block;text-transform:uppercase}
+  .h2-eyebrow::before{content:'— ';margin-right:4px}
+  .h2-main{font-family:'Noto Serif SC',serif;font-weight:900;color:var(--forest);font-size:clamp(24px,3vw,36px);line-height:1.2;letter-spacing:-.01em;margin:0}
+  .h2-main-en{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--forest);font-weight:600;font-size:clamp(22px,2.8vw,32px);line-height:1.2;letter-spacing:-.005em;margin:0}
+  .h2-block{padding-bottom:28px;margin-bottom:32px}
+  @media(max-width:768px){
+    .h2-eyebrow{font-size:11px;letter-spacing:.14em}
+    .h2-main{font-size:22px}
+    .h2-main-en{font-size:20px}
+    .h2-block{padding-bottom:20px;margin-bottom:24px}
+  }
+
 </style>
 </head>
 
@@ -333,10 +366,9 @@
 <!-- NAV -->
 <nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
   <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-3 nav-brand text-white">
-      <span class="font-display text-xl font-semibold tracking-tight">Foodvio</span>
-      <span class="w-px h-3 bg-white/30 mx-1"></span>
-      <span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span>
+    <a href="index.html" class="brand-logo nav-brand" aria-label="Foodvio 花花食界">
+      <span class="zh">花花食界</span>
+      <span class="en">FOODVIO</span>
     </a>
     <div class="hidden lg:flex items-center gap-9">
       <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
@@ -353,23 +385,72 @@
   </div>
 
   <div class="mega-menu" id="mega-products">
-    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
-      <div class="col-span-3"><div class="mega-col-title">Product Lines</div>
-        <a href="products-sauces-v62.html" class="mega-link featured">Innovation Sauces</a></div>
-      <div class="col-span-3"><div class="mega-col-title">By Brand</div>
-        <a href="products-index-v62.html" class="mega-link">花花食界</a></div>
-      <div class="col-span-3"><div class="mega-col-title">Featured</div><a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link">赣南螺丝椒系列</a></div>
-      <div class="col-span-3"><div class="mega-col-title">Quick Access</div><a href="#" class="mega-link">📄 Catalog</a></div>
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-10 gap-6">
+      <div class="col-span-2">
+        <a href="products-sauces-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">🥫 <span data-zh>西式酱料</span><span data-en>Sauces</span></a>
+        <a href="products-sauces-v62.html#sku-tomato-bolognese" class="mega-link" data-foodvio-cta="general_contact">🥫 <span data-zh>番茄牛肉酱</span><span data-en>Tomato Bolognese</span></a>
+        <a href="products-sauces-v62.html#sku-creamy-mushroom" class="mega-link" data-foodvio-cta="general_contact">🍄 <span data-zh>奶油蘑菇酱</span><span data-en>Creamy Mushroom</span></a>
+        <a href="products-sauces-v62.html#sku-basil-pesto" class="mega-link" data-foodvio-cta="general_contact">🌿 <span data-zh>罗勒松子青酱</span><span data-en>Basil Pesto</span></a>
+        <a href="products-sauces-v62.html#sku-smoked-pepper" class="mega-link" data-foodvio-cta="general_contact">🌶️ <span data-zh>烟熏彩椒酱</span><span data-en>Smoked Pepper Sauce</span></a>
+        <a href="products-sauces-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>查看全部酱料</span><span data-en>See all sauces</span> →</a>
+      </div>
+      <div class="col-span-2">
+        <a href="products-staples-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">🍕 <span data-zh>西式主食</span><span data-en>Staples</span></a>
+        <a href="products-staples-v62.html#sku-black-truffle-pizza" class="mega-link" data-foodvio-cta="general_contact">🍕 <span data-zh>黑松露披萨</span><span data-en>Black Truffle Pizza</span></a>
+        <a href="products-staples-v62.html#sku-classic-bolognese" class="mega-link" data-foodvio-cta="general_contact">🍝 <span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></a>
+        <a href="products-staples-v62.html#sku-japanese-squid-rice" class="mega-link" data-foodvio-cta="general_contact">🍱 <span data-zh>日式鱿鱼炒饭</span><span data-en>Japanese Squid Fried Rice</span></a>
+        <a href="products-staples-v62.html#sku-cheese-beef-patty" class="mega-link" data-foodvio-cta="general_contact">🥩 <span data-zh>芝士牛肉饼</span><span data-en>Cheese Beef Patty</span></a>
+        <a href="products-staples-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>查看全部 11 款主食</span><span data-en>See all 11 staples</span> →</a>
+      </div>
+      <div class="col-span-2">
+        <a href="products-snacks-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">🍟 <span data-zh>炸品小食</span><span data-en>Snacks</span></a>
+        <a href="products-snacks-v62.html#sku-crispy-potato" class="mega-link" data-foodvio-cta="general_contact">🥔 <span data-zh>香酥土豆块</span><span data-en>Crispy Potato Cubes</span></a>
+        <a href="products-snacks-v62.html#sku-chicken-bites" class="mega-link" data-foodvio-cta="general_contact">🍗 <span data-zh>鸡肉锅巴</span><span data-en>Chicken Crispy Bites</span></a>
+        <a href="products-snacks-v62.html#sku-sweet-potato-fries" class="mega-link" data-foodvio-cta="general_contact">🍠 <span data-zh>原切红薯条</span><span data-en>Cut Sweet Potato Fries</span></a>
+        <a href="products-snacks-v62.html#sku-golden-cod" class="mega-link" data-foodvio-cta="general_contact">🐟 <span data-zh>黄金鳕鱼排</span><span data-en>Golden Cod Fillet</span></a>
+        <a href="products-snacks-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>查看全部 6 款小食</span><span data-en>See all 6 snacks</span> →</a>
+      </div>
+      <div class="col-span-2">
+        <a href="products-mains-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">🍖 <span data-zh>主菜大餐</span><span data-en>Mains</span></a>
+        <a href="products-mains-v62.html#sku-italian-roast-chicken" class="mega-link" data-foodvio-cta="general_contact">🍗 <span data-zh>意式烤鸡</span><span data-en>Italian Roast Chicken</span></a>
+        <a href="products-mains-v62.html#sku-german-pork-knuckle" class="mega-link" data-foodvio-cta="general_contact">🍖 <span data-zh>德式脆皮猪肘</span><span data-en>German Crispy Pork Knuckle</span></a>
+        <a href="products-mains-v62.html#sku-american-bbq-ribs" class="mega-link" data-foodvio-cta="general_contact">🥩 <span data-zh>美式炭烤猪肋排</span><span data-en>American BBQ Pork Ribs</span></a>
+        <a href="products-mains-v62.html#sku-german-classic-platter" class="mega-link" data-foodvio-cta="general_contact">🌭 <span data-zh>德国经典拼盘</span><span data-en>German Classic Platter</span></a>
+        <a href="products-mains-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>查看全部主菜</span><span data-en>See all mains</span> →</a>
+      </div>
+      <div class="col-span-2">
+        <a href="products-chinpapa-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">👶 <span data-zh>华仔爸爸</span><span data-en>ChinnPaPa</span></a>
+        <a href="products-chinpapa-v62.html#sku-wagyu-pizza" class="mega-link" data-foodvio-cta="general_contact">🍕 <span data-zh>和牛肉酱披萨</span><span data-en>Wagyu Bolognese Pizza</span></a>
+        <a href="products-chinpapa-v62.html#sku-cheese-beef-roll" class="mega-link" data-foodvio-cta="general_contact">🌯 <span data-zh>芝士牛肉卷</span><span data-en>Cheese Beef Roll</span></a>
+        <a href="products-chinpapa-v62.html#sku-bolognese-pasta" class="mega-link" data-foodvio-cta="general_contact">🍝 <span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></a>
+        <a href="products-chinpapa-v62.html#sku-herb-roast-chicken" class="mega-link" data-foodvio-cta="general_contact">🍗 <span data-zh>香草萌萌鸡</span><span data-en>Herb Roast Chicken</span></a>
+        <a href="products-chinpapa-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>了解华仔爸爸品牌</span><span data-en>Learn ChinnPaPa</span> →</a>
+      </div>
     </div>
   </div>
   <div class="mega-menu" id="mega-solutions">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
-      <div class="col-span-4"><div class="mega-col-title">By Scenario</div>
-        <a href="solutions-light-kitchen-v62.html" class="mega-link">🔵 轻后厨</a></div>
-      <div class="col-span-4"><div class="mega-col-title">Featured</div>
-        <a href="solutions-coffee-shops-v62.html" class="mega-link">华东咖啡 24 店</a></div>
-      <div class="col-span-4"><div class="mega-col-title">Channels</div>
-        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a></div>
+      <div class="col-span-4">
+        <div class="mega-col-title"><span data-zh>按业态(中文 18 场景)</span><span data-en>By Scenario (CN 18)</span></div>
+        <a href="#" class="mega-link">🔵 轻后厨(6)</a>
+        <a href="#" class="mega-link">🟢 全球连锁(4)</a>
+        <a href="#" class="mega-link">🟡 机构团餐(3)</a>
+        <a href="#" class="mega-link">🟠 新零售(3)</a>
+        <a href="#" class="mega-link">🟣 特殊业态(2)</a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Featured Cases</div>
+        <a href="solutions-coffee-shops-v62.html" class="mega-link"><span data-zh>华东咖啡连锁 · 24 店</span><span data-en>East China Coffee · 24 stores</span></a>
+        <a href="solutions-index-v62.html" class="mega-link"><span data-zh>高校食堂季度更新</span><span data-en>University quarterly menu</span></a>
+        <a href="for-global-v62.html" class="mega-link"><span data-zh>SEA 餐饮集团 · 200+ 店</span><span data-en>SEA chain · 200+ stores</span></a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Global Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a>
+        <a href="for-industrial-v62.html" class="mega-link">🏢 Industrial</a>
+        <a href="for-retail-v62.html" class="mega-link">🛒 Retail</a>
+        <a href="for-online-sales-v62.html" class="mega-link">💻 Online Sales</a>
+      </div>
     </div>
   </div>
   <div class="mega-menu" id="mega-story">
@@ -400,22 +481,31 @@
   </div>
   <div class="mega-menu" id="mega-capabilities">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
-      <div class="col-span-3"><div class="mega-col-title">Manufacturing</div>
-        <a href="capabilities-ganzhou-factory-v62.html" class="mega-link featured">🏭 江西赣州 · 6.66 万㎡</a>
-        <a href="capabilities-zhangjiakou-factory-v62.html" class="mega-link">🥖 河北张家口 · FDA</a>
-        <a href="capabilities-huairou-factory-v62.html" class="mega-link">🏢 北京怀柔基地</a></div>
-      <div class="col-span-3"><div class="mega-col-title">Expertise</div>
-        <a href="capabilities-rd-team-v62.html" class="mega-link featured">👨‍🍳 米其林研发团队</a></div>
-      <div class="col-span-3"><div class="mega-col-title">Supply Chain</div>
-        <a href="capabilities-supply-chain-v62.html" class="mega-link">🚢 4 港口 FOB · 冷链</a></div>
-      <div class="col-span-3"><div class="mega-col-title">Compliance</div>
-        <a href="capabilities-certifications-v62.html" class="mega-link featured">🏅 HACCP · ISO · FDA</a></div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Manufacturing</div>
+        <a href="capabilities-ganzhou-factory-v62.html" class="mega-link">🏭 <span data-zh>江西赣州(6.66 万㎡)</span><span data-en>Jiangxi Ganzhou · 66,600㎡</span></a>
+        <a href="capabilities-zhangjiakou-factory-v62.html" class="mega-link">🥖 <span data-zh>河北张家口(1.6 万㎡)</span><span data-en>Hebei Zhangjiakou · 16,000㎡</span></a>
+        <a href="capabilities-huairou-factory-v62.html" class="mega-link">🏢 <span data-zh>北京怀柔(总部研发)</span><span data-en>Beijing Huairou · HQ + R&D</span></a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Expertise</div>
+        <a href="capabilities-rd-team-v62.html" class="mega-link"><span data-zh>米其林级研发中心</span><span data-en>Michelin-grade R&D</span></a>
+        <a href="capabilities-supply-chain-v62.html" class="mega-link"><span data-zh>柔性供应链</span><span data-en>Flexible Supply Chain</span></a>
+        <a href="capabilities-rd-team-v62.html" class="mega-link"><span data-zh>按客户需求打样</span><span data-en>Custom Prototyping</span></a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Certifications</div>
+        <a href="capabilities-certifications-v62.html" class="mega-link">HACCP · ISO 22000 · BSCI</a>
+        <a href="capabilities-certifications-v62.html" class="mega-link">US FDA Registered</a>
+        <a href="capabilities-certifications-v62.html" class="mega-link">8 SC Production Categories</a>
+        <a href="capabilities-certifications-v62.html" class="mega-link mt-3 text-xs opacity-70"><span data-zh>预约工厂参观 →</span><span data-en>Book a factory visit →</span></a>
+      </div>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="relative min-h-[640px] flex items-end pb-20 pt-32 overflow-hidden">
+<section class="relative min-h-[640px] flex items-end pb-20 pt-20 overflow-hidden">
   <div class="hero-bg"></div>
   <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
 
@@ -430,7 +520,7 @@
         <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
           INDUSTRIAL CAPABILITIES · ESTABLISHED 2021
         </div>
-        <h1 class="hero-title reveal delay-1" style="font-size: clamp(48px, 7vw, 100px);">
+        <h1 class="hero-title reveal delay-1" style="font-size: clamp(32px, 4vw, 52px);">
           <span data-zh>从田间到全球<br>我们建好了路</span>
           <span data-en>From field to global market,<br>we built the rails.</span>
         </h1>
@@ -450,13 +540,13 @@
 </section>
 
 <!-- KEY NUMBERS BAND -->
-<section class="bg-cream py-16 md:py-20">
+<section class="bg-cream py-12 md:py-16">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
     <div class="nums-band reveal">
       <div class="nums-band-grid">
         <div class="item">
           <div class="v">100,000<sup>㎡</sup></div>
-          <div class="l"><span data-zh>自营工厂</span><span data-en>Owned facilities</span></div>
+          <div class="l"><span data-zh>自建及托管</span><span data-en>Owned &amp; managed</span></div>
         </div>
         <div class="item">
           <div class="v">3</div>
@@ -488,12 +578,12 @@
 </section>
 
 <!-- 4 CAPABILITY CARDS -->
-<section class="bg-paper py-28 md:py-32">
+<section class="bg-paper py-12 md:py-16">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
 
     <div class="text-center mb-16 reveal">
       <div class="section-no mb-6 inline-block">01 / Four Pillars</div>
-      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(32px, 4vw, 52px); line-height: 1.1;">
+      <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(22px, 2.8vw, 34px); line-height: 1.1;">
         <span data-zh>四大能力支柱</span>
         <span data-en>Four pillars of capability.</span>
       </h2>
@@ -512,7 +602,7 @@
         <h3><span data-zh>3 大自营工厂</span><span data-en>3 owned factories</span></h3>
         <div class="cap-en">
           <span data-zh>One million square feet under our roof.</span>
-          <span data-en>10 万㎡,全部自营</span>
+          <span data-en>Approx. 100,000㎡ owned and managed facilities</span>
         </div>
         <p class="cap-desc">
           <span data-zh>江西赣州 6.66 万㎡ 综合工厂 · 河北张家口 1.6 万㎡ 烘焙(FDA 注册)· 北京怀柔基地。所有产能 100% 自营,不外包。</span>
@@ -521,7 +611,7 @@
         <div class="cap-stats">
           <div class="cap-stat">
             <div class="v">100,000㎡</div>
-            <div class="l"><span data-zh>总面积</span><span data-en>Total</span></div>
+            <div class="l"><span data-zh>自建及托管</span><span data-en>Owned &amp; managed</span></div>
           </div>
           <div class="cap-stat">
             <div class="v">3</div>
@@ -642,7 +732,7 @@
 </section>
 
 <!-- ALL 7 PAGES INDEX (deep-link grid) -->
-<section class="bg-cream py-28 md:py-32">
+<section class="bg-cream py-12 md:py-16">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
 
     <div class="text-center mb-12 reveal">
@@ -710,7 +800,7 @@
 </section>
 
 <!-- CERT BADGES -->
-<section class="bg-paper py-24 md:py-28">
+<section class="bg-paper py-12 md:py-16">
   <div class="max-w-[1100px] mx-auto px-6 md:px-12">
 
     <div class="text-center mb-10 reveal">
@@ -743,7 +833,7 @@
 </section>
 
 <!-- BOTTOM CTA -->
-<section id="bottom-cta" class="bg-cream py-24 md:py-28 px-6 md:px-12">
+<section id="bottom-cta" class="bg-cream py-12 md:py-16 px-6 md:px-12">
   <div class="max-w-[1100px] mx-auto text-center reveal">
     <p class="font-display italic text-terra text-lg mb-6">— Want to see for yourself?</p>
     <h2 class="font-serif-sc font-bold text-forest mb-8" style="font-size: clamp(28px, 3.5vw, 44px); line-height: 1.2;">
@@ -770,11 +860,13 @@
 
 <!-- FOOTER -->
 <footer class="text-white/80">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-16 pb-10">
     <div class="grid md:grid-cols-12 gap-10 mb-16">
       <div class="md:col-span-4">
-        <div class="font-display text-3xl text-white mb-2">Foodvio</div>
-        <div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div>
+        <a href="index.html" class="brand-logo lg" aria-label="Foodvio 花花食界" style="margin-bottom:24px;">
+          <span class="zh">花花食界</span>
+          <span class="en">FOODVIO</span>
+        </a>
         <p class="text-sm text-white/55 leading-relaxed mb-8 max-w-sm">
           <span data-zh>源自中国的专业西餐食品品牌。</span>
           <span data-en>The professional Western cuisine brand from China.</span>
@@ -795,7 +887,12 @@
     <div class="footer-divider mb-6"></div>
     <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
       <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
-      <div><span>京 ICP 备 2022025117 号-1</span></div>
+      <div class="flex items-center gap-5 flex-wrap">
+        <span>京 ICP 备 2022025117 号-1</span>
+        <a href="privacy-policy-zh.html" class="hover:text-gold transition" data-zh>隐私政策</a><a href="privacy-policy-en.html" class="hover:text-gold transition" data-en>Privacy</a>
+        <a href="terms-of-service-zh.html" class="hover:text-gold transition" data-zh>用户协议</a><a href="terms-of-service-en.html" class="hover:text-gold transition" data-en>Terms</a>
+        <a href="cookie-policy-zh.html" class="hover:text-gold transition" data-zh>Cookie</a><a href="cookie-policy-en.html" class="hover:text-gold transition" data-en>Cookies</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -844,5 +941,7 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 reveals.forEach(el => obs.observe(el));
 </script>
+
+<script src="cookie-banner.js" defer></script>
 </body>
 </html>

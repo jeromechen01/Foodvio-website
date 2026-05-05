@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>供应链 & 全球出口 · Capabilities · Foodvio 花花食界</title>
-<meta name="description" content="花花食界供应链与全球出口能力 · 5 大原料直采 · 4 港口 FOB 出海 · 全程冷链 · 服务东南亚 / 北美 / 欧洲" />
+<meta name="description" content="花花食界供应链 · 5 大原料直采 · 全球 6 国海洋蛋白进口 · 3 自营工厂 + OEM 网络 · 4 港口 FOB 出海 · 全程冷链" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
@@ -86,13 +86,63 @@
   .lang-toggle{padding:5px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:11px;color:rgba(255,255,255,.85);cursor:pointer;background:transparent}
   .nav-bar.dark-page.scrolled .lang-toggle{color:var(--forest);border-color:rgba(27,67,50,.25)}
   @media(max-width:768px){.mega-menu{display:none}.timeline-step{grid-template-columns:1fr;gap:6px}}
+
+  /* Global sourcing tiles */
+  .global-tile{background:#fff;border:1px solid rgba(74,144,226,.12);border-radius:14px;padding:22px;display:flex;align-items:flex-start;gap:14px;transition:all .35s}
+  .global-tile:hover{border-color:var(--sky);transform:translateY(-3px);box-shadow:0 12px 28px -16px rgba(74,144,226,.2)}
+  .global-tile .flag{font-size:32px;line-height:1}
+  .global-tile h5{font-family:'Noto Serif SC',serif;font-weight:700;font-size:15px;color:var(--forest);margin-bottom:4px}
+  .global-tile .country-en{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--sky);font-size:12px;margin-bottom:8px;letter-spacing:.05em}
+  .global-tile p{font-size:12px;color:rgba(13,42,31,.7);line-height:1.55}
+  /* Domestic network mini-cards */
+  .domestic-card{background:#fff;border:1px solid rgba(13,42,31,.08);border-radius:16px;padding:24px 22px;transition:all .3s}
+  .domestic-card:hover{border-color:var(--terra);transform:translateY(-2px)}
+  .domestic-card .label{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .domestic-card h4{font-family:'Noto Serif SC',serif;font-weight:700;font-size:18px;color:var(--forest);margin-bottom:14px;line-height:1.3}
+  .domestic-card ul{list-style:none;padding:0;margin:0}
+  .domestic-card ul li{font-size:13px;color:rgba(13,42,31,.75);line-height:1.65;padding:3px 0;display:flex;gap:8px}
+  .domestic-card ul li::before{content:'·';color:var(--terra);font-weight:700;flex-shrink:0}
+
+
+  /* === Brand Logo (R1) === */
+  .brand-logo{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;line-height:1;text-decoration:none;color:inherit;transition:opacity .25s}
+  .brand-logo:hover{opacity:.8}
+  .brand-logo .zh{font-family:'Noto Serif SC',serif;font-weight:900;font-size:18px;letter-spacing:.08em;color:var(--forest);line-height:1.1;display:block}
+  .brand-logo .en{font-family:'Inter',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.46em;color:var(--forest);line-height:1;margin-top:4px;display:block;padding-right:.46em}
+  /* nav 上的 logo 在深色背景上 */
+  nav .brand-logo .zh, nav .brand-logo .en{color:#fff}
+  nav.scrolled .brand-logo .zh, nav.scrolled .brand-logo .en{color:var(--forest)}
+  /* footer 上的 logo */
+  footer .brand-logo .zh, footer .brand-logo .en{color:#fff}
+  /* hero/marketing 区里的大版 */
+  .brand-logo.lg .zh{font-size:26px;letter-spacing:.08em}
+  .brand-logo.lg .en{font-size:13.5px;letter-spacing:.46em;margin-top:6px;padding-right:.46em}
+  @media (max-width:768px){
+    .brand-logo .zh{font-size:16px;letter-spacing:.08em}
+    .brand-logo .en{font-size:8.5px;letter-spacing:.42em;padding-right:.42em}
+  }
+
+
+  /* === Standard H2 Section Title (R5) === */
+  .h2-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-weight:500;letter-spacing:.18em;font-size:14px;margin-bottom:18px;display:inline-block;text-transform:uppercase}
+  .h2-eyebrow::before{content:'— ';margin-right:4px}
+  .h2-main{font-family:'Noto Serif SC',serif;font-weight:900;color:var(--forest);font-size:clamp(24px,3vw,36px);line-height:1.2;letter-spacing:-.01em;margin:0}
+  .h2-main-en{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--forest);font-weight:600;font-size:clamp(22px,2.8vw,32px);line-height:1.2;letter-spacing:-.005em;margin:0}
+  .h2-block{padding-bottom:28px;margin-bottom:32px}
+  @media(max-width:768px){
+    .h2-eyebrow{font-size:11px;letter-spacing:.14em}
+    .h2-main{font-size:22px}
+    .h2-main-en{font-size:20px}
+    .h2-block{padding-bottom:20px;margin-bottom:24px}
+  }
+
 </style>
 </head>
 <body class="grain">
 
 <nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
   <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-3 text-white nav-brand"><span class="font-display text-xl font-semibold">Foodvio</span><span class="w-px h-3 bg-white/30 mx-1"></span><span class="font-serif-sc text-sm tracking-wider opacity-85">花花食界</span></a>
+    <a href="index.html" class="brand-logo nav-brand" aria-label="Foodvio 花花食界"><span class="zh">花花食界</span><span class="en">FOODVIO</span></a>
     <div class="hidden lg:flex items-center gap-9">
       <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
       <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
@@ -102,8 +152,75 @@
     </div>
     <div class="flex items-center gap-4"><button onclick="toggleLang()" class="lang-toggle">中 / EN</button><a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white" data-foodvio-cta="general_contact">Contact</a></div>
   </div>
-  <div class="mega-menu" id="mega-products"><div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8"><div class="col-span-3"><div class="mega-col-title">Products</div><a href="products-sauces-v62.html" class="mega-link featured">Sauces</a></div><div class="col-span-9"><div class="mega-col-title">Featured</div><a href="our-story-chinese-roots-gannan-chili-v62.html" class="mega-link">赣南螺丝椒系列</a></div></div></div>
-  <div class="mega-menu" id="mega-solutions"><div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8"><div class="col-span-12"><div class="mega-col-title">By Channel</div><a href="solutions-light-kitchen-v62.html" class="mega-link">轻后厨</a></div></div></div>
+  <div class="mega-menu" id="mega-products">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-10 gap-6">
+      <div class="col-span-2">
+        <a href="products-sauces-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">🥫 <span data-zh>西式酱料</span><span data-en>Sauces</span></a>
+        <a href="products-sauces-v62.html#sku-tomato-bolognese" class="mega-link" data-foodvio-cta="general_contact">🥫 <span data-zh>番茄牛肉酱</span><span data-en>Tomato Bolognese</span></a>
+        <a href="products-sauces-v62.html#sku-creamy-mushroom" class="mega-link" data-foodvio-cta="general_contact">🍄 <span data-zh>奶油蘑菇酱</span><span data-en>Creamy Mushroom</span></a>
+        <a href="products-sauces-v62.html#sku-basil-pesto" class="mega-link" data-foodvio-cta="general_contact">🌿 <span data-zh>罗勒松子青酱</span><span data-en>Basil Pesto</span></a>
+        <a href="products-sauces-v62.html#sku-smoked-pepper" class="mega-link" data-foodvio-cta="general_contact">🌶️ <span data-zh>烟熏彩椒酱</span><span data-en>Smoked Pepper Sauce</span></a>
+        <a href="products-sauces-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>查看全部酱料</span><span data-en>See all sauces</span> →</a>
+      </div>
+      <div class="col-span-2">
+        <a href="products-staples-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">🍕 <span data-zh>西式主食</span><span data-en>Staples</span></a>
+        <a href="products-staples-v62.html#sku-black-truffle-pizza" class="mega-link" data-foodvio-cta="general_contact">🍕 <span data-zh>黑松露披萨</span><span data-en>Black Truffle Pizza</span></a>
+        <a href="products-staples-v62.html#sku-classic-bolognese" class="mega-link" data-foodvio-cta="general_contact">🍝 <span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></a>
+        <a href="products-staples-v62.html#sku-japanese-squid-rice" class="mega-link" data-foodvio-cta="general_contact">🍱 <span data-zh>日式鱿鱼炒饭</span><span data-en>Japanese Squid Fried Rice</span></a>
+        <a href="products-staples-v62.html#sku-cheese-beef-patty" class="mega-link" data-foodvio-cta="general_contact">🥩 <span data-zh>芝士牛肉饼</span><span data-en>Cheese Beef Patty</span></a>
+        <a href="products-staples-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>查看全部 11 款主食</span><span data-en>See all 11 staples</span> →</a>
+      </div>
+      <div class="col-span-2">
+        <a href="products-snacks-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">🍟 <span data-zh>炸品小食</span><span data-en>Snacks</span></a>
+        <a href="products-snacks-v62.html#sku-crispy-potato" class="mega-link" data-foodvio-cta="general_contact">🥔 <span data-zh>香酥土豆块</span><span data-en>Crispy Potato Cubes</span></a>
+        <a href="products-snacks-v62.html#sku-chicken-bites" class="mega-link" data-foodvio-cta="general_contact">🍗 <span data-zh>鸡肉锅巴</span><span data-en>Chicken Crispy Bites</span></a>
+        <a href="products-snacks-v62.html#sku-sweet-potato-fries" class="mega-link" data-foodvio-cta="general_contact">🍠 <span data-zh>原切红薯条</span><span data-en>Cut Sweet Potato Fries</span></a>
+        <a href="products-snacks-v62.html#sku-golden-cod" class="mega-link" data-foodvio-cta="general_contact">🐟 <span data-zh>黄金鳕鱼排</span><span data-en>Golden Cod Fillet</span></a>
+        <a href="products-snacks-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>查看全部 6 款小食</span><span data-en>See all 6 snacks</span> →</a>
+      </div>
+      <div class="col-span-2">
+        <a href="products-mains-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">🍖 <span data-zh>主菜大餐</span><span data-en>Mains</span></a>
+        <a href="products-mains-v62.html#sku-italian-roast-chicken" class="mega-link" data-foodvio-cta="general_contact">🍗 <span data-zh>意式烤鸡</span><span data-en>Italian Roast Chicken</span></a>
+        <a href="products-mains-v62.html#sku-german-pork-knuckle" class="mega-link" data-foodvio-cta="general_contact">🍖 <span data-zh>德式脆皮猪肘</span><span data-en>German Crispy Pork Knuckle</span></a>
+        <a href="products-mains-v62.html#sku-american-bbq-ribs" class="mega-link" data-foodvio-cta="general_contact">🥩 <span data-zh>美式炭烤猪肋排</span><span data-en>American BBQ Pork Ribs</span></a>
+        <a href="products-mains-v62.html#sku-german-classic-platter" class="mega-link" data-foodvio-cta="general_contact">🌭 <span data-zh>德国经典拼盘</span><span data-en>German Classic Platter</span></a>
+        <a href="products-mains-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>查看全部主菜</span><span data-en>See all mains</span> →</a>
+      </div>
+      <div class="col-span-2">
+        <a href="products-chinpapa-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">👶 <span data-zh>华仔爸爸</span><span data-en>ChinnPaPa</span></a>
+        <a href="products-chinpapa-v62.html#sku-wagyu-pizza" class="mega-link" data-foodvio-cta="general_contact">🍕 <span data-zh>和牛肉酱披萨</span><span data-en>Wagyu Bolognese Pizza</span></a>
+        <a href="products-chinpapa-v62.html#sku-cheese-beef-roll" class="mega-link" data-foodvio-cta="general_contact">🌯 <span data-zh>芝士牛肉卷</span><span data-en>Cheese Beef Roll</span></a>
+        <a href="products-chinpapa-v62.html#sku-bolognese-pasta" class="mega-link" data-foodvio-cta="general_contact">🍝 <span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></a>
+        <a href="products-chinpapa-v62.html#sku-herb-roast-chicken" class="mega-link" data-foodvio-cta="general_contact">🍗 <span data-zh>香草萌萌鸡</span><span data-en>Herb Roast Chicken</span></a>
+        <a href="products-chinpapa-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>了解华仔爸爸品牌</span><span data-en>Learn ChinnPaPa</span> →</a>
+      </div>
+    </div>
+  </div>
+  <div class="mega-menu" id="mega-solutions">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4">
+        <div class="mega-col-title"><span data-zh>按业态(中文 18 场景)</span><span data-en>By Scenario (CN 18)</span></div>
+        <a href="#" class="mega-link">🔵 轻后厨(6)</a>
+        <a href="#" class="mega-link">🟢 全球连锁(4)</a>
+        <a href="#" class="mega-link">🟡 机构团餐(3)</a>
+        <a href="#" class="mega-link">🟠 新零售(3)</a>
+        <a href="#" class="mega-link">🟣 特殊业态(2)</a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Featured Cases</div>
+        <a href="solutions-coffee-shops-v62.html" class="mega-link"><span data-zh>华东咖啡连锁 · 24 店</span><span data-en>East China Coffee · 24 stores</span></a>
+        <a href="solutions-index-v62.html" class="mega-link"><span data-zh>高校食堂季度更新</span><span data-en>University quarterly menu</span></a>
+        <a href="for-global-v62.html" class="mega-link"><span data-zh>SEA 餐饮集团 · 200+ 店</span><span data-en>SEA chain · 200+ stores</span></a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Global Channels</div>
+        <a href="for-foodservice-v62.html" class="mega-link">🍽️ Foodservice</a>
+        <a href="for-industrial-v62.html" class="mega-link">🏢 Industrial</a>
+        <a href="for-retail-v62.html" class="mega-link">🛒 Retail</a>
+        <a href="for-online-sales-v62.html" class="mega-link">💻 Online Sales</a>
+      </div>
+    </div>
+  </div>
   <div class="mega-menu" id="mega-story">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
@@ -130,29 +247,47 @@
       </div>
     </div>
   </div>
-  <div class="mega-menu" id="mega-capabilities"><div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
-    <div class="col-span-3"><div class="mega-col-title">Manufacturing</div><a href="capabilities-ganzhou-factory-v62.html" class="mega-link">🏭 江西赣州</a><a href="capabilities-zhangjiakou-factory-v62.html" class="mega-link">🥖 河北张家口</a><a href="capabilities-huairou-factory-v62.html" class="mega-link">🏢 北京怀柔</a></div>
-    <div class="col-span-3"><div class="mega-col-title">Expertise</div><a href="capabilities-rd-team-v62.html" class="mega-link featured">👨‍🍳 米其林研发</a></div>
-    <div class="col-span-3"><div class="mega-col-title">Supply</div><a href="capabilities-supply-chain-v62.html" class="mega-link featured">🚢 4 港口</a></div>
-    <div class="col-span-3"><div class="mega-col-title">Compliance</div><a href="capabilities-certifications-v62.html" class="mega-link featured">🏅 认证</a></div></div></div>
+  <div class="mega-menu" id="mega-capabilities">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
+      <div class="col-span-4">
+        <div class="mega-col-title">Manufacturing</div>
+        <a href="capabilities-ganzhou-factory-v62.html" class="mega-link">🏭 <span data-zh>江西赣州(6.66 万㎡)</span><span data-en>Jiangxi Ganzhou · 66,600㎡</span></a>
+        <a href="capabilities-zhangjiakou-factory-v62.html" class="mega-link">🥖 <span data-zh>河北张家口(1.6 万㎡)</span><span data-en>Hebei Zhangjiakou · 16,000㎡</span></a>
+        <a href="capabilities-huairou-factory-v62.html" class="mega-link">🏢 <span data-zh>北京怀柔(总部研发)</span><span data-en>Beijing Huairou · HQ + R&D</span></a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Expertise</div>
+        <a href="capabilities-rd-team-v62.html" class="mega-link"><span data-zh>米其林级研发中心</span><span data-en>Michelin-grade R&D</span></a>
+        <a href="capabilities-supply-chain-v62.html" class="mega-link"><span data-zh>柔性供应链</span><span data-en>Flexible Supply Chain</span></a>
+        <a href="capabilities-rd-team-v62.html" class="mega-link"><span data-zh>按客户需求打样</span><span data-en>Custom Prototyping</span></a>
+      </div>
+      <div class="col-span-4">
+        <div class="mega-col-title">Certifications</div>
+        <a href="capabilities-certifications-v62.html" class="mega-link">HACCP · ISO 22000 · BSCI</a>
+        <a href="capabilities-certifications-v62.html" class="mega-link">US FDA Registered</a>
+        <a href="capabilities-certifications-v62.html" class="mega-link">8 SC Production Categories</a>
+        <a href="capabilities-certifications-v62.html" class="mega-link mt-3 text-xs opacity-70"><span data-zh>预约工厂参观 →</span><span data-en>Book a factory visit →</span></a>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <section class="mag-hero">
-  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pb-24 pt-32">
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pb-16 pt-20">
     <div class="breadcrumb mb-12 reveal"><a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a><span class="sep">›</span><a href="capabilities-index-v62.html">Capabilities</a><span class="sep">›</span><span class="text-white"><span data-zh>供应链 & 全球出口</span><span data-en>Supply Chain & Exports</span></span></div>
     <div class="grid md:grid-cols-12 gap-8 items-end">
       <div class="md:col-span-9">
         <div class="issue-tag mb-10 reveal"><span class="dot"></span><span>SUPPLY CHAIN · FROM FIELD TO PORT</span></div>
-        <div class="mag-label mb-8 reveal delay-1">8 ORIGINS · 4 EXPORT PORTS</div>
-        <h1 class="mag-title reveal delay-1" style="font-size:clamp(48px,8vw,100px);"><span data-zh>从产地到港口<br>我们建好了路</span><span data-en>Field to port,<br>we built the route.</span></h1>
-        <p class="mag-subtitle reveal delay-2 mt-10" style="font-size:clamp(18px,1.6vw,24px);max-width:600px;" data-zh>8 origins direct sourcing. 4 ports FOB. Full cold chain.</p>
+        <div class="mag-label mb-8 reveal delay-1">5 ORIGINS · 4 EXPORT PORTS · GLOBAL SOURCING</div>
+        <h1 class="mag-title reveal delay-1" style="font-size: clamp(32px, 4vw, 52px);"><span data-zh>从产地到港口<br>我们建好了路</span><span data-en>Field to port,<br>we built the route.</span></h1>
+        <p class="mag-subtitle reveal delay-2 mt-10" style="font-size:clamp(18px,1.6vw,24px);max-width:600px;" data-zh>5 origins direct sourcing. 4 ports FOB. Full cold chain.</p>
         <p class="mag-subtitle reveal delay-2 mt-10 font-serif-sc" style="font-size:clamp(16px,1.4vw,20px);max-width:600px;font-style:normal;" data-en>5 大原料 · 4 港口 FOB · 全程冷链</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="bg-paper py-24 md:py-28">
+<section class="bg-paper py-12 md:py-16">
   <div class="article-section">
     <div class="reveal max-w-[760px] mx-auto">
       <span class="article-num">01 / The Network</span>
@@ -169,7 +304,7 @@
   </div>
 </section>
 
-<section class="bg-cream py-28 md:py-32">
+<section class="bg-cream py-12 md:py-16">
   <div class="article-section">
     <div class="text-center reveal mb-12">
       <span class="article-num">02 / 5 Origins</span>
@@ -188,7 +323,7 @@
   </div>
 </section>
 
-<section class="bg-paper py-28 md:py-32">
+<section class="bg-paper py-12 md:py-16">
   <div class="article-section">
     <div class="text-center reveal mb-12">
       <span class="article-num">03 / 4 Export Ports</span>
@@ -228,10 +363,38 @@
   </div>
 </section>
 
-<section class="bg-cream py-28 md:py-32">
+<!-- ════════ NEW SECTION · Global Sourcing ════════ -->
+<section class="bg-cream py-12 md:py-16">
+  <div class="article-section">
+    <div class="text-center reveal mb-12">
+      <span class="article-num">04 / Global Sourcing</span>
+      <h2 class="article-h2"><span data-zh>全球海洋蛋白产区合作</span><span data-en>Global protein sourcing partners.</span></h2>
+      <p class="text-base text-forest/75 font-serif-sc max-w-[760px] mx-auto">
+        <span data-zh>除中国本土 5 大原料产地外,我们与全球主要海洋蛋白产区建立稳定合作 —— 三文鱼、帝王蟹、龙虾、真鳕、对虾、牛羊肉,从原产地直接进入花花的产品矩阵。</span>
+        <span data-en>Beyond our 5 China-side origins, we maintain stable partnerships with the world's major marine-protein regions — salmon, king crab, lobster, cod, prawn, beef &amp; lamb come directly from origin into our portfolio.</span>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 reveal delay-1">
+      <div class="global-tile"><span class="flag">🇳🇴</span><div><h5><span data-zh>挪威</span><span data-en>Norway</span></h5><div class="country-en">North Atlantic</div><p><span data-zh>三文鱼</span><span data-en>Salmon</span></p></div></div>
+      <div class="global-tile"><span class="flag">🇩🇰</span><div><h5><span data-zh>丹麦</span><span data-en>Denmark</span></h5><div class="country-en">North Sea</div><p><span data-zh>三文鱼 / 北欧海产</span><span data-en>Salmon / Nordic seafood</span></p></div></div>
+      <div class="global-tile"><span class="flag">🇷🇺</span><div><h5><span data-zh>俄罗斯</span><span data-en>Russia</span></h5><div class="country-en">Far East / Arctic</div><p><span data-zh>帝王蟹 / 真鳕</span><span data-en>King crab / cod</span></p></div></div>
+      <div class="global-tile"><span class="flag">🇺🇸</span><div><h5><span data-zh>美国</span><span data-en>USA</span></h5><div class="country-en">Alaska</div><p><span data-zh>帝王蟹 / 阿拉斯加海产</span><span data-en>King crab / Alaska seafood</span></p></div></div>
+      <div class="global-tile"><span class="flag">🇦🇺</span><div><h5><span data-zh>澳大利亚</span><span data-en>Australia</span></h5><div class="country-en">Indo-Pacific</div><p><span data-zh>龙虾 / 高端牛羊肉</span><span data-en>Lobster / premium beef &amp; lamb</span></p></div></div>
+      <div class="global-tile"><span class="flag">🇨🇱</span><div><h5><span data-zh>智利</span><span data-en>Chile</span></h5><div class="country-en">South Pacific</div><p><span data-zh>三文鱼 / 大西洋鲑</span><span data-en>Salmon / Atlantic salmon</span></p></div></div>
+    </div>
+
+    <p class="text-center text-sm text-forest/60 italic mt-8 reveal delay-2 font-display">
+      <span data-zh>以产品为核心 —— 整合全球产业链上下游优质资源,从底层升级食品。</span>
+      <span data-en>Product as core — integrating global upstream resources, upgrading food from the foundation up.</span>
+    </p>
+  </div>
+</section>
+
+<section class="bg-cream py-12 md:py-16">
   <div class="article-section">
     <div class="max-w-[760px] mx-auto reveal mb-12">
-      <span class="article-num">04 / Cold Chain</span>
+      <span class="article-num">05 / Cold Chain</span>
       <h2 class="article-h2"><span data-zh>全程冷链保障</span><span data-en>Full cold chain guarantee.</span></h2>
       <p class="text-base text-forest/75 font-serif-sc">
         <span data-zh>从原料采摘到客户接货,全链路温度可监控、可追溯。</span>
@@ -263,11 +426,105 @@
   </div>
 </section>
 
-<section class="bg-paper py-24 md:py-28">
+<!-- ════════ NEW SECTION · Domestic Network ════════ -->
+<section class="bg-paper py-12 md:py-16">
+  <div class="article-section">
+    <div class="text-center reveal mb-14">
+      <span class="article-num">06 / Domestic Network</span>
+      <h2 class="article-h2"><span data-zh>中国本土供应网络</span><span data-en>The China network behind every product.</span></h2>
+      <p class="text-base text-forest/75 font-serif-sc max-w-[760px] mx-auto">
+        <span data-zh>3 个自营工厂 + 多家专业 OEM 合作伙伴 + 3 个供应链运营中心 —— 让每一款产品都有可追溯的产地、可控的产能、可达的物流半径。</span>
+        <span data-en>3 owned factories + specialized OEM partners + 3 supply-chain operations hubs — every product backed by traceable origin, controlled capacity, and reachable logistics.</span>
+      </p>
+    </div>
+
+    <!-- 3 自营工厂 -->
+    <div class="reveal delay-1 mb-12">
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="domestic-card">
+          <div class="label">⊙ <span data-zh>自营工厂 01</span><span data-en>Owned Plant 01</span></div>
+          <h4><span data-zh>江西赣州工厂</span><span data-en>Jiangxi Ganzhou</span></h4>
+          <ul>
+            <li><span data-zh>厂房面积 6.66 万㎡</span><span data-en>66,600㎡ site</span></li>
+            <li><span data-zh>HACCP · ISO 22000 · BSCI 资质</span><span data-en>HACCP · ISO 22000 · BSCI</span></li>
+            <li><span data-zh>8 大类 SC 生产资质</span><span data-en>8 SC production categories</span></li>
+            <li><span data-zh>出口 4 港口:天津 / 青岛 / 上海 / 深圳</span><span data-en>Exports via 4 ports: Tianjin / Qingdao / Shanghai / Shenzhen</span></li>
+          </ul>
+        </div>
+        <div class="domestic-card">
+          <div class="label">⊙ <span data-zh>自营工厂 02</span><span data-en>Owned Plant 02</span></div>
+          <h4><span data-zh>河北张家口烘焙产业园</span><span data-en>Hebei Zhangjiakou · Bakery Park</span></h4>
+          <ul>
+            <li><span data-zh>厂房面积 1.6 万㎡</span><span data-en>16,000㎡ site</span></li>
+            <li><span data-zh>HACCP · ISO 22000 · BSCI · US FDA 注册</span><span data-en>HACCP · ISO 22000 · BSCI · US FDA registered</span></li>
+            <li><span data-zh>30+ 烘焙品类</span><span data-en>30+ bakery categories</span></li>
+            <li><span data-zh>国家出口备案</span><span data-en>Nationally export-registered</span></li>
+          </ul>
+        </div>
+        <div class="domestic-card">
+          <div class="label">⊙ <span data-zh>自营工厂 03</span><span data-en>Owned Plant 03</span></div>
+          <h4><span data-zh>北京怀柔工厂</span><span data-en>Beijing Huairou</span></h4>
+          <ul>
+            <li><span data-zh>北京本地化产能</span><span data-en>Beijing-local capacity</span></li>
+            <li><span data-zh>近距离服务首都商圈</span><span data-en>Serves the capital business circle</span></li>
+            <li><span data-zh>研发与试产一体化</span><span data-en>Integrated R&amp;D and pilot production</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- OEM 网络 + 原料基地 -->
+    <div class="reveal delay-2 grid md:grid-cols-2 gap-5 mb-12">
+      <div class="domestic-card">
+        <div class="label">⊙ <span data-zh>专业 OEM 合作网络</span><span data-en>OEM partner network</span></div>
+        <h4><span data-zh>多省份分品类专精产能</span><span data-en>Province-by-category specialty capacity</span></h4>
+        <ul>
+          <li><span data-zh>北京 / 酱料 · 天津 / 烘焙 · 河北 / 汤品</span><span data-en>Beijing / sauce · Tianjin / bakery · Hebei / soup</span></li>
+          <li><span data-zh>山东 / 炸物烤鸡 · 江苏 / 炒饭 · 河南 / 主食</span><span data-en>Shandong / fried &amp; roast · Jiangsu / fried rice · Henan / staples</span></li>
+          <li><span data-zh>广东 / 东南亚产品 · 广西 / 海鲜 · 安徽 / 烘焙 · 湖南 / 小菜</span><span data-en>Guangdong / SE Asian · Guangxi / seafood · Anhui / bakery · Hunan / sides</span></li>
+        </ul>
+      </div>
+      <div class="domestic-card">
+        <div class="label">⊙ <span data-zh>原料产区基地</span><span data-en>Origin sourcing bases</span></div>
+        <h4><span data-zh>覆盖中国主要农副产区</span><span data-en>Covering China's key agricultural origins</span></h4>
+        <ul>
+          <li><span data-zh>新疆 / 面粉 · 黑龙江 / 五常大米 · 内蒙古 / 牛羊肉</span><span data-en>Xinjiang / flour · Heilongjiang / Wuchang rice · Inner Mongolia / beef &amp; lamb</span></li>
+          <li><span data-zh>河北 / 蔬菜 · 山东 / 鸡鸭 · 江西 / 鸡 + 脐橙</span><span data-en>Hebei / vegetables · Shandong / poultry · Jiangxi / chicken &amp; oranges</span></li>
+          <li><span data-zh>福建 / 海产品 · 广东广西 / 优质海洋蛋白</span><span data-en>Fujian / seafood · Guangdong &amp; Guangxi / premium marine protein</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3 供应链中心 -->
+    <div class="reveal delay-3">
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="domestic-card">
+          <div class="label">⊙ <span data-zh>供应链中心 01</span><span data-en>Hub 01</span></div>
+          <h4><span data-zh>北京仓配中心</span><span data-en>Beijing Distribution Hub</span></h4>
+          <ul><li><span data-zh>覆盖华北 / 东北市场</span><span data-en>Serves North &amp; Northeast China</span></li></ul>
+        </div>
+        <div class="domestic-card">
+          <div class="label">⊙ <span data-zh>供应链中心 02</span><span data-en>Hub 02</span></div>
+          <h4><span data-zh>上海华东供应链运营中心</span><span data-en>Shanghai East-China Hub</span></h4>
+          <ul><li><span data-zh>覆盖华东市场 + 上海港 FOB</span><span data-en>Serves East China + Shanghai FOB</span></li></ul>
+        </div>
+        <div class="domestic-card">
+          <div class="label">⊙ <span data-zh>供应链中心 03</span><span data-en>Hub 03</span></div>
+          <h4><span data-zh>江西华南供应链运营中心</span><span data-en>Jiangxi South-China Hub</span></h4>
+          <ul><li><span data-zh>覆盖华南市场 + 深圳港 FOB</span><span data-en>Serves South China + Shenzhen FOB</span></li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper py-12 md:py-16">
   <div class="article-section">
     <div class="reveal">
       <div class="stat-band">
-        <div class="item"><div class="v">8</div><div class="l"><span data-zh>产地</span><span data-en>Origins</span></div></div>
+        <div class="item"><div class="v">5</div><div class="l"><span data-zh>原料产地</span><span data-en>Origins</span></div></div>
+        <div class="item"><div class="v">6</div><div class="l"><span data-zh>海外蛋白产区</span><span data-en>Global sourcing</span></div></div>
+        <div class="item"><div class="v">3</div><div class="l"><span data-zh>自营工厂</span><span data-en>Owned plants</span></div></div>
         <div class="item"><div class="v">4</div><div class="l"><span data-zh>出口港口</span><span data-en>Ports</span></div></div>
         <div class="item"><div class="v">3,000<span style="font-size:24px">+</span></div><div class="l"><span data-zh>合作伙伴</span><span data-en>Partners</span></div></div>
         <div class="item"><div class="v">100%</div><div class="l"><span data-zh>批次可追溯</span><span data-en>Batch traceable</span></div></div>
@@ -276,11 +533,11 @@
   </div>
 </section>
 
-<section id="bottom-cta" class="py-28 px-6 md:px-12">
+<section id="bottom-cta" class="py-24 px-6 md:px-12">
   <div class="max-w-[1100px] mx-auto">
     <div class="cta-block reveal">
       <div class="relative z-10 max-w-2xl">
-        <div class="font-display italic text-white/80 text-sm tracking-[0.2em] mb-6">05 / SHIP TO YOUR PORT</div>
+        <div class="font-display italic text-white/80 text-sm tracking-[0.2em] mb-6">07 / SHIP TO YOUR PORT</div>
         <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size:clamp(28px,4vw,44px);"><span data-zh>告诉我们你的<br>目的地港口</span><span data-en>Tell us your<br>destination port.</span></h2>
         <p class="text-white/85 text-base md:text-lg mb-10 leading-relaxed"><span data-zh>给我们目的地港口 + 产品清单,我们快速回复 FOB 报价、航期、冷链方案。</span><span data-en>Give us your destination port + product list — we'll respond with FOB quote, schedule, and cold-chain plan.</span></p>
         <div class="flex flex-wrap gap-3">
@@ -293,16 +550,19 @@
 </section>
 
 <footer class="text-white/80">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-10">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-16 pb-10">
     <div class="grid md:grid-cols-12 gap-10 mb-16">
-      <div class="md:col-span-4"><div class="font-display text-3xl text-white mb-2">Foodvio</div><div class="font-serif-sc text-white/60 text-sm tracking-wider mb-6">花花食界</div></div>
+      <div class="md:col-span-4"><a href="index.html" class="brand-logo lg" aria-label="Foodvio 花花食界" style="margin-bottom:24px;display:inline-flex;">
+          <span class="zh">花花食界</span>
+          <span class="en">FOODVIO</span>
+        </a></div>
       <div class="md:col-span-2"><div class="footer-col-title">Capabilities</div><a href="capabilities-index-v62.html" class="footer-link">Overview</a><a href="capabilities-supply-chain-v62.html" class="footer-link">Supply Chain</a></div>
       <div class="md:col-span-2"><div class="footer-col-title">Channels</div><a href="for-global-v62.html" class="footer-link">For Global</a></div>
       <div class="md:col-span-2"><div class="footer-col-title">Discover</div><a href="our-story-chinese-roots-v62.html" class="footer-link">5 Origins</a></div>
       <div class="md:col-span-2"><div class="footer-col-title">Contact</div><p class="text-xs text-white/55">400-6879-568</p></div>
     </div>
     <div class="footer-divider mb-6"></div>
-    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40"><div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div><div>京 ICP 备 2022025117 号-1</div></div>
+    <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40"><div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div><div class="flex items-center gap-5 flex-wrap"><span>京 ICP 备 2022025117 号-1</span><a href="privacy-policy-zh.html" class="hover:text-gold transition" data-zh>隐私政策</a><a href="privacy-policy-en.html" class="hover:text-gold transition" data-en>Privacy</a><a href="terms-of-service-zh.html" class="hover:text-gold transition" data-zh>用户协议</a><a href="terms-of-service-en.html" class="hover:text-gold transition" data-en>Terms</a><a href="cookie-policy-zh.html" class="hover:text-gold transition" data-zh>Cookie</a><a href="cookie-policy-en.html" class="hover:text-gold transition" data-en>Cookies</a></div></div>
   </div>
 </footer>
 
@@ -319,5 +579,7 @@ mp.forEach(p=>{p.addEventListener('mouseenter',()=>clearTimeout(menuTimer));p.ad
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}}),{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+
+<script src="cookie-banner.js" defer></script>
 </body>
 </html>
