@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Solutions · Foodvio 花花食界 — 18 Scenarios for Every Kitchen</title>
-<meta name="description" content="花花食界场景化方案 · 中文 18 个细分场景 / 英文 4 大渠道 · 服务 3,000+ 餐饮伙伴 · 从精品咖啡馆到产业园食堂" />
+<title>行业洞察 · Insights · Foodvio 花花食界</title>
+<meta name="description" content="Foodvio 行业洞察 · 5 大中国洞察 · 5 国大师学艺札记 · 客户案例 · 产品研发幕后" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,6 +44,7 @@
     overflow-x: hidden;
   }
 
+  /* Grain texture */
   .grain::after {
     content: ''; position: fixed; inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
@@ -51,6 +52,7 @@
     mix-blend-mode: overlay;
   }
 
+  /* Hero */
   .hero-bg {
     position: absolute; inset: 0;
     background: var(--ink);
@@ -59,8 +61,8 @@
   .hero-bg::before {
     content: ''; position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse at 25% 35%, rgba(74,144,226,0.20) 0%, transparent 55%),
-      radial-gradient(ellipse at 75% 65%, rgba(245,200,46,0.12) 0%, transparent 50%);
+      radial-gradient(ellipse at 25% 35%, rgba(245,200,46,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 65%, rgba(224,122,95,0.15) 0%, transparent 50%);
   }
   .hero-bg::after {
     content: ''; position: absolute; inset: 0;
@@ -81,10 +83,11 @@
   }
   .reveal.in { opacity: 1; transform: translateY(0); }
   .delay-1 { transition-delay: 0.10s; }
-  .delay-2 { transition-delay: 0.20s; }
-  .delay-3 { transition-delay: 0.30s; }
-  .delay-4 { transition-delay: 0.40s; }
-  .delay-5 { transition-delay: 0.50s; }
+  .delay-2 { transition-delay: 0.18s; }
+  .delay-3 { transition-delay: 0.26s; }
+  .delay-4 { transition-delay: 0.34s; }
+  .delay-5 { transition-delay: 0.42s; }
+  .delay-6 { transition-delay: 0.50s; }
 
   .hero-title {
     font-family: 'Noto Serif SC', serif; font-weight: 700;
@@ -111,218 +114,213 @@
   }
   .btn-link:hover { gap: 14px; border-bottom-color: var(--rust); }
 
-  /* View toggle */
-  .view-toggle {
-    display: inline-flex;
-    background: #fff;
-    border: 1px solid rgba(27,67,50,0.12);
-    border-radius: 999px;
-    padding: 4px;
-    gap: 4px;
-  }
-  .view-btn {
-    padding: 10px 20px;
-    border-radius: 999px;
-    font-size: 13px;
-    color: rgba(13,42,31,0.6);
-    transition: all 0.3s;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    display: inline-flex; align-items: center; gap: 8px;
-  }
-  .view-btn:hover { color: var(--forest); }
-  .view-btn.active {
-    background: var(--forest);
-    color: #fff;
-  }
-  .view-btn .count {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    opacity: 0.7;
-  }
-
-  /* View panels */
-  .view-panel { display: none; }
-  .view-panel.active { display: block; }
-
-  /* Scenario category section */
-  .cat-section {
-    margin-bottom: 56px;
-  }
-  .cat-header {
-    display: flex; align-items: baseline; gap: 16px;
-    padding-bottom: 18px;
-    margin-bottom: 24px;
-    border-bottom: 1px solid rgba(27,67,50,0.1);
-  }
-  .cat-header h3 {
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 700;
-    font-size: 24px;
-    color: var(--forest);
-  }
-  .cat-header .cat-tag {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 13px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-  .cat-header .cat-count {
-    margin-left: auto;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: rgba(13,42,31,0.5);
-    font-size: 14px;
-  }
-  .cat-section .cat-tagline {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: var(--terra);
-    font-size: 16px;
-    margin-bottom: 20px;
-    margin-top: -16px;
-  }
-
-  /* Cat color */
-  .cat-light h3 { color: #2c5282; } .cat-light .cat-tag { color: #4a90e2; }
-  .cat-chain h3 { color: #2f5920; } .cat-chain .cat-tag { color: #5a8f3b; }
-  .cat-inst h3 { color: #b8922a; } .cat-inst .cat-tag { color: #c9a838; }
-  .cat-retail h3 { color: #c25e44; } .cat-retail .cat-tag { color: #e07a5f; }
-  .cat-special h3 { color: #6b4892; } .cat-special .cat-tag { color: #8b6db8; }
-
-  /* Scenario card */
-  .sce-card {
-    background: #fff;
-    border: 1px solid rgba(27,67,50,0.06);
-    border-radius: 14px;
-    padding: 22px 18px;
-    transition: all 0.4s cubic-bezier(.16,.84,.28,.99);
-    text-align: center;
-    cursor: pointer;
-    height: 100%;
+  /* Brand split section */
+  .brand-card {
+    border-radius: 24px;
+    padding: 48px 40px;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
     position: relative;
     overflow: hidden;
   }
-  .sce-card::before {
+  .brand-card.b2b {
+    background: linear-gradient(160deg, var(--forest) 0%, var(--ink) 100%);
+    color: #fff;
+  }
+  .brand-card.consumer {
+    background: linear-gradient(160deg, #F5F1EA 0%, #ede4d2 100%);
+    color: var(--ink);
+    border: 1px solid rgba(27,67,50,0.08);
+  }
+  .brand-card::after {
     content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 2px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s cubic-bezier(.16,.84,.28,.99);
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    pointer-events: none;
   }
-  .sce-card.s-light::before { background: var(--sky); }
-  .sce-card.s-chain::before { background: var(--sage); }
-  .sce-card.s-inst::before { background: var(--gold); }
-  .sce-card.s-retail::before { background: var(--terra); }
-  .sce-card.s-special::before { background: #8b6db8; }
-  .sce-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 36px -14px rgba(13,42,31,0.18);
-    border-color: rgba(27,67,50,0.12);
-  }
-  .sce-card:hover::before { transform: scaleX(1); }
-  .sce-card .icon { font-size: 30px; margin-bottom: 10px; }
-  .sce-card h4 {
-    font-size: 14px;
-    color: var(--forest);
-    font-weight: 500;
-    line-height: 1.3;
-    margin-bottom: 6px;
-  }
-  .sce-card .name-en {
+  .brand-card .label {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 12px;
-    color: rgba(13,42,31,0.5);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    opacity: 0.7;
+  }
+  .brand-card .brand-name-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
     margin-bottom: 8px;
   }
-  .sce-card .skus {
+  .brand-card .brand-name-en {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 11px;
-    color: var(--terra);
+    font-size: 22px;
+    margin-bottom: 24px;
+    opacity: 0.85;
   }
+  .brand-card .desc {
+    font-size: 15px; line-height: 1.7;
+    margin-bottom: 32px;
+    opacity: 0.85;
+  }
+  .brand-card .stats {
+    display: flex; gap: 24px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-bottom: 28px;
+  }
+  .brand-card.consumer .stats { border-top-color: rgba(13,42,31,0.15); }
+  .brand-card .stat-item {
+    flex: 1;
+  }
+  .brand-card .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1;
+    color: var(--gold);
+  }
+  .brand-card.consumer .stat-num { color: var(--rust); }
+  .brand-card .stat-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 6px;
+    opacity: 0.6;
+  }
+  .brand-card a.action {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--gold);
+    font-weight: 500; font-size: 15px;
+    transition: gap 0.3s;
+  }
+  .brand-card.consumer a.action { color: var(--rust); }
+  .brand-card a.action:hover { gap: 16px; }
 
-  /* English 4-channel cards (bigger) */
-  .ch-card {
+  /* Product line cards */
+  .line-card {
     background: #fff;
     border: 1px solid rgba(27,67,50,0.08);
-    border-radius: 24px;
-    padding: 40px 36px;
+    border-radius: 20px;
+    padding: 36px 32px 32px;
     transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     cursor: pointer;
   }
-  .ch-card::before {
+  .line-card::before {
     content: '';
-    position: absolute; top: 0; left: 0; right: 0;
+    position: absolute;
+    top: 0; left: 0; right: 0;
     height: 3px;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s cubic-bezier(.16,.84,.28,.99);
   }
-  .ch-card.c1::before { background: var(--rust); }
-  .ch-card.c2::before { background: var(--sky); }
-  .ch-card.c3::before { background: var(--terra); }
-  .ch-card.c4::before { background: var(--sage); }
-  .ch-card:hover {
-    transform: translateY(-6px);
+  .line-card:hover {
+    transform: translateY(-8px);
     box-shadow: 0 20px 50px -20px rgba(13,42,31,0.18);
+    border-color: rgba(27,67,50,0.15);
   }
-  .ch-card:hover::before { transform: scaleX(1); }
-  .ch-card .icon-big { font-size: 44px; margin-bottom: 24px; }
-  .ch-card .ch-num {
+  .line-card:hover::before { transform: scaleX(1); }
+
+  /* 6 cards: 6 different accent colors + subtle bg tints */
+  .line-card.l1 { background: linear-gradient(180deg, #fff 0%, #fefaf3 100%); }
+  .line-card.l1::before { background: var(--rust); }
+  .line-card.l1 .num { color: var(--rust); }
+
+  .line-card.l2 { background: linear-gradient(180deg, #fff 0%, #f9faf5 100%); }
+  .line-card.l2::before { background: var(--terra); }
+  .line-card.l2 .num { color: var(--terra); }
+
+  .line-card.l3 { background: linear-gradient(180deg, #fff 0%, #fdf7f0 100%); }
+  .line-card.l3::before { background: var(--gold); }
+  .line-card.l3 .num { color: #c19818; }
+
+  .line-card.l4 { background: linear-gradient(180deg, #fff 0%, #faf5f3 100%); }
+  .line-card.l4::before { background: #8b3a1f; }
+  .line-card.l4 .num { color: #8b3a1f; }
+
+  .line-card.l5 { background: linear-gradient(180deg, #fff 0%, #f5faf3 100%); }
+  .line-card.l5::before { background: var(--sage); }
+  .line-card.l5 .num { color: #5a8f6e; }
+
+  .line-card.l6 { background: linear-gradient(180deg, #fff 0%, #faf7f0 100%); }
+  .line-card.l6::before { background: #b8922a; }
+  .line-card.l6 .num { color: #b8922a; }
+
+  .line-card .num {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    color: var(--terra);
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.12em;
-    margin-bottom: 16px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
   }
-  .ch-card .ch-num::before { content: '— '; }
-  .ch-card h3 {
+  .line-card .num::before { content: '— '; }
+  .line-card .icon {
+    font-size: 40px;
+    margin-bottom: 28px;
+    line-height: 1;
+  }
+  .line-card h3 {
     font-family: 'Noto Serif SC', serif;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 22px;
+    line-height: 1.25;
     color: var(--forest);
     margin-bottom: 4px;
   }
-  .ch-card .name-en {
+  .line-card .name-en {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--terra);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
-  .ch-card .desc {
+  .line-card .desc {
     font-size: 14px;
-    line-height: 1.65;
+    line-height: 1.55;
     color: rgba(13,42,31,0.7);
     margin-bottom: 18px;
   }
-  .ch-card .typical {
+  .line-card .skus {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(27,67,50,0.08);
+    border-radius: 999px;
     font-size: 12px;
-    color: rgba(13,42,31,0.55);
-    padding: 14px 16px;
-    background: var(--cream);
-    border-radius: 10px;
+    color: var(--forest);
+    font-weight: 500;
     margin-bottom: 20px;
-    font-style: italic;
+    width: fit-content;
   }
-  .ch-card .typical strong {
+  .line-card .reps {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(13,42,31,0.55);
+    padding: 16px 0;
+    border-top: 1px dashed rgba(27,67,50,0.12);
+    margin-bottom: 20px;
+  }
+  .line-card .reps .reps-label {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    color: var(--forest);
-    margin-right: 4px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 6px;
+    display: block;
   }
-  .ch-card .arrow-end {
+  .line-card .arrow-end {
     margin-top: auto;
     font-size: 14px;
     font-weight: 500;
@@ -332,14 +330,14 @@
     gap: 8px;
     transition: gap 0.3s;
   }
-  .ch-card:hover .arrow-end { gap: 14px; }
+  .line-card:hover .arrow-end { gap: 14px; }
 
-  /* Custom callout */
+  /* Custom development block */
   .custom-block {
-    background: linear-gradient(160deg, var(--forest) 0%, var(--ink) 100%);
+    background: linear-gradient(160deg, #faf7f0 0%, #efe6d2 100%);
     border-radius: 28px;
     padding: 56px 48px;
-    color: #fff;
+    border: 1px solid rgba(27,67,50,0.08);
     position: relative;
     overflow: hidden;
   }
@@ -347,10 +345,8 @@
     content: '';
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(ellipse at 80% 50%, rgba(245,200,46,0.18) 0%, transparent 50%),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-    opacity: 0.7;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.05;
     mix-blend-mode: overlay;
     pointer-events: none;
   }
@@ -364,7 +360,7 @@
   .breadcrumb a:hover { color: var(--gold); }
   .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
 
-  /* Nav */
+  /* Nav (consistent w/ homepage) */
   .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
   .nav-bar.scrolled {
     background: rgba(13,42,31,0.95);
@@ -392,6 +388,7 @@
   .nav-link.active { color: var(--gold); }
   .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
 
+  /* Mega menu */
   .mega-menu {
     position: fixed; top: 64px; left: 0; right: 0;
     background: #fff;
@@ -427,6 +424,7 @@
   }
   .mega-cta:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
 
+  /* Footer */
   footer { background: var(--ink); }
   .footer-col-title {
     font-family: 'Cormorant Garamond', serif; font-style: italic;
@@ -443,6 +441,7 @@
     background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%);
   }
 
+  /* Lang switch */
   [data-en] { display: none; }
   body.lang-en [data-zh] { display: none; }
   body.lang-en [data-en] { display: inline; }
@@ -495,36 +494,160 @@
     .h2-block{padding-bottom:20px;margin-bottom:24px}
   }
 
+  /* ─────────────────────────────────────────────
+     W10 · ps-card-rich (信息密度升级版)
+     在原 .ps-card 基础上扩展:加规格 + 卖点 2-3 点
+     ───────────────────────────────────────────── */
+  .ps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:1024px){.ps-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
+  @media(max-width:520px){.ps-grid{grid-template-columns:1fr;gap:12px}}
+
+  .ps-card-rich{
+    background:#fff;border-radius:14px;
+    border:1px solid rgba(13,42,31,0.06);
+    padding:0 0 22px 0;
+    text-decoration:none;color:inherit;
+    display:flex;flex-direction:column;
+    transition:all .3s cubic-bezier(.2,.8,.2,1);
+    position:relative;overflow:hidden;
+    min-height:480px;
+  }
+  .ps-card-rich:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 32px -16px rgba(13,42,31,.18);
+    border-color:rgba(224,122,95,.3);
+  }
+  /* 产品图区(画册图位 / 现以 emoji 占位) */
+  .ps-card-rich .visual{
+    aspect-ratio:1.1/1;
+    background:linear-gradient(140deg,#F5F1EA 0%,#EAE3D5 100%);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 0 16px;
+    position:relative;overflow:hidden;
+    border-radius:14px 14px 0 0;
+  }
+  .ps-card-rich .visual::after{
+    content:'';position:absolute;inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+    opacity:.10;mix-blend-mode:multiply;
+  }
+  .ps-card-rich .visual img{
+    width:100%;height:100%;object-fit:cover;
+    position:relative;z-index:1;
+  }
+  .ps-card-rich .visual .emoji{
+    font-size:80px;line-height:1;
+    filter:drop-shadow(0 4px 8px rgba(0,0,0,.08));
+    z-index:1;
+  }
+  @media(max-width:520px){.ps-card-rich .visual .emoji{font-size:56px}}
+
+  /* 信息块容器 */
+  .ps-card-rich .info{
+    padding:0 18px;
+    display:flex;flex-direction:column;
+    flex:1;
+  }
+
+  /* 1. 产品名 */
+  .ps-card-rich .pname{
+    font-family:'Noto Serif SC',serif;
+    font-weight:700;color:var(--forest);
+    font-size:17px;line-height:1.3;
+    margin:0 0 4px;
+  }
+  .ps-card-rich .pname-en{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;color:var(--terra);
+    font-size:13px;letter-spacing:.04em;
+    margin-bottom:12px;
+  }
+
+  /* 2. 卖点(主) */
+  .ps-card-rich .ptag{
+    font-family:'Noto Sans SC',sans-serif;
+    font-size:13px;line-height:1.55;
+    color:var(--ink);
+    margin-bottom:10px;
+    min-height:40px;
+  }
+
+  /* 3. 规格 */
+  .ps-card-rich .pspec{
+    font-family:'Noto Sans SC',sans-serif;
+    font-size:11.5px;letter-spacing:.04em;
+    color:var(--steel);
+    padding:4px 10px;
+    background:rgba(245,200,46,.10);
+    border-left:2px solid var(--gold);
+    align-self:flex-start;
+    margin-bottom:12px;
+  }
+
+  /* 4. 卖点 2-3 点 */
+  .ps-card-rich .pbullets{
+    display:flex;flex-direction:column;gap:4px;
+    margin-bottom:14px;
+  }
+  .ps-card-rich .pbullets span{
+    font-family:'Noto Sans SC',sans-serif;
+    font-size:12px;line-height:1.4;
+    color:var(--forest);
+    padding-left:14px;position:relative;
+  }
+  .ps-card-rich .pbullets span::before{
+    content:'·';position:absolute;left:4px;top:-2px;
+    color:var(--terra);font-weight:700;font-size:14px;
+  }
+
+  /* 底部箭头 */
+  .ps-card-rich .arrow-cta{
+    margin-top:auto;padding-top:8px;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-size:12px;
+    color:var(--rust);
+    display:flex;align-items:center;gap:4px;
+    letter-spacing:.06em;
+  }
+  .ps-card-rich:hover .arrow-cta{font-weight:600;gap:6px}
+
+  /* steel 色变量补 */
+  :root{--steel:#4A6271}
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>
-
 <body class="grain">
 
-<!-- NAV -->
+<!-- ═══════════════════════════════════════════
+     NAVIGATION (consistent w/ entire site)
+     ═══════════════════════════════════════════ -->
 <nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
   <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
     <a href="index.html" class="brand-logo nav-brand" aria-label="Foodvio 花花食界">
       <span class="zh">花花食界</span>
       <span class="en">FOODVIO</span>
     </a>
+
     <div class="hidden lg:flex items-center gap-9">
       <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products">Products</a>
-      <a href="solutions-index-v62.html" class="nav-link has-dropdown active" data-menu="solutions">Solutions</a>
+      <a href="#" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
       <a href="our-story-index-v62.html" class="nav-link has-dropdown" data-menu="story">Our Story</a>
       <a href="capabilities-index-v62.html" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
-      <a href="insights-v62.html" class="nav-link">Insights</a>
+      <a href="insights-v62.html" class="nav-link active">Insights</a>
       <a href="about-v62.html" class="nav-link">About</a>
     </div>
+
     <div class="flex items-center gap-4">
       <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       </button>
       <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
-      <a href="#custom" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+      <a href="#" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
     </div>
   </div>
 
+  <!-- Mega Menu Panels -->
   <div class="mega-menu" id="mega-products">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-10 gap-6">
       <div class="col-span-2">
@@ -648,408 +771,302 @@
   </div>
 </nav>
 
-<!-- ═══════════ SECTION 1 · HERO ═══════════ -->
-<section class="relative min-h-[640px] flex items-end pb-20 pt-20 overflow-hidden">
-  <div class="hero-bg"></div>
-  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
 
-    <div class="breadcrumb mb-12 reveal">
-      <a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a>
-      <span class="sep">›</span>
-      <span class="text-white">Solutions</span>
-    </div>
-
-    <div class="grid md:grid-cols-12 gap-8 items-end">
+<!-- ═══════════════════════════════════════════
+     HERO · Insights
+     ═══════════════════════════════════════════ -->
+<section class="relative min-h-[460px] flex items-end pb-12 pt-16 overflow-hidden">
+  <div class="hero-bg absolute inset-0" style="background:linear-gradient(135deg, #1B4332 0%, #0d2a1f 100%);"></div>
+  <div class="hero-bg::after" style="position:absolute;inset:0;background-image:radial-gradient(ellipse at 30% 20%, rgba(245,200,46,0.18) 0%, transparent 50%),radial-gradient(ellipse at 70% 80%, rgba(129,178,154,0.12) 0%, transparent 55%);pointer-events:none;"></div>
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 w-full relative z-10">
+    <div class="grid md:grid-cols-12 gap-10 items-end">
       <div class="md:col-span-8">
-        <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
-          OUR SOLUTIONS
-        </div>
-        <h1 class="hero-title reveal delay-1" style="font-size: clamp(28px, 3.5vw, 40px);">
-          <span data-zh>每个厨房,<br>都有专属方案</span>
-          <span data-en>Solutions for<br>every kitchen.</span>
+        <div class="font-display italic tracking-[0.18em] text-gold/85 text-sm mb-4">— FOODVIO INSIGHTS</div>
+        <h1 class="font-serif-sc font-black text-white leading-[1.05] mb-6" style="font-size:clamp(38px, 5vw, 64px)">
+          <span data-zh>行业洞察</span>
+          <span data-en>Industry Insights</span>
         </h1>
-        <p class="font-display italic text-white/65 mt-6 text-lg md:text-xl reveal delay-2" data-zh>
-          18 scenarios. 4 channels. One promise.
+        <p class="font-display italic text-cream/85 leading-snug max-w-2xl" style="font-size:clamp(18px, 2vw, 26px);">
+          <span data-zh>"读懂中国味,做对西式菜。"</span>
+          <span data-en>"Read Chinese palate. Get Western cuisine right."</span>
         </p>
-        <p class="font-serif-sc text-white/65 mt-6 text-base md:text-lg reveal delay-2" data-en>
-          18 个细分场景 · 4 大渠道 · 一个承诺
-        </p>
-        <p class="text-white/75 text-base md:text-lg max-w-2xl mt-10 leading-relaxed reveal delay-3">
-          <span data-zh>从精品咖啡馆到产业园食堂,从超市自有品牌到跨境电商,花花食界已服务 3,000+ 合作伙伴</span>
-          <span data-en>From boutique cafés to enterprise canteens, supermarket private labels to cross-border e-commerce — Foodvio serves 3,000+ partners.</span>
-        </p>
-      </div>
-      <div class="md:col-span-4 reveal delay-3">
-        <div class="flex flex-col gap-3 md:items-end">
-          <a href="#views" class="btn-primary" data-foodvio-cta="general_contact">
-            <span data-zh>找到我的方案</span>
-            <span data-en>Find my solution</span>
-            <span class="arrow">↓</span>
-          </a>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ SECTION 2 · View Toggle + Scenarios ═══════════ -->
-<section id="views" class="bg-cream py-12 md:py-16">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-
-    <div class="grid md:grid-cols-12 gap-8 mb-12 reveal">
-      <div class="md:col-span-5">
-        <div class="section-no mb-6">01 / Find Your Fit</div>
-        <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(24px, 3vw, 36px);">
-          <span data-zh>选择你的视角</span>
-          <span data-en>Choose your view</span>
-        </h2>
-      </div>
-      <div class="md:col-span-6 md:col-start-7 flex items-end">
-        <p class="font-display italic text-terra text-xl">
-          <span data-zh>中国客户偏向场景视图,海外客户偏向渠道视图。</span>
-          <span data-en>Chinese partners prefer scenarios. Global partners prefer channels.</span>
-        </p>
-      </div>
-    </div>
-
-    <!-- View toggle -->
-    <div class="mb-14 reveal">
-      <div class="view-toggle">
-        <button class="view-btn active" data-view="cn">
-          <span>🇨🇳</span>
-          <span data-zh>中文 · 18 场景</span><span data-en>By Scenario</span>
-          <span class="count">18</span>
-        </button>
-        <button class="view-btn" data-view="en">
-          <span>🌍</span>
-          <span data-zh>英文 · 4 渠道</span><span data-en>By Channel</span>
-          <span class="count">4</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- ═══════ Chinese view: 18 scenarios in 5 categories ═══════ -->
-    <div class="view-panel active" id="view-cn">
-
-      <!-- 轻后厨 6 -->
-      <div class="cat-section reveal">
-        <div class="cat-header cat-light">
-          <span class="cat-tag">— 01 / Light Kitchen</span>
-          <h3>🔵 <span data-zh>轻后厨</span><span data-en>Light Kitchen</span></h3>
-          <span class="cat-count">6 <span data-zh>场景</span><span data-en>scenarios</span></span>
-        </div>
-        <div class="cat-tagline">
-          <span data-zh>灵活 · 快捷 · 差异化</span>
-          <span data-en>Flexible · Fast · Differentiated</span>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          <a href="solutions-coffee-shops-v62.html" class="sce-card s-light">
-            <div class="icon">☕</div>
-            <h4><span data-zh>精品咖啡馆</span><span data-en>Cafés</span></h4>
-            <div class="name-en"><span data-zh>Cafés</span><span data-en>精品咖啡馆</span></div>
-            <div class="skus">32 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-light">
-            <div class="icon">🍝</div>
-            <h4><span data-zh>西式简餐厅</span><span data-en>Bistros</span></h4>
-            <div class="name-en"><span data-zh>Bistros</span><span data-en>西式简餐厅</span></div>
-            <div class="skus">58 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-light">
-            <div class="icon">🎢</div>
-            <h4><span data-zh>游乐场餐饮</span><span data-en>Theme Parks</span></h4>
-            <div class="name-en"><span data-zh>Theme Parks</span><span data-en>游乐场餐饮</span></div>
-            <div class="skus">40 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-light">
-            <div class="icon">🏕️</div>
-            <h4><span data-zh>露营基地</span><span data-en>Camping</span></h4>
-            <div class="name-en"><span data-zh>Camping</span><span data-en>露营基地</span></div>
-            <div class="skus">25 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-light">
-            <div class="icon">🍻</div>
-            <h4><span data-zh>精品酒吧</span><span data-en>Bars</span></h4>
-            <div class="name-en"><span data-zh>Bars</span><span data-en>精品酒吧</span></div>
-            <div class="skus">28 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-light">
-            <div class="icon">🎵</div>
-            <h4><span data-zh>Live House</span><span data-en>Music Venues</span></h4>
-            <div class="name-en"><span data-zh>Music Venues</span><span data-en>Live House</span></div>
-            <div class="skus">22 SKUs</div>
-          </a>
-        </div>
-      </div>
-
-      <!-- 全球风味连锁 4 -->
-      <div class="cat-section reveal">
-        <div class="cat-header cat-chain">
-          <span class="cat-tag">— 02 / Global Chains</span>
-          <h3>🟢 <span data-zh>全球风味连锁</span><span data-en>Global-Flavor Chains</span></h3>
-          <span class="cat-count">4 <span data-zh>场景</span><span data-en>scenarios</span></span>
-        </div>
-        <div class="cat-tagline">
-          <span data-zh>标准化 · 规模化 · 季度创新</span>
-          <span data-en>Standardized · At-scale · Quarterly innovation</span>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <a href="#" class="sce-card s-chain">
-            <div class="icon">🌐</div>
-            <h4><span data-zh>西餐连锁</span><span data-en>Western Chain</span></h4>
-            <div class="name-en"><span data-zh>Western Chain</span><span data-en>西餐连锁</span></div>
-            <div class="skus">85 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-chain">
-            <div class="icon">🍜</div>
-            <h4><span data-zh>日韩连锁</span><span data-en>JP/KR Chain</span></h4>
-            <div class="name-en"><span data-zh>JP/KR Chain</span><span data-en>日韩连锁</span></div>
-            <div class="skus">35 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-chain">
-            <div class="icon">🍔</div>
-            <h4><span data-zh>欧美连锁</span><span data-en>Euro/NA Chain</span></h4>
-            <div class="name-en"><span data-zh>Euro/NA Chain</span><span data-en>欧美连锁</span></div>
-            <div class="skus">48 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-chain">
-            <div class="icon">🌶️</div>
-            <h4><span data-zh>东南亚连锁</span><span data-en>SEA Chain</span></h4>
-            <div class="name-en"><span data-zh>SEA Chain</span><span data-en>东南亚连锁</span></div>
-            <div class="skus">24 SKUs</div>
-          </a>
-        </div>
-      </div>
-
-      <!-- 机构团餐 3 -->
-      <div class="cat-section reveal">
-        <div class="cat-header cat-inst">
-          <span class="cat-tag">— 03 / Industrial</span>
-          <h3>🟡 <span data-zh>机构团餐</span><span data-en>Industrial</span></h3>
-          <span class="cat-count">3 <span data-zh>场景</span><span data-en>scenarios</span></span>
-        </div>
-        <div class="cat-tagline">
-          <span data-zh>稳定 · 合规 · 营养</span>
-          <span data-en>Stable · Compliant · Nutritious</span>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <a href="#" class="sce-card s-inst">
-            <div class="icon">🏢</div>
-            <h4><span data-zh>国企食堂</span><span data-en>Corporate Cafeteria</span></h4>
-            <div class="name-en"><span data-zh>Corporate</span><span data-en>国企食堂</span></div>
-            <div class="skus">42 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-inst">
-            <div class="icon">🎓</div>
-            <h4><span data-zh>高校餐厅</span><span data-en>University</span></h4>
-            <div class="name-en"><span data-zh>University</span><span data-en>高校餐厅</span></div>
-            <div class="skus">38 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-inst">
-            <div class="icon">🏗️</div>
-            <h4><span data-zh>产业园员工餐</span><span data-en>Business Park</span></h4>
-            <div class="name-en"><span data-zh>Business Park</span><span data-en>产业园员工餐</span></div>
-            <div class="skus">35 SKUs</div>
-          </a>
-        </div>
-      </div>
-
-      <!-- 新零售 3 -->
-      <div class="cat-section reveal">
-        <div class="cat-header cat-retail">
-          <span class="cat-tag">— 04 / Retail</span>
-          <h3>🟠 <span data-zh>新零售</span><span data-en>Retail</span></h3>
-          <span class="cat-count">3 <span data-zh>场景</span><span data-en>scenarios</span></span>
-        </div>
-        <div class="cat-tagline">
-          <span data-zh>OEM · 自有品牌 · 包装定制</span>
-          <span data-en>OEM · Private Label · Custom Packaging</span>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <a href="#" class="sce-card s-retail">
-            <div class="icon">🛒</div>
-            <h4><span data-zh>超市连锁</span><span data-en>Supermarket</span></h4>
-            <div class="name-en"><span data-zh>Supermarket</span><span data-en>超市连锁</span></div>
-            <div class="skus">65 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-retail">
-            <div class="icon">🏪</div>
-            <h4><span data-zh>便利店即食</span><span data-en>CVS Ready</span></h4>
-            <div class="name-en"><span data-zh>CVS Ready</span><span data-en>便利店即食</span></div>
-            <div class="skus">28 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-retail">
-            <div class="icon">💰</div>
-            <h4><span data-zh>折扣零售</span><span data-en>Discount Retail</span></h4>
-            <div class="name-en"><span data-zh>Discount</span><span data-en>折扣零售</span></div>
-            <div class="skus">30 SKUs</div>
-          </a>
-        </div>
-      </div>
-
-      <!-- 特殊业态 2 -->
-      <div class="cat-section reveal">
-        <div class="cat-header cat-special">
-          <span class="cat-tag">— 05 / Special</span>
-          <h3>🟣 <span data-zh>特殊业态</span><span data-en>Special</span></h3>
-          <span class="cat-count">2 <span data-zh>场景</span><span data-en>scenarios</span></span>
-        </div>
-        <div class="cat-tagline">
-          <span data-zh>高端 · 定制 · 健康</span>
-          <span data-en>Premium · Customized · Healthy</span>
-        </div>
-        <div class="grid grid-cols-2 gap-4 max-w-3xl">
-          <a href="#" class="sce-card s-special">
-            <div class="icon">🏨</div>
-            <h4><span data-zh>精品酒店</span><span data-en>Boutique Hotels</span></h4>
-            <div class="name-en"><span data-zh>Boutique Hotels</span><span data-en>精品酒店</span></div>
-            <div class="skus">52 SKUs</div>
-          </a>
-          <a href="#" class="sce-card s-special">
-            <div class="icon">💪</div>
-            <h4><span data-zh>健身轻食配送</span><span data-en>Fitness Meal</span></h4>
-            <div class="name-en"><span data-zh>Fitness Meal</span><span data-en>健身轻食配送</span></div>
-            <div class="skus">18 SKUs</div>
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ═══════ English view: 4 channels ═══════ -->
-    <div class="view-panel" id="view-en">
-
-      <div class="grid md:grid-cols-2 gap-6">
-
-        <a href="for-foodservice-v62.html" class="ch-card c1">
-          <div class="ch-num">Channel 01</div>
-          <div class="icon-big">🍽️</div>
-          <h3><span data-zh>餐饮运营商</span><span data-en>Foodservice</span></h3>
-          <div class="name-en"><span data-zh>Foodservice</span><span data-en>For F&B operators</span></div>
-          <p class="desc">
-            <span data-zh>覆盖中文 11 场景 · 咖啡馆 / 西式简餐 / 连锁 / 酒店 / 酒吧</span>
-            <span data-en>Covering 11 Chinese scenarios — cafés, bistros, chains, hotels, bars.</span>
-          </p>
-          <div class="typical">
-            <strong>Typical:</strong>
-            <span data-zh>300+ 餐饮品牌 · 平均门店导入 8-10 SKU</span>
-            <span data-en>300+ F&B brands · 8-10 SKUs per store on average</span>
-          </div>
-          <span class="arrow-end">
-            <span data-zh>查看餐饮方案</span><span data-en>Foodservice landing</span> →
-          </span>
-        </a>
-
-        <a href="for-industrial-v62.html" class="ch-card c2">
-          <div class="ch-num">Channel 02</div>
-          <div class="icon-big">🏢</div>
-          <h3><span data-zh>团餐与机构</span><span data-en>Industrial</span></h3>
-          <div class="name-en"><span data-zh>Industrial</span><span data-en>For institutions</span></div>
-          <p class="desc">
-            <span data-zh>覆盖中文 3 机构场景 · 国企 / 高校 / 产业园</span>
-            <span data-en>Covering 3 institutional scenarios — corporate, universities, business parks.</span>
-          </p>
-          <div class="typical">
-            <strong>Typical:</strong>
-            <span data-zh>50+ 大型团餐项目 · 千人食堂稳定供应</span>
-            <span data-en>50+ institutional projects · 1,000+ person canteen scale</span>
-          </div>
-          <span class="arrow-end">
-            <span data-zh>查看团餐方案</span><span data-en>Industrial landing</span> →
-          </span>
-        </a>
-
-        <a href="for-retail-v62.html" class="ch-card c3">
-          <div class="ch-num">Channel 03</div>
-          <div class="icon-big">🛒</div>
-          <h3><span data-zh>零售品牌方</span><span data-en>Retail / OEM</span></h3>
-          <div class="name-en"><span data-zh>Retail</span><span data-en>For private labels</span></div>
-          <p class="desc">
-            <span data-zh>覆盖中文 3 零售场景 · 超市 / 便利店 / 折扣零售</span>
-            <span data-en>Covering 3 retail scenarios — supermarkets, CVS, discount retail.</span>
-          </p>
-          <div class="typical">
-            <strong>Typical:</strong>
-            <span data-zh>100+ 自有品牌项目 · 8 大类 SC 资质</span>
-            <span data-en>100+ private label projects · 8 SC production categories</span>
-          </div>
-          <span class="arrow-end">
-            <span data-zh>查看零售方案</span><span data-en>Retail / OEM landing</span> →
-          </span>
-        </a>
-
-        <a href="for-online-sales-v62.html" class="ch-card c4">
-          <div class="ch-num">Channel 04</div>
-          <div class="icon-big">💻</div>
-          <h3><span data-zh>跨境电商</span><span data-en>Online Sales</span></h3>
-          <div class="name-en"><span data-zh>Online Sales</span><span data-en>For e-commerce & D2C</span></div>
-          <p class="desc">
-            <span data-zh>Amazon FBA / Shopify D2C / 直播电商 / TikTok / 健身配送</span>
-            <span data-en>Amazon FBA · Shopify D2C · Livestream · TikTok · Fitness meals</span>
-          </p>
-          <div class="typical">
-            <strong>Typical:</strong>
-            <span data-zh>50+ 跨境品牌 · 摄影包 + 跨境合规一站搞定</span>
-            <span data-en>50+ cross-border brands · Photo pack & compliance handled</span>
-          </div>
-          <span class="arrow-end">
-            <span data-zh>查看电商方案</span><span data-en>Online Sales landing</span> →
-          </span>
-        </a>
-
-      </div>
-
-      <p class="text-center text-sm text-forest/55 mt-12 italic">
-        <span data-zh>海外采购商请访问独立英文站 → foodvio.com</span>
-        <span data-en>For overseas importers — visit our English site at foodvio.com</span>
+<!-- ═══════════════════════════════════════════
+     01 · 5 大中国洞察(主题)
+     ═══════════════════════════════════════════ -->
+<section class="bg-paper py-12 md:py-16">
+  <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+    <div class="reveal mb-10">
+      <div class="section-no mb-4">01 / The Five China Insights</div>
+      <h2 class="font-serif-sc font-bold text-forest leading-tight mb-3" style="font-size:clamp(26px, 3.2vw, 38px);">
+        <span data-zh>5 大中国洞察</span>
+        <span data-en>The Five China Insights</span>
+      </h2>
+      <p class="font-serif-sc text-forest/75 text-base md:text-lg max-w-2xl leading-relaxed">
+        <span data-zh>西餐进入中国市场,绕不过的 5 道槛 — 我们与你分享每一道的解法。</span>
+        <span data-en>5 thresholds Western cuisine must clear in the Chinese market — and our take on each.</span>
       </p>
-
     </div>
 
+    <div class="grid md:grid-cols-5 gap-4 reveal delay-1">
+      <a href="our-story-china-insight-v62.html#texture" class="bg-cream rounded-2xl p-6 border border-forest/10 hover:border-terra/40 transition">
+        <div class="text-3xl mb-2">🥢</div>
+        <h4 class="font-serif-sc font-bold text-forest text-base mb-2">
+          <span data-zh>口感</span><span data-en>Texture</span>
+        </h4>
+        <p class="text-xs text-forest/70 leading-relaxed">
+          <span data-zh>嚼劲、Q 弹、爽脆</span>
+          <span data-en>Chewiness · Q · Crispness</span>
+        </p>
+      </a>
+      <a href="our-story-china-insight-v62.html#flavor" class="bg-cream rounded-2xl p-6 border border-forest/10 hover:border-terra/40 transition">
+        <div class="text-3xl mb-2">🌶️</div>
+        <h4 class="font-serif-sc font-bold text-forest text-base mb-2">
+          <span data-zh>口味</span><span data-en>Flavor</span>
+        </h4>
+        <p class="text-xs text-forest/70 leading-relaxed">
+          <span data-zh>辣度 · 咸度 · 复合曲线</span>
+          <span data-en>Spice · Salt · Curve</span>
+        </p>
+      </a>
+      <a href="our-story-china-insight-v62.html#color" class="bg-cream rounded-2xl p-6 border border-forest/10 hover:border-terra/40 transition">
+        <div class="text-3xl mb-2">🎨</div>
+        <h4 class="font-serif-sc font-bold text-forest text-base mb-2">
+          <span data-zh>颜色</span><span data-en>Color</span>
+        </h4>
+        <p class="text-xs text-forest/70 leading-relaxed">
+          <span data-zh>"色香味"以色第一</span>
+          <span data-en>Color comes first</span>
+        </p>
+      </a>
+      <a href="our-story-china-insight-v62.html#wok-hei" class="bg-cream rounded-2xl p-6 border border-forest/10 hover:border-terra/40 transition">
+        <div class="text-3xl mb-2">🔥</div>
+        <h4 class="font-serif-sc font-bold text-forest text-base mb-2">
+          <span data-zh>锅气</span><span data-en>Wok-hei</span>
+        </h4>
+        <p class="text-xs text-forest/70 leading-relaxed">
+          <span data-zh>高温快炒带来的镬气</span>
+          <span data-en>High-heat aromatic char</span>
+        </p>
+      </a>
+      <a href="our-story-china-insight-v62.html#restoration" class="bg-cream rounded-2xl p-6 border border-forest/10 hover:border-terra/40 transition">
+        <div class="text-3xl mb-2">✨</div>
+        <h4 class="font-serif-sc font-bold text-forest text-base mb-2">
+          <span data-zh>还原度</span><span data-en>Restoration</span>
+        </h4>
+        <p class="text-xs text-forest/70 leading-relaxed">
+          <span data-zh>加热后还原现做的程度</span>
+          <span data-en>Restoration to fresh</span>
+        </p>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- ═══════════ SECTION 3 · Custom Solution ═══════════ -->
-<section id="custom" class="py-12 md:py-16 px-6 md:px-12">
-  <div class="max-w-[1440px] mx-auto">
-    <div class="custom-block reveal">
-      <div class="relative z-10 grid md:grid-cols-12 gap-10 items-center">
+<!-- ═══════════════════════════════════════════
+     02 · 5 国大师学艺札记
+     ═══════════════════════════════════════════ -->
+<section class="bg-cream py-12 md:py-16">
+  <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+    <div class="grid md:grid-cols-12 gap-10 mb-10 reveal">
+      <div class="md:col-span-6">
+        <div class="section-no mb-4">02 / Apprenticeship Notes</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight mb-3" style="font-size:clamp(26px, 3.2vw, 38px);">
+          <span data-zh>5 国大师学艺札记</span>
+          <span data-en>5-Country Apprenticeship Notes</span>
+        </h2>
+        <p class="font-serif-sc text-forest/75 text-base md:text-lg max-w-xl leading-relaxed">
+          <span data-zh>意大利 · 西班牙 · 韩国 · 日本 · 墨西哥 — 学艺路上的笔记。</span>
+          <span data-en>Italy · Spain · Korea · Japan · Mexico — notes from the journey.</span>
+        </p>
+      </div>
+      <div class="md:col-span-5 md:col-start-8 flex items-end justify-start md:justify-end">
+        <a href="our-story-global-masters-v62.html" class="btn-link" data-foodvio-cta="general_contact">
+          <span data-zh>查看全部札记</span><span data-en>See all notes</span> →
+        </a>
+      </div>
+    </div>
 
-        <div class="md:col-span-7">
-          <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6">
-            DON'T SEE YOUR EXACT SCENARIO?
-          </div>
-          <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.15;">
-            <span data-zh>没有你的业态?<br>我们可以为你定制方案</span>
-            <span data-en>Don't see your scenario?<br>We build custom solutions.</span>
-          </h2>
-          <p class="text-white/75 text-base md:text-lg leading-relaxed max-w-2xl">
-            <span data-zh>每一个业态,都可以专属定制 —— 从产品组合到 SOP,从包装规格到价格分级。让花花的米其林研发团队成为你的私人厨房。</span>
-            <span data-en>Every business model can be customized — from product mix to SOP, from packaging spec to tiered pricing. Let our Michelin R&D team become your private kitchen.</span>
-          </p>
-        </div>
+    <div class="grid md:grid-cols-5 gap-4 reveal delay-1">
+      <a href="our-story-global-masters-italy-v62.html" class="bg-white rounded-2xl p-6 border border-forest/10 hover:border-terra/40 transition">
+        <div class="text-3xl mb-2">🇮🇹</div>
+        <h4 class="font-serif-sc font-bold text-forest text-base mb-1">
+          <span data-zh>意大利</span><span data-en>Italy</span>
+        </h4>
+        <p class="text-xs text-forest/70">
+          <span data-zh>慢炖肉酱 · 手工披萨</span>
+          <span data-en>Ragù · Pizza</span>
+        </p>
+      </a>
+      <a href="our-story-global-masters-spain-v62.html" class="bg-white rounded-2xl p-6 border border-forest/10 hover:border-terra/40 transition">
+        <div class="text-3xl mb-2">🇪🇸</div>
+        <h4 class="font-serif-sc font-bold text-forest text-base mb-1">
+          <span data-zh>西班牙</span><span data-en>Spain</span>
+        </h4>
+        <p class="text-xs text-forest/70">
+          <span data-zh>火腿 · 海鲜饭</span>
+          <span data-en>Jamón · Paella</span>
+        </p>
+      </a>
+      <a href="our-story-global-masters-korea-v62.html" class="bg-white rounded-2xl p-6 border border-forest/10 hover:border-terra/40 transition">
+        <div class="text-3xl mb-2">🇰🇷</div>
+        <h4 class="font-serif-sc font-bold text-forest text-base mb-1">
+          <span data-zh>韩国</span><span data-en>Korea</span>
+        </h4>
+        <p class="text-xs text-forest/70">
+          <span data-zh>发酵 · 韩式炸鸡</span>
+          <span data-en>Fermentation · KFC</span>
+        </p>
+      </a>
+      <a href="our-story-global-masters-japan-v62.html" class="bg-white rounded-2xl p-6 border border-forest/10 hover:border-terra/40 transition">
+        <div class="text-3xl mb-2">🇯🇵</div>
+        <h4 class="font-serif-sc font-bold text-forest text-base mb-1">
+          <span data-zh>日本</span><span data-en>Japan</span>
+        </h4>
+        <p class="text-xs text-forest/70">
+          <span data-zh>真空锁鲜 · 还原度</span>
+          <span data-en>Vacuum freshness</span>
+        </p>
+      </a>
+      <a href="our-story-global-masters-mexico-v62.html" class="bg-white rounded-2xl p-6 border border-forest/10 hover:border-terra/40 transition">
+        <div class="text-3xl mb-2">🇲🇽</div>
+        <h4 class="font-serif-sc font-bold text-forest text-base mb-1">
+          <span data-zh>墨西哥</span><span data-en>Mexico</span>
+        </h4>
+        <p class="text-xs text-forest/70">
+          <span data-zh>风味馅料 · 玉米</span>
+          <span data-en>Fillings · Corn</span>
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
 
-        <div class="md:col-span-5 text-left md:text-right">
-          <a href="#" class="btn-primary" data-foodvio-cta="custom_inquiry">
-            <span data-zh>申请定制方案</span>
-            <span data-en>Apply for custom solution</span>
-            <span class="arrow">→</span>
-          </a>
-          <div class="mt-6 text-sm text-white/60">
-            📞 400-6879-568<br>
-            📧 huahuakefu1@foodvio.com.cn
-          </div>
-        </div>
+<!-- ═══════════════════════════════════════════
+     03 · 行业洞察文章(占位)
+     ═══════════════════════════════════════════ -->
+<section class="bg-paper py-12 md:py-16">
+  <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+    <div class="grid md:grid-cols-12 gap-10 mb-10 reveal">
+      <div class="md:col-span-6">
+        <div class="section-no mb-4">03 / Articles & Reports</div>
+        <h2 class="font-serif-sc font-bold text-forest leading-tight mb-3" style="font-size:clamp(26px, 3.2vw, 38px);">
+          <span data-zh>行业洞察文章</span>
+          <span data-en>Articles & Reports</span>
+        </h2>
+        <p class="font-serif-sc text-forest/75 text-base md:text-lg max-w-xl leading-relaxed">
+          <span data-zh>从行业研究、客户案例、产品幕后到工艺解读 — 持续更新中。</span>
+          <span data-en>Industry research, client cases, product behind-the-scenes, craft analyses — continuously updated.</span>
+        </p>
+      </div>
+    </div>
 
+    <div class="grid md:grid-cols-3 gap-6 reveal delay-1">
+      <div class="bg-cream rounded-2xl p-7 border border-forest/10 opacity-80">
+        <div class="font-display italic text-terra/70 text-xs tracking-[0.15em] mb-3">COMING SOON · CATEGORY</div>
+        <h4 class="font-serif-sc font-bold text-forest/85 text-lg mb-3 leading-snug">
+          <span data-zh>B2B 西餐供应链行业研究</span>
+          <span data-en>B2B Western Cuisine Supply Chain Research</span>
+        </h4>
+        <p class="text-sm text-forest/65 leading-relaxed">
+          <span data-zh>市场规模、客户结构、品类趋势 — 持续更新的中国 B2B 西餐供应链研究。</span>
+          <span data-en>Market size, client structure, category trends — China B2B Western cuisine supply-chain research.</span>
+        </p>
+      </div>
+      <div class="bg-cream rounded-2xl p-7 border border-forest/10 opacity-80">
+        <div class="font-display italic text-terra/70 text-xs tracking-[0.15em] mb-3">COMING SOON · CASE STUDIES</div>
+        <h4 class="font-serif-sc font-bold text-forest/85 text-lg mb-3 leading-snug">
+          <span data-zh>客户案例研究</span>
+          <span data-en>Client Case Studies</span>
+        </h4>
+        <p class="text-sm text-forest/65 leading-relaxed">
+          <span data-zh>从连锁餐饮、轻厨房、咖啡馆到便利店 — 真实合作案例的复盘与解读。</span>
+          <span data-en>From chain foodservice and light kitchens to cafés and CVS — debriefs of real partnerships.</span>
+        </p>
+      </div>
+      <div class="bg-cream rounded-2xl p-7 border border-forest/10 opacity-80">
+        <div class="font-display italic text-terra/70 text-xs tracking-[0.15em] mb-3">COMING SOON · BEHIND-THE-SCENES</div>
+        <h4 class="font-serif-sc font-bold text-forest/85 text-lg mb-3 leading-snug">
+          <span data-zh>产品研发幕后</span>
+          <span data-en>Product R&D Behind-the-Scenes</span>
+        </h4>
+        <p class="text-sm text-forest/65 leading-relaxed">
+          <span data-zh>从配方打磨、原料试错到米其林研发把关 — 一款产品从 0 到 1 的故事。</span>
+          <span data-en>From recipe iteration and ingredient trials to Michelin R&D oversight — a product from zero to one.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <p class="font-serif-sc text-forest/65 text-sm md:text-base mb-6 italic max-w-xl mx-auto">
+        <span data-zh>第一批文章正在筹备中。订阅获取更新通知,或联系我们获取定制内容。</span>
+        <span data-en>The first articles are in preparation. Subscribe for updates, or contact us for tailored content.</span>
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="#" class="btn-primary" data-foodvio-cta="general_contact">
+          <span data-zh>订阅更新</span><span data-en>Subscribe</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="#" class="btn-outline" data-foodvio-cta="custom_inquiry">
+          <span data-zh>定制内容咨询</span><span data-en>Custom Content</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══════════════════════════════════════════
+     04 · 双品牌窗口
+     ═══════════════════════════════════════════ -->
+<section class="bg-cream py-12 md:py-16">
+  <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+    <div class="reveal mb-10">
+      <div class="section-no mb-4">04 / Brand Lens</div>
+      <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size:clamp(26px, 3.2vw, 38px);">
+        <span data-zh>从两个品牌读 Foodvio</span>
+        <span data-en>Foodvio Through Two Brands</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 reveal delay-1">
+      <a href="products-index-v62.html" class="bg-white rounded-2xl p-8 md:p-10 border border-forest/10 hover:border-terra/40 transition group">
+        <div class="font-display italic text-terra text-xs tracking-[0.15em] mb-3">B2B · FOODSERVICE</div>
+        <h3 class="font-serif-sc font-bold text-forest text-2xl mb-3">
+          <span data-zh>花花食界 Foodvio</span>
+          <span data-en>Foodvio (B2B)</span>
+        </h3>
+        <p class="text-sm md:text-base text-forest/75 leading-relaxed mb-5">
+          <span data-zh>5 大产品矩阵 · 100+ SKU · 服务连锁餐饮、轻厨房、咖啡馆、KA 客户。</span>
+          <span data-en>5 product matrices · 100+ SKUs · serving chain foodservice, light kitchens, cafés, KA clients.</span>
+        </p>
+        <span class="font-display italic text-rust text-sm group-hover:font-bold transition">→ <span data-zh>查看产品矩阵</span><span data-en>View Products</span></span>
+      </a>
+      <a href="products-chinpapa-v62.html" class="bg-white rounded-2xl p-8 md:p-10 border border-forest/10 hover:border-terra/40 transition group">
+        <div class="font-display italic text-terra text-xs tracking-[0.15em] mb-3">B2C · KIDS NUTRITION</div>
+        <h3 class="font-serif-sc font-bold text-forest text-2xl mb-3">
+          <span data-zh>华仔爸爸 ChinnPaPa</span>
+          <span data-en>ChinnPaPa (B2C)</span>
+        </h3>
+        <p class="text-sm md:text-base text-forest/75 leading-relaxed mb-5">
+          <span data-zh>儿童健康营养早餐品牌 · 美味、健康、营养 · 走进千家万户。</span>
+          <span data-en>Healthy kids' nutritional breakfast brand · delicious, healthy, nutritious · into homes.</span>
+        </p>
+        <span class="font-display italic text-rust text-sm group-hover:font-bold transition">→ <span data-zh>了解华仔爸爸</span><span data-en>About ChinnPaPa</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
 <footer class="text-white/80">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-16 pb-10">
+
     <div class="grid md:grid-cols-12 gap-10 mb-16">
+
       <div class="md:col-span-4">
         <a href="index.html" class="brand-logo lg" aria-label="Foodvio 花花食界" style="margin-bottom:24px;">
           <span class="zh">花花食界</span>
@@ -1060,28 +1077,49 @@
           <span data-en>The professional Western cuisine brand from China. From field to plate — world flavors, made in China.</span>
         </p>
       </div>
-      <div class="md:col-span-2"><div class="footer-col-title">Products</div>
+
+      <div class="md:col-span-2">
+        <div class="footer-col-title">Products</div>
         <a href="products-sauces-v62.html" class="footer-link">Sauces</a>
         <a href="products-index-v62.html#staples" class="footer-link">Western Staples</a>
         <a href="products-index-v62.html#snacks" class="footer-link">Fried Snacks</a>
-        <a href="products-index-v62.html#mains" class="footer-link">Main Courses</a></div>
-      <div class="md:col-span-2"><div class="footer-col-title">Solutions</div>
+        <a href="products-index-v62.html#mains" class="footer-link">Main Courses</a>
+        <a href="products-index-v62.html#sides" class="footer-link">Healthy Sides</a>
+        <a href="products-index-v62.html#bakery" class="footer-link">Bakery</a>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="footer-col-title">Solutions</div>
         <a href="for-foodservice-v62.html" class="footer-link">Foodservice</a>
         <a href="for-industrial-v62.html" class="footer-link">Industrial</a>
         <a href="for-retail-v62.html" class="footer-link">Retail</a>
-        <a href="for-online-sales-v62.html" class="footer-link">Online Sales</a></div>
-      <div class="md:col-span-2"><div class="footer-col-title">Discover</div>
+        <a href="for-online-sales-v62.html" class="footer-link">Online Sales</a>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="footer-col-title">Discover</div>
         <a href="our-story-index-v62.html" class="footer-link">Our Story</a>
         <a href="capabilities-index-v62.html" class="footer-link">Capabilities</a>
         <a href="insights-v62.html" class="footer-link">Insights</a>
-        <a href="about-v62.html" class="footer-link">About</a></div>
-      <div class="md:col-span-2"><div class="footer-col-title">Contact</div>
+        <a href="about-v62.html" class="footer-link">About</a>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="footer-col-title">Contact</div>
         <p class="text-xs text-white/55 leading-relaxed">
           400-6879-568<br>
-          huahuakefu1@<br>foodvio.com.cn
-        </p></div>
+          huahuakefu1@<br>foodvio.com.cn<br>
+          <span class="text-white/40 mt-2 inline-block">
+            <span data-zh>北京望京 SOHO T3A 1008</span>
+            <span data-en>Wangjing SOHO T3A 1008, Beijing</span>
+          </span>
+        </p>
+      </div>
+
     </div>
+
     <div class="footer-divider mb-6"></div>
+
     <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
       <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
       <div class="flex items-center gap-5">
@@ -1091,6 +1129,7 @@
         <a href="cookie-policy-zh.html" class="hover:text-gold transition" data-zh>Cookie</a><a href="cookie-policy-en.html" class="hover:text-gold transition" data-en>Cookies</a>
       </div>
     </div>
+
   </div>
 </footer>
 
@@ -1100,28 +1139,9 @@ function toggleLang() {
   const isEn = document.body.classList.contains('lang-en');
   document.documentElement.lang = isEn ? 'en' : 'zh-CN';
   localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
-  // Auto switch view based on language
-  if (isEn) {
-    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
-    document.querySelector('[data-view="en"]').classList.add('active');
-    document.getElementById('view-en').classList.add('active');
-  } else {
-    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
-    document.querySelector('[data-view="cn"]').classList.add('active');
-    document.getElementById('view-cn').classList.add('active');
-  }
 }
 if (localStorage.getItem('foodvio-lang') === 'en') {
   document.body.classList.add('lang-en');
-  // Default to channel view
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
-    document.querySelector('[data-view="en"]').classList.add('active');
-    document.getElementById('view-en').classList.add('active');
-  });
 }
 
 const navbar = document.getElementById('navbar');
@@ -1153,18 +1173,6 @@ megaPanels.forEach(panel => {
   });
 });
 
-// View toggle
-const viewBtns = document.querySelectorAll('.view-btn');
-const viewPanels = document.querySelectorAll('.view-panel');
-viewBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    viewBtns.forEach(b => b.classList.remove('active'));
-    viewPanels.forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('view-' + btn.dataset.view).classList.add('active');
-  });
-});
-
 const reveals = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -1179,5 +1187,5 @@ reveals.forEach(el => obs.observe(el));
 
 
 <script src="cookie-banner.js" defer></script>
-</body>
+
 </html>
