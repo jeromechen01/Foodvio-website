@@ -104,11 +104,36 @@ window.FoodvioLeads = (function() {
 
   // 自动绑定所有 CTA 按钮
   function autoAttach() {
+    // W10-fix · 区分"真实弹窗按钮"和"误标签的跳转链接"
+    // 规则:
+    //   1. data-foodvio-cta="sample_request/catalog_download/custom_inquiry/meeting_booking/origin_tour"
+    //      → 永远弹询盘弹窗(用户的明确意图)
+    //   2. data-foodvio-cta="general_contact"(历史遗留宽泛标签)
+    //      → 只在 href 是 "#" / 空 / 不存在 时弹窗;
+    //         否则保持普通链接行为(让浏览器去跳)
+    const POPUP_CTAS = new Set([
+      'sample_request', 'catalog_download', 'custom_inquiry',
+      'meeting_booking', 'origin_tour'
+    ]);
+
     document.querySelectorAll('[data-foodvio-cta]').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        openModal(btn.dataset.foodvioCta);
-      });
+      const ctaType = btn.dataset.foodvioCta;
+      const href = btn.getAttribute('href') || '';
+      const isPopupCta = POPUP_CTAS.has(ctaType);
+      const isPlaceholderHref = (href === '' || href === '#');
+
+      // 只在以下情况拦截并弹窗:
+      //   - 真正的弹窗 CTA(sample_request 等)
+      //   - 或 general_contact + href 是占位(没有真链接)
+      const shouldOpenModal = isPopupCta || (ctaType === 'general_contact' && isPlaceholderHref);
+
+      if (shouldOpenModal) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          openModal(ctaType);
+        });
+      }
+      // else: 保持原生 <a href="..."> 跳转行为,不绑事件
     });
   }
 

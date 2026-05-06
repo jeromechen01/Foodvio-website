@@ -247,6 +247,12 @@
   body.lang-en [data-en].block { display: block; }
   .lang-toggle { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); transition: all 0.3s; cursor: pointer; background: transparent; }
   .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  /* W10-fix-2 · 语言按钮高亮当前语言 */
+  .lang-toggle .lang-zh { font-weight: 600; opacity: 1; transition: opacity .2s; }
+  .lang-toggle .lang-en { opacity: .5; transition: opacity .2s; }
+  body.lang-en .lang-toggle .lang-zh { opacity: .5; font-weight: 400; }
+  body.lang-en .lang-toggle .lang-en { opacity: 1; font-weight: 600; }
+  .lang-toggle .lang-sep { opacity: .4; margin: 0 2px; }
   .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
 
   @media (max-width: 768px) { .mega-menu { display: none; } }
@@ -305,8 +311,8 @@
       <a href="about-v62.html" class="nav-link">About</a>
     </div>
     <div class="flex items-center gap-4">
-      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
-      <a href="#" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
+      <button onclick="toggleLang()" class="lang-toggle" id="lang-toggle-btn"><span class="lang-zh">中</span><span class="lang-sep"> / </span><span class="lang-en">EN</span></button>
+      <a href="#" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition" data-foodvio-cta="general_contact">Contact</a>
     </div>
   </div>
 
@@ -358,11 +364,11 @@
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
         <div class="mega-col-title"><span data-zh>按业态(中文 18 场景)</span><span data-en>By Scenario (CN 18)</span></div>
-        <a href="#" class="mega-link">🔵 轻后厨(6)</a>
-        <a href="#" class="mega-link">🟢 全球连锁(4)</a>
-        <a href="#" class="mega-link">🟡 机构团餐(3)</a>
-        <a href="#" class="mega-link">🟠 新零售(3)</a>
-        <a href="#" class="mega-link">🟣 特殊业态(2)</a>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link">🔵 轻后厨(6)</a>
+        <a href="for-global-v62.html" class="mega-link">🟢 全球连锁(4)</a>
+        <a href="for-industrial-v62.html" class="mega-link">🟡 机构团餐(3)</a>
+        <a href="for-retail-v62.html" class="mega-link">🟠 新零售(3)</a>
+        <a href="for-online-sales-v62.html" class="mega-link">🟣 特殊业态(2)</a>
       </div>
       <div class="col-span-4">
         <div class="mega-col-title">Featured Cases</div>
@@ -448,7 +454,7 @@
         <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
           STORY 03 / CHINA INSIGHT
         </div>
-        <h1 class="hero-title reveal delay-1" style="font-size: clamp(32px, 4vw, 52px);">
+        <h1 class="hero-title reveal delay-1 font-serif-sc font-black text-white leading-[1.05]" style="font-size: clamp(38px, 5vw, 64px);">
           <span data-zh>我们不翻译<br>我们重构</span>
           <span data-en>We don't translate.<br>We rebuild.</span>
         </h1>
@@ -506,7 +512,7 @@
 
     <div class="grid md:grid-cols-2 gap-6">
 
-      <a href="#" class="insight-card reveal delay-1">
+      <a href="#texture" class="insight-card reveal delay-1">
         <div class="insight-num">01</div>
         <div class="insight-tag">Insight 01 · Texture</div>
         <h3><span data-zh>披萨嚼劲</span><span data-en>Pizza Crust Bite</span></h3>
@@ -539,7 +545,7 @@
         <span class="read-more"><span data-zh>读完整洞察</span><span data-en>Read full insight</span> →</span>
       </a>
 
-      <a href="#" class="insight-card reveal delay-2">
+      <a href="#flavor" class="insight-card reveal delay-2">
         <div class="insight-num">02</div>
         <div class="insight-tag">Insight 02 · Spice</div>
         <h3><span data-zh>辣度阈值</span><span data-en>Spice Threshold</span></h3>
@@ -572,7 +578,7 @@
         <span class="read-more"><span data-zh>读完整洞察</span><span data-en>Read full insight</span> →</span>
       </a>
 
-      <a href="#" class="insight-card reveal delay-3">
+      <a href="#color" class="insight-card reveal delay-3">
         <div class="insight-num">03</div>
         <div class="insight-tag">Insight 03 · Equipment</div>
         <h3><span data-zh>厨房设备现实</span><span data-en>Kitchen Equipment Reality</span></h3>
@@ -605,7 +611,7 @@
         <span class="read-more"><span data-zh>读完整洞察</span><span data-en>Read full insight</span> →</span>
       </a>
 
-      <a href="#" class="insight-card reveal delay-4">
+      <a href="#wok-hei" class="insight-card reveal delay-4">
         <div class="insight-num">04</div>
         <div class="insight-tag">Insight 04 · Regional</div>
         <h3><span data-zh>地方口味差异</span><span data-en>Regional Palate Differences</span></h3>
@@ -638,7 +644,7 @@
         <span class="read-more"><span data-zh>读完整洞察</span><span data-en>Read full insight</span> →</span>
       </a>
 
-      <a href="#" class="insight-card reveal delay-5">
+      <a href="#restoration" class="insight-card reveal delay-5">
         <div class="insight-num">05</div>
         <div class="insight-tag">Insight 05 · Color</div>
         <h3><span data-zh>酱底颜色阈值</span><span data-en>Sauce Color Threshold</span></h3>

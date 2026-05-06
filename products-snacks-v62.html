@@ -506,6 +506,12 @@
     cursor: pointer; background: transparent;
   }
   .lang-toggle:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  /* W10-fix-2 · 语言按钮高亮当前语言 */
+  .lang-toggle .lang-zh { font-weight: 600; opacity: 1; transition: opacity .2s; }
+  .lang-toggle .lang-en { opacity: .5; transition: opacity .2s; }
+  body.lang-en .lang-toggle .lang-zh { opacity: .5; font-weight: 400; }
+  body.lang-en .lang-toggle .lang-en { opacity: 1; font-weight: 600; }
+  .lang-toggle .lang-sep { opacity: .4; margin: 0 2px; }
   .nav-bar.dark-page.scrolled .lang-toggle {
     color: var(--forest); border-color: rgba(27,67,50,0.25);
   }
@@ -565,7 +571,7 @@
 
     <div class="hidden lg:flex items-center gap-9">
       <a href="products-index-v62.html" class="nav-link has-dropdown active" data-menu="products">Products</a>
-      <a href="#" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
+      <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions">Solutions</a>
       <a href="our-story-index-v62.html" class="nav-link has-dropdown" data-menu="story">Our Story</a>
       <a href="capabilities-index-v62.html" class="nav-link has-dropdown" data-menu="capabilities">Capabilities</a>
       <a href="insights-v62.html" class="nav-link">Insights</a>
@@ -576,7 +582,7 @@
       <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       </button>
-      <button onclick="toggleLang()" class="lang-toggle">中 / EN</button>
+      <button onclick="toggleLang()" class="lang-toggle" id="lang-toggle-btn"><span class="lang-zh">中</span><span class="lang-sep"> / </span><span class="lang-en">EN</span></button>
       <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
     </div>
   </div>
@@ -631,11 +637,11 @@
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
         <div class="mega-col-title"><span data-zh>按业态(中文 18 场景)</span><span data-en>By Scenario (CN 18)</span></div>
-        <a href="#" class="mega-link">🔵 轻后厨(6)</a>
-        <a href="#" class="mega-link">🟢 全球连锁(4)</a>
-        <a href="#" class="mega-link">🟡 机构团餐(3)</a>
-        <a href="#" class="mega-link">🟠 新零售(3)</a>
-        <a href="#" class="mega-link">🟣 特殊业态(2)</a>
+        <a href="solutions-light-kitchen-v62.html" class="mega-link">🔵 轻后厨(6)</a>
+        <a href="for-global-v62.html" class="mega-link">🟢 全球连锁(4)</a>
+        <a href="for-industrial-v62.html" class="mega-link">🟡 机构团餐(3)</a>
+        <a href="for-retail-v62.html" class="mega-link">🟠 新零售(3)</a>
+        <a href="for-online-sales-v62.html" class="mega-link">🟣 特殊业态(2)</a>
       </div>
       <div class="col-span-4">
         <div class="mega-col-title">Featured Cases</div>
@@ -723,7 +729,7 @@
         <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-4 reveal">
           PRODUCT LINE / SNACKS
         </div>
-        <h1 class="hero-title reveal delay-1" style="font-size: clamp(28px, 3.5vw, 40px);">
+        <h1 class="hero-title reveal delay-1 font-serif-sc font-black text-white leading-[1.05]" style="font-size: clamp(38px, 5vw, 64px);">
           <span data-zh>炸品小食</span>
           <span data-en>Snacks</span>
         </h1>
