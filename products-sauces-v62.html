@@ -792,32 +792,8 @@
       </div>
     </div>
 
-    <!-- Tabs -->
-    <div class="flavor-tabs reveal">
-      <button class="flavor-tab active" data-tab="italian">
-        <span>🇮🇹</span>
-        <span data-zh>意式系列</span><span data-en>Italian</span>
-        <span class="count">5</span>
-      </button>
-      <button class="flavor-tab" data-tab="american">
-        <span>🇺🇸</span>
-        <span data-zh>美式系列</span><span data-en>American</span>
-        <span class="count">5</span>
-      </button>
-      <button class="flavor-tab" data-tab="sea">
-        <span>🌶️</span>
-        <span data-zh>东南亚系列</span><span data-en>Southeast Asian</span>
-        <span class="count">4</span>
-      </button>
-      <button class="flavor-tab" data-tab="jpkr">
-        <span>🍜</span>
-        <span data-zh>日韩系列</span><span data-en>Japanese & Korean</span>
-        <span class="count">4</span>
-      </button>
-    </div>
-
-    <!-- ITALIAN PANEL -->
-    <div class="sauce-panel active grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5" id="panel-italian">
+    <!-- All Sauces · 全部酱料 18 款 -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 reveal">
 
       <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
         <div class="sauce-swatch sauce-tomato"><div class="badge">⭐ Bestseller</div></div>
@@ -879,11 +855,6 @@
         </div>
       </a>
 
-    </div>
-
-    <!-- AMERICAN PANEL -->
-    <div class="sauce-panel grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5" id="panel-american">
-
       <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
         <div class="sauce-swatch sauce-bacon"></div>
         <div class="info">
@@ -944,11 +915,6 @@
         </div>
       </a>
 
-    </div>
-
-    <!-- SOUTHEAST ASIAN PANEL -->
-    <div class="sauce-panel grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5" id="panel-sea">
-
       <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
         <div class="sauce-swatch sauce-curry"></div>
         <div class="info">
@@ -996,11 +962,6 @@
           <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
         </div>
       </a>
-
-    </div>
-
-    <!-- JAPANESE & KOREAN PANEL -->
-    <div class="sauce-panel grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5" id="panel-jpkr">
 
       <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
         <div class="sauce-swatch sauce-gochu"><div class="badge">⭐ Bestseller</div></div>
@@ -1374,18 +1335,6 @@ megaPanels.forEach(panel => {
   panel.addEventListener('mouseenter', () => clearTimeout(menuTimer));
   panel.addEventListener('mouseleave', () => {
     menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
-  });
-});
-
-// Flavor tabs
-const tabs = document.querySelectorAll('.flavor-tab');
-const panels = document.querySelectorAll('.sauce-panel');
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    panels.forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
   });
 });
 

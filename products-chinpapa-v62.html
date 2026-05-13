@@ -557,6 +557,138 @@
   /* ChinnPaPa SKU badge */
   .cp-badge{position:absolute;top:10px;right:10px;color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:10px;letter-spacing:.1em;padding:3px 8px;border-radius:999px;line-height:1.2}
   .ps-card .visual{position:relative}
+
+  /* W11 · Sauce-card 同款卡片样式 */
+  .sauce-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(.16,.84,.28,.99);
+    cursor: pointer;
+    border: 1px solid rgba(27,67,50,0.06);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  .sauce-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -16px rgba(13,42,31,0.18);
+    border-color: rgba(27,67,50,0.12);
+  }
+  .sauce-swatch {
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+  }
+  .sauce-swatch::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+  }
+  .sauce-swatch .badge {
+    position: absolute; top: 14px; left: 14px;
+    background: rgba(255,255,255,0.95);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    color: var(--forest);
+    font-weight: 500;
+    backdrop-filter: blur(8px);
+    z-index: 2;
+  }
+  .sauce-swatch .emoji-overlay {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 64px;
+    z-index: 1;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+  /* 食物色系(W11 新增) */
+  .sw-pizza-truffle { background: linear-gradient(135deg, #4A3520 0%, #1A0F08 100%); }
+  .sw-pizza-meat { background: linear-gradient(135deg, #8B3A1F 0%, #4A1C0E 100%); }
+  .sw-pizza-hawaiian { background: linear-gradient(135deg, #F5A623 0%, #C9711A 100%); }
+  .sw-pizza-wagyu { background: linear-gradient(135deg, #B33232 0%, #6E1C1C 100%); }
+  .sw-pizza-durian { background: linear-gradient(135deg, #D9C247 0%, #8F7E2A 100%); }
+  .sw-quesadilla { background: linear-gradient(135deg, #C28828 0%, #6E4A14 100%); }
+  .sw-burrito { background: linear-gradient(135deg, #B87841 0%, #6E4422 100%); }
+  .sw-pasta-bolognese { background: linear-gradient(135deg, #C13A2A 0%, #75180E 100%); }
+  .sw-pasta-cream { background: linear-gradient(135deg, #E8D9A9 0%, #A89262 100%); }
+  .sw-fried-rice { background: linear-gradient(135deg, #D9B670 0%, #8B6F30 100%); }
+  .sw-burger { background: linear-gradient(135deg, #6B4423 0%, #3E2712 100%); }
+  .sw-potato { background: linear-gradient(135deg, #E8B458 0%, #A87B22 100%); }
+  .sw-sweet-potato { background: linear-gradient(135deg, #D9722E 0%, #8F3F10 100%); }
+  .sw-cod { background: linear-gradient(135deg, #E8C898 0%, #A8884F 100%); }
+  .sw-shrimp { background: linear-gradient(135deg, #F0996B 0%, #B0552C 100%); }
+  .sw-chicken-thai { background: linear-gradient(135deg, #D9923A 0%, #8B5614 100%); }
+  .sw-chicken-bite { background: linear-gradient(135deg, #C28233 0%, #75481A 100%); }
+  .sw-roast-chicken { background: linear-gradient(135deg, #B8762E 0%, #6E3F10 100%); }
+  .sw-pork-knuckle { background: linear-gradient(135deg, #8B4A1F 0%, #4A2410 100%); }
+  .sw-bbq-ribs { background: linear-gradient(135deg, #8C2A1F 0%, #4A1009 100%); }
+  .sw-sausage-platter { background: linear-gradient(135deg, #6F3A1F 0%, #3F1E0E 100%); }
+  .sw-fermented-chili { background: linear-gradient(135deg, #B83232 0%, #6E1818 100%); }
+  
+  .sauce-card .info {
+    padding: 22px 22px 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .sauce-card h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--forest);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .sauce-card .name-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--terra);
+    margin-bottom: 12px;
+  }
+  .sauce-card .desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(13,42,31,0.7);
+    margin-bottom: 14px;
+    flex-grow: 1;
+  }
+  .sauce-card .spec {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--terra);
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed rgba(27,67,50,0.12);
+  }
+  .sauce-card .tags {
+    display: flex; flex-wrap: wrap; gap: 5px;
+    margin-bottom: 14px;
+  }
+  .sauce-card .tag {
+    padding: 3px 8px;
+    background: rgba(245,200,46,0.15);
+    border-radius: 999px;
+    font-size: 10px;
+    color: #c19818;
+    font-weight: 500;
+  }
+  .sauce-card .view-link {
+    color: var(--rust);
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s;
+  }
+  .sauce-card:hover .view-link { gap: 12px; }
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>
@@ -796,212 +928,220 @@
             <div class="font-display italic text-terra text-xs tracking-wider mb-2">HEALTHY</div>
             <div class="font-serif-sc font-bold text-forest text-base">健康</div>
           </div>
-          <div class="text-center p-4 bg-white rounded-2xl border border-forest/
-<!-- 美式/意式披萨 -->
+          <div class="text-center p-4 bg-white rounded-2xl border border-forest/10">
+            <div class="font-display italic text-terra text-xs tracking-wider mb-2">CONVENIENT</div>
+            <div class="font-serif-sc font-bold text-forest text-base">便捷</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 美式/意式披萨 / American / Italian Pizza -->
 <section class="bg-paper py-12 md:py-16">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-
     <div class="grid md:grid-cols-12 gap-10 mb-10 reveal">
-      <div class="md:col-span-5">
+      <div class="md:col-span-6">
         <div class="section-no mb-6">02 / American / Italian Pizza</div>
         <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(26px, 3.2vw, 38px);">
           <span data-zh>🍕 美式/意式披萨</span>
           <span data-en>🍕 American / Italian Pizza</span>
         </h2>
-        <p class="text-sm text-forest/60 italic mt-2 font-display"><span data-zh>产品规格:</span><span data-en>Specs:</span> 110g(约 4.5 寸)</p>
       </div>
-      <div class="md:col-span-6 md:col-start-7 flex items-end">
+      <div class="md:col-span-5 md:col-start-8 flex items-end">
         <p class="font-display italic text-terra text-base md:text-lg">
           <span data-zh>童享开心小天地 · 迷你一人食</span>
           <span data-en>Mini personal pizza · just for kids</span>
         </p>
       </div>
     </div>
-
-    <div class="ps-grid reveal delay-1">
-      <a href="#" id="sku-black-pepper-beef-pizza" class="ps-card" data-foodvio-cta="sample_request" data-product="黑椒牛肉披萨">
-        <div class="visual"><span class="emoji">🍕</span><span class="cp-badge" style="background:var(--rust);">HOT</span></div>
-        <h4><span data-zh>黑椒牛肉披萨</span><span data-en>Black Pepper Beef Pizza</span></h4>
-        <div class="name-en">Black Pepper Beef Pizza</div>
-        <p style="font-size:13px;color:rgba(13,42,31,.7);line-height:1.6;margin-top:8px;">
-          <span data-zh>经典黑椒牛柳风味,跃然饼上!中西合璧的味觉狂欢</span><span data-en>Classic black pepper beef on pizza — East meets West.</span>
-        </p>
-        <div class="arrow-cta"><span data-zh>申请样品</span><span data-en>Request sample</span> →</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 reveal delay-1">
+      <a href="#" id="sku-black-pepper-beef-pizza" class="sauce-card" data-foodvio-cta="sample_request" data-product="黑椒牛肉披萨">
+        <div class="sauce-swatch sw-pizza-meat">
+          <div class="badge">🔥 HOT</div>
+          <span class="emoji-overlay">🍕</span>
+        </div>
+        <div class="info">
+          <h3><span data-zh>黑椒牛肉披萨</span><span data-en>Black Pepper Beef Pizza</span></h3>
+          <div class="name-en"><span data-zh>Black Pepper Beef Pizza</span><span data-en>黑椒牛肉披萨</span></div>
+          <p class="desc"><span data-zh>≥70% 馅料 · 现切黑椒牛肉 + 拉丝芝士</span><span data-en>≥70% filling · black-pepper beef + stretchy cheese</span></p>
+          <div class="spec">110g (4.5 寸)</div>
+          <div class="tags"><span class="tag"><span data-zh>美式</span><span data-en>American</span></span><span class="tag"><span data-zh>热销</span><span data-en>Bestseller</span></span><span class="tag"><span data-zh>儿童</span><span data-en>Kids</span></span></div>
+          <span class="view-link"><span data-zh>申请样品</span><span data-en>Request sample</span> →</span>
+        </div>
       </a>
-      <a href="#" id="sku-wagyu-bolognese-pizza" class="ps-card" data-foodvio-cta="sample_request" data-product="和牛肉酱披萨">
-        <div class="visual"><span class="emoji">🥩</span><span class="cp-badge" style="background:var(--rust);">HOT</span></div>
-        <h4><span data-zh>和牛肉酱披萨</span><span data-en>Wagyu Bolognese Pizza</span></h4>
-        <div class="name-en">Wagyu Bolognese Pizza</div>
-        <p style="font-size:13px;color:rgba(13,42,31,.7);line-height:1.6;margin-top:8px;">
-          <span data-zh>甄选高品质和牛制成意式肉酱,搭配浓郁马苏里拉,每一口都是奢华的肉感满足</span><span data-en>Premium wagyu Bolognese with rich mozzarella — luxurious meat indulgence.</span>
-        </p>
-        <div class="arrow-cta"><span data-zh>申请样品</span><span data-en>Request sample</span> →</div>
+      <a href="#" id="sku-wagyu-pizza" class="sauce-card" data-foodvio-cta="sample_request" data-product="和牛肉酱披萨">
+        <div class="sauce-swatch sw-pizza-wagyu">
+          <div class="badge">🔥 HOT</div>
+          <span class="emoji-overlay">🍕</span>
+        </div>
+        <div class="info">
+          <h3><span data-zh>和牛肉酱披萨</span><span data-en>Wagyu Bolognese Pizza</span></h3>
+          <div class="name-en"><span data-zh>Wagyu Bolognese Pizza</span><span data-en>和牛肉酱披萨</span></div>
+          <p class="desc"><span data-zh>≥70% 馅料 · 秘制和牛肉酱 + 原制马苏里拉</span><span data-en>≥70% filling · secret wagyu sauce + real mozzarella</span></p>
+          <div class="spec">110g / 180g</div>
+          <div class="tags"><span class="tag"><span data-zh>意式</span><span data-en>Italian</span></span><span class="tag"><span data-zh>和牛</span><span data-en>Wagyu</span></span><span class="tag"><span data-zh>双规格</span><span data-en>2 sizes</span></span></div>
+          <span class="view-link"><span data-zh>申请样品</span><span data-en>Request sample</span> →</span>
+        </div>
       </a>
-      <a href="#" id="sku-black-truffle-pizza" class="ps-card" data-foodvio-cta="sample_request" data-product="黑松露披萨">
-        <div class="visual"><span class="emoji">🍄</span></div>
-        <h4><span data-zh>黑松露披萨</span><span data-en>Black Truffle Pizza</span></h4>
-        <div class="name-en">Black Truffle Pizza</div>
-        <p style="font-size:13px;color:rgba(13,42,31,.7);line-height:1.6;margin-top:8px;">
-          <span data-zh>云南黑松露 · 奶油芝士基底 · 高端口味儿童版</span><span data-en>Yunnan black truffle on creamy cheese base — premium kid-friendly version.</span>
-        </p>
-        <div class="arrow-cta"><span data-zh>申请样品</span><span data-en>Request sample</span> →</div>
+      <a href="#" id="sku-black-truffle-pizza-kids" class="sauce-card" data-foodvio-cta="sample_request" data-product="黑松露披萨">
+        <div class="sauce-swatch sw-pizza-truffle">
+          
+          <span class="emoji-overlay">🍕</span>
+        </div>
+        <div class="info">
+          <h3><span data-zh>黑松露披萨</span><span data-en>Black Truffle Pizza</span></h3>
+          <div class="name-en"><span data-zh>Black Truffle Pizza</span><span data-en>黑松露披萨</span></div>
+          <p class="desc"><span data-zh>云南黑松露 + 双重芝士,儿童分享装</span><span data-en>Yunnan black truffle + double cheese · kids' sharing</span></p>
+          <div class="spec">110g (4.5 寸)</div>
+          <div class="tags"><span class="tag"><span data-zh>意式</span><span data-en>Italian</span></span><span class="tag"><span data-zh>松露</span><span data-en>Truffle</span></span><span class="tag"><span data-zh>儿童</span><span data-en>Kids</span></span></div>
+          <span class="view-link"><span data-zh>申请样品</span><span data-en>Request sample</span> →</span>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-
-<!-- 主菜大餐 -->
+<!-- 西式主食 / Western Staples -->
 <section class="bg-cream py-12 md:py-16">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-
     <div class="grid md:grid-cols-12 gap-10 mb-10 reveal">
-      <div class="md:col-span-5">
-        <div class="section-no mb-6">03 / Main Courses</div>
+      <div class="md:col-span-6">
+        <div class="section-no mb-6">03 / Western Staples</div>
         <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(26px, 3.2vw, 38px);">
-          <span data-zh>🥩 主菜大餐</span>
-          <span data-en>🥩 Main Courses</span>
+          <span data-zh>🌯 西式主食</span>
+          <span data-en>🌯 Western Staples</span>
         </h2>
-        
       </div>
-      <div class="md:col-span-6 md:col-start-7 flex items-end">
+      <div class="md:col-span-5 md:col-start-8 flex items-end">
         <p class="font-display italic text-terra text-base md:text-lg">
-          <span data-zh>西式硬菜 · 给孩子的精致主餐</span>
-          <span data-en>Western mains · refined for kids</span>
+          <span data-zh>卷饼 · 饼 · 意面 — 营养便捷儿童早餐</span>
+          <span data-en>Wraps · patties · pasta — nutritional breakfast</span>
         </p>
       </div>
     </div>
-
-    <div class="ps-grid reveal delay-1">
-      <a href="#" id="sku-american-bbq-ribs" class="ps-card" data-foodvio-cta="sample_request" data-product="美式炭烤猪肋排">
-        <div class="visual"><span class="emoji">🥩</span></div>
-        <h4><span data-zh>美式炭烤猪肋排</span><span data-en>American BBQ Pork Ribs</span></h4>
-        <div class="name-en">American BBQ Pork Ribs</div>
-        <p style="font-size:13px;color:rgba(13,42,31,.7);line-height:1.6;margin-top:8px;">
-          <span data-zh>[ 卖点 / 工艺 / 适用场景 占位,待手册补充 ]</span><span data-en>[ Highlights / process / scenarios — pending manual ]</span>
-        </p>
-        <div class="arrow-cta"><span data-zh>申请样品</span><span data-en>Request sample</span> →</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 reveal delay-1">
+      <a href="#" id="sku-cheese-beef-roll-cp" class="sauce-card" data-foodvio-cta="sample_request" data-product="芝士牛肉卷">
+        <div class="sauce-swatch sw-burrito">
+          
+          <span class="emoji-overlay">🌯</span>
+        </div>
+        <div class="info">
+          <h3><span data-zh>芝士牛肉卷</span><span data-en>Cheese Beef Roll</span></h3>
+          <div class="name-en"><span data-zh>Cheese Beef Roll</span><span data-en>芝士牛肉卷</span></div>
+          <p class="desc"><span data-zh>肉馅扎实,马苏里拉芝士融合牛肉,营养早餐首选</span><span data-en>Packed beef + mozzarella · breakfast first pick</span></p>
+          <div class="spec">120g / 180g</div>
+          <div class="tags"><span class="tag"><span data-zh>墨西哥</span><span data-en>Mexican</span></span><span class="tag"><span data-zh>早餐</span><span data-en>Breakfast</span></span><span class="tag"><span data-zh>儿童</span><span data-en>Kids</span></span></div>
+          <span class="view-link"><span data-zh>申请样品</span><span data-en>Request sample</span> →</span>
+        </div>
+      </a>
+      <a href="#" id="sku-cheese-beef-patty-cp" class="sauce-card" data-foodvio-cta="sample_request" data-product="芝士牛肉饼">
+        <div class="sauce-swatch sw-quesadilla">
+          <div class="badge">⭐ Bestseller</div>
+          <span class="emoji-overlay">🥩</span>
+        </div>
+        <div class="info">
+          <h3><span data-zh>芝士牛肉饼</span><span data-en>Cheese Beef Patty</span></h3>
+          <div class="name-en"><span data-zh>Cheese Beef Patty</span><span data-en>芝士牛肉饼</span></div>
+          <p class="desc"><span data-zh>≥70% 馅料 · ≥43% 马苏里拉 · 原切牛肉墨西哥风味</span><span data-en>≥70% filling · ≥43% mozzarella · Mexican-style</span></p>
+          <div class="spec">200g (100g × 2)</div>
+          <div class="tags"><span class="tag"><span data-zh>墨西哥</span><span data-en>Mexican</span></span><span class="tag"><span data-zh>热销</span><span data-en>Bestseller</span></span><span class="tag"><span data-zh>高馅料</span><span data-en>High-filling</span></span></div>
+          <span class="view-link"><span data-zh>申请样品</span><span data-en>Request sample</span> →</span>
+        </div>
+      </a>
+      <a href="#" id="sku-classic-bolognese-cp" class="sauce-card" data-foodvio-cta="sample_request" data-product="古法肉酱意面">
+        <div class="sauce-swatch sw-pasta-bolognese">
+          
+          <span class="emoji-overlay">🍝</span>
+        </div>
+        <div class="info">
+          <h3><span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></h3>
+          <div class="name-en"><span data-zh>Classic Bolognese Pasta</span><span data-en>古法肉酱意面</span></div>
+          <p class="desc"><span data-zh>纯牛肉酱,酱汁浓郁。30 秒煮面 · 米其林口味</span><span data-en>Pure beef ragù · 30s ready · Michelin-certified</span></p>
+          <div class="spec">350g (面 200g + 酱 150g)</div>
+          <div class="tags"><span class="tag"><span data-zh>意式</span><span data-en>Italian</span></span><span class="tag"><span data-zh>快速</span><span data-en>Fast</span></span><span class="tag"><span data-zh>儿童</span><span data-en>Kids</span></span></div>
+          <span class="view-link"><span data-zh>申请样品</span><span data-en>Request sample</span> →</span>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-
-<!-- 意面炒饭 -->
+<!-- 主菜大餐 / Main Courses -->
 <section class="bg-paper py-12 md:py-16">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-
     <div class="grid md:grid-cols-12 gap-10 mb-10 reveal">
-      <div class="md:col-span-5">
-        <div class="section-no mb-6">04 / Pasta &amp; Fried Rice</div>
+      <div class="md:col-span-6">
+        <div class="section-no mb-6">04 / Main Courses</div>
         <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(26px, 3.2vw, 38px);">
-          <span data-zh>🍝 意面炒饭</span>
-          <span data-en>🍝 Pasta &amp; Fried Rice</span>
+          <span data-zh>🍗 主菜大餐</span>
+          <span data-en>🍗 Main Courses</span>
         </h2>
-        
       </div>
-      <div class="md:col-span-6 md:col-start-7 flex items-end">
+      <div class="md:col-span-5 md:col-start-8 flex items-end">
         <p class="font-display italic text-terra text-base md:text-lg">
-          <span data-zh>经典主食 · 一份就饱</span>
-          <span data-en>Classic staples · one bowl satisfies</span>
+          <span data-zh>迷你版主菜 · 节日 / 周末家庭餐</span>
+          <span data-en>Mini mains · holiday / weekend family meals</span>
         </p>
       </div>
     </div>
-
-    <div class="ps-grid reveal delay-1">
-      <a href="#" id="sku-classic-bolognese" class="ps-card" data-foodvio-cta="sample_request" data-product="古法肉酱意面">
-        <div class="visual"><span class="emoji">🍝</span></div>
-        <h4><span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></h4>
-        <div class="name-en">Classic Bolognese Pasta</div>
-        <p style="font-size:13px;color:rgba(13,42,31,.7);line-height:1.6;margin-top:8px;">
-          <span data-zh>[ 卖点 / 工艺 / 适用场景 占位,待手册补充 ]</span><span data-en>[ Highlights / process / scenarios — pending manual ]</span>
-        </p>
-        <div class="arrow-cta"><span data-zh>申请样品</span><span data-en>Request sample</span> →</div>
-      </a>
-      <a href="#" id="sku-japanese-squid-rice" class="ps-card" data-foodvio-cta="sample_request" data-product="日式鱿鱼炒饭">
-        <div class="visual"><span class="emoji">🍱</span></div>
-        <h4><span data-zh>日式鱿鱼炒饭</span><span data-en>Japanese Squid Fried Rice</span></h4>
-        <div class="name-en">Japanese Squid Fried Rice</div>
-        <p style="font-size:13px;color:rgba(13,42,31,.7);line-height:1.6;margin-top:8px;">
-          <span data-zh>[ 卖点 / 工艺 / 适用场景 占位,待手册补充 ]</span><span data-en>[ Highlights / process / scenarios — pending manual ]</span>
-        </p>
-        <div class="arrow-cta"><span data-zh>申请样品</span><span data-en>Request sample</span> →</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 reveal delay-1">
+      <a href="#" id="sku-italian-mini-chicken" class="sauce-card" data-foodvio-cta="sample_request" data-product="意式香草萌萌鸡">
+        <div class="sauce-swatch sw-roast-chicken">
+          <div class="badge">🆕 NEW</div>
+          <span class="emoji-overlay">🍗</span>
+        </div>
+        <div class="info">
+          <h3><span data-zh>意式香草萌萌鸡</span><span data-en>Italian Herb Mini Chicken</span></h3>
+          <div class="name-en"><span data-zh>Italian Herb Mini Chicken</span><span data-en>意式香草萌萌鸡</span></div>
+          <p class="desc"><span data-zh>迷你版意式香草烤鸡 · 儿童份量 · 香草配方</span><span data-en>Mini Italian herb roast chicken · kids' portion</span></p>
+          <div class="spec">320g 单人份</div>
+          <div class="tags"><span class="tag"><span data-zh>意式</span><span data-en>Italian</span></span><span class="tag"><span data-zh>新品</span><span data-en>New</span></span><span class="tag"><span data-zh>儿童</span><span data-en>Kids</span></span></div>
+          <span class="view-link"><span data-zh>申请样品</span><span data-en>Request sample</span> →</span>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-
-<!-- 意式烤鸡 -->
+<!-- 健康小菜 / Healthy Sides -->
 <section class="bg-cream py-12 md:py-16">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-
     <div class="grid md:grid-cols-12 gap-10 mb-10 reveal">
-      <div class="md:col-span-5">
-        <div class="section-no mb-6">05 / Roast Chicken</div>
-        <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(26px, 3.2vw, 38px);">
-          <span data-zh>🍗 意式烤鸡</span>
-          <span data-en>🍗 Roast Chicken</span>
-        </h2>
-        
-      </div>
-      <div class="md:col-span-6 md:col-start-7 flex items-end">
-        <p class="font-display italic text-terra text-base md:text-lg">
-          <span data-zh>可爱命名 · 萌系造型</span>
-          <span data-en>Cute design · kid-friendly shape</span>
-        </p>
-      </div>
-    </div>
-
-    <div class="ps-grid reveal delay-1">
-      <a href="#" id="sku-italian-herb-chicken" class="ps-card" data-foodvio-cta="sample_request" data-product="意式香草萌萌鸡">
-        <div class="visual"><span class="emoji">🍗</span><span class="cp-badge" style="background:var(--terra);">NEW</span></div>
-        <h4><span data-zh>意式香草萌萌鸡</span><span data-en>Italian Herb Mini Chicken</span></h4>
-        <div class="name-en">Italian Herb Mini Chicken</div>
-        <p style="font-size:13px;color:rgba(13,42,31,.7);line-height:1.6;margin-top:8px;">
-          <span data-zh>[ 卖点 / 工艺 / 适用场景 占位,待手册补充 ]</span><span data-en>[ Highlights / process / scenarios — pending manual ]</span>
-        </p>
-        <div class="arrow-cta"><span data-zh>申请样品</span><span data-en>Request sample</span> →</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- 健康小菜 -->
-<section class="bg-paper py-12 md:py-16">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-
-    <div class="grid md:grid-cols-12 gap-10 mb-10 reveal">
-      <div class="md:col-span-5">
-        <div class="section-no mb-6">06 / Healthy Sides</div>
+      <div class="md:col-span-6">
+        <div class="section-no mb-6">05 / Healthy Sides</div>
         <h2 class="font-serif-sc font-bold text-forest leading-tight" style="font-size: clamp(26px, 3.2vw, 38px);">
           <span data-zh>🌶️ 健康小菜</span>
           <span data-en>🌶️ Healthy Sides</span>
         </h2>
-        
       </div>
-      <div class="md:col-span-6 md:col-start-7 flex items-end">
+      <div class="md:col-span-5 md:col-start-8 flex items-end">
         <p class="font-display italic text-terra text-base md:text-lg">
-          <span data-zh>益生菌发酵 · 助力肠道健康</span>
-          <span data-en>Probiotic fermented · gut health for kids</span>
+          <span data-zh>FEATURED · 健康发酵 · 益生菌</span>
+          <span data-en>FEATURED · fermented healthy · probiotic</span>
         </p>
       </div>
     </div>
-
-    <div class="ps-grid reveal delay-1">
-      <a href="#" id="sku-fermented-chili" class="ps-card" data-foodvio-cta="sample_request" data-product="健康发酵辣椒">
-        <div class="visual"><span class="emoji">🌶️</span><span class="cp-badge" style="background:var(--gold);">FEATURED</span></div>
-        <h4><span data-zh>健康发酵辣椒</span><span data-en>Healthy Fermented Chili</span></h4>
-        <div class="name-en">Healthy Fermented Chili</div>
-        <p style="font-size:13px;color:rgba(13,42,31,.7);line-height:1.6;margin-top:8px;">
-          <span data-zh>江西赣南螺丝椒 · 益生菌发酵工艺 · 30-50K SHU 温和辣度,儿童可接受范围</span><span data-en>Gannan Luosijiao chili · probiotic fermentation · 30-50K SHU mild heat, kid-friendly.</span>
-        </p>
-        <div class="arrow-cta"><span data-zh>申请样品</span><span data-en>Request sample</span> →</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 reveal delay-1">
+      <a href="#" id="sku-fermented-chili" class="sauce-card" data-foodvio-cta="sample_request" data-product="健康发酵辣椒">
+        <div class="sauce-swatch sw-fermented-chili">
+          <div class="badge">💚 HEALTHY</div>
+          <span class="emoji-overlay">🌶️</span>
+        </div>
+        <div class="info">
+          <h3><span data-zh>健康发酵辣椒</span><span data-en>Healthy Fermented Chili</span></h3>
+          <div class="name-en"><span data-zh>Healthy Fermented Chili</span><span data-en>健康发酵辣椒</span></div>
+          <p class="desc"><span data-zh>传统乳酸发酵工艺,赣南螺丝椒 + 益生菌,温和不上火</span><span data-en>Traditional lacto-fermented · Gannan chili + probiotic</span></p>
+          <div class="spec">200g</div>
+          <div class="tags"><span class="tag"><span data-zh>健康</span><span data-en>Healthy</span></span><span class="tag"><span data-zh>益生菌</span><span data-en>Probiotic</span></span><span class="tag"><span data-zh>发酵</span><span data-en>Fermented</span></span></div>
+          <span class="view-link"><span data-zh>申请样品</span><span data-en>Request sample</span> →</span>
+        </div>
       </a>
     </div>
   </div>
 </section>
+
 
 olor:var(--terra);margin-top:8px;font-style:italic;font-family:'Cormorant Garamond',serif;">规格 · 90g · 芝士、淡奶油</div>
           <div class="arrow-cta"><span data-zh>申请样品</span><span data-en>Request sample</span> →</div>

@@ -70,24 +70,57 @@
   }
 
   /* ==========================================
-     Hero background - editorial photo feel
+     Hero background - editorial photo carousel (W11 · Ken Burns)
      ========================================== */
   .hero-bg {
     position: absolute; inset: 0;
     background: var(--ink);
     overflow: hidden;
   }
+  /* 3 张图叠放 · Ken Burns 缓慢放大 · 15s 一个完整循环(每张 5s) */
+  .hero-slide {
+    position: absolute; inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: heroFade 15s infinite;
+    will-change: opacity, transform;
+  }
+  .hero-slide-1 {
+    background-image: url('assets/hero/hero-01.jpg');
+    animation-delay: 0s;
+  }
+  .hero-slide-2 {
+    background-image: url('assets/hero/hero-02.jpg');
+    animation-delay: 5s;
+  }
+  .hero-slide-3 {
+    background-image: url('assets/hero/hero-03.jpg');
+    animation-delay: 10s;
+  }
+  /* Ken Burns 缩放 — 跟透明度同步,每张 5 秒内从 1.0 → 1.08 缓慢放大 */
+  @keyframes heroFade {
+    0%    { opacity: 0; transform: scale(1.00); }
+    6%    { opacity: 1; transform: scale(1.01); }   /* 淡入完成 0.9s */
+    26%   { opacity: 1; transform: scale(1.05); }   /* 高潮停留 */
+    33%   { opacity: 1; transform: scale(1.07); }   /* 5s 末尾,几乎到顶 */
+    40%   { opacity: 0; transform: scale(1.08); }   /* 淡出完成 1.05s */
+    100%  { opacity: 0; transform: scale(1.00); }
+  }
+  /* 整体暗化遮罩,保证文字可读 */
   .hero-bg::before {
     content: ''; position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse at 25% 30%, rgba(224,122,95,0.18) 0%, transparent 55%),
-      radial-gradient(ellipse at 80% 70%, rgba(129,178,154,0.12) 0%, transparent 50%),
-      radial-gradient(ellipse at 60% 10%, rgba(245,200,46,0.08) 0%, transparent 60%);
+      linear-gradient(135deg, rgba(13,42,31,0.55) 0%, rgba(13,42,31,0.35) 50%, rgba(13,42,31,0.65) 100%);
+    z-index: 1;
+    pointer-events: none;
   }
   .hero-bg::after {
     content: ''; position: absolute; inset: 0;
     background-image:
-      linear-gradient(180deg, transparent 0%, transparent 60%, rgba(13,42,31,0.5) 100%);
+      linear-gradient(180deg, transparent 0%, transparent 50%, rgba(13,42,31,0.7) 100%);
+    z-index: 2;
+    pointer-events: none;
   }
 
   /* Subtle moving particles for life, not "drama" */
@@ -833,20 +866,19 @@
 </nav>
 
 <!-- ═══════════════════════════════════════════
-     SCREEN 1 · HERO (restrained)
+     SCREEN 1 · HERO (W11 · 3 图轮播 Ken Burns)
      5 elements: brand mark / Slogan / EN slogan / 1 CTA / 1 ghost link
      ═══════════════════════════════════════════
-     ⚠️ W10-fix-2 标记 · 此 hero 为"视频/动画轮播预留位"
-     未来 Jerome 会替换为:
-       1) 全屏视频背景:<video autoplay muted loop playsinline class="hero-video">
-            <source src="hero-video.mp4" type="video/mp4">
-          </video>
-       2) 或图片轮播:swiper.js + 3-5 张高清品牌图
-     文字内容暂保留,可叠在视频/轮播上(z-10 层)
+     ⚠️ Banner 图位于 assets/hero/hero-01.jpg / hero-02.jpg / hero-03.jpg
+     每张 5 秒,Ken Burns 缓慢放大 1.0 → 1.08,fade 衔接
+     如需替换:把新图放进 assets/hero/ 同名覆盖即可
      ═══════════════════════════════════════════ -->
 <section class="relative h-screen min-h-[760px] flex items-center overflow-hidden">
-  <!-- ⚠️ 待替换:hero-bg 是当前的渐变背景,后续可替换为 <video> 或 swiper -->
-  <div class="hero-bg"></div>
+  <div class="hero-bg">
+    <div class="hero-slide hero-slide-1"></div>
+    <div class="hero-slide hero-slide-2"></div>
+    <div class="hero-slide hero-slide-3"></div>
+  </div>
   <div class="hero-particles" id="particles"></div>
 
   <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
