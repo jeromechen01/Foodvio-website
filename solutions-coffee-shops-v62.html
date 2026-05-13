@@ -345,6 +345,283 @@
     .h2-block{padding-bottom:20px;margin-bottom:24px}
   }
 
+
+  /* W12 · Mobile P1 优化 */
+  @media (max-width: 768px) {
+    /* 1. sauce-card swatch 在手机端从 4:3 改为 16:9,信息更紧凑 */
+    .sauce-card .sauce-swatch { aspect-ratio: 16/9 !important; }
+    .sauce-card .sauce-swatch .emoji-overlay { font-size: 48px !important; }
+    .sauce-card .info { padding: 16px 16px 18px !important; }
+    .sauce-card h3 { font-size: 16px !important; }
+    .sauce-card .name-en { font-size: 12px !important; margin-bottom: 8px !important; }
+    .sauce-card .desc { font-size: 12px !important; margin-bottom: 10px !important; }
+    .sauce-card .spec { font-size: 11px !important; padding-bottom: 10px !important; margin-bottom: 10px !important; }
+    .sauce-card .tag { font-size: 9px !important; padding: 2px 6px !important; }
+    .sauce-card .view-link { font-size: 11px !important; }
+  }
+  @media (max-width: 520px) {
+    /* 2. 子页 hero h1 在小屏再缩一档 */
+    section > div > .max-w-4xl h1,
+    section h1[style*="clamp(38px"],
+    section h1[style*="clamp(40px"] {
+      font-size: clamp(28px, 7vw, 40px) !important;
+    }
+    /* 3. 容器 padding 从 px-6 缩为 px-4(更多内容宽度) */
+    .max-w-\[1440px\].mx-auto.px-6,
+    .max-w-\[1100px\].mx-auto.px-6 {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    /* 4. section_no 字号缩 */
+    .section-no { font-size: 12px !important; }
+    /* 5. h2 主标题缩(分散在各页面的 inline style) */
+    h2[style*="clamp(26px"],
+    h2[style*="clamp(28px"] {
+      font-size: clamp(20px, 5vw, 28px) !important;
+    }
+  }
+  @media (max-width: 480px) {
+    /* 6. products-sauces 18 卡在小屏改 1 列(避免 2 列挤压) */
+    section .grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-5 {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+
+  /* W12 P0-1 · Mobile Hamburger Menu */
+  .nav-hamburger {
+    display: none;
+    width: 28px; height: 28px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 60;
+  }
+  .nav-hamburger span {
+    display: block;
+    height: 1.5px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(.16,.84,.28,.99);
+    transform-origin: center;
+  }
+  .nav-bar.dark-page.scrolled .nav-hamburger span { background: var(--forest); }
+  /* X 状态 */
+  body.nav-drawer-open .nav-hamburger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    background: #fff !important;
+  }
+  body.nav-drawer-open .nav-hamburger span:nth-child(2) { opacity: 0; }
+  body.nav-drawer-open .nav-hamburger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    background: #fff !important;
+  }
+
+  /* Drawer 弹层 */
+  .nav-drawer {
+    position: fixed;
+    top: 0; right: 0;
+    width: 280px; max-width: 85vw;
+    height: 100vh;
+    background: var(--ink);
+    z-index: 55;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(.16,.84,.28,.99);
+    padding: 80px 28px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -8px 0 32px -8px rgba(0,0,0,0.4);
+    overflow-y: auto;
+  }
+  body.nav-drawer-open .nav-drawer { transform: translateX(0); }
+
+  .nav-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(13,42,31,0.55);
+    backdrop-filter: blur(4px);
+    z-index: 54;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  body.nav-drawer-open .nav-drawer-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-drawer-link {
+    display: block;
+    padding: 14px 0;
+    color: rgba(255,255,255,0.85);
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-decoration: none;
+    transition: color 0.2s, padding-left 0.2s;
+  }
+  .nav-drawer-link:hover,
+  .nav-drawer-link.active {
+    color: var(--gold);
+    padding-left: 6px;
+  }
+  .nav-drawer-link .en {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+    letter-spacing: 0.04em;
+  }
+  body.lang-en .nav-drawer-link .zh { display: none; }
+  body:not(.lang-en) .nav-drawer-link .en-only { display: none; }
+
+  .nav-drawer-footer {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .nav-drawer-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    background: var(--rust);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .nav-drawer-cta:hover { background: rgba(199,62,58,0.85); }
+  .nav-drawer-contact {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+  }
+
+  /* 显示规则 */
+  @media (max-width: 1023px) {
+    .nav-hamburger { display: flex; }
+    /* 桌面端的 Contact 按钮已经 hidden md:inline-flex,平板/手机端隐藏 */
+  }
+  /* drawer 默认存在但 transform 隐藏,移动端起效;桌面端永远不显示 */
+  @media (min-width: 1024px) {
+    .nav-drawer, .nav-drawer-backdrop { display: none !important; }
+  }
+
+  /* 锁滚动 */
+  body.nav-drawer-open { overflow: hidden; }
+
+
+  /* W13 · 移动端比例协调(参考全球食品品牌) */
+  @media (max-width: 768px) {
+    /* ───── A. sauce-card 正文回升到全球标准 ───── */
+    .sauce-card h3 { font-size: 17px !important; line-height: 1.35 !important; margin-bottom: 6px !important; }
+    .sauce-card .name-en { font-size: 13px !important; margin-bottom: 10px !important; }
+    .sauce-card .desc { font-size: 13px !important; line-height: 1.5 !important; margin-bottom: 12px !important; }
+    .sauce-card .spec { font-size: 12px !important; padding-bottom: 12px !important; margin-bottom: 12px !important; }
+    .sauce-card .tag { font-size: 11px !important; padding: 3px 8px !important; }
+    .sauce-card .view-link { font-size: 13px !important; }
+    .sauce-card .info { padding: 18px 18px 20px !important; }
+    /* sauce-card swatch 略增高(16/9 太扁),改为 5/3 */
+    .sauce-card .sauce-swatch { aspect-ratio: 5/3 !important; }
+    .sauce-card .sauce-swatch .emoji-overlay { font-size: 56px !important; }
+
+    /* ───── B. ps-card(首页 R2-A 矩阵)正文协调 ───── */
+    .ps-card h4 { font-size: 16px !important; line-height: 1.35 !important; }
+    .ps-card .name-en { font-size: 12px !important; }
+    .ps-card .arrow-cta { font-size: 13px !important; }
+    .ps-card { padding: 18px 16px 20px !important; min-height: 220px !important; }
+
+    /* ───── C. ps-more-mobile 全宽按钮字号合适 ───── */
+    .ps-more-mobile { font-size: 14px !important; padding: 13px 18px !important; }
+
+    /* ───── D. 抽屉菜单字号回升 ───── */
+    .nav-drawer-link { font-size: 16px !important; padding: 13px 0 !important; }
+    .nav-drawer-link .en { font-size: 11px !important; margin-top: 3px !important; }
+    .nav-drawer-cta { font-size: 14px !important; padding: 13px 20px !important; }
+    .nav-drawer-contact { font-size: 12px !important; line-height: 1.7 !important; }
+
+    /* ───── E. section eyebrow 协调 ───── */
+    .section-no { font-size: 13px !important; }
+
+    /* ───── F. 段落正文最小可读字号 ───── */
+    p { font-size: max(14px, 1em); }
+  }
+
+  @media (max-width: 520px) {
+    /* 小屏(iPhone SE / Android 普通)进一步精修 */
+    .sauce-card h3 { font-size: 16px !important; }
+    .sauce-card .desc { font-size: 13px !important; }
+    .sauce-card .name-en { font-size: 12px !important; }
+    .sauce-card .spec { font-size: 11px !important; }
+    .sauce-card .tag { font-size: 10px !important; }
+    .sauce-card .view-link { font-size: 12px !important; }
+    .sauce-card .info { padding: 16px 16px 18px !important; }
+    .sauce-card .sauce-swatch .emoji-overlay { font-size: 48px !important; }
+
+    /* 子页 hero h1 (W12 用 clamp(28px, 7vw, 40px)) — W13 微调以适配 1-2 行布局 */
+    section h1[style*="clamp(38px"],
+    section h1[style*="clamp(40px"] {
+      font-size: clamp(26px, 6.5vw, 36px) !important;
+      line-height: 1.15 !important;
+    }
+
+    /* 首页 hero — 主标题克制 */
+    .hero-title-zh, .hero-title-en {
+      font-size: clamp(30px, 8vw, 44px) !important;
+      line-height: 1.1 !important;
+    }
+
+    /* h2 section 标题 */
+    h2[style*="clamp(26px"],
+    h2[style*="clamp(28px"] {
+      font-size: clamp(22px, 5.2vw, 28px) !important;
+      line-height: 1.2 !important;
+    }
+
+    /* 段落最小字号 */
+    p, p[class*="text-"] { font-size: 14px !important; line-height: 1.55 !important; }
+  }
+
+  @media (max-width: 380px) {
+    /* iPhone SE 等超小屏 */
+    .hero-title-zh, .hero-title-en {
+      font-size: clamp(26px, 7.5vw, 36px) !important;
+    }
+    .sauce-card .info { padding: 14px 14px 16px !important; }
+    .sauce-card h3 { font-size: 15px !important; }
+  }
+
+  /* W13 G. 全站图文比例协调 ───── */
+  @media (max-width: 768px) {
+    /* hero section 容器内边距统一 */
+    section.h-screen .max-w-\[1440px\] { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+
+    /* 首页 R2-A cat-row 间距统一 */
+    .ps-cat-row { margin-bottom: 28px !important; }
+    .ps-cat-row .icon { font-size: 22px !important; }
+    .ps-cat-title h3 { font-size: 18px !important; line-height: 1.25 !important; }
+    .ps-cat-title .en { font-size: 11px !important; }
+
+    /* section padding 收紧 */
+    section.py-12 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+    section.py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+
+    /* h2 大标题与 section_no 间距收紧 */
+    .section-no { margin-bottom: 0.75rem !important; }
+  }
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>
@@ -369,6 +646,10 @@
     <div class="flex items-center gap-4">
       <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+            <!-- W12 P0-1 · mobile hamburger menu -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
       <button onclick="toggleLang()" class="lang-toggle" id="lang-toggle-btn"><span class="lang-zh">中</span><span class="lang-sep"> / </span><span class="lang-en">EN</span></button>
       <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
@@ -497,6 +778,25 @@
     </div>
   </div>
 </nav>
+<!-- W12 P0-1 · mobile drawer -->
+<div class="nav-drawer-backdrop" id="navDrawerBackdrop"></div>
+<aside class="nav-drawer" id="navDrawer" aria-hidden="true">
+  <a href="products-index-v62.html" class="nav-drawer-link "><span class="zh">产品</span><span class="en-only">Products</span><span class="en">Products</span></a>
+  <a href="solutions-index-v62.html" class="nav-drawer-link active"><span class="zh">方案</span><span class="en-only">Solutions</span><span class="en">Solutions</span></a>
+  <a href="our-story-index-v62.html" class="nav-drawer-link "><span class="zh">品牌故事</span><span class="en-only">Our Story</span><span class="en">Our Story</span></a>
+  <a href="capabilities-index-v62.html" class="nav-drawer-link "><span class="zh">能力体系</span><span class="en-only">Capabilities</span><span class="en">Capabilities</span></a>
+  <a href="insights-v62.html" class="nav-drawer-link "><span class="zh">行业洞察</span><span class="en-only">Insights</span><span class="en">Insights</span></a>
+  <a href="about-v62.html" class="nav-drawer-link "><span class="zh">关于我们</span><span class="en-only">About</span><span class="en">About</span></a>
+
+  <div class="nav-drawer-footer">
+    <a href="#" class="nav-drawer-cta" data-foodvio-cta="general_contact"><span class="zh">联系我们</span><span class="en-only">Contact us</span></a>
+    <div class="nav-drawer-contact">
+      ✉ huahuakefu1@foodvio.com.cn<br>
+      ☎ 400-6879-568
+    </div>
+  </div>
+</aside>
+
 
 <!-- ═══════════ HERO ═══════════ -->
 <section class="relative min-h-[640px] flex items-end pb-20 pt-20 overflow-hidden">
@@ -1112,6 +1412,24 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 reveals.forEach(el => obs.observe(el));
+
+
+// W12 P0-1 · Hamburger toggle
+(function(){
+  const burger = document.getElementById('navHamburger');
+  const drawer = document.getElementById('navDrawer');
+  const backdrop = document.getElementById('navDrawerBackdrop');
+  if (!burger || !drawer) return;
+  function open(){ document.body.classList.add('nav-drawer-open'); drawer.setAttribute('aria-hidden','false'); }
+  function close(){ document.body.classList.remove('nav-drawer-open'); drawer.setAttribute('aria-hidden','true'); }
+  function toggle(){ document.body.classList.contains('nav-drawer-open') ? close() : open(); }
+  burger.addEventListener('click', toggle);
+  if (backdrop) backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  // 点 drawer 内链接后自动关
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+})();
+
 </script>
 
 
