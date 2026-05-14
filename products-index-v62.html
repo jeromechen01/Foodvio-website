@@ -897,6 +897,32 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
+
+  /* W16 · products-index ps-card-rich 接图样式 */
+  .ps-card-rich.has-image .visual {
+    position: relative;
+    overflow: hidden;
+  }
+  .ps-card-rich.has-image .visual .emoji {
+    display: none;
+  }
+  .ps-card-rich.has-image .visual::after {
+    display: none;
+  }
+  .ps-card-rich-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .ps-card-rich-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>
@@ -989,7 +1015,6 @@
         <a href="for-global-v62.html" class="mega-link">🟢 全球连锁(4)</a>
         <a href="for-industrial-v62.html" class="mega-link">🟡 机构团餐(3)</a>
         <a href="for-retail-v62.html" class="mega-link">🟠 新零售(3)</a>
-        <a href="for-online-sales-v62.html" class="mega-link">🟣 特殊业态(2)</a>
       </div>
       <div class="col-span-4">
         <div class="mega-col-title">Featured Cases</div>
@@ -1152,8 +1177,14 @@
     </div>
 
     <div class="ps-grid reveal delay-1">
-      <a href="products-sauces-v62.html#sku-tomato-bolognese" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="番茄牛肉酱">
-        <div class="visual"><span class="emoji">🥫</span></div>
+      <a href="products-sauces-v62.html#sku-tomato-bolognese" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="番茄牛肉酱">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-tomato-bolognese.webp">
+              <img src="assets/products/sku-tomato-bolognese.jpg" alt="番茄牛肉酱" loading="lazy">
+            </picture>
+            <span class="emoji">🥫</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>番茄牛肉酱</span><span data-en>Tomato Bolognese</span></h4>
           <div class="pname-en">Tomato Bolognese Sauce</div>
@@ -1174,8 +1205,14 @@
         </div>
       </a>
 
-      <a href="products-sauces-v62.html#sku-creamy-mushroom" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="奶油蘑菇酱">
-        <div class="visual"><span class="emoji">🍄</span></div>
+      <a href="products-sauces-v62.html#sku-creamy-mushroom" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="奶油蘑菇酱">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-creamy-mushroom.webp">
+              <img src="assets/products/sku-creamy-mushroom.jpg" alt="奶油蘑菇酱" loading="lazy">
+            </picture>
+            <span class="emoji">🍄</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>奶油蘑菇酱</span><span data-en>Creamy Mushroom</span></h4>
           <div class="pname-en">Creamy Mushroom Sauce</div>
@@ -1196,8 +1233,14 @@
         </div>
       </a>
 
-      <a href="products-sauces-v62.html#sku-basil-pesto" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="罗勒松子青酱">
-        <div class="visual"><span class="emoji">🌿</span></div>
+      <a href="products-sauces-v62.html#sku-basil-pesto" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="罗勒松子青酱">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-basil-pesto.webp">
+              <img src="assets/products/sku-basil-pesto.jpg" alt="罗勒松子青酱" loading="lazy">
+            </picture>
+            <span class="emoji">🌿</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>罗勒松子青酱</span><span data-en>Basil Pesto</span></h4>
           <div class="pname-en">Basil Pine Nut Pesto</div>
@@ -1268,8 +1311,14 @@
     </div>
 
     <div class="ps-grid reveal delay-1">
-      <a href="products-staples-v62.html#sku-black-truffle-pizza" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="黑松露披萨">
-        <div class="visual"><span class="emoji">🍕</span></div>
+      <a href="products-staples-v62.html#sku-black-truffle-pizza" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="黑松露披萨">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-black-truffle-pizza.webp">
+              <img src="assets/products/sku-black-truffle-pizza.jpg" alt="黑松露披萨" loading="lazy">
+            </picture>
+            <span class="emoji">🍕</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>黑松露披萨</span><span data-en>Black Truffle Pizza</span></h4>
           <div class="pname-en">Black Truffle Pizza</div>
@@ -1290,8 +1339,14 @@
         </div>
       </a>
 
-      <a href="products-staples-v62.html#sku-classic-bolognese" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="古法肉酱意面">
-        <div class="visual"><span class="emoji">🍝</span></div>
+      <a href="products-staples-v62.html#sku-classic-bolognese" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="古法肉酱意面">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-classic-bolognese.webp">
+              <img src="assets/products/sku-classic-bolognese.jpg" alt="古法肉酱意面" loading="lazy">
+            </picture>
+            <span class="emoji">🍝</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></h4>
           <div class="pname-en">Classic Bolognese Pasta</div>
@@ -1312,8 +1367,14 @@
         </div>
       </a>
 
-      <a href="products-staples-v62.html#sku-japanese-squid-rice" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="日式鱿鱼炒饭">
-        <div class="visual"><span class="emoji">🍱</span></div>
+      <a href="products-staples-v62.html#sku-japanese-squid-rice" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="日式鱿鱼炒饭">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-japanese-squid-rice.webp">
+              <img src="assets/products/sku-japanese-squid-rice.jpg" alt="日式鱿鱼炒饭" loading="lazy">
+            </picture>
+            <span class="emoji">🍱</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>日式鱿鱼炒饭</span><span data-en>Japanese Squid Fried Rice</span></h4>
           <div class="pname-en">Japanese Squid Fried Rice</div>
@@ -1334,8 +1395,14 @@
         </div>
       </a>
 
-      <a href="products-staples-v62.html#sku-cheese-beef-patty" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="芝士牛肉饼">
-        <div class="visual"><span class="emoji">🥩</span></div>
+      <a href="products-staples-v62.html#sku-cheese-beef-patty" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="芝士牛肉饼">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-cheese-beef-patty.webp">
+              <img src="assets/products/sku-cheese-beef-patty.jpg" alt="芝士牛肉饼" loading="lazy">
+            </picture>
+            <span class="emoji">🥩</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>芝士牛肉饼(墨西哥风味)</span><span data-en>Cheese Beef Patty</span></h4>
           <div class="pname-en">Beef Cheese Quesadilla</div>
@@ -1384,8 +1451,14 @@
     </div>
 
     <div class="ps-grid reveal delay-1">
-      <a href="products-snacks-v62.html#sku-sweet-potato-fries" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="原切红薯条">
-        <div class="visual"><span class="emoji">🍠</span></div>
+      <a href="products-snacks-v62.html#sku-sweet-potato-fries" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="原切红薯条">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-sweet-potato-fries.webp">
+              <img src="assets/products/sku-sweet-potato-fries.jpg" alt="原切红薯条" loading="lazy">
+            </picture>
+            <span class="emoji">🍠</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>原切红薯条</span><span data-en>Cut Sweet Potato Fries</span></h4>
           <div class="pname-en">Cut Sweet Potato Fries</div>
@@ -1406,8 +1479,14 @@
         </div>
       </a>
 
-      <a href="products-snacks-v62.html#sku-crispy-potato" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="香酥土豆块">
-        <div class="visual"><span class="emoji">🥔</span></div>
+      <a href="products-snacks-v62.html#sku-crispy-potato" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="香酥土豆块">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-crispy-potato.webp">
+              <img src="assets/products/sku-crispy-potato.jpg" alt="香酥土豆块" loading="lazy">
+            </picture>
+            <span class="emoji">🥔</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>香酥土豆块</span><span data-en>Crispy Potato Cubes</span></h4>
           <div class="pname-en">Crispy Potato Cubes</div>
@@ -1428,8 +1507,14 @@
         </div>
       </a>
 
-      <a href="products-snacks-v62.html#sku-golden-cod" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="黄金鳕鱼排">
-        <div class="visual"><span class="emoji">🐟</span></div>
+      <a href="products-snacks-v62.html#sku-golden-cod" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="黄金鳕鱼排">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-golden-cod.webp">
+              <img src="assets/products/sku-golden-cod.jpg" alt="黄金鳕鱼排" loading="lazy">
+            </picture>
+            <span class="emoji">🐟</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>黄金鳕鱼排</span><span data-en>Golden Cod Fillet</span></h4>
           <div class="pname-en">Golden Cod Fillet</div>
@@ -1450,8 +1535,14 @@
         </div>
       </a>
 
-      <a href="products-snacks-v62.html#sku-chicken-bites" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="鸡肉锅巴">
-        <div class="visual"><span class="emoji">🍗</span></div>
+      <a href="products-snacks-v62.html#sku-chicken-bites" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="鸡肉锅巴">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-chicken-bites.webp">
+              <img src="assets/products/sku-chicken-bites.jpg" alt="鸡肉锅巴" loading="lazy">
+            </picture>
+            <span class="emoji">🍗</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>鸡肉锅巴</span><span data-en>Chicken Crispy Bites</span></h4>
           <div class="pname-en">Chicken Crispy Bites</div>
@@ -1500,8 +1591,14 @@
     </div>
 
     <div class="ps-grid reveal delay-1">
-      <a href="products-mains-v62.html#sku-italian-roast-chicken" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="意式烤鸡">
-        <div class="visual"><span class="emoji">🍗</span></div>
+      <a href="products-mains-v62.html#sku-italian-roast-chicken" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="意式烤鸡">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-italian-roast-chicken.webp">
+              <img src="assets/products/sku-italian-roast-chicken.jpg" alt="意式烤鸡" loading="lazy">
+            </picture>
+            <span class="emoji">🍗</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>意式香草烤鸡</span><span data-en>Italian Herb Roast Chicken</span></h4>
           <div class="pname-en">Italian Herb Roast Chicken</div>
@@ -1522,8 +1619,14 @@
         </div>
       </a>
 
-      <a href="products-mains-v62.html#sku-german-pork-knuckle" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="德式脆皮猪肘">
-        <div class="visual"><span class="emoji">🍖</span></div>
+      <a href="products-mains-v62.html#sku-german-pork-knuckle" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="德式脆皮猪肘">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-german-pork-knuckle.webp">
+              <img src="assets/products/sku-german-pork-knuckle.jpg" alt="德式脆皮猪肘" loading="lazy">
+            </picture>
+            <span class="emoji">🍖</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>德式脆皮猪肘</span><span data-en>German Crispy Pork Knuckle</span></h4>
           <div class="pname-en">German Crispy Pork Knuckle</div>
@@ -1544,8 +1647,14 @@
         </div>
       </a>
 
-      <a href="products-mains-v62.html#sku-american-bbq-ribs" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="美式炭烤猪肋排">
-        <div class="visual"><span class="emoji">🥩</span></div>
+      <a href="products-mains-v62.html#sku-american-bbq-ribs" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="美式炭烤猪肋排">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-american-bbq-ribs.webp">
+              <img src="assets/products/sku-american-bbq-ribs.jpg" alt="美式炭烤猪肋排" loading="lazy">
+            </picture>
+            <span class="emoji">🥩</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>美式炭烤猪肋排</span><span data-en>American BBQ Pork Ribs</span></h4>
           <div class="pname-en">American BBQ Pork Ribs</div>
@@ -1566,8 +1675,14 @@
         </div>
       </a>
 
-      <a href="products-mains-v62.html#sku-german-classic-platter" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="德国经典拼盘">
-        <div class="visual"><span class="emoji">🌭</span></div>
+      <a href="products-mains-v62.html#sku-german-classic-platter" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="德国经典拼盘">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-german-classic-platter.webp">
+              <img src="assets/products/sku-german-classic-platter.jpg" alt="德国经典拼盘" loading="lazy">
+            </picture>
+            <span class="emoji">🌭</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>德国经典拼盘</span><span data-en>German Classic Platter</span></h4>
           <div class="pname-en">German Classic Sausage Platter</div>
@@ -1638,8 +1753,14 @@
         </div>
       </a>
 
-      <a href="products-chinpapa-v62.html#sku-cheese-beef-patty" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="芝士牛肉饼">
-        <div class="visual"><span class="emoji">🥩</span></div>
+      <a href="products-chinpapa-v62.html#sku-cheese-beef-patty" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="芝士牛肉饼">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-cheese-beef-patty.webp">
+              <img src="assets/products/sku-cheese-beef-patty.jpg" alt="芝士牛肉饼" loading="lazy">
+            </picture>
+            <span class="emoji">🥩</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>芝士牛肉饼(墨西哥风味)</span><span data-en>Cheese Beef Patty</span></h4>
           <div class="pname-en">Beef Cheese Quesadilla</div>
@@ -1660,8 +1781,14 @@
         </div>
       </a>
 
-      <a href="products-chinpapa-v62.html#sku-wagyu-pizza" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="和牛肉酱披萨">
-        <div class="visual"><span class="emoji">🍕</span></div>
+      <a href="products-chinpapa-v62.html#sku-wagyu-pizza" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="和牛肉酱披萨">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-wagyu-pizza.webp">
+              <img src="assets/products/sku-wagyu-pizza.jpg" alt="和牛肉酱披萨" loading="lazy">
+            </picture>
+            <span class="emoji">🍕</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>和牛肉酱披萨</span><span data-en>Wagyu Bolognese Pizza</span></h4>
           <div class="pname-en">Wagyu Bolognese Pizza</div>
@@ -1682,8 +1809,14 @@
         </div>
       </a>
 
-      <a href="products-chinpapa-v62.html#sku-bolognese-pasta" class="ps-card-rich" data-foodvio-cta="general_contact" data-product="古法肉酱意面">
-        <div class="visual"><span class="emoji">🍝</span></div>
+      <a href="products-chinpapa-v62.html#sku-bolognese-pasta" class="ps-card-rich has-image" data-foodvio-cta="general_contact" data-product="古法肉酱意面">
+          <div class="visual">
+            <picture class="ps-card-rich-img">
+              <source type="image/webp" srcset="assets/products/sku-classic-bolognese.webp">
+              <img src="assets/products/sku-classic-bolognese.jpg" alt="古法肉酱意面" loading="lazy">
+            </picture>
+            <span class="emoji">🍝</span>
+          </div>
         <div class="info">
           <h4 class="pname"><span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></h4>
           <div class="pname-en">Classic Bolognese Pasta</div>
@@ -1762,7 +1895,6 @@
         <a href="products-index-v62.html#snacks" class="footer-link">Fried Snacks</a>
         <a href="products-index-v62.html#mains" class="footer-link">Main Courses</a>
         <a href="products-index-v62.html#sides" class="footer-link"><span data-zh>健康小菜</span><span data-en>Healthy Sides</span></a>
-        <a href="products-index-v62.html#bakery" class="footer-link"><span data-zh>烘焙食品</span><span data-en>Bakery</span></a>
       </div>
 
       <div class="md:col-span-2">
@@ -1787,8 +1919,8 @@
           400-6879-568<br>
           huahuakefu1@<br>foodvio.com.cn<br>
           <span class="text-white/40 mt-2 inline-block">
-            <span data-zh>北京望京 SOHO T3A 1008</span>
-            <span data-en>Wangjing SOHO T3A 1008, Beijing</span>
+            <span data-zh>北京市朝阳区零秒空间酒仙桥社区419房间</span>
+            <span data-en>Room 419, LIMO space, Jiuxianqiao Community, Chaoyang District, Beijing, PRC.</span>
           </span>
         </p>
       </div>
