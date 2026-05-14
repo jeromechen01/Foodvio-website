@@ -830,6 +830,22 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
+
+  /* W14 · 产品图接入样式 */
+  .sauce-swatch.has-image .emoji-overlay { display: none; }
+  .sauce-swatch.has-image::after { display: none; }  /* 隐藏噪点纹理,让真实图自然显示 */
+  .sauce-swatch-img {
+    position: absolute; inset: 0;
+    display: block;
+    width: 100%; height: 100%;
+  }
+  .sauce-swatch-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* 图片加载失败时,emoji + 渐变色块作为优雅降级(自动生效) */
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>
@@ -1095,8 +1111,12 @@
     <!-- All Sauces · 全部酱料 18 款 -->
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 reveal">
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-tomato"><div class="badge">⭐ Bestseller</div></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-tomato-bolognese" data-product="番茄牛肉酱">
+        <div class="sauce-swatch sauce-tomato has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-tomato-bolognese.webp">
+            <img src="assets/products/sku-tomato-bolognese.jpg" alt="sku-tomato-bolognese" loading="lazy">
+          </picture><div class="badge">⭐ Bestseller</div></div>
         <div class="info">
           <h3><span data-zh>番茄牛肉酱</span><span data-en>Tomato Bolognese</span></h3>
           <div class="name-en"><span data-zh>Tomato Bolognese</span><span data-en>番茄牛肉酱</span></div>
@@ -1107,8 +1127,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-cream"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-creamy-mushroom" data-product="奶油蘑菇酱">
+        <div class="sauce-swatch sauce-cream has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-creamy-mushroom.webp">
+            <img src="assets/products/sku-creamy-mushroom.jpg" alt="sku-creamy-mushroom" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>奶油蘑菇酱</span><span data-en>Creamy Mushroom</span></h3>
           <div class="name-en"><span data-zh>Creamy Mushroom</span><span data-en>奶油蘑菇酱</span></div>
@@ -1119,8 +1143,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-meat"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-classic-bolognese-sauce" data-product="古法肉酱">
+        <div class="sauce-swatch sauce-meat has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-classic-bolognese-sauce.webp">
+            <img src="assets/products/sku-classic-bolognese-sauce.jpg" alt="sku-classic-bolognese-sauce" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>古法肉酱</span><span data-en>Classic Bolognese</span></h3>
           <div class="name-en"><span data-zh>Classic Bolognese</span><span data-en>古法肉酱</span></div>
@@ -1131,8 +1159,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-basil"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-basil-pesto" data-product="罗勒青酱">
+        <div class="sauce-swatch sauce-basil has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-basil-pesto.webp">
+            <img src="assets/products/sku-basil-pesto.jpg" alt="sku-basil-pesto" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>罗勒青酱</span><span data-en>Basil Pesto</span></h3>
           <div class="name-en"><span data-zh>Basil Pesto</span><span data-en>罗勒青酱</span></div>
@@ -1143,8 +1175,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-porcini"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-porcini-sauce" data-product="牛肝菌酱">
+        <div class="sauce-swatch sauce-porcini has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-porcini-sauce.webp">
+            <img src="assets/products/sku-porcini-sauce.jpg" alt="sku-porcini-sauce" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>牛肝菌酱</span><span data-en>Porcini Sauce</span></h3>
           <div class="name-en"><span data-zh>Porcini Sauce</span><span data-en>牛肝菌酱</span></div>
@@ -1155,8 +1191,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-bacon"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-bacon-black-pepper" data-product="培根黑椒酱">
+        <div class="sauce-swatch sauce-bacon has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-bacon-black-pepper.webp">
+            <img src="assets/products/sku-bacon-black-pepper.jpg" alt="sku-bacon-black-pepper" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>培根黑椒酱</span><span data-en>Bacon Black Pepper</span></h3>
           <div class="name-en"><span data-zh>Bacon Black Pepper</span><span data-en>培根黑椒酱</span></div>
@@ -1167,8 +1207,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-pepper"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-black-pepper-sauce" data-product="美式黑椒汁">
+        <div class="sauce-swatch sauce-pepper has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-black-pepper-sauce.webp">
+            <img src="assets/products/sku-black-pepper-sauce.jpg" alt="sku-black-pepper-sauce" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>美式黑椒汁</span><span data-en>Black Pepper Sauce</span></h3>
           <div class="name-en"><span data-zh>Black Pepper Sauce</span><span data-en>美式黑椒汁</span></div>
@@ -1179,8 +1223,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-honey"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-honey-mustard" data-product="蜂蜜芥末">
+        <div class="sauce-swatch sauce-honey has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-honey-mustard.webp">
+            <img src="assets/products/sku-honey-mustard.jpg" alt="sku-honey-mustard" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>蜂蜜芥末</span><span data-en>Honey Mustard</span></h3>
           <div class="name-en"><span data-zh>Honey Mustard</span><span data-en>蜂蜜芥末</span></div>
@@ -1191,8 +1239,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-caesar"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-caesar" data-product="凯撒酱">
+        <div class="sauce-swatch sauce-caesar has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-caesar.webp">
+            <img src="assets/products/sku-caesar.jpg" alt="sku-caesar" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>凯撒酱</span><span data-en>Caesar</span></h3>
           <div class="name-en"><span data-zh>Caesar</span><span data-en>凯撒酱</span></div>
@@ -1203,8 +1255,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-thousand"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-thousand-island" data-product="千岛酱">
+        <div class="sauce-swatch sauce-thousand has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-thousand-island.webp">
+            <img src="assets/products/sku-thousand-island.jpg" alt="sku-thousand-island" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>千岛酱</span><span data-en>Thousand Island</span></h3>
           <div class="name-en"><span data-zh>Thousand Island</span><span data-en>千岛酱</span></div>
@@ -1215,8 +1271,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-curry"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-yellow-curry" data-product="黄咖喱酱">
+        <div class="sauce-swatch sauce-curry has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-yellow-curry.webp">
+            <img src="assets/products/sku-yellow-curry.jpg" alt="sku-yellow-curry" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>黄咖喱酱</span><span data-en>Yellow Curry</span></h3>
           <div class="name-en"><span data-zh>Yellow Curry</span><span data-en>黄咖喱酱</span></div>
@@ -1227,8 +1287,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-sweet-sour"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-sweet-sour-thai" data-product="泰式酸辣酱">
+        <div class="sauce-swatch sauce-sweet-sour has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-sweet-sour-thai.webp">
+            <img src="assets/products/sku-sweet-sour-thai.jpg" alt="sku-sweet-sour-thai" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>泰式酸辣酱</span><span data-en>Sweet & Sour Thai</span></h3>
           <div class="name-en"><span data-zh>Sweet & Sour Thai</span><span data-en>泰式酸辣酱</span></div>
@@ -1239,8 +1303,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-satay"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-satay" data-product="沙茶酱">
+        <div class="sauce-swatch sauce-satay has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-satay.webp">
+            <img src="assets/products/sku-satay.jpg" alt="sku-satay" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>沙茶酱</span><span data-en>Satay Sauce</span></h3>
           <div class="name-en"><span data-zh>Satay Sauce</span><span data-en>沙茶酱</span></div>
@@ -1251,8 +1319,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-yuzu"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-yuzu-pepper" data-product="柚子椒酱">
+        <div class="sauce-swatch sauce-yuzu has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-yuzu-pepper.webp">
+            <img src="assets/products/sku-yuzu-pepper.jpg" alt="sku-yuzu-pepper" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>柚子椒酱</span><span data-en>Yuzu Pepper</span></h3>
           <div class="name-en"><span data-zh>Yuzu Pepper</span><span data-en>柚子椒酱</span></div>
@@ -1263,8 +1335,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-gochu"><div class="badge">⭐ Bestseller</div></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-korean-gochujang" data-product="韩式辣酱">
+        <div class="sauce-swatch sauce-gochu has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-korean-gochujang.webp">
+            <img src="assets/products/sku-korean-gochujang.jpg" alt="sku-korean-gochujang" loading="lazy">
+          </picture><div class="badge">⭐ Bestseller</div></div>
         <div class="info">
           <h3><span data-zh>韩式辣酱</span><span data-en>Korean Gochujang</span></h3>
           <div class="name-en"><span data-zh>Korean Gochujang</span><span data-en>韩式辣酱</span></div>
@@ -1275,8 +1351,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-teriyaki"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-teriyaki" data-product="日式照烧酱">
+        <div class="sauce-swatch sauce-teriyaki has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-teriyaki.webp">
+            <img src="assets/products/sku-teriyaki.jpg" alt="sku-teriyaki" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>日式照烧酱</span><span data-en>Teriyaki</span></h3>
           <div class="name-en"><span data-zh>Teriyaki</span><span data-en>日式照烧酱</span></div>
@@ -1287,8 +1367,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-tartar"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-tartar" data-product="鞑靼酱">
+        <div class="sauce-swatch sauce-tartar has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-tartar.webp">
+            <img src="assets/products/sku-tartar.jpg" alt="sku-tartar" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>鞑靼酱</span><span data-en>Tartar Sauce</span></h3>
           <div class="name-en"><span data-zh>Tartar Sauce</span><span data-en>鞑靼酱</span></div>
@@ -1299,8 +1383,12 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact">
-        <div class="sauce-swatch sauce-salsa"></div>
+      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-salsa" data-product="莎莎酱">
+        <div class="sauce-swatch sauce-salsa has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-salsa.webp">
+            <img src="assets/products/sku-salsa.jpg" alt="sku-salsa" loading="lazy">
+          </picture></div>
         <div class="info">
           <h3><span data-zh>莎莎酱</span><span data-en>Salsa</span></h3>
           <div class="name-en"><span data-zh>Salsa</span><span data-en>莎莎酱</span></div>

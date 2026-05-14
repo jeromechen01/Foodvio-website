@@ -966,6 +966,22 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
+
+  /* W14 · 产品图接入样式 */
+  .sauce-swatch.has-image .emoji-overlay { display: none; }
+  .sauce-swatch.has-image::after { display: none; }  /* 隐藏噪点纹理,让真实图自然显示 */
+  .sauce-swatch-img {
+    position: absolute; inset: 0;
+    display: block;
+    width: 100%; height: 100%;
+  }
+  .sauce-swatch-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* 图片加载失败时,emoji + 渐变色块作为优雅降级(自动生效) */
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>
@@ -1272,9 +1288,12 @@
         </div>
       </a>
       <a href="#" id="sku-wagyu-pizza" class="sauce-card" data-foodvio-cta="sample_request" data-product="和牛肉酱披萨">
-        <div class="sauce-swatch sw-pizza-wagyu">
+        <div class="sauce-swatch sw-pizza-wagyu has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-wagyu-pizza.webp">
+            <img src="assets/products/sku-wagyu-pizza.jpg" alt="sku-wagyu-pizza" loading="lazy">
+          </picture>
           <div class="badge">🔥 HOT</div>
-          <span class="emoji-overlay">🍕</span>
         </div>
         <div class="info">
           <h3><span data-zh>和牛肉酱披萨</span><span data-en>Wagyu Bolognese Pizza</span></h3>
@@ -1323,9 +1342,11 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 reveal delay-1">
       <a href="#" id="sku-cheese-beef-roll-cp" class="sauce-card" data-foodvio-cta="sample_request" data-product="芝士牛肉卷">
-        <div class="sauce-swatch sw-burrito">
-          
-          <span class="emoji-overlay">🌯</span>
+        <div class="sauce-swatch sw-burrito has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-cheese-beef-roll-cp.webp">
+            <img src="assets/products/sku-cheese-beef-roll-cp.jpg" alt="sku-cheese-beef-roll-cp" loading="lazy">
+          </picture>
         </div>
         <div class="info">
           <h3><span data-zh>芝士牛肉卷</span><span data-en>Cheese Beef Roll</span></h3>
@@ -1337,9 +1358,12 @@
         </div>
       </a>
       <a href="#" id="sku-cheese-beef-patty-cp" class="sauce-card" data-foodvio-cta="sample_request" data-product="芝士牛肉饼">
-        <div class="sauce-swatch sw-quesadilla">
+        <div class="sauce-swatch sw-quesadilla has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-cheese-beef-patty-cp.webp">
+            <img src="assets/products/sku-cheese-beef-patty-cp.jpg" alt="sku-cheese-beef-patty-cp" loading="lazy">
+          </picture>
           <div class="badge">⭐ Bestseller</div>
-          <span class="emoji-overlay">🥩</span>
         </div>
         <div class="info">
           <h3><span data-zh>芝士牛肉饼</span><span data-en>Cheese Beef Patty</span></h3>
@@ -1351,9 +1375,11 @@
         </div>
       </a>
       <a href="#" id="sku-classic-bolognese-cp" class="sauce-card" data-foodvio-cta="sample_request" data-product="古法肉酱意面">
-        <div class="sauce-swatch sw-pasta-bolognese">
-          
-          <span class="emoji-overlay">🍝</span>
+        <div class="sauce-swatch sw-pasta-bolognese has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-classic-bolognese-cp.webp">
+            <img src="assets/products/sku-classic-bolognese-cp.jpg" alt="sku-classic-bolognese-cp" loading="lazy">
+          </picture>
         </div>
         <div class="info">
           <h3><span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></h3>

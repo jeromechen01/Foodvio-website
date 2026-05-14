@@ -1029,6 +1029,22 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
+
+  /* W14 · 产品图接入样式 */
+  .sauce-swatch.has-image .emoji-overlay { display: none; }
+  .sauce-swatch.has-image::after { display: none; }  /* 隐藏噪点纹理,让真实图自然显示 */
+  .sauce-swatch-img {
+    position: absolute; inset: 0;
+    display: block;
+    width: 100%; height: 100%;
+  }
+  .sauce-swatch-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* 图片加载失败时,emoji + 渐变色块作为优雅降级(自动生效) */
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>

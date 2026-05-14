@@ -902,6 +902,22 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
+
+  /* W14 · 产品图接入样式 */
+  .sauce-swatch.has-image .emoji-overlay { display: none; }
+  .sauce-swatch.has-image::after { display: none; }  /* 隐藏噪点纹理,让真实图自然显示 */
+  .sauce-swatch-img {
+    position: absolute; inset: 0;
+    display: block;
+    width: 100%; height: 100%;
+  }
+  .sauce-swatch-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* 图片加载失败时,emoji + 渐变色块作为优雅降级(自动生效) */
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>
@@ -1150,9 +1166,12 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 reveal delay-1">
       <a href="#" id="sku-italian-roast-chicken" class="sauce-card" data-foodvio-cta="sample_request" data-product="意式香草烤鸡">
-        <div class="sauce-swatch sw-roast-chicken">
+        <div class="sauce-swatch sw-roast-chicken has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-italian-roast-chicken.webp">
+            <img src="assets/products/sku-italian-roast-chicken.jpg" alt="sku-italian-roast-chicken" loading="lazy">
+          </picture>
           <div class="badge">⭐ Bestseller</div>
-          <span class="emoji-overlay">🍗</span>
         </div>
         <div class="info">
           <h3><span data-zh>意式香草烤鸡</span><span data-en>Italian Herb Roast Chicken</span></h3>
@@ -1187,9 +1206,11 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 reveal delay-1">
       <a href="#" id="sku-german-pork-knuckle" class="sauce-card" data-foodvio-cta="sample_request" data-product="德式脆皮猪肘">
-        <div class="sauce-swatch sw-pork-knuckle">
-          
-          <span class="emoji-overlay">🍖</span>
+        <div class="sauce-swatch sw-pork-knuckle has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-german-pork-knuckle.webp">
+            <img src="assets/products/sku-german-pork-knuckle.jpg" alt="sku-german-pork-knuckle" loading="lazy">
+          </picture>
         </div>
         <div class="info">
           <h3><span data-zh>德式脆皮猪肘</span><span data-en>German Crispy Pork Knuckle</span></h3>
@@ -1201,9 +1222,12 @@
         </div>
       </a>
       <a href="#" id="sku-american-bbq-ribs" class="sauce-card" data-foodvio-cta="sample_request" data-product="美式炭烤猪肋排">
-        <div class="sauce-swatch sw-bbq-ribs">
+        <div class="sauce-swatch sw-bbq-ribs has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-american-bbq-ribs.webp">
+            <img src="assets/products/sku-american-bbq-ribs.jpg" alt="sku-american-bbq-ribs" loading="lazy">
+          </picture>
           <div class="badge">🔥 HOT</div>
-          <span class="emoji-overlay">🥩</span>
         </div>
         <div class="info">
           <h3><span data-zh>美式炭烤猪肋排</span><span data-en>American BBQ Pork Ribs</span></h3>
@@ -1238,9 +1262,11 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 reveal delay-1">
       <a href="#" id="sku-german-classic-platter" class="sauce-card" data-foodvio-cta="sample_request" data-product="德国经典拼盘">
-        <div class="sauce-swatch sw-sausage-platter">
-          
-          <span class="emoji-overlay">🌭</span>
+        <div class="sauce-swatch sw-sausage-platter has-image">
+          <picture class="sauce-swatch-img">
+            <source type="image/webp" srcset="assets/products/sku-german-classic-platter.webp">
+            <img src="assets/products/sku-german-classic-platter.jpg" alt="sku-german-classic-platter" loading="lazy">
+          </picture>
         </div>
         <div class="info">
           <h3><span data-zh>德国经典拼盘</span><span data-en>German Classic Sausage Platter</span></h3>
