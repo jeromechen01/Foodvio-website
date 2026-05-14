@@ -1045,6 +1045,34 @@
   }
   /* 图片加载失败时,emoji + 渐变色块作为优雅降级(自动生效) */
 
+
+  /* W15 · 首页 ps-card 产品图样式 */
+  .ps-card.has-image .visual {
+    position: relative;
+    overflow: hidden;
+  }
+  .ps-card.has-image .visual .emoji {
+    display: none;  /* 隐藏 emoji,真图就位 */
+  }
+  .ps-card.has-image .visual::after {
+    display: none;  /* 隐藏噪点纹理 */
+  }
+  .ps-card-img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .ps-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* 图加载失败的 fallback:CSS 兜底显示渐变背景 + emoji */
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>
@@ -1331,20 +1359,38 @@
         </a>
       </div>
       <div class="ps-grid">
-        <a href="products-sauces-v62.html" class="ps-card" data-foodvio-cta="general_contact" data-product="番茄牛肉酱">
-          <div class="visual"><span class="emoji">🥫</span></div>
+        <a href="products-sauces-v62.html" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="番茄牛肉酱">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-tomato-bolognese.webp">
+            <img src="assets/products/sku-tomato-bolognese.jpg" alt="番茄牛肉酱" loading="lazy">
+          </picture>
+          <span class="emoji">🥫</span>
+        </div>
           <h4><span data-zh>番茄牛肉酱</span><span data-en>Tomato Bolognese</span></h4>
           <div class="name-en">Tomato Bolognese</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-sauces-v62.html" class="ps-card" data-foodvio-cta="general_contact" data-product="奶油蘑菇酱">
-          <div class="visual"><span class="emoji">🍄</span></div>
+        <a href="products-sauces-v62.html" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="奶油蘑菇酱">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-creamy-mushroom.webp">
+            <img src="assets/products/sku-creamy-mushroom.jpg" alt="奶油蘑菇酱" loading="lazy">
+          </picture>
+          <span class="emoji">🍄</span>
+        </div>
           <h4><span data-zh>奶油蘑菇酱</span><span data-en>Creamy Mushroom</span></h4>
           <div class="name-en">Creamy Mushroom</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-sauces-v62.html" class="ps-card" data-foodvio-cta="general_contact" data-product="罗勒松子青酱">
-          <div class="visual"><span class="emoji">🌿</span></div>
+        <a href="products-sauces-v62.html" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="罗勒松子青酱">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-basil-pesto.webp">
+            <img src="assets/products/sku-basil-pesto.jpg" alt="罗勒松子青酱" loading="lazy">
+          </picture>
+          <span class="emoji">🌿</span>
+        </div>
           <h4><span data-zh>罗勒松子青酱</span><span data-en>Basil Pesto</span></h4>
           <div class="name-en">Basil Pesto</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
@@ -1375,26 +1421,50 @@
         </a>
       </div>
       <div class="ps-grid">
-        <a href="products-staples-v62.html#sku-black-truffle-pizza" class="ps-card" data-foodvio-cta="general_contact" data-product="黑松露披萨">
-          <div class="visual"><span class="emoji">🍕</span></div>
+        <a href="products-staples-v62.html#sku-black-truffle-pizza" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="黑松露披萨">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-black-truffle-pizza.webp">
+            <img src="assets/products/sku-black-truffle-pizza.jpg" alt="黑松露披萨" loading="lazy">
+          </picture>
+          <span class="emoji">🍕</span>
+        </div>
           <h4><span data-zh>黑松露披萨</span><span data-en>Black Truffle Pizza</span></h4>
           <div class="name-en">Black Truffle Pizza</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-staples-v62.html#sku-classic-bolognese" class="ps-card" data-foodvio-cta="general_contact" data-product="古法肉酱意面">
-          <div class="visual"><span class="emoji">🍝</span></div>
+        <a href="products-staples-v62.html#sku-classic-bolognese" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="古法肉酱意面">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-classic-bolognese.webp">
+            <img src="assets/products/sku-classic-bolognese.jpg" alt="古法肉酱意面" loading="lazy">
+          </picture>
+          <span class="emoji">🍝</span>
+        </div>
           <h4><span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></h4>
           <div class="name-en">Classic Bolognese</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-staples-v62.html#sku-japanese-squid-rice" class="ps-card" data-foodvio-cta="general_contact" data-product="日式鱿鱼炒饭">
-          <div class="visual"><span class="emoji">🍱</span></div>
+        <a href="products-staples-v62.html#sku-japanese-squid-rice" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="日式鱿鱼炒饭">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-japanese-squid-rice.webp">
+            <img src="assets/products/sku-japanese-squid-rice.jpg" alt="日式鱿鱼炒饭" loading="lazy">
+          </picture>
+          <span class="emoji">🍱</span>
+        </div>
           <h4><span data-zh>日式鱿鱼炒饭</span><span data-en>Japanese Squid Fried Rice</span></h4>
           <div class="name-en">Squid Fried Rice</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-staples-v62.html#sku-cheese-beef-patty" class="ps-card" data-foodvio-cta="general_contact" data-product="芝士牛肉饼">
-          <div class="visual"><span class="emoji">🥩</span></div>
+        <a href="products-staples-v62.html#sku-cheese-beef-patty" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="芝士牛肉饼">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-cheese-beef-patty.webp">
+            <img src="assets/products/sku-cheese-beef-patty.jpg" alt="芝士牛肉饼" loading="lazy">
+          </picture>
+          <span class="emoji">🥩</span>
+        </div>
           <h4><span data-zh>芝士牛肉饼</span><span data-en>Cheese Beef Patty</span></h4>
           <div class="name-en">Cheese Beef Patty</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
@@ -1419,26 +1489,50 @@
         </a>
       </div>
       <div class="ps-grid">
-        <a href="products-snacks-v62.html#sku-crispy-potato" class="ps-card" data-foodvio-cta="general_contact" data-product="香酥土豆块">
-          <div class="visual"><span class="emoji">🥔</span></div>
+        <a href="products-snacks-v62.html#sku-crispy-potato" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="香酥土豆块">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-crispy-potato.webp">
+            <img src="assets/products/sku-crispy-potato.jpg" alt="香酥土豆块" loading="lazy">
+          </picture>
+          <span class="emoji">🥔</span>
+        </div>
           <h4><span data-zh>香酥土豆块</span><span data-en>Crispy Potato Cubes</span></h4>
           <div class="name-en">Crispy Potato Cubes</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-snacks-v62.html#sku-chicken-bites" class="ps-card" data-foodvio-cta="general_contact" data-product="鸡肉锅巴">
-          <div class="visual"><span class="emoji">🍗</span></div>
+        <a href="products-snacks-v62.html#sku-chicken-bites" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="鸡肉锅巴">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-chicken-bites.webp">
+            <img src="assets/products/sku-chicken-bites.jpg" alt="鸡肉锅巴" loading="lazy">
+          </picture>
+          <span class="emoji">🍗</span>
+        </div>
           <h4><span data-zh>鸡肉锅巴</span><span data-en>Chicken Crispy Bites</span></h4>
           <div class="name-en">Chicken Crispy Bites</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-snacks-v62.html#sku-sweet-potato-fries" class="ps-card" data-foodvio-cta="general_contact" data-product="原切红薯条">
-          <div class="visual"><span class="emoji">🍠</span></div>
+        <a href="products-snacks-v62.html#sku-sweet-potato-fries" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="原切红薯条">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-sweet-potato-fries.webp">
+            <img src="assets/products/sku-sweet-potato-fries.jpg" alt="原切红薯条" loading="lazy">
+          </picture>
+          <span class="emoji">🍠</span>
+        </div>
           <h4><span data-zh>原切红薯条</span><span data-en>Cut Sweet Potato Fries</span></h4>
           <div class="name-en">Sweet Potato Fries</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-snacks-v62.html#sku-golden-cod" class="ps-card" data-foodvio-cta="general_contact" data-product="整块鳕鱼排">
-          <div class="visual"><span class="emoji">🐟</span></div>
+        <a href="products-snacks-v62.html#sku-golden-cod" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="整块鳕鱼排">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-golden-cod.webp">
+            <img src="assets/products/sku-golden-cod.jpg" alt="整块鳕鱼排" loading="lazy">
+          </picture>
+          <span class="emoji">🐟</span>
+        </div>
           <h4><span data-zh>整块鳕鱼排</span><span data-en>Whole Cod Fillet</span></h4>
           <div class="name-en">Whole Cod Fillet</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
@@ -1463,26 +1557,50 @@
         </a>
       </div>
       <div class="ps-grid">
-        <a href="products-mains-v62.html#sku-italian-roast-chicken" class="ps-card" data-foodvio-cta="general_contact" data-product="意式烤鸡">
-          <div class="visual"><span class="emoji">🍗</span></div>
+        <a href="products-mains-v62.html#sku-italian-roast-chicken" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="意式烤鸡">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-italian-roast-chicken.webp">
+            <img src="assets/products/sku-italian-roast-chicken.jpg" alt="意式烤鸡" loading="lazy">
+          </picture>
+          <span class="emoji">🍗</span>
+        </div>
           <h4><span data-zh>意式烤鸡</span><span data-en>Italian Roast Chicken</span></h4>
           <div class="name-en">Italian Roast Chicken</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-mains-v62.html#sku-german-pork-knuckle" class="ps-card" data-foodvio-cta="general_contact" data-product="德式脆皮猪肘">
-          <div class="visual"><span class="emoji">🍖</span></div>
+        <a href="products-mains-v62.html#sku-german-pork-knuckle" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="德式脆皮猪肘">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-german-pork-knuckle.webp">
+            <img src="assets/products/sku-german-pork-knuckle.jpg" alt="德式脆皮猪肘" loading="lazy">
+          </picture>
+          <span class="emoji">🍖</span>
+        </div>
           <h4><span data-zh>德式脆皮猪肘</span><span data-en>German Crispy Pork Knuckle</span></h4>
           <div class="name-en">Crispy Pork Knuckle</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-mains-v62.html#sku-american-bbq-ribs" class="ps-card" data-foodvio-cta="general_contact" data-product="美式炭烤猪肋排">
-          <div class="visual"><span class="emoji">🥩</span></div>
+        <a href="products-mains-v62.html#sku-american-bbq-ribs" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="美式炭烤猪肋排">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-american-bbq-ribs.webp">
+            <img src="assets/products/sku-american-bbq-ribs.jpg" alt="美式炭烤猪肋排" loading="lazy">
+          </picture>
+          <span class="emoji">🥩</span>
+        </div>
           <h4><span data-zh>美式炭烤猪肋排</span><span data-en>American BBQ Pork Ribs</span></h4>
           <div class="name-en">American BBQ Ribs</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
-        <a href="products-mains-v62.html#sku-german-classic-platter" class="ps-card" data-foodvio-cta="general_contact" data-product="德国经典拼盘">
-          <div class="visual"><span class="emoji">🌭</span></div>
+        <a href="products-mains-v62.html#sku-german-classic-platter" class="ps-card has-image" data-foodvio-cta="general_contact" data-product="德国经典拼盘">
+          <div class="visual">
+          <picture class="ps-card-img">
+            <source type="image/webp" srcset="assets/products/sku-german-classic-platter.webp">
+            <img src="assets/products/sku-german-classic-platter.jpg" alt="德国经典拼盘" loading="lazy">
+          </picture>
+          <span class="emoji">🌭</span>
+        </div>
           <h4><span data-zh>德国经典拼盘</span><span data-en>German Classic Platter</span></h4>
           <div class="name-en">German Classic Platter</div>
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
