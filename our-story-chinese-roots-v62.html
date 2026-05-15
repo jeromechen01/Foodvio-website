@@ -578,6 +578,17 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
+
+  /* W19 · origin-card 接图 */
+  .origin-card.has-image .visual {
+    background-image: linear-gradient(180deg, rgba(13,42,31,0.30) 0%, rgba(13,42,31,0.55) 100%), var(--bg-image);
+    background-size: cover;
+    background-position: center;
+  }
+  .origin-card.has-image .visual .icon-big {
+    text-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  }
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>
@@ -864,7 +875,7 @@
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
 
       <a href="our-story-chinese-roots-gannan-chili-v62.html" class="origin-card featured reveal delay-1">
-        <div class="visual ov-chili">
+        <div class="visual ov-chili has-image" style="--bg-image: url('assets/origins/origin-gannan-chili.jpg')">
           <span class="featured-badge">⭐ Featured</span>
           <span class="icon-big">🌶️</span>
         </div>
@@ -879,7 +890,7 @@
       </a>
 
       <a href="#" class="origin-card reveal delay-2" data-foodvio-cta="general_contact">
-        <div class="visual ov-truffle">
+        <div class="visual ov-truffle has-image" style="--bg-image: url('assets/origins/origin-yunnan.jpg')">
           <span class="icon-big">🍄</span>
         </div>
         <div class="info">
@@ -893,7 +904,7 @@
       </a>
 
       <a href="#" class="origin-card reveal delay-3" data-foodvio-cta="general_contact">
-        <div class="visual ov-rice">
+        <div class="visual ov-rice has-image" style="--bg-image: url('assets/origins/origin-wuchang.jpg')">
           <span class="icon-big">🌾</span>
         </div>
         <div class="info">
@@ -907,7 +918,7 @@
       </a>
 
       <a href="#" class="origin-card reveal delay-4" data-foodvio-cta="general_contact">
-        <div class="visual ov-meat">
+        <div class="visual ov-meat has-image" style="--bg-image: url('assets/origins/origin-inner-mongolia.jpg')">
           <span class="icon-big">🐄</span>
         </div>
         <div class="info">
@@ -921,7 +932,7 @@
       </a>
 
       <a href="#" class="origin-card reveal delay-5" data-foodvio-cta="general_contact">
-        <div class="visual ov-flour">
+        <div class="visual ov-flour has-image" style="--bg-image: url('assets/origins/origin-xinjiang.jpg')">
           <span class="icon-big">🌾</span>
         </div>
         <div class="info">

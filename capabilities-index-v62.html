@@ -641,6 +641,25 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
+
+  /* W19 · capabilities-index 工厂卡接图 */
+  a.has-factory-img {
+    position: relative;
+    overflow: hidden;
+  }
+  a.has-factory-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(180deg, rgba(13,42,31,0.40) 0%, rgba(13,42,31,0.70) 100%), var(--factory-bg);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: transform 0.6s ease;
+  }
+  a.has-factory-img:hover::before { transform: scale(1.05); }
+  a.has-factory-img > * { position: relative; z-index: 1; }
+
 </style>
 </head>
 
@@ -769,9 +788,9 @@
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
         <div class="mega-col-title">Manufacturing</div>
-        <a href="capabilities-ganzhou-factory-v62.html" class="mega-link">🏭 <span data-zh>江西赣州(6.66 万㎡)</span><span data-en>Jiangxi Ganzhou · 66,600㎡</span></a>
-        <a href="capabilities-zhangjiakou-factory-v62.html" class="mega-link">🥖 <span data-zh>河北张家口(1.6 万㎡)</span><span data-en>Hebei Zhangjiakou · 16,000㎡</span></a>
-        <a href="capabilities-huairou-factory-v62.html" class="mega-link">🏢 <span data-zh>北京怀柔(总部研发)</span><span data-en>Beijing Huairou · HQ + R&D</span></a>
+        <a href="capabilities-ganzhou-factory-v62.html" class="has-factory-img mega-link" style="--factory-bg: url('assets/factories/factory-ganzhou.jpg')">🏭 <span data-zh>江西赣州(6.66 万㎡)</span><span data-en>Jiangxi Ganzhou · 66,600㎡</span></a>
+        <a href="capabilities-zhangjiakou-factory-v62.html" class="has-factory-img mega-link" style="--factory-bg: url('assets/factories/factory-zhangjiakou.jpg')">🥖 <span data-zh>河北张家口(1.6 万㎡)</span><span data-en>Hebei Zhangjiakou · 16,000㎡</span></a>
+        <a href="capabilities-huairou-factory-v62.html" class="has-factory-img mega-link" style="--factory-bg: url('assets/factories/factory-huairou.jpg')">🏢 <span data-zh>北京怀柔(总部研发)</span><span data-en>Beijing Huairou · HQ + R&D</span></a>
       </div>
       <div class="col-span-4">
         <div class="mega-col-title">Expertise</div>
@@ -901,7 +920,7 @@
     <div class="grid md:grid-cols-2 gap-6">
 
       <!-- Pillar 1: Manufacturing -->
-      <a href="capabilities-ganzhou-factory-v62.html" class="cap-card c1 reveal delay-1">
+      <a href="capabilities-ganzhou-factory-v62.html" class="has-factory-img cap-card c1 reveal delay-1" style="--factory-bg: url('assets/factories/factory-ganzhou.jpg')">
         <div class="cap-num">Pillar 01 · Manufacturing</div>
         <div class="cap-icon">🏭</div>
         <h3><span data-zh>3 大自营工厂</span><span data-en>3 owned factories</span></h3>
@@ -1055,15 +1074,15 @@
         <div class="font-display italic text-steel text-sm tracking-[0.15em] uppercase mb-4 pb-2 border-b border-steel/20">
           <span data-zh>制造能力</span><span data-en>Manufacturing</span>
         </div>
-        <a href="capabilities-ganzhou-factory-v62.html" class="sub-link block mb-3">
+        <a href="capabilities-ganzhou-factory-v62.html" class="has-factory-img sub-link block mb-3" style="--factory-bg: url('assets/factories/factory-ganzhou.jpg')">
           <h5><span data-zh>🏭 江西赣州工厂</span><span data-en>🏭 Ganzhou Factory</span><span class="arrow">→</span></h5>
           <p><span data-zh>6.66 万㎡ · 综合产能旗舰</span><span data-en>66,600㎡ · Flagship plant</span></p>
         </a>
-        <a href="capabilities-zhangjiakou-factory-v62.html" class="sub-link block mb-3">
+        <a href="capabilities-zhangjiakou-factory-v62.html" class="has-factory-img sub-link block mb-3" style="--factory-bg: url('assets/factories/factory-zhangjiakou.jpg')">
           <h5><span data-zh>🥖 河北张家口工厂</span><span data-en>🥖 Zhangjiakou Factory</span><span class="arrow">→</span></h5>
           <p><span data-zh>1.6 万㎡ · 烘焙 · FDA 注册</span><span data-en>16,000㎡ · Bakery · FDA</span></p>
         </a>
-        <a href="capabilities-huairou-factory-v62.html" class="sub-link block">
+        <a href="capabilities-huairou-factory-v62.html" class="has-factory-img sub-link block" style="--factory-bg: url('assets/factories/factory-huairou.jpg')">
           <h5><span data-zh>🏢 北京怀柔基地</span><span data-en>🏢 Huairou Beijing Base</span><span class="arrow">→</span></h5>
           <p><span data-zh>研发与样品打样基地</span><span data-en>R&D & prototype base</span></p>
         </a>
@@ -1183,7 +1202,7 @@
         <a href="for-foodservice-v62.html" class="footer-link"><span data-zh>连锁餐饮</span><span data-en>Foodservice</span></a></div>
       <div class="md:col-span-2"><div class="footer-col-title">Capabilities</div>
         <a href="capabilities-index-v62.html" class="footer-link">Overview</a>
-        <a href="capabilities-ganzhou-factory-v62.html" class="footer-link">Ganzhou Factory</a>
+        <a href="capabilities-ganzhou-factory-v62.html" class="has-factory-img footer-link" style="--factory-bg: url('assets/factories/factory-ganzhou.jpg')">Ganzhou Factory</a>
         <a href="capabilities-rd-team-v62.html" class="footer-link">R&D Team</a>
         <a href="capabilities-certifications-v62.html" class="footer-link">Certifications</a></div>
       <div class="md:col-span-2"><div class="footer-col-title"><span data-zh>联系</span><span data-en>Contact</span></div>

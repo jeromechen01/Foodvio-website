@@ -594,6 +594,30 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
+
+  /* W19 · global-masters 卡片接图 */
+  a.has-country-img {
+    position: relative;
+    overflow: hidden;
+  }
+  a.has-country-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(180deg, rgba(13,42,31,0.40) 0%, rgba(13,42,31,0.70) 100%), var(--country-bg);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: transform 0.6s ease;
+  }
+  a.has-country-img:hover::before {
+    transform: scale(1.05);
+  }
+  a.has-country-img > * {
+    position: relative;
+    z-index: 1;
+  }
+
 </style>
 <script src="lead-capture.js" defer></script>
 </head>
@@ -855,7 +879,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <a href="our-story-global-masters-italy-v62.html" class="master-card c-italy featured reveal delay-1">
+      <a href="our-story-global-masters-italy-v62.html" class="has-country-img master-card c-italy featured reveal delay-1" style="--country-bg: url('assets/countries/country-italy.jpg')">
         <div class="visual v-italy">
           <span class="featured-badge">⭐ Featured</span>
           <span class="flag-big">🇮🇹</span>
@@ -907,7 +931,7 @@
         </div>
       </a>
 
-      <a href="#" class="master-card c-japan reveal delay-4" data-foodvio-cta="general_contact">
+      <a href="#" class="has-country-img master-card c-japan reveal delay-4" data-foodvio-cta="general_contact" style="--country-bg: url('assets/countries/country-japan.jpg')">
         <div class="visual v-japan">
           <span class="flag-big">🇯🇵</span>
         </div>
@@ -941,7 +965,7 @@
         </div>
       </a>
 
-      <a href="#" class="master-card c-mexico reveal delay-6" data-foodvio-cta="general_contact">
+      <a href="#" class="has-country-img master-card c-mexico reveal delay-6" data-foodvio-cta="general_contact" style="--country-bg: url('assets/countries/country-mexico.jpg')">
         <div class="visual v-mexico">
           <span class="flag-big">🇲🇽</span>
         </div>
@@ -1027,7 +1051,7 @@
         <span data-en>Request 6-country sample pack</span>
         <span>→</span>
       </a>
-      <a href="our-story-global-masters-italy-v62.html" class="btn-outline" data-foodvio-cta="general_contact">
+      <a href="our-story-global-masters-italy-v62.html" class="btn-outline" data-foodvio-cta="general_contact" >
         <span data-zh>从意大利开始读</span>
         <span data-en>Start with Italy</span>
       </a>
