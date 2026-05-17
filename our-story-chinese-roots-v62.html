@@ -53,23 +53,27 @@
 
   .hero-title { font-family: 'Noto Serif SC', serif; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #fff; }
 
-  /* China map decoration (CSS-only abstract) */
-  .map-deco {
-    position: relative;
-    background:
-      radial-gradient(ellipse 200px 60px at 35% 45%, rgba(245,200,46,0.4) 0%, transparent 70%),
-      radial-gradient(circle 4px at 22% 38%, var(--sage) 0%, transparent 70%),
-      radial-gradient(circle 4px at 38% 28%, var(--sage) 0%, transparent 70%),
-      radial-gradient(circle 4px at 50% 32%, var(--sage) 0%, transparent 70%),
-      radial-gradient(circle 6px at 45% 65%, var(--rust) 0%, transparent 70%),
-      radial-gradient(circle 4px at 58% 60%, var(--sage) 0%, transparent 70%),
-      radial-gradient(circle 4px at 65% 52%, var(--sage) 0%, transparent 70%),
-      radial-gradient(circle 4px at 70% 70%, var(--sage) 0%, transparent 70%),
-      radial-gradient(circle 4px at 75% 78%, var(--sage) 0%, transparent 70%);
-    aspect-ratio: 4/3;
-    border-radius: 12px;
-    background-color: rgba(27,67,50,0.04);
+  /* W22 · 中国地图(真实轮廓 SVG) */
+  .china-map-wrap {
+    width: 100%;
+    background: rgba(27,67,50,0.03);
     border: 1px solid rgba(27,67,50,0.08);
+    border-radius: 16px;
+    padding: 24px 20px;
+    aspect-ratio: 5/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .china-map-svg {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  @media (max-width: 768px) {
+    .china-map-wrap { padding: 16px 12px; aspect-ratio: 4/3; }
+    .china-map-svg text { font-size: 22px !important; }
   }
 
   /* Origin card */
@@ -654,15 +658,15 @@
         <a href="products-mains-v62.html#sku-italian-roast-chicken" class="mega-link" data-foodvio-cta="general_contact">🍗 <span data-zh>意式烤鸡</span><span data-en>Italian Roast Chicken</span></a>
         <a href="products-mains-v62.html#sku-german-pork-knuckle" class="mega-link" data-foodvio-cta="general_contact">🍖 <span data-zh>德式脆皮猪肘</span><span data-en>German Crispy Pork Knuckle</span></a>
         <a href="products-mains-v62.html#sku-american-bbq-ribs" class="mega-link" data-foodvio-cta="general_contact">🥩 <span data-zh>美式炭烤猪肋排</span><span data-en>American BBQ Pork Ribs</span></a>
-        <a href="products-mains-v62.html#sku-german-classic-platter" class="mega-link" data-foodvio-cta="general_contact">🌭 <span data-zh>德国经典拼盘</span><span data-en>German Classic Platter</span></a>
+        <a href="products-mains-v62.html#sku-german-classic-platter" class="mega-link" data-foodvio-cta="general_contact">🌭 <span data-zh>德式经典香肠品牌</span><span data-en>German Classic Sausage Brand</span></a>
         <a href="products-mains-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>查看全部主菜</span><span data-en>See all mains</span> →</a>
       </div>
       <div class="col-span-2">
         <a href="products-chinpapa-v62.html" class="mega-col-title" style="display:block;color:var(--forest);text-decoration:none;font-weight:700;" data-foodvio-cta="general_contact">👶 <span data-zh>华仔爸爸</span><span data-en>ChinnPaPa</span></a>
         <a href="products-chinpapa-v62.html#sku-wagyu-pizza" class="mega-link" data-foodvio-cta="general_contact">🍕 <span data-zh>和牛肉酱披萨</span><span data-en>Wagyu Bolognese Pizza</span></a>
-        <a href="products-chinpapa-v62.html#sku-cheese-beef-roll" class="mega-link" data-foodvio-cta="general_contact">🌯 <span data-zh>芝士牛肉卷</span><span data-en>Cheese Beef Roll</span></a>
-        <a href="products-chinpapa-v62.html#sku-bolognese-pasta" class="mega-link" data-foodvio-cta="general_contact">🍝 <span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></a>
-        <a href="products-chinpapa-v62.html#sku-herb-roast-chicken" class="mega-link" data-foodvio-cta="general_contact">🍗 <span data-zh>香草萌萌鸡</span><span data-en>Herb Roast Chicken</span></a>
+        <a href="products-chinpapa-v62.html#sku-cheese-beef-roll-cp" class="mega-link" data-foodvio-cta="general_contact">🌯 <span data-zh>芝士牛肉卷</span><span data-en>Cheese Beef Roll</span></a>
+        <a href="products-chinpapa-v62.html#sku-classic-bolognese-cp" class="mega-link" data-foodvio-cta="general_contact">🍝 <span data-zh>古法肉酱意面</span><span data-en>Classic Bolognese Pasta</span></a>
+        <a href="products-chinpapa-v62.html#sku-italian-mini-chicken" class="mega-link" data-foodvio-cta="general_contact">🍗 <span data-zh>香草萌萌鸡</span><span data-en>Herb Roast Chicken</span></a>
         <a href="products-chinpapa-v62.html" class="mega-link more-link" style="margin-top:8px;font-style:italic;color:var(--terra);" data-foodvio-cta="general_contact"><span data-zh>了解华仔爸爸品牌</span><span data-en>Learn ChinnPaPa</span> →</a>
       </div>
     </div>
@@ -710,12 +714,13 @@
         <a href="our-story-chinese-roots-yunnan-v62.html" class="mega-link">🍄 <span data-zh>云南 · 松露 · 迷迭香</span><span data-en>Yunnan · Truffle &amp; Rosemary</span></a>
       </div>
       <div class="col-span-4">
-        <div class="mega-col-title">5 Countries</div>
+        <div class="mega-col-title">6 Countries</div>
         <a href="our-story-global-masters-italy-v62.html" class="mega-link">🇮🇹 Italy</a>
         <a href="our-story-global-masters-spain-v62.html" class="mega-link">🇪🇸 Spain</a>
         <a href="our-story-global-masters-korea-v62.html" class="mega-link">🇰🇷 Korea</a>
         <a href="our-story-global-masters-japan-v62.html" class="mega-link">🇯🇵 Japan</a>
         <a href="our-story-global-masters-mexico-v62.html" class="mega-link">🇲🇽 Mexico</a>
+        <a href="our-story-global-masters-v62.html#master-sea" class="mega-link">🌏 SEA</a>
       </div>
     </div>
   </div>
@@ -809,12 +814,12 @@
       <div class="md:col-span-5 reveal">
         <div class="section-no mb-6">01 / The Map</div>
         <h2 class="font-serif-sc font-bold text-forest leading-tight mb-6" style="font-size: clamp(32px, 4vw, 48px);">
-          <span data-zh>八个产地<br>遍布中国</span>
-          <span data-en>Eight origins<br>across China.</span>
+          <span data-zh>五个产地<br>遍布中国</span>
+          <span data-en>Five origins<br>across China.</span>
         </h2>
         <p class="font-display italic text-terra text-lg mb-8">
-          <span data-zh>从赣南红土地到云南深山,从内蒙古草原到福建海岸。</span>
-          <span data-en>From Gannan's red soil to Yunnan's mountains, from Inner Mongolia's grasslands to Fujian's coast.</span>
+          <span data-zh>从赣南红土地到云南深山,从内蒙古草原到东北黑土。</span>
+          <span data-en>From Gannan's red soil to Yunnan's mountains, from Inner Mongolia's grasslands to Northeast's black earth.</span>
         </p>
         <p class="text-base text-forest/75 leading-relaxed">
           <span data-zh>每一个产地,都对应一种我们坚持深耕的食材。我们与产地的农户、合作社建立长期合作,从源头确保品质稳定。</span>
@@ -823,32 +828,41 @@
       </div>
 
       <div class="md:col-span-7 reveal delay-1">
-        <div class="map-deco">
-          <!-- Annotations -->
-          <div class="absolute" style="left: 20%; top: 22%;">
-            <div class="text-xs text-forest/70 font-display italic">新疆</div>
-          </div>
-          <div class="absolute" style="left: 38%; top: 18%;">
-            <div class="text-xs text-forest/70 font-display italic">内蒙古</div>
-          </div>
-          <div class="absolute" style="left: 50%; top: 22%;">
-            <div class="text-xs text-forest/70 font-display italic">东北</div>
-          </div>
-          <div class="absolute" style="left: 32%; top: 56%;">
-            <div class="text-xs text-rust font-display italic font-semibold">⭐ 江西赣南</div>
-          </div>
-          <div class="absolute" style="left: 24%; top: 70%;">
-            <div class="text-xs text-forest/70 font-display italic">云南</div>
-          </div>
-          <div class="absolute" style="left: 60%; top: 53%;">
-            <div class="text-xs text-forest/70 font-display italic">山东</div>
-          </div>
-          <div class="absolute" style="left: 65%; top: 70%;">
-            <div class="text-xs text-forest/70 font-display italic">福建</div>
-          </div>
-          <div class="absolute" style="left: 70%; top: 80%;">
-            <div class="text-xs text-forest/70 font-display italic">粤桂</div>
-          </div>
+        <div class="china-map-wrap">
+          <svg class="china-map-svg" viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- 简化的中国大陆轮廓 -->
+            <path d="M 165,280 Q 130,250 145,200 Q 160,170 200,165 Q 240,155 280,170 L 330,160 Q 380,155 420,140 Q 470,130 510,135 Q 560,140 600,155 L 660,165 Q 710,170 750,180 Q 790,195 820,215 Q 845,235 855,260 L 870,295 Q 880,330 875,365 Q 870,395 855,415 L 830,440 Q 815,460 810,485 L 805,520 Q 800,550 785,575 L 760,610 Q 740,640 715,665 Q 690,690 660,705 Q 625,720 590,720 L 550,715 Q 510,705 475,690 L 440,675 Q 410,665 380,650 L 350,640 Q 330,620 315,600 Q 305,575 305,555 L 305,520 Q 295,495 275,475 L 250,455 Q 230,435 220,410 Q 215,390 215,365 Q 210,340 200,320 Q 185,300 165,280 Z M 800,200 L 815,195 L 830,205 L 835,225 L 820,240 L 800,235 L 790,215 Z" 
+                  fill="rgba(27,67,50,0.08)" stroke="rgba(27,67,50,0.20)" stroke-width="1.5"/>
+            
+            <!-- 5 个产地点 + 标签 -->
+            <!-- 新疆 -->
+            <circle cx="250" cy="290" r="6" fill="var(--sage)" opacity="0.85"/>
+            <text x="245" y="270" font-family="'Cormorant Garamond',serif" font-size="18" font-style="italic" fill="#1B4332" text-anchor="middle">新疆</text>
+            
+            <!-- 内蒙古 -->
+            <circle cx="520" cy="230" r="6" fill="var(--sage)" opacity="0.85"/>
+            <text x="520" y="210" font-family="'Cormorant Garamond',serif" font-size="18" font-style="italic" fill="#1B4332" text-anchor="middle">内蒙古</text>
+            
+            <!-- 东北(五常) -->
+            <circle cx="780" cy="240" r="6" fill="var(--sage)" opacity="0.85"/>
+            <text x="785" y="220" font-family="'Cormorant Garamond',serif" font-size="18" font-style="italic" fill="#1B4332" text-anchor="middle">东北 · 五常</text>
+            
+            <!-- 江西赣南(主推 · 星标) -->
+            <circle cx="660" cy="550" r="10" fill="var(--rust)" opacity="0.95"/>
+            <text x="660" y="588" font-family="'Cormorant Garamond',serif" font-size="20" font-weight="600" font-style="italic" fill="#C73E3A" text-anchor="middle">⭐ 江西赣南</text>
+            
+            <!-- 云南 -->
+            <circle cx="420" cy="600" r="6" fill="var(--sage)" opacity="0.85"/>
+            <text x="420" y="630" font-family="'Cormorant Garamond',serif" font-size="18" font-style="italic" fill="#1B4332" text-anchor="middle">云南</text>
+            
+            <!-- 连线(轻虚线,把5地连起来) -->
+            <g stroke="rgba(27,67,50,0.18)" stroke-width="1" stroke-dasharray="3,3" fill="none">
+              <line x1="250" y1="290" x2="520" y2="230"/>
+              <line x1="520" y1="230" x2="780" y2="240"/>
+              <line x1="660" y1="550" x2="520" y2="230"/>
+              <line x1="660" y1="550" x2="420" y2="600"/>
+            </g>
+          </svg>
         </div>
       </div>
 
@@ -861,10 +875,10 @@
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
 
     <div class="text-center mb-16 reveal">
-      <div class="section-no mb-6 inline-block">02 / The Eight</div>
+      <div class="section-no mb-6 inline-block">02 / The Six</div>
       <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(22px, 2.8vw, 34px); line-height: 1.1;">
-        <span data-zh>八种食材,八个故事</span>
-        <span data-en>Eight ingredients, eight stories.</span>
+        <span data-zh>五种食材,五个故事</span>
+        <span data-en>Five ingredients, five stories.</span>
       </h2>
       <p class="font-display italic text-terra text-lg">
         <span data-zh>每一颗食材,都值得被认真讲述。</span>
@@ -889,7 +903,7 @@
         </div>
       </a>
 
-      <a href="#" class="origin-card reveal delay-2" data-foodvio-cta="general_contact">
+      <a href="our-story-chinese-roots-yunnan-v62.html" class="origin-card reveal delay-2" data-foodvio-cta="general_contact">
         <div class="visual ov-truffle has-image" style="--bg-image: url('assets/origins/origin-yunnan.jpg')">
           <span class="icon-big">🍄</span>
         </div>
@@ -903,7 +917,7 @@
         </div>
       </a>
 
-      <a href="#" class="origin-card reveal delay-3" data-foodvio-cta="general_contact">
+      <a href="our-story-chinese-roots-wuchang-v62.html" class="origin-card reveal delay-3" data-foodvio-cta="general_contact">
         <div class="visual ov-rice has-image" style="--bg-image: url('assets/origins/origin-wuchang.jpg')">
           <span class="icon-big">🌾</span>
         </div>
@@ -917,7 +931,7 @@
         </div>
       </a>
 
-      <a href="#" class="origin-card reveal delay-4" data-foodvio-cta="general_contact">
+      <a href="our-story-chinese-roots-inner-mongolia-v62.html" class="origin-card reveal delay-4" data-foodvio-cta="general_contact">
         <div class="visual ov-meat has-image" style="--bg-image: url('assets/origins/origin-inner-mongolia.jpg')">
           <span class="icon-big">🐄</span>
         </div>
@@ -931,7 +945,7 @@
         </div>
       </a>
 
-      <a href="#" class="origin-card reveal delay-5" data-foodvio-cta="general_contact">
+      <a href="our-story-chinese-roots-xinjiang-v62.html" class="origin-card reveal delay-5" data-foodvio-cta="general_contact">
         <div class="visual ov-flour has-image" style="--bg-image: url('assets/origins/origin-xinjiang.jpg')">
           <span class="icon-big">🌾</span>
         </div>
@@ -941,48 +955,6 @@
           <div class="name-en"><span data-zh>Xinjiang Flour</span><span data-en>新疆面粉</span></div>
           <p class="desc"><span data-zh>戈壁日晒小麦,蛋白质含量高,是披萨饼底嚼劲的关键。</span><span data-en>Gobi sun-grown wheat — high protein, the secret to our pizza bases' bite.</span></p>
           <div class="powers"><span class="label">POWERS:</span><span data-zh>披萨饼底 / 可颂底胚</span><span data-en>Pizza Base / Croissant Base</span></div>
-          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
-        </div>
-      </a>
-
-      <a href="#" class="origin-card reveal delay-6" data-foodvio-cta="general_contact">
-        <div class="visual ov-seafood">
-          <span class="icon-big">🐟</span>
-        </div>
-        <div class="info">
-          <div class="region"><span data-zh>福建 · 福州</span><span data-en>Fujian · Fuzhou</span></div>
-          <h3><span data-zh>福建深海产</span><span data-en>Fujian Deep-Sea Catch</span></h3>
-          <div class="name-en"><span data-zh>Fujian Deep-Sea</span><span data-en>福建海产</span></div>
-          <p class="desc"><span data-zh>福建沿海野生鳕鱼与小杂鱼,撑起西式炸品的核心鱼料。</span><span data-en>Wild cod and small fish from Fujian's coast — at the core of our fried seafood line.</span></p>
-          <div class="powers"><span class="label">POWERS:</span><span data-zh>黄金鳕鱼排 / 小食拼盘</span><span data-en>Cod Fillets / Seafood Snacks</span></div>
-          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
-        </div>
-      </a>
-
-      <a href="#" class="origin-card reveal delay-7" data-foodvio-cta="general_contact">
-        <div class="visual ov-poultry">
-          <span class="icon-big">🐔</span>
-        </div>
-        <div class="info">
-          <div class="region"><span data-zh>山东 · 潍坊</span><span data-en>Shandong · Weifang</span></div>
-          <h3><span data-zh>山东禽类</span><span data-en>Shandong Poultry</span></h3>
-          <div class="name-en"><span data-zh>Shandong Poultry</span><span data-en>山东禽类</span></div>
-          <p class="desc"><span data-zh>山东标准化禽类养殖,鸡肉细腻紧实,是炸品与香草鸡的基础。</span><span data-en>Standardized poultry from Shandong — fine, firm chicken anchoring our fried snacks and herb chicken.</span></p>
-          <div class="powers"><span class="label">POWERS:</span><span data-zh>意式香草鸡 / 鸡肉锅巴</span><span data-en>Italian Herb Chicken / Chicken Snacks</span></div>
-          <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
-        </div>
-      </a>
-
-      <a href="#" class="origin-card reveal delay-8" data-foodvio-cta="general_contact">
-        <div class="visual ov-marine">
-          <span class="icon-big">🦐</span>
-        </div>
-        <div class="info">
-          <div class="region"><span data-zh>粤桂 · 北部湾</span><span data-en>Guangdong-Guangxi · Beibu Gulf</span></div>
-          <h3><span data-zh>粤桂海洋蛋白</span><span data-en>Guangdong-Guangxi Marine</span></h3>
-          <div class="name-en"><span data-zh>GD-GX Marine Protein</span><span data-en>粤桂海洋蛋白</span></div>
-          <p class="desc"><span data-zh>北部湾海域虾贝,鲜度高、口感弹润,用于跨境海产 OEM。</span><span data-en>Shrimp & shellfish from Beibu Gulf — high freshness, springy texture, used in cross-border seafood OEM.</span></p>
-          <div class="powers"><span class="label">POWERS:</span><span data-zh>海鲜披萨 / 海产小食</span><span data-en>Seafood Pizza / Marine Snacks</span></div>
           <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
         </div>
       </a>
