@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Chinese Roots · Foodvio 花花食界 — 5 Origins, From Field to Plate</title>
 <meta name="description" content="花花食界中国原料故事 · 5 大原料产地 · 江西赣南螺丝椒 / 新疆 / 内蒙古 / 东北五常 / 云南黑松露" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
-
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = { theme: { extend: {
@@ -17,19 +15,16 @@
     fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'sans-sc': ['"Noto Sans SC"', 'sans-serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
   }}}
 </script>
-
 <style>
   :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; }
   * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
   html { scroll-behavior: smooth; }
   body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
-
   .grain::after {
     content: ''; position: fixed; inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
     opacity: 0.05; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
   }
-
   .hero-bg { position: absolute; inset: 0; background: var(--ink); overflow: hidden; }
   .hero-bg::before {
     content: ''; position: absolute; inset: 0;
@@ -41,18 +36,14 @@
     content: ''; position: absolute; inset: 0;
     background-image: linear-gradient(180deg, transparent 0%, transparent 70%, rgba(13,42,31,0.6) 100%);
   }
-
   .section-no { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-weight: 500; letter-spacing: 0.12em; font-size: 14px; }
   .section-no::before { content: '— '; margin-right: 6px; }
-
   .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
   .reveal.in { opacity: 1; transform: translateY(0); }
   .delay-1 { transition-delay: 0.08s; } .delay-2 { transition-delay: 0.16s; } .delay-3 { transition-delay: 0.24s; }
   .delay-4 { transition-delay: 0.32s; } .delay-5 { transition-delay: 0.40s; } .delay-6 { transition-delay: 0.48s; }
   .delay-7 { transition-delay: 0.56s; } .delay-8 { transition-delay: 0.64s; }
-
   .hero-title { font-family: 'Noto Serif SC', serif; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #fff; }
-
   /* Origin card */
   .origin-card {
     background: #fff;
@@ -115,7 +106,6 @@
   .ov-seafood { background: linear-gradient(135deg, #4A90E2 0%, #1e5b9e 100%); }
   .ov-poultry { background: linear-gradient(135deg, #E8A852 0%, #B87520 100%); }
   .ov-marine { background: linear-gradient(135deg, #5a8f9e 0%, #2c5563 100%); }
-
   .origin-card .info { padding: 24px 22px; flex-grow: 1; display: flex; flex-direction: column; }
   .origin-card .region {
     font-family: 'Cormorant Garamond', serif; font-style: italic;
@@ -155,7 +145,6 @@
     transition: gap 0.3s;
   }
   .origin-card:hover .arrow { gap: 12px; }
-
   /* Promise items */
   .promise-row {
     display: grid;
@@ -182,7 +171,6 @@
     font-size: 14px; color: rgba(13,42,31,0.7);
     line-height: 1.65;
   }
-
   .btn-primary {
     display: inline-flex; align-items: center; gap: 12px;
     padding: 16px 32px; background: var(--rust); color: #fff;
@@ -199,13 +187,11 @@
     transition: all 0.3s;
   }
   .btn-outline:hover { background: var(--cream); border-color: var(--forest); }
-
   /* Breadcrumb */
   .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
   .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
   .breadcrumb a:hover { color: var(--gold); }
   .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
-
   /* Nav */
   .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
   .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -217,7 +203,6 @@
   .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
   .nav-link.active { color: var(--gold); }
   .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
-
   .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
   .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
   .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
@@ -225,13 +210,11 @@
   .mega-link:hover { color: var(--rust); padding-left: 6px; }
   .mega-link.featured { color: var(--rust); font-weight: 500; }
   .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
-
   footer { background: var(--ink); }
   .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
   .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
   .footer-link:hover { color: var(--gold); }
   .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
-
   [data-en] { display: none; }
   body.lang-en [data-zh] { display: none; }
   body.lang-en [data-en] { display: inline; }
@@ -245,11 +228,9 @@
   body.lang-en .lang-toggle .lang-en { opacity: 1; font-weight: 600; }
   .lang-toggle .lang-sep { opacity: .4; margin: 0 2px; }
   .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
-
   @media (max-width: 768px) {
     .mega-menu { display: none; }
   }
-
   /* === Brand Logo (R1) === */
   .brand-logo{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;line-height:1;text-decoration:none;color:inherit;transition:opacity .25s}
   .brand-logo:hover{opacity:.8}
@@ -267,8 +248,6 @@
     .brand-logo .zh{font-size:16px;letter-spacing:.08em}
     .brand-logo .en{font-size:8.5px;letter-spacing:.42em;padding-right:.42em}
   }
-
-
   /* === Standard H2 Section Title (R5) === */
   .h2-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-weight:500;letter-spacing:.18em;font-size:14px;margin-bottom:18px;display:inline-block;text-transform:uppercase}
   .h2-eyebrow::before{content:'— ';margin-right:4px}
@@ -281,8 +260,6 @@
     .h2-main-en{font-size:20px}
     .h2-block{padding-bottom:20px;margin-bottom:24px}
   }
-
-
   /* W12 · Mobile P1 优化 */
   @media (max-width: 768px) {
     /* 1. sauce-card swatch 在手机端从 4:3 改为 16:9,信息更紧凑 */
@@ -323,8 +300,6 @@
       grid-template-columns: 1fr !important;
     }
   }
-
-
   /* W12 P0-1 · Mobile Hamburger Menu */
   .nav-hamburger {
     display: none;
@@ -356,7 +331,6 @@
     transform: translateY(-7px) rotate(-45deg);
     background: #fff !important;
   }
-
   /* Drawer 弹层 */
   .nav-drawer {
     position: fixed;
@@ -374,7 +348,6 @@
     overflow-y: auto;
   }
   body.nav-drawer-open .nav-drawer { transform: translateX(0); }
-
   .nav-drawer-backdrop {
     position: fixed;
     inset: 0;
@@ -389,7 +362,6 @@
     opacity: 1;
     pointer-events: auto;
   }
-
   .nav-drawer-link {
     display: block;
     padding: 14px 0;
@@ -417,7 +389,6 @@
   }
   body.lang-en .nav-drawer-link .zh { display: none; }
   body:not(.lang-en) .nav-drawer-link .en-only { display: none; }
-
   .nav-drawer-footer {
     margin-top: auto;
     padding-top: 24px;
@@ -445,7 +416,6 @@
     color: rgba(255,255,255,0.5);
     line-height: 1.6;
   }
-
   /* 显示规则 */
   @media (max-width: 1023px) {
     .nav-hamburger { display: flex; }
@@ -455,11 +425,8 @@
   @media (min-width: 1024px) {
     .nav-drawer, .nav-drawer-backdrop { display: none !important; }
   }
-
   /* 锁滚动 */
   body.nav-drawer-open { overflow: hidden; }
-
-
   /* W13 · 移动端比例协调(参考全球食品品牌) */
   @media (max-width: 768px) {
     /* ───── A. sauce-card 正文回升到全球标准 ───── */
@@ -473,29 +440,23 @@
     /* sauce-card swatch 略增高(16/9 太扁),改为 5/3 */
     .sauce-card .sauce-swatch { aspect-ratio: 5/3 !important; }
     .sauce-card .sauce-swatch .emoji-overlay { font-size: 56px !important; }
-
     /* ───── B. ps-card(首页 R2-A 矩阵)正文协调 ───── */
     .ps-card h4 { font-size: 16px !important; line-height: 1.35 !important; }
     .ps-card .name-en { font-size: 12px !important; }
     .ps-card .arrow-cta { font-size: 13px !important; }
     .ps-card { padding: 18px 16px 20px !important; min-height: 220px !important; }
-
     /* ───── C. ps-more-mobile 全宽按钮字号合适 ───── */
     .ps-more-mobile { font-size: 14px !important; padding: 13px 18px !important; }
-
     /* ───── D. 抽屉菜单字号回升 ───── */
     .nav-drawer-link { font-size: 16px !important; padding: 13px 0 !important; }
     .nav-drawer-link .en { font-size: 11px !important; margin-top: 3px !important; }
     .nav-drawer-cta { font-size: 14px !important; padding: 13px 20px !important; }
     .nav-drawer-contact { font-size: 12px !important; line-height: 1.7 !important; }
-
     /* ───── E. section eyebrow 协调 ───── */
     .section-no { font-size: 13px !important; }
-
     /* ───── F. 段落正文最小可读字号 ───── */
     p { font-size: max(14px, 1em); }
   }
-
   @media (max-width: 520px) {
     /* 小屏(iPhone SE / Android 普通)进一步精修 */
     .sauce-card h3 { font-size: 16px !important; }
@@ -506,31 +467,26 @@
     .sauce-card .view-link { font-size: 12px !important; }
     .sauce-card .info { padding: 16px 16px 18px !important; }
     .sauce-card .sauce-swatch .emoji-overlay { font-size: 48px !important; }
-
     /* 子页 hero h1 (W12 用 clamp(28px, 7vw, 40px)) — W13 微调以适配 1-2 行布局 */
     section h1[style*="clamp(38px"],
     section h1[style*="clamp(40px"] {
       font-size: clamp(26px, 6.5vw, 36px) !important;
       line-height: 1.15 !important;
     }
-
     /* 首页 hero — 主标题克制 */
     .hero-title-zh, .hero-title-en {
       font-size: clamp(30px, 8vw, 44px) !important;
       line-height: 1.1 !important;
     }
-
     /* h2 section 标题 */
     h2[style*="clamp(26px"],
     h2[style*="clamp(28px"] {
       font-size: clamp(22px, 5.2vw, 28px) !important;
       line-height: 1.2 !important;
     }
-
     /* 段落最小字号 */
     p, p[class*="text-"] { font-size: 14px !important; line-height: 1.55 !important; }
   }
-
   @media (max-width: 380px) {
     /* iPhone SE 等超小屏 */
     .hero-title-zh, .hero-title-en {
@@ -539,27 +495,21 @@
     .sauce-card .info { padding: 14px 14px 16px !important; }
     .sauce-card h3 { font-size: 15px !important; }
   }
-
   /* W13 G. 全站图文比例协调 ───── */
   @media (max-width: 768px) {
     /* hero section 容器内边距统一 */
     section.h-screen .max-w-\[1440px\] { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
-
     /* 首页 R2-A cat-row 间距统一 */
     .ps-cat-row { margin-bottom: 28px !important; }
     .ps-cat-row .icon { font-size: 22px !important; }
     .ps-cat-title h3 { font-size: 18px !important; line-height: 1.25 !important; }
     .ps-cat-title .en { font-size: 11px !important; }
-
     /* section padding 收紧 */
     section.py-12 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
     section.py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
-
     /* h2 大标题与 section_no 间距收紧 */
     .section-no { margin-bottom: 0.75rem !important; }
   }
-
-
   /* W19 · origin-card 接图 */
   .origin-card.has-image .visual {
     background-image: linear-gradient(180deg, rgba(13,42,31,0.30) 0%, rgba(13,42,31,0.55) 100%), var(--bg-image);
@@ -569,8 +519,6 @@
   .origin-card.has-image .visual .icon-big {
     text-shadow: 0 4px 16px rgba(0,0,0,0.6);
   }
-
-
   /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
   .cta-as-text {
     display: inline-block;
@@ -582,13 +530,10 @@
     cursor: default;
     user-select: none;
   }
-
   </style>
 <script src="lead-capture.js" defer></script>
 </head>
-
 <body class="grain">
-
 <!-- NAV -->
 <nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
   <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
@@ -617,7 +562,6 @@
       <a href="#" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition" data-foodvio-cta="general_contact"><span data-zh>联系我们</span><span data-en>Contact</span></a>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-products">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-10 gap-6">
       <div class="col-span-2">
@@ -662,7 +606,6 @@
       </div>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-solutions">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
@@ -687,7 +630,6 @@
       </div>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-story">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
@@ -715,7 +657,6 @@
       </div>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-capabilities">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
@@ -750,7 +691,6 @@
   <a href="insights-v62.html" class="nav-drawer-link "><span class="zh">行业洞察</span><span class="en-only">Insights</span><span class="en">Insights</span></a>
   <a href="careers-v62.html" class="nav-drawer-link "><span class="zh">加入我们</span><span class="en-only">Careers</span><span class="en">Careers</span></a>
   <a href="about-v62.html" class="nav-drawer-link "><span class="zh">关于我们</span><span class="en-only">About</span><span class="en">About</span></a>
-
   <div class="nav-drawer-footer">
     <a href="#" class="nav-drawer-cta" data-foodvio-cta="general_contact"><span class="zh">联系我们</span><span class="en-only">Contact us</span></a>
     <div class="nav-drawer-contact">
@@ -759,13 +699,10 @@
     </div>
   </div>
 </aside>
-
-
 <!-- HERO -->
 <section class="relative min-h-[640px] flex items-end pb-20 pt-20 overflow-hidden">
   <div class="hero-bg"></div>
   <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full">
-
     <div class="breadcrumb mb-12 reveal">
       <a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a>
       <span class="sep">›</span>
@@ -773,7 +710,6 @@
       <span class="sep">›</span>
       <span class="text-white"><span data-zh>中国原料</span><span data-en>Chinese Roots</span></span>
     </div>
-
     <div class="grid md:grid-cols-12 gap-8 items-end">
       <div class="md:col-span-9">
         <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
@@ -797,12 +733,10 @@
     </div>
   </div>
 </section>
-
 <!-- ════════ MAP OVERVIEW ════════ -->
 <section class="bg-paper py-12 md:py-16">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
     <div class="grid md:grid-cols-12 gap-12 items-center">
-
       <div class="md:col-span-5 reveal">
         <div class="section-no mb-6">01 / The Map</div>
         <h2 class="font-serif-sc font-bold text-forest leading-tight mb-6" style="font-size: clamp(32px, 4vw, 48px);">
@@ -818,15 +752,12 @@
           <span data-en>Each origin corresponds to an ingredient we commit to deeply. We build long-term partnerships with farmers and cooperatives, ensuring quality from the source.</span>
         </p>
       </div>
-
     </div>
   </div>
 </section>
-
 <!-- ════════ 8 ORIGIN CARDS ════════ -->
 <section class="bg-cream py-12 md:py-16">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-
     <div class="text-center mb-16 reveal">
       <div class="section-no mb-6 inline-block">02 / The Six</div>
       <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(22px, 2.8vw, 34px); line-height: 1.1;">
@@ -838,9 +769,7 @@
         <span data-en>Each ingredient deserves to be told properly.</span>
       </p>
     </div>
-
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-
       <a href="our-story-chinese-roots-gannan-chili-v62.html" class="origin-card featured reveal delay-1">
         <div class="visual ov-chili has-image" style="--bg-image: url('assets/origins/origin-gannan-chili.jpg')">
           <span class="featured-badge">⭐ Featured</span>
@@ -855,7 +784,6 @@
           <span class="arrow"><span data-zh>读完整故事</span><span data-en>Read full story</span> →</span>
         </div>
       </a>
-
       <a href="our-story-chinese-roots-yunnan-v62.html" class="origin-card reveal delay-2" data-foodvio-cta="general_contact">
         <div class="visual ov-truffle has-image" style="--bg-image: url('assets/origins/origin-yunnan.jpg')">
           <span class="icon-big">🍄</span>
@@ -869,7 +797,6 @@
           <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
         </div>
       </a>
-
       <a href="our-story-chinese-roots-wuchang-v62.html" class="origin-card reveal delay-3" data-foodvio-cta="general_contact">
         <div class="visual ov-rice has-image" style="--bg-image: url('assets/origins/origin-wuchang.jpg')">
           <span class="icon-big">🌾</span>
@@ -883,7 +810,6 @@
           <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
         </div>
       </a>
-
       <a href="our-story-chinese-roots-inner-mongolia-v62.html" class="origin-card reveal delay-4" data-foodvio-cta="general_contact">
         <div class="visual ov-meat has-image" style="--bg-image: url('assets/origins/origin-inner-mongolia.jpg')">
           <span class="icon-big">🐄</span>
@@ -897,7 +823,6 @@
           <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
         </div>
       </a>
-
       <a href="our-story-chinese-roots-xinjiang-v62.html" class="origin-card reveal delay-5" data-foodvio-cta="general_contact">
         <div class="visual ov-flour has-image" style="--bg-image: url('assets/origins/origin-xinjiang.jpg')">
           <span class="icon-big">🌾</span>
@@ -911,16 +836,12 @@
           <span class="arrow"><span data-zh>即将上线</span><span data-en>Coming soon</span> →</span>
         </div>
       </a>
-
     </div>
-
   </div>
 </section>
-
 <!-- ════════ SOURCING PROMISE ════════ -->
 <section class="bg-paper py-12 md:py-16">
   <div class="max-w-[1100px] mx-auto px-6 md:px-12">
-
     <div class="text-center mb-16 reveal">
       <div class="section-no mb-6 inline-block">03 / Our Promise</div>
       <h2 class="font-serif-sc font-bold text-forest mb-4" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.1;">
@@ -932,9 +853,7 @@
         <span data-en>For every ingredient, we promise three things.</span>
       </p>
     </div>
-
     <div class="reveal delay-1">
-
       <div class="promise-row">
         <div class="promise-icon">🔬</div>
         <div>
@@ -942,7 +861,6 @@
           <p><span data-zh>每一批次原料,均经过 SGS 或 BV 等独立第三方检测机构进行品质与安全检验,报告随产品同步交付。</span><span data-en>Every batch is tested by independent SGS or BV facilities for quality and safety. Reports delivered alongside product.</span></p>
         </div>
       </div>
-
       <div class="promise-row">
         <div class="promise-icon">📋</div>
         <div>
@@ -950,7 +868,6 @@
           <p><span data-zh>从原料田间到成品出厂,每一批次都有完整的追溯记录。任何一袋花花产品,都能查到它来自哪一片土地。</span><span data-en>From field to finished product, every batch carries a complete traceability log. Any Foodvio package — we can tell you what soil it came from.</span></p>
         </div>
       </div>
-
       <div class="promise-row">
         <div class="promise-icon">🚜</div>
         <div>
@@ -958,12 +875,9 @@
           <p><span data-zh>我们的供应链团队每年至少 2 次实地访查每个核心产地,与农户、合作社建立直接联系,长期合作并不通过中间商。</span><span data-en>Our supply chain team visits each core origin at least twice per year — building direct, long-term partnerships without middlemen.</span></p>
         </div>
       </div>
-
     </div>
-
   </div>
 </section>
-
 <!-- ════════ CTA ════════ -->
 <section class="bg-cream py-12 md:py-16 px-6 md:px-12">
   <div class="max-w-[1100px] mx-auto text-center reveal">
@@ -984,7 +898,6 @@
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer class="text-white/80">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-16 pb-10">
@@ -1001,7 +914,7 @@
       </div>
       <div class="md:col-span-2"><div class="footer-col-title"><span data-zh>产品</span><span data-en>Products</span></div>
         <a href="products-sauces-v62.html" class="footer-link"><span data-zh>西式酱料</span><span data-en>Sauces</span></a>
-        <a href="products-index-v62.html#sides" class="footer-link"><span data-zh>健康小菜</span><span data-en>Healthy Sides</span></a></div>
+        </div>
       <div class="md:col-span-2"><div class="footer-col-title"><span data-zh>解决方案</span><span data-en>Solutions</span></div>
         <a href="for-foodservice-v62.html" class="footer-link"><span data-zh>连锁餐饮</span><span data-en>Foodservice</span></a>
         <a href="for-industrial-v62.html" class="footer-link"><span data-zh>机构团餐</span><span data-en>Industrial</span></a></div>
@@ -1024,7 +937,6 @@
     </div>
   </div>
 </footer>
-
 <script>
 function toggleLang() {
   document.body.classList.toggle('lang-en');
@@ -1033,7 +945,6 @@ function toggleLang() {
   localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
 }
 if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
-
 const navbar = document.getElementById('navbar');
 function updateNav() {
   const scrolled = window.scrollY > 60;
@@ -1042,7 +953,6 @@ function updateNav() {
 }
 window.addEventListener('scroll', updateNav);
 updateNav();
-
 const menuTriggers = document.querySelectorAll('[data-menu]');
 const megaPanels = document.querySelectorAll('.mega-menu');
 let menuTimer = null;
@@ -1062,7 +972,6 @@ megaPanels.forEach(panel => {
     menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
   });
 });
-
 const reveals = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -1073,8 +982,6 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 reveals.forEach(el => obs.observe(el));
-
-
 // W12 P0-1 · Hamburger toggle
 (function(){
   const burger = document.getElementById('navHamburger');
@@ -1090,10 +997,7 @@ reveals.forEach(el => obs.observe(el));
   // 点 drawer 内链接后自动关
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
 })();
-
 </script>
-
-
 <script src="cookie-banner.js" defer></script>
 </body>
 </html>

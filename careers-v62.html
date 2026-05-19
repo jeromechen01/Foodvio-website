@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>加入我们 · Join Foodvio · 花花食界招聘</title>
 <meta name="description" content="加入花花食界 · 寻找充满热情的食品行业人才 · 食品研发、销售、管培生岗位招聘中 · 北京花花食界食品科技有限公司 · 源自中国的专业西餐食品品牌 · 双品牌战略 · 三大生产基地 · 4 大产品价值" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
-
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -29,7 +27,6 @@
     }
   }
 </script>
-
 <style>
   :root {
     --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A;
@@ -43,7 +40,6 @@
     color: var(--ink);
     overflow-x: hidden;
   }
-
   /* Grain texture */
   .grain::after {
     content: ''; position: fixed; inset: 0;
@@ -51,7 +47,6 @@
     opacity: 0.04; pointer-events: none; z-index: 99;
     mix-blend-mode: overlay;
   }
-
   /* Hero */
   .hero-bg {
     position: absolute; inset: 0;
@@ -68,14 +63,12 @@
     content: ''; position: absolute; inset: 0;
     background-image: linear-gradient(180deg, transparent 0%, transparent 70%, rgba(13,42,31,0.6) 100%);
   }
-
   .section-no {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic; color: var(--terra);
     font-weight: 500; letter-spacing: 0.12em; font-size: 14px;
   }
   .section-no::before { content: '— '; margin-right: 6px; }
-
   .reveal {
     opacity: 0; transform: translateY(32px);
     transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99),
@@ -88,12 +81,10 @@
   .delay-4 { transition-delay: 0.34s; }
   .delay-5 { transition-delay: 0.42s; }
   .delay-6 { transition-delay: 0.50s; }
-
   .hero-title {
     font-family: 'Noto Serif SC', serif; font-weight: 700;
     line-height: 1.05; letter-spacing: -0.02em; color: #fff;
   }
-
   /* Buttons */
   .btn-primary {
     display: inline-flex; align-items: center; gap: 12px;
@@ -105,7 +96,6 @@
   .btn-primary:hover { background: #b03531; transform: translateY(-2px); }
   .btn-primary .arrow { transition: transform 0.4s; }
   .btn-primary:hover .arrow { transform: translateX(4px); }
-
   .btn-link {
     display: inline-flex; align-items: center; gap: 8px;
     color: var(--rust); font-size: 14px; font-weight: 500;
@@ -113,7 +103,6 @@
     padding-bottom: 4px; transition: gap 0.3s;
   }
   .btn-link:hover { gap: 14px; border-bottom-color: var(--rust); }
-
   /* Brand split section */
   .brand-card {
     border-radius: 24px;
@@ -200,7 +189,6 @@
   }
   .brand-card.consumer a.action { color: var(--rust); }
   .brand-card a.action:hover { gap: 16px; }
-
   /* Product line cards */
   .line-card {
     background: #fff;
@@ -230,32 +218,25 @@
     border-color: rgba(27,67,50,0.15);
   }
   .line-card:hover::before { transform: scaleX(1); }
-
   /* 6 cards: 6 different accent colors + subtle bg tints */
   .line-card.l1 { background: linear-gradient(180deg, #fff 0%, #fefaf3 100%); }
   .line-card.l1::before { background: var(--rust); }
   .line-card.l1 .num { color: var(--rust); }
-
   .line-card.l2 { background: linear-gradient(180deg, #fff 0%, #f9faf5 100%); }
   .line-card.l2::before { background: var(--terra); }
   .line-card.l2 .num { color: var(--terra); }
-
   .line-card.l3 { background: linear-gradient(180deg, #fff 0%, #fdf7f0 100%); }
   .line-card.l3::before { background: var(--gold); }
   .line-card.l3 .num { color: #c19818; }
-
   .line-card.l4 { background: linear-gradient(180deg, #fff 0%, #faf5f3 100%); }
   .line-card.l4::before { background: #8b3a1f; }
   .line-card.l4 .num { color: #8b3a1f; }
-
   .line-card.l5 { background: linear-gradient(180deg, #fff 0%, #f5faf3 100%); }
   .line-card.l5::before { background: var(--sage); }
   .line-card.l5 .num { color: #5a8f6e; }
-
   .line-card.l6 { background: linear-gradient(180deg, #fff 0%, #faf7f0 100%); }
   .line-card.l6::before { background: #b8922a; }
   .line-card.l6 .num { color: #b8922a; }
-
   .line-card .num {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -331,7 +312,6 @@
     transition: gap 0.3s;
   }
   .line-card:hover .arrow-end { gap: 14px; }
-
   /* Custom development block */
   .custom-block {
     background: linear-gradient(160deg, #faf7f0 0%, #efe6d2 100%);
@@ -350,7 +330,6 @@
     mix-blend-mode: overlay;
     pointer-events: none;
   }
-
   /* Breadcrumb */
   .breadcrumb {
     font-size: 13px; color: rgba(255,255,255,0.55);
@@ -359,7 +338,6 @@
   .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
   .breadcrumb a:hover { color: var(--gold); }
   .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
-
   /* Nav (consistent w/ homepage) */
   .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
   .nav-bar.scrolled {
@@ -375,7 +353,6 @@
   .nav-bar.dark-page.scrolled .nav-brand,
   .nav-bar.dark-page.scrolled .nav-utility { color: var(--forest); }
   .nav-bar.dark-page.scrolled .nav-link:hover { color: var(--rust); }
-
   .nav-link {
     position: relative; font-size: 14px;
     letter-spacing: 0.02em; padding: 6px 0;
@@ -387,7 +364,6 @@
   }
   .nav-link.active { color: var(--gold); }
   .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
-
   /* Mega menu */
   .mega-menu {
     position: fixed; top: 64px; left: 0; right: 0;
@@ -423,7 +399,6 @@
     margin-bottom: 10px;
   }
   .mega-cta:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
-
   /* Footer */
   footer { background: var(--ink); }
   .footer-col-title {
@@ -440,7 +415,6 @@
     height: 1px;
     background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%);
   }
-
   /* Lang switch */
   [data-en] { display: none; }
   body.lang-en [data-zh] { display: none; }
@@ -462,12 +436,10 @@
   .nav-bar.dark-page.scrolled .lang-toggle {
     color: var(--forest); border-color: rgba(27,67,50,0.25);
   }
-
   @media (max-width: 768px) {
     .hero-title { font-size: clamp(24px, 3vw, 36px) !important; }
     .mega-menu { display: none; }
   }
-
   /* === Brand Logo (R1) === */
   .brand-logo{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;line-height:1;text-decoration:none;color:inherit;transition:opacity .25s}
   .brand-logo:hover{opacity:.8}
@@ -485,8 +457,6 @@
     .brand-logo .zh{font-size:16px;letter-spacing:.08em}
     .brand-logo .en{font-size:8.5px;letter-spacing:.42em;padding-right:.42em}
   }
-
-
   /* === Standard H2 Section Title (R5) === */
   .h2-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-weight:500;letter-spacing:.18em;font-size:14px;margin-bottom:18px;display:inline-block;text-transform:uppercase}
   .h2-eyebrow::before{content:'— ';margin-right:4px}
@@ -499,7 +469,6 @@
     .h2-main-en{font-size:20px}
     .h2-block{padding-bottom:20px;margin-bottom:24px}
   }
-
   /* ─────────────────────────────────────────────
      W10 · ps-card-rich (信息密度升级版)
      在原 .ps-card 基础上扩展:加规格 + 卖点 2-3 点
@@ -507,7 +476,6 @@
   .ps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   @media(max-width:1024px){.ps-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
   @media(max-width:520px){.ps-grid{grid-template-columns:1fr;gap:12px}}
-
   .ps-card-rich{
     background:#fff;border-radius:14px;
     border:1px solid rgba(13,42,31,0.06);
@@ -547,14 +515,12 @@
     z-index:1;
   }
   @media(max-width:520px){.ps-card-rich .visual .emoji{font-size:56px}}
-
   /* 信息块容器 */
   .ps-card-rich .info{
     padding:0 18px;
     display:flex;flex-direction:column;
     flex:1;
   }
-
   /* 1. 产品名 */
   .ps-card-rich .pname{
     font-family:'Noto Serif SC',serif;
@@ -568,7 +534,6 @@
     font-size:13px;letter-spacing:.04em;
     margin-bottom:12px;
   }
-
   /* 2. 卖点(主) */
   .ps-card-rich .ptag{
     font-family:'Noto Sans SC',sans-serif;
@@ -577,7 +542,6 @@
     margin-bottom:10px;
     min-height:40px;
   }
-
   /* 3. 规格 */
   .ps-card-rich .pspec{
     font-family:'Noto Sans SC',sans-serif;
@@ -589,7 +553,6 @@
     align-self:flex-start;
     margin-bottom:12px;
   }
-
   /* 4. 卖点 2-3 点 */
   .ps-card-rich .pbullets{
     display:flex;flex-direction:column;gap:4px;
@@ -605,7 +568,6 @@
     content:'·';position:absolute;left:4px;top:-2px;
     color:var(--terra);font-weight:700;font-size:14px;
   }
-
   /* 底部箭头 */
   .ps-card-rich .arrow-cta{
     margin-top:auto;padding-top:8px;
@@ -616,11 +578,8 @@
     letter-spacing:.06em;
   }
   .ps-card-rich:hover .arrow-cta{font-weight:600;gap:6px}
-
   /* steel 色变量补 */
   :root{--steel:#4A6271}
-
-
   /* W12 · Mobile P1 优化 */
   @media (max-width: 768px) {
     /* 1. sauce-card swatch 在手机端从 4:3 改为 16:9,信息更紧凑 */
@@ -661,8 +620,6 @@
       grid-template-columns: 1fr !important;
     }
   }
-
-
   /* W12 P0-1 · Mobile Hamburger Menu */
   .nav-hamburger {
     display: none;
@@ -694,7 +651,6 @@
     transform: translateY(-7px) rotate(-45deg);
     background: #fff !important;
   }
-
   /* Drawer 弹层 */
   .nav-drawer {
     position: fixed;
@@ -712,7 +668,6 @@
     overflow-y: auto;
   }
   body.nav-drawer-open .nav-drawer { transform: translateX(0); }
-
   .nav-drawer-backdrop {
     position: fixed;
     inset: 0;
@@ -727,7 +682,6 @@
     opacity: 1;
     pointer-events: auto;
   }
-
   .nav-drawer-link {
     display: block;
     padding: 14px 0;
@@ -755,7 +709,6 @@
   }
   body.lang-en .nav-drawer-link .zh { display: none; }
   body:not(.lang-en) .nav-drawer-link .en-only { display: none; }
-
   .nav-drawer-footer {
     margin-top: auto;
     padding-top: 24px;
@@ -783,7 +736,6 @@
     color: rgba(255,255,255,0.5);
     line-height: 1.6;
   }
-
   /* 显示规则 */
   @media (max-width: 1023px) {
     .nav-hamburger { display: flex; }
@@ -793,11 +745,8 @@
   @media (min-width: 1024px) {
     .nav-drawer, .nav-drawer-backdrop { display: none !important; }
   }
-
   /* 锁滚动 */
   body.nav-drawer-open { overflow: hidden; }
-
-
   /* W13 · 移动端比例协调(参考全球食品品牌) */
   @media (max-width: 768px) {
     /* ───── A. sauce-card 正文回升到全球标准 ───── */
@@ -811,29 +760,23 @@
     /* sauce-card swatch 略增高(16/9 太扁),改为 5/3 */
     .sauce-card .sauce-swatch { aspect-ratio: 5/3 !important; }
     .sauce-card .sauce-swatch .emoji-overlay { font-size: 56px !important; }
-
     /* ───── B. ps-card(首页 R2-A 矩阵)正文协调 ───── */
     .ps-card h4 { font-size: 16px !important; line-height: 1.35 !important; }
     .ps-card .name-en { font-size: 12px !important; }
     .ps-card .arrow-cta { font-size: 13px !important; }
     .ps-card { padding: 18px 16px 20px !important; min-height: 220px !important; }
-
     /* ───── C. ps-more-mobile 全宽按钮字号合适 ───── */
     .ps-more-mobile { font-size: 14px !important; padding: 13px 18px !important; }
-
     /* ───── D. 抽屉菜单字号回升 ───── */
     .nav-drawer-link { font-size: 16px !important; padding: 13px 0 !important; }
     .nav-drawer-link .en { font-size: 11px !important; margin-top: 3px !important; }
     .nav-drawer-cta { font-size: 14px !important; padding: 13px 20px !important; }
     .nav-drawer-contact { font-size: 12px !important; line-height: 1.7 !important; }
-
     /* ───── E. section eyebrow 协调 ───── */
     .section-no { font-size: 13px !important; }
-
     /* ───── F. 段落正文最小可读字号 ───── */
     p { font-size: max(14px, 1em); }
   }
-
   @media (max-width: 520px) {
     /* 小屏(iPhone SE / Android 普通)进一步精修 */
     .sauce-card h3 { font-size: 16px !important; }
@@ -844,31 +787,26 @@
     .sauce-card .view-link { font-size: 12px !important; }
     .sauce-card .info { padding: 16px 16px 18px !important; }
     .sauce-card .sauce-swatch .emoji-overlay { font-size: 48px !important; }
-
     /* 子页 hero h1 (W12 用 clamp(28px, 7vw, 40px)) — W13 微调以适配 1-2 行布局 */
     section h1[style*="clamp(38px"],
     section h1[style*="clamp(40px"] {
       font-size: clamp(26px, 6.5vw, 36px) !important;
       line-height: 1.15 !important;
     }
-
     /* 首页 hero — 主标题克制 */
     .hero-title-zh, .hero-title-en {
       font-size: clamp(30px, 8vw, 44px) !important;
       line-height: 1.1 !important;
     }
-
     /* h2 section 标题 */
     h2[style*="clamp(26px"],
     h2[style*="clamp(28px"] {
       font-size: clamp(22px, 5.2vw, 28px) !important;
       line-height: 1.2 !important;
     }
-
     /* 段落最小字号 */
     p, p[class*="text-"] { font-size: 14px !important; line-height: 1.55 !important; }
   }
-
   @media (max-width: 380px) {
     /* iPhone SE 等超小屏 */
     .hero-title-zh, .hero-title-en {
@@ -877,27 +815,21 @@
     .sauce-card .info { padding: 14px 14px 16px !important; }
     .sauce-card h3 { font-size: 15px !important; }
   }
-
   /* W13 G. 全站图文比例协调 ───── */
   @media (max-width: 768px) {
     /* hero section 容器内边距统一 */
     section.h-screen .max-w-\[1440px\] { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
-
     /* 首页 R2-A cat-row 间距统一 */
     .ps-cat-row { margin-bottom: 28px !important; }
     .ps-cat-row .icon { font-size: 22px !important; }
     .ps-cat-title h3 { font-size: 18px !important; line-height: 1.25 !important; }
     .ps-cat-title .en { font-size: 11px !important; }
-
     /* section padding 收紧 */
     section.py-12 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
     section.py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
-
     /* h2 大标题与 section_no 间距收紧 */
     .section-no { margin-bottom: 0.75rem !important; }
   }
-
-
   /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
   .cta-as-text {
     display: inline-block;
@@ -909,8 +841,6 @@
     cursor: default;
     user-select: none;
   }
-
-  
   /* W26 · careers page styles */
   .job-card {
     background: #FAF7F0;
@@ -1014,12 +944,10 @@
     .job-card { padding: 24px 20px; }
     .job-meta { margin-top: 16px; }
   }
-
   </style>
 <script src="lead-capture.js" defer></script>
 </head>
 <body class="grain">
-
 <!-- ═══════════════════════════════════════════
      NAVIGATION (consistent w/ entire site)
      ═══════════════════════════════════════════ -->
@@ -1029,7 +957,6 @@
       <span class="zh">花花食界</span>
       <span class="en">FOODVIO</span>
     </a>
-
     <div class="hidden lg:flex items-center gap-9">
       <a href="products-index-v62.html" class="nav-link has-dropdown" data-menu="products"><span data-zh>产品</span><span data-en>Products</span></a>
       <a href="solutions-index-v62.html" class="nav-link has-dropdown" data-menu="solutions"><span data-zh>方案</span><span data-en>Solutions</span></a>
@@ -1039,7 +966,6 @@
       <a href="careers-v62.html" class="nav-link active"><span data-zh>加入我们</span><span data-en>Careers</span></a>
       <a href="about-v62.html" class="nav-link"><span data-zh>关于我们</span><span data-en>About</span></a>
     </div>
-
     <div class="flex items-center gap-4">
       <button class="nav-utility text-white/80 hover:text-gold transition" aria-label="Search">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
@@ -1052,7 +978,6 @@
       <a href="#" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition" data-foodvio-cta="general_contact"><span data-zh>联系我们</span><span data-en>Contact</span></a>
     </div>
   </div>
-
   <!-- Mega Menu Panels -->
   <div class="mega-menu" id="mega-products">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-10 gap-6">
@@ -1098,7 +1023,6 @@
       </div>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-solutions">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
@@ -1123,7 +1047,6 @@
       </div>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-story">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
@@ -1151,7 +1074,6 @@
       </div>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-capabilities">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
@@ -1187,7 +1109,6 @@
   <a href="careers-v62.html" class="nav-drawer-link active"><span class="zh">加入我们</span><span class="en-only">Careers</span><span class="en">Careers</span></a>
   <a href="about-v62.html" class="nav-drawer-link "><span class="zh">关于我们</span><span class="en-only">About</span><span class="en">About</span></a>
   <a href="careers-v62.html" class="nav-drawer-link "><span class="zh">加入我们</span><span class="en-only">Careers</span><span class="en">Careers</span></a>
-
   <div class="nav-drawer-footer">
     <a href="#" class="nav-drawer-cta" data-foodvio-cta="general_contact"><span class="zh">联系我们</span><span class="en-only">Contact us</span></a>
     <div class="nav-drawer-contact">
@@ -1196,14 +1117,12 @@
     </div>
   </div>
 </aside>
-
 <!-- ╔══════════════════════════════════════════════════════════════
      SECTION 1 · HERO
      ══════════════════════════════════════════════════════════════ -->
 <section class="relative min-h-[80vh] flex items-end pb-16 pt-32 overflow-hidden" style="background: linear-gradient(135deg, var(--ink) 0%, #0a1f17 100%);">
   <!-- Background gradient overlay -->
   <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 30%, rgba(245,200,46,0.10) 0%, transparent 60%), radial-gradient(ellipse at 70% 70%, rgba(231,158,93,0.08) 0%, transparent 60%);"></div>
-  
   <div class="max-w-[1440px] mx-auto px-6 md:px-12 w-full relative z-10">
     <div class="font-display italic text-gold/80 text-sm tracking-[0.2em] mb-6 reveal">
       — CAREERS · 加入花花食界
@@ -1224,8 +1143,6 @@
     </div>
   </div>
 </section>
-
-
 <!-- ╔══════════════════════════════════════════════════════════════
      SECTION 2 · 我们是谁
      ══════════════════════════════════════════════════════════════ -->
@@ -1241,20 +1158,19 @@
       </div>
       <div class="md:col-span-7 reveal delay-1">
         <p class="text-forest/80 text-lg leading-relaxed mb-6">
-          <span data-zh>花花食界 Foodvio 创立于 2021 年,我们用 5 年时间从一家代工厂,成长为中国西式食品供应链的革新者。</span>
-          <span data-en>Founded in 2021, Foodvio grew from an OEM workshop to an innovator in China&apos;s western food supply chain in just 5 years.</span>
+          <span data-zh>花花食界 Foodvio 创立于 2021 年,我们用 5 年时间已经成长为中国西餐食品的革新者。</span>
+          <span data-en>Founded in 2021, Foodvio has grown into an innovator in China&apos;s western food industry in just 5 years.</span>
         </p>
         <p class="text-forest/80 text-lg leading-relaxed mb-6">
-          <span data-zh>我们相信:中国本土原料 + 全球工艺,可以做出与意大利、西班牙、美国同等水准的西餐食材,价格只需 1/8。</span>
-          <span data-en>We believe Chinese ingredients + global craftsmanship can match Italian, Spanish, American quality — at 1/8 the price.</span>
+          <span data-zh>我们相信:中国本土原料 + 全球工艺,可以做出与意大利、西班牙、美国同等水准的西餐食材。</span>
+          <span data-en>We believe Chinese ingredients + global craftsmanship can match Italian, Spanish, American quality.</span>
         </p>
         <p class="text-forest/80 text-lg leading-relaxed">
-          <span data-zh>这不是降级,而是一次基于深度本土供应链的创新。我们正在招聘愿意与我们一起,把这件事做大、做扎实的人。</span>
-          <span data-en>This isn&apos;t cost-cutting — it&apos;s innovation rooted in deep local supply. We&apos;re hiring people who want to scale this with us.</span>
+          <span data-zh>这是一次基于深度本土供应链的创新。我们正在招聘愿意与我们一起,把这件事做大、做扎实的人。</span>
+          <span data-en>This is innovation rooted in deep local supply. We&apos;re hiring people who want to scale this with us.</span>
         </p>
       </div>
     </div>
-
     <!-- 公司数据带 -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-forest/10 reveal delay-2">
       <div class="text-center">
@@ -1276,8 +1192,6 @@
     </div>
   </div>
 </section>
-
-
 <!-- ╔══════════════════════════════════════════════════════════════
      SECTION 3 · 我们的价值观
      ══════════════════════════════════════════════════════════════ -->
@@ -1290,7 +1204,6 @@
         <span data-en>What we look for</span>
       </h2>
     </div>
-
     <div class="grid md:grid-cols-3 gap-8">
       <!-- Value 1 -->
       <div class="reveal delay-1">
@@ -1331,8 +1244,6 @@
     </div>
   </div>
 </section>
-
-
 <!-- ╔══════════════════════════════════════════════════════════════
      SECTION 4 · 在招岗位
      ══════════════════════════════════════════════════════════════ -->
@@ -1350,10 +1261,8 @@
         <span data-zh>北京 · 望京</span><span data-en>Beijing · Wangjing</span>
       </p>
     </div>
-
     <!-- 岗位列表 -->
     <div class="space-y-5">
-      
       <!-- 岗位 1: 食品研发专员 -->
       <div class="job-card reveal delay-1">
         <div class="grid md:grid-cols-12 gap-6 items-start">
@@ -1393,7 +1302,7 @@
                 <div class="job-meta-label"><span data-zh>学历 · 经验</span><span data-en>Education · Experience</span></div>
                 <div class="job-meta-value"><span data-zh>本科 · 1-3 年</span><span data-en>Bachelor · 1-3 yrs</span></div>
               </div>
-              <a href="mailto:huahuakefu1@foodvio.com.cn?subject=求职申请 · Job Application" class="btn-outline mt-4 inline-flex">
+              <a href="mailto:huahuakefu1@foodvio.com.cn?subject=Job%20Application%20-%20%E6%B1%82%E8%81%8C%E7%94%B3%E8%AF%B7" class="btn-outline mt-4 inline-flex">
                 <span data-zh>投递简历</span><span data-en>Apply Now</span>
                 <span class="arrow">→</span>
               </a>
@@ -1401,7 +1310,6 @@
           </div>
         </div>
       </div>
-
       <!-- 岗位 2: 大客户销售代表/经理 -->
       <div class="job-card reveal delay-2">
         <div class="grid md:grid-cols-12 gap-6 items-start">
@@ -1438,7 +1346,7 @@
                 <div class="job-meta-label"><span data-zh>学历 · 经验</span><span data-en>Education · Experience</span></div>
                 <div class="job-meta-value"><span data-zh>大专 · 3-5 年</span><span data-en>Associate · 3-5 yrs</span></div>
               </div>
-              <a href="mailto:huahuakefu1@foodvio.com.cn?subject=求职申请 · Job Application" class="btn-outline mt-4 inline-flex">
+              <a href="mailto:huahuakefu1@foodvio.com.cn?subject=Job%20Application%20-%20%E6%B1%82%E8%81%8C%E7%94%B3%E8%AF%B7" class="btn-outline mt-4 inline-flex">
                 <span data-zh>投递简历</span><span data-en>Apply Now</span>
                 <span class="arrow">→</span>
               </a>
@@ -1446,7 +1354,6 @@
           </div>
         </div>
       </div>
-
       <!-- 岗位 3: 管培生 (NEW) -->
       <div class="job-card job-card-featured reveal delay-3">
         <div class="grid md:grid-cols-12 gap-6 items-start">
@@ -1488,7 +1395,7 @@
                 <div class="job-meta-label"><span data-zh>招聘人数</span><span data-en>Openings</span></div>
                 <div class="job-meta-value"><span data-zh>若干名</span><span data-en>Multiple</span></div>
               </div>
-              <a href="mailto:huahuakefu1@foodvio.com.cn?subject=求职申请 · Job Application" class="btn-primary mt-4 inline-flex">
+              <a href="mailto:huahuakefu1@foodvio.com.cn?subject=Job%20Application%20-%20%E6%B1%82%E8%81%8C%E7%94%B3%E8%AF%B7" class="btn-primary mt-4 inline-flex">
                 <span data-zh>投递简历</span><span data-en>Apply Now</span>
                 <span class="arrow">→</span>
               </a>
@@ -1496,12 +1403,9 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
-
 <!-- ╔══════════════════════════════════════════════════════════════
      SECTION 5 · 申请流程
      ══════════════════════════════════════════════════════════════ -->
@@ -1514,7 +1418,6 @@
         <span data-en>How to Apply</span>
       </h2>
     </div>
-
     <div class="grid md:grid-cols-4 gap-6">
       <div class="process-step reveal delay-1">
         <div class="process-num">01</div>
@@ -1559,8 +1462,6 @@
     </div>
   </div>
 </section>
-
-
 <!-- ╔══════════════════════════════════════════════════════════════
      SECTION 6 · CTA
      ══════════════════════════════════════════════════════════════ -->
@@ -1575,19 +1476,16 @@
       <span data-en>Resume email · huahuakefu1@foodvio.com.cn</span>
     </p>
     <div class="reveal delay-2">
-      <a href="mailto:huahuakefu1@foodvio.com.cn?subject=Careers Inquiry · 求职咨询" class="btn-primary inline-flex">
+      <a href="mailto:huahuakefu1@foodvio.com.cn?subject=Careers%20Inquiry%20-%20%E6%B1%82%E8%81%8C%E5%92%A8%E8%AF%A2" class="btn-primary inline-flex">
         <span data-zh>发送简历</span><span data-en>Send Resume</span>
         <span class="arrow">→</span>
       </a>
     </div>
   </div>
 </section>
-
 <footer class="text-white/80">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-16 pb-10">
-
     <div class="grid md:grid-cols-12 gap-10 mb-16">
-
       <div class="md:col-span-4">
         <a href="index.html" class="brand-logo lg" aria-label="Foodvio 花花食界" style="margin-bottom:24px;">
           <span class="zh">花花食界</span>
@@ -1598,16 +1496,13 @@
           <span data-en>The professional Western cuisine brand from China. From field to plate — world flavors, made in China.</span>
         </p>
       </div>
-
       <div class="md:col-span-2">
         <div class="footer-col-title"><span data-zh>产品</span><span data-en>Products</span></div>
         <a href="products-sauces-v62.html" class="footer-link"><span data-zh>西式酱料</span><span data-en>Sauces</span></a>
-        <a href="products-index-v62.html#staples" class="footer-link">Western Staples</a>
-        <a href="products-index-v62.html#snacks" class="footer-link">Fried Snacks</a>
-        <a href="products-index-v62.html#mains" class="footer-link">Main Courses</a>
-        <a href="products-index-v62.html#sides" class="footer-link"><span data-zh>健康小菜</span><span data-en>Healthy Sides</span></a>
+        <a href="products-staples-v62.html" class="footer-link">Western Staples</a>
+        <a href="products-snacks-v62.html" class="footer-link">Fried Snacks</a>
+        <a href="products-mains-v62.html" class="footer-link">Main Courses</a>
       </div>
-
       <div class="md:col-span-2">
         <div class="footer-col-title"><span data-zh>解决方案</span><span data-en>Solutions</span></div>
         <a href="for-foodservice-v62.html" class="footer-link"><span data-zh>连锁餐饮</span><span data-en>Foodservice</span></a>
@@ -1615,7 +1510,6 @@
         <a href="for-retail-v62.html" class="footer-link"><span data-zh>新零售</span><span data-en>Retail</span></a>
         <a href="for-online-sales-v62.html" class="footer-link"><span data-zh>线上销售</span><span data-en>Online Sales</span></a>
       </div>
-
       <div class="md:col-span-2">
         <div class="footer-col-title"><span data-zh>探索</span><span data-en>Discover</span></div>
         <a href="our-story-index-v62.html" class="footer-link"><span data-zh>品牌故事</span><span data-en>Our Story</span></a>
@@ -1623,7 +1517,6 @@
         <a href="insights-v62.html" class="footer-link"><span data-zh>行业洞察</span><span data-en>Insights</span></a>
         <a href="about-v62.html" class="footer-link"><span data-zh>关于我们</span><span data-en>About</span></a>
       </div>
-
       <div class="md:col-span-2">
         <div class="footer-col-title"><span data-zh>联系</span><span data-en>Contact</span></div>
         <p class="text-xs text-white/55 leading-relaxed">
@@ -1635,11 +1528,8 @@
           </span>
         </p>
       </div>
-
     </div>
-
     <div class="footer-divider mb-6"></div>
-
     <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
       <div>© 2026 Beijing Foodvio Food Technology Co., Ltd.</div>
       <div class="flex items-center gap-5">
@@ -1649,10 +1539,8 @@
         <a href="cookie-policy-zh.html" class="hover:text-gold transition" data-zh>Cookie</a><a href="cookie-policy-en.html" class="hover:text-gold transition" data-en>Cookies</a>
       </div>
     </div>
-
   </div>
 </footer>
-
 <script>
 function toggleLang() {
   document.body.classList.toggle('lang-en');
@@ -1663,7 +1551,6 @@ function toggleLang() {
 if (localStorage.getItem('foodvio-lang') === 'en') {
   document.body.classList.add('lang-en');
 }
-
 const navbar = document.getElementById('navbar');
 function updateNav() {
   const scrolled = window.scrollY > 60;
@@ -1672,7 +1559,6 @@ function updateNav() {
 }
 window.addEventListener('scroll', updateNav);
 updateNav();
-
 const menuTriggers = document.querySelectorAll('[data-menu]');
 const megaPanels = document.querySelectorAll('.mega-menu');
 let menuTimer = null;
@@ -1692,7 +1578,6 @@ megaPanels.forEach(panel => {
     menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
   });
 });
-
 const reveals = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -1703,8 +1588,6 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 reveals.forEach(el => obs.observe(el));
-
-
 // W12 P0-1 · Hamburger toggle
 (function(){
   const burger = document.getElementById('navHamburger');
@@ -1720,10 +1603,6 @@ reveals.forEach(el => obs.observe(el));
   // 点 drawer 内链接后自动关
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
 })();
-
 </script>
-
-
 <script src="cookie-banner.js" defer></script>
-
 </html>

@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>赣南螺丝椒 · Origin Story · Foodvio 花花食界</title>
 <meta name="description" content="赣南螺丝椒 · 江西赣南红土地上的中国地理标志辣椒 · 花花食界披萨、健康小菜、酱料的灵魂原料 · 中国地理标志保护产品" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
-
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = { theme: { extend: {
@@ -17,19 +15,16 @@
     fontFamily: { 'serif-sc': ['"Noto Serif SC"', 'serif'], 'sans-sc': ['"Noto Sans SC"', 'sans-serif'], 'display': ['"Cormorant Garamond"', 'serif'], 'body': ['"Inter"', 'sans-serif'] }
   }}}
 </script>
-
 <style>
   :root { --ink: #0d2a1f; --forest: #1B4332; --terra: #E07A5F; --rust: #C73E3A; --gold: #F5C82E; --sage: #81B29A; --sky: #4A90E2; --cream: #F5F1EA; --paper: #FAF7F0; --chili-red: #B8231C; }
   * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
   html { scroll-behavior: smooth; }
   body { font-family: 'Noto Sans SC', 'Inter', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
-
   .grain::after {
     content: ''; position: fixed; inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
     opacity: 0.05; pointer-events: none; z-index: 99; mix-blend-mode: overlay;
   }
-
   /* ════════ MAGAZINE HERO (full screen) ════════ */
   .mag-hero {
     position: relative;
@@ -50,7 +45,6 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
     opacity: 0.10; mix-blend-mode: overlay;
   }
-
   /* Floating chili emoji */
   .chili-deco {
     position: absolute;
@@ -62,7 +56,6 @@
   }
   .chili-1 { top: 20%; right: 8%; transform: rotate(-15deg); }
   .chili-2 { bottom: 18%; right: 30%; font-size: 140px; transform: rotate(25deg); opacity: 0.08; }
-
   .mag-label {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -84,7 +77,6 @@
     color: rgba(255,255,255,0.7);
     font-weight: 500;
   }
-
   /* Issue meta tag */
   .issue-tag {
     display: inline-flex;
@@ -103,7 +95,6 @@
     font-style: italic;
   }
   .issue-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
-
   /* ════════ ARTICLE TYPOGRAPHY (editorial) ════════ */
   .article-section {
     max-width: 760px;
@@ -171,7 +162,6 @@
     padding-top: 6px;
     margin-bottom: -8px;
   }
-
   /* ════════ Pull quote (large editorial quote) ════════ */
   .pull-quote {
     border-left: 3px solid var(--chili-red);
@@ -203,7 +193,6 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
-
   /* ════════ Spec card (data sheet) ════════ */
   .spec-card {
     background: linear-gradient(135deg, #faf7f0 0%, #f0e6d2 100%);
@@ -266,7 +255,6 @@
     font-weight: 500;
     line-height: 1.5;
   }
-
   /* ════════ Reasons (numbered editorial) ════════ */
   .reason {
     display: grid;
@@ -298,7 +286,6 @@
     line-height: 1.75;
     color: rgba(13,42,31,0.75);
   }
-
   /* ════════ Product cards (it powers these) ════════ */
   .pwr-card {
     background: #fff;
@@ -354,7 +341,6 @@
     color: rgba(13,42,31,0.65);
     line-height: 1.55;
   }
-
   /* ════════ Field-to-factory timeline ════════ */
   .field-step {
     display: flex; gap: 20px;
@@ -396,7 +382,6 @@
     height: 24px;
     border-left: 1px dashed rgba(184,35,28,0.4);
   }
-
   /* ════════ Cert badge ════════ */
   .cert-badge {
     display: inline-flex;
@@ -410,7 +395,6 @@
     color: var(--forest);
   }
   .cert-badge .icon { color: var(--chili-red); font-size: 20px; }
-
   /* ════════ Related reading ════════ */
   .read-card {
     padding: 24px 0;
@@ -438,7 +422,6 @@
     transition: color 0.3s;
   }
   .read-card:hover h5 { color: var(--chili-red); }
-
   /* ════════ CTA at bottom ════════ */
   .cta-block {
     background: linear-gradient(135deg, var(--chili-red) 0%, #7a0f0a 100%);
@@ -471,18 +454,15 @@
     transition: all 0.3s;
   }
   .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
-
   /* ════════ Reveal ════════ */
   .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.2s cubic-bezier(.16,.84,.28,.99), transform 1.2s cubic-bezier(.16,.84,.28,.99); }
   .reveal.in { opacity: 1; transform: translateY(0); }
   .delay-1 { transition-delay: 0.10s; } .delay-2 { transition-delay: 0.20s; } .delay-3 { transition-delay: 0.30s; }
-
   /* Breadcrumb */
   .breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 0.02em; }
   .breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
   .breadcrumb a:hover { color: var(--gold); }
   .breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
-
   /* Nav */
   .nav-bar { transition: all 0.4s cubic-bezier(.16,.84,.28,.99); }
   .nav-bar.scrolled { background: rgba(13,42,31,0.95); backdrop-filter: blur(20px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -494,7 +474,6 @@
   .nav-link.has-dropdown::after { content: '⌄'; margin-left: 4px; font-size: 12px; opacity: 0.6; }
   .nav-link.active { color: var(--gold); }
   .nav-bar.dark-page.scrolled .nav-link.active { color: var(--rust); }
-
   .mega-menu { position: fixed; top: 64px; left: 0; right: 0; background: #fff; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15); border-top: 1px solid var(--gold); padding: 48px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.3s cubic-bezier(.16,.84,.28,.99); z-index: 60; }
   .mega-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
   .mega-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--terra); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(0,0,0,0.06); }
@@ -504,14 +483,12 @@
   .mega-link.featured::before { content: '★'; margin-right: 6px; color: var(--gold); }
   .mega-cta { display: block; padding: 14px 18px; background: var(--cream); border: 1px solid rgba(27,67,50,0.1); border-radius: 8px; font-size: 13px; color: var(--forest); transition: all 0.3s; margin-bottom: 10px; }
   .mega-cta:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
-
   /* Footer */
   footer { background: var(--ink); }
   .footer-col-title { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
   .footer-link { display: block; padding: 5px 0; color: rgba(255,255,255,0.65); font-size: 13px; transition: color 0.25s; }
   .footer-link:hover { color: var(--gold); }
   .footer-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(245,200,46,0.3) 50%, transparent 100%); }
-
   /* Lang switch */
   [data-en] { display: none; }
   body.lang-en [data-zh] { display: none; }
@@ -526,14 +503,12 @@
   body.lang-en .lang-toggle .lang-en { opacity: 1; font-weight: 600; }
   .lang-toggle .lang-sep { opacity: .4; margin: 0 2px; }
   .nav-bar.dark-page.scrolled .lang-toggle { color: var(--forest); border-color: rgba(27,67,50,0.25); }
-
   @media (max-width: 768px) {
     .mega-menu { display: none; }
     .reason { grid-template-columns: 1fr; gap: 12px; }
     .reason-num { font-size: 40px; }
     .spec-row { grid-template-columns: 1fr; gap: 4px; padding: 10px 0; }
   }
-
   /* === Brand Logo (R1) === */
   .brand-logo{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;line-height:1;text-decoration:none;color:inherit;transition:opacity .25s}
   .brand-logo:hover{opacity:.8}
@@ -551,8 +526,6 @@
     .brand-logo .zh{font-size:16px;letter-spacing:.08em}
     .brand-logo .en{font-size:8.5px;letter-spacing:.42em;padding-right:.42em}
   }
-
-
   /* === Standard H2 Section Title (R5) === */
   .h2-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terra);font-weight:500;letter-spacing:.18em;font-size:14px;margin-bottom:18px;display:inline-block;text-transform:uppercase}
   .h2-eyebrow::before{content:'— ';margin-right:4px}
@@ -565,8 +538,6 @@
     .h2-main-en{font-size:20px}
     .h2-block{padding-bottom:20px;margin-bottom:24px}
   }
-
-
   /* W12 · Mobile P1 优化 */
   @media (max-width: 768px) {
     /* 1. sauce-card swatch 在手机端从 4:3 改为 16:9,信息更紧凑 */
@@ -607,8 +578,6 @@
       grid-template-columns: 1fr !important;
     }
   }
-
-
   /* W12 P0-1 · Mobile Hamburger Menu */
   .nav-hamburger {
     display: none;
@@ -640,7 +609,6 @@
     transform: translateY(-7px) rotate(-45deg);
     background: #fff !important;
   }
-
   /* Drawer 弹层 */
   .nav-drawer {
     position: fixed;
@@ -658,7 +626,6 @@
     overflow-y: auto;
   }
   body.nav-drawer-open .nav-drawer { transform: translateX(0); }
-
   .nav-drawer-backdrop {
     position: fixed;
     inset: 0;
@@ -673,7 +640,6 @@
     opacity: 1;
     pointer-events: auto;
   }
-
   .nav-drawer-link {
     display: block;
     padding: 14px 0;
@@ -701,7 +667,6 @@
   }
   body.lang-en .nav-drawer-link .zh { display: none; }
   body:not(.lang-en) .nav-drawer-link .en-only { display: none; }
-
   .nav-drawer-footer {
     margin-top: auto;
     padding-top: 24px;
@@ -729,7 +694,6 @@
     color: rgba(255,255,255,0.5);
     line-height: 1.6;
   }
-
   /* 显示规则 */
   @media (max-width: 1023px) {
     .nav-hamburger { display: flex; }
@@ -739,11 +703,8 @@
   @media (min-width: 1024px) {
     .nav-drawer, .nav-drawer-backdrop { display: none !important; }
   }
-
   /* 锁滚动 */
   body.nav-drawer-open { overflow: hidden; }
-
-
   /* W13 · 移动端比例协调(参考全球食品品牌) */
   @media (max-width: 768px) {
     /* ───── A. sauce-card 正文回升到全球标准 ───── */
@@ -757,29 +718,23 @@
     /* sauce-card swatch 略增高(16/9 太扁),改为 5/3 */
     .sauce-card .sauce-swatch { aspect-ratio: 5/3 !important; }
     .sauce-card .sauce-swatch .emoji-overlay { font-size: 56px !important; }
-
     /* ───── B. ps-card(首页 R2-A 矩阵)正文协调 ───── */
     .ps-card h4 { font-size: 16px !important; line-height: 1.35 !important; }
     .ps-card .name-en { font-size: 12px !important; }
     .ps-card .arrow-cta { font-size: 13px !important; }
     .ps-card { padding: 18px 16px 20px !important; min-height: 220px !important; }
-
     /* ───── C. ps-more-mobile 全宽按钮字号合适 ───── */
     .ps-more-mobile { font-size: 14px !important; padding: 13px 18px !important; }
-
     /* ───── D. 抽屉菜单字号回升 ───── */
     .nav-drawer-link { font-size: 16px !important; padding: 13px 0 !important; }
     .nav-drawer-link .en { font-size: 11px !important; margin-top: 3px !important; }
     .nav-drawer-cta { font-size: 14px !important; padding: 13px 20px !important; }
     .nav-drawer-contact { font-size: 12px !important; line-height: 1.7 !important; }
-
     /* ───── E. section eyebrow 协调 ───── */
     .section-no { font-size: 13px !important; }
-
     /* ───── F. 段落正文最小可读字号 ───── */
     p { font-size: max(14px, 1em); }
   }
-
   @media (max-width: 520px) {
     /* 小屏(iPhone SE / Android 普通)进一步精修 */
     .sauce-card h3 { font-size: 16px !important; }
@@ -790,31 +745,26 @@
     .sauce-card .view-link { font-size: 12px !important; }
     .sauce-card .info { padding: 16px 16px 18px !important; }
     .sauce-card .sauce-swatch .emoji-overlay { font-size: 48px !important; }
-
     /* 子页 hero h1 (W12 用 clamp(28px, 7vw, 40px)) — W13 微调以适配 1-2 行布局 */
     section h1[style*="clamp(38px"],
     section h1[style*="clamp(40px"] {
       font-size: clamp(26px, 6.5vw, 36px) !important;
       line-height: 1.15 !important;
     }
-
     /* 首页 hero — 主标题克制 */
     .hero-title-zh, .hero-title-en {
       font-size: clamp(30px, 8vw, 44px) !important;
       line-height: 1.1 !important;
     }
-
     /* h2 section 标题 */
     h2[style*="clamp(26px"],
     h2[style*="clamp(28px"] {
       font-size: clamp(22px, 5.2vw, 28px) !important;
       line-height: 1.2 !important;
     }
-
     /* 段落最小字号 */
     p, p[class*="text-"] { font-size: 14px !important; line-height: 1.55 !important; }
   }
-
   @media (max-width: 380px) {
     /* iPhone SE 等超小屏 */
     .hero-title-zh, .hero-title-en {
@@ -823,35 +773,27 @@
     .sauce-card .info { padding: 14px 14px 16px !important; }
     .sauce-card h3 { font-size: 15px !important; }
   }
-
   /* W13 G. 全站图文比例协调 ───── */
   @media (max-width: 768px) {
     /* hero section 容器内边距统一 */
     section.h-screen .max-w-\[1440px\] { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
-
     /* 首页 R2-A cat-row 间距统一 */
     .ps-cat-row { margin-bottom: 28px !important; }
     .ps-cat-row .icon { font-size: 22px !important; }
     .ps-cat-title h3 { font-size: 18px !important; line-height: 1.25 !important; }
     .ps-cat-title .en { font-size: 11px !important; }
-
     /* section padding 收紧 */
     section.py-12 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
     section.py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
-
     /* h2 大标题与 section_no 间距收紧 */
     .section-no { margin-bottom: 0.75rem !important; }
   }
-
-
   /* W19 · 第二批资产 hero 背景图 */
   .mag-hero {
     background-image: linear-gradient(135deg, rgba(13,42,31,0.55) 0%, rgba(13,42,31,0.30) 50%, rgba(13,42,31,0.55) 100%), url('assets/origins/origin-gannan-chili.jpg');
     background-size: cover;
     background-position: center;
   }
-
-
   /* W22 · 原料页 pwr-card 产品图接入 */
   .pwr-card.has-image .swatch {
     position: relative;
@@ -868,8 +810,6 @@
     width: 100%; height: 100%;
     object-fit: cover; display: block;
   }
-
-
   /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
   .cta-as-text {
     display: inline-block;
@@ -881,13 +821,10 @@
     cursor: default;
     user-select: none;
   }
-
   </style>
 <script src="lead-capture.js" defer></script>
 </head>
-
 <body class="grain">
-
 <!-- NAV -->
 <nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50 px-6 md:px-12">
   <div class="max-w-[1440px] mx-auto h-16 flex items-center justify-between">
@@ -916,7 +853,6 @@
       <a href="#bottom-cta" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition">Contact</a>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-products">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-10 gap-6">
       <div class="col-span-2">
@@ -961,7 +897,6 @@
       </div>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-solutions">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
@@ -986,7 +921,6 @@
       </div>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-story">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
@@ -1014,7 +948,6 @@
       </div>
     </div>
   </div>
-
   <div class="mega-menu" id="mega-capabilities">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-8">
       <div class="col-span-4">
@@ -1049,7 +982,6 @@
   <a href="insights-v62.html" class="nav-drawer-link "><span class="zh">行业洞察</span><span class="en-only">Insights</span><span class="en">Insights</span></a>
   <a href="careers-v62.html" class="nav-drawer-link "><span class="zh">加入我们</span><span class="en-only">Careers</span><span class="en">Careers</span></a>
   <a href="about-v62.html" class="nav-drawer-link "><span class="zh">关于我们</span><span class="en-only">About</span><span class="en">About</span></a>
-
   <div class="nav-drawer-footer">
     <a href="#" class="nav-drawer-cta" data-foodvio-cta="general_contact"><span class="zh">联系我们</span><span class="en-only">Contact us</span></a>
     <div class="nav-drawer-contact">
@@ -1058,15 +990,11 @@
     </div>
   </div>
 </aside>
-
-
 <!-- ════════ SECTION 1 · MAGAZINE HERO ════════ -->
 <section class="mag-hero">
   <span class="chili-deco chili-1">🌶️</span>
   <span class="chili-deco chili-2">🌶️</span>
-
   <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pb-16 pt-20">
-
     <div class="breadcrumb mb-16 reveal">
       <a href="index.html"><span data-zh>首页</span><span data-en>Home</span></a>
       <span class="sep">›</span>
@@ -1076,22 +1004,17 @@
       <span class="sep">›</span>
       <span class="text-white"><span data-zh>赣南螺丝椒</span><span data-en>Gannan Luosijiao Chili</span></span>
     </div>
-
     <div class="grid md:grid-cols-12 gap-8 items-end">
-
       <div class="md:col-span-9">
         <div class="issue-tag mb-10 reveal">
           <span class="dot"></span>
           <span>ORIGIN STORY · 01 OF 8</span>
         </div>
-
         <div class="mag-label mb-8 reveal delay-1">江西 · GANNAN, JIANGXI</div>
-
         <h1 class="mag-title reveal delay-1" style="font-size: clamp(38px, 5vw, 64px);">
           <span data-zh>赣南<br>螺丝椒</span>
           <span data-en class="block">Gannan<br>Luosijiao</span>
         </h1>
-
         <p class="mag-subtitle reveal delay-2 mt-10" style="font-size: clamp(18px, 1.8vw, 26px); max-width: 580px;" data-zh>
           A chili from Gannan's red soil — fiery yet aromatic, deep yet balanced.
         </p>
@@ -1099,7 +1022,6 @@
           一种长于赣南红土地、辣而不燥、香气浓郁的中国辣椒
         </p>
       </div>
-
       <div class="md:col-span-3 reveal delay-3">
         <div class="text-white/55 text-xs uppercase tracking-[0.2em] mb-3 font-display italic">Read time</div>
         <div class="text-white/85 font-display italic text-2xl mb-6">8 min</div>
@@ -1112,16 +1034,12 @@
           <li>· <span data-zh>认证与延伸</span><span data-en>Certs & related</span></li>
         </ul>
       </div>
-
     </div>
-
   </div>
 </section>
-
 <!-- ════════ SECTION 2 · OPENING (drop-cap article) ════════ -->
 <section class="bg-paper py-12 md:py-16">
   <div class="article-section">
-
     <div class="reveal">
       <span class="article-num">01 / Opening</span>
       <h2 class="article-h2">
@@ -1133,7 +1051,6 @@
         <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">从一颗辣椒开始的故事</span>
       </div>
     </div>
-
     <div class="reveal delay-1">
       <p class="article-p first-para" data-zh>
         在江西赣南的红土地上,生长着一种形如螺丝、辣度温润、香气浓郁的辣椒。它不像四川朝天椒那样极致灼烈,也不像青辣椒那样清淡寡味——它在这两者之间,找到了一个属于中国的、独特的平衡点。
@@ -1141,14 +1058,12 @@
       <p class="article-p-en first-para" data-en>
         On the red soil of Gannan, Jiangxi, grows a chili that twists like a spiral. Its heat is gentle, its aroma profound. Unlike the searing power of Sichuan's bird's eye, or the meek flavor of green peppers, the Luosijiao occupies its own ground — a quintessentially Chinese balance.
       </p>
-
       <p class="article-p" data-zh>
         我们叫它"赣南螺丝椒"——这是花花食界披萨、健康小菜、酱料的灵魂之一。从西式酱料的辣度调配,到益生菌发酵小菜的核心原料,再到东南亚和日韩系列调味的关键支撑,这一颗中国辣椒,默默地撑起了我们 20+ 款产品的味觉骨架。
       </p>
       <p class="article-p-en" data-en>
         We call it Gannan Luosijiao — and it is the soul of Foodvio's pizzas, sides, and sauces. From the spice profile of our Western sauces, to the heart of our probiotic-fermented chili sides, to the key support in our Southeast Asian and Korean range — this single Chinese chili quietly powers the flavor backbone of 20+ SKUs.
       </p>
-
       <p class="article-p" data-zh>
         本期 Origin Story,我们带你走进这颗辣椒的故事。
       </p>
@@ -1156,7 +1071,6 @@
         In this Origin Story, we take you to its source.
       </p>
     </div>
-
     <div class="pull-quote reveal delay-2">
       <div class="quote-text" data-zh>
         "辣味是世界共通的语言,<br>
@@ -1171,10 +1085,8 @@
         <span data-en>— Foodvio R&D Chef</span>
       </div>
     </div>
-
   </div>
 </section>
-
 <!-- ════════ SECTION 3 · ORIGIN PROFILE (spec card) ════════ -->
 <section class="bg-cream py-12 md:py-16">
   <div class="article-section">
@@ -1189,14 +1101,12 @@
         <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">辣椒背后的数据</span>
       </div>
     </div>
-
     <div class="spec-card reveal delay-1">
       <div class="spec-label">Specifications</div>
       <h3>
         <span data-zh>赣南螺丝椒 · 数据档案</span>
         <span data-en>Gannan Luosijiao · Data Sheet</span>
       </h3>
-
       <div class="spec-row">
         <span class="key"><span data-zh>学名</span><span data-en>Botanical</span></span>
         <span class="val"><span data-zh>辣椒属(Capsicum)</span><span data-en>Capsicum (genus)</span></span>
@@ -1230,14 +1140,11 @@
         <span class="val font-display italic" style="color: var(--chili-red); font-size: 16px;">100<span style="font-weight:300;">+</span> tons</span>
       </div>
     </div>
-
   </div>
 </section>
-
 <!-- ════════ SECTION 4 · 3 REASONS WE CHOSE IT ════════ -->
 <section class="bg-paper py-12 md:py-16">
   <div class="article-section">
-
     <div class="reveal">
       <span class="article-num">03 / Why we chose it</span>
       <h2 class="article-h2">
@@ -1249,9 +1156,7 @@
         <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">三个理由 · 来自主厨笔记</span>
       </div>
     </div>
-
     <div class="mt-12 reveal delay-1">
-
       <div class="reason">
         <div class="reason-num">01</div>
         <div>
@@ -1267,7 +1172,6 @@
           </p>
         </div>
       </div>
-
       <div class="reason">
         <div class="reason-num">02</div>
         <div>
@@ -1283,7 +1187,6 @@
           </p>
         </div>
       </div>
-
       <div class="reason">
         <div class="reason-num">03</div>
         <div>
@@ -1299,16 +1202,12 @@
           </p>
         </div>
       </div>
-
     </div>
-
   </div>
 </section>
-
 <!-- ════════ SECTION 5 · WHAT IT POWERS ════════ -->
 <section class="bg-cream py-12 md:py-16">
   <div class="article-section wide">
-
     <div class="text-center reveal mb-16">
       <span class="article-num">04 / What it powers</span>
       <h2 class="article-h2">
@@ -1320,9 +1219,7 @@
         <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">一种原料 · 三款旗舰产品</span>
       </div>
     </div>
-
     <div class="grid md:grid-cols-3 gap-6">
-
       <a href="#" class="pwr-card reveal delay-1 has-image" data-foodvio-cta="general_contact">
         <div class="swatch swatch-side">
           <picture class="pwr-card-img">
@@ -1340,7 +1237,6 @@
           </p>
         </div>
       </a>
-
       <a href="#" class="pwr-card reveal delay-2 has-image" data-foodvio-cta="general_contact">
         <div class="swatch swatch-pizza">
           <picture class="pwr-card-img">
@@ -1358,7 +1254,6 @@
           </p>
         </div>
       </a>
-
       <a href="#" class="pwr-card reveal delay-3 has-image" data-foodvio-cta="general_contact">
         <div class="swatch swatch-sauce">
           <picture class="pwr-card-img">
@@ -1376,9 +1271,7 @@
           </p>
         </div>
       </a>
-
     </div>
-
     <div class="text-center mt-12 reveal">
       <a href="products-sauces-v62.html" class="font-display italic text-rust border-b border-rust/40 pb-1 hover:border-rust transition" style="font-size: 15px;">
         <span data-zh>查看全部 20+ 款赣南螺丝椒产品</span>
@@ -1386,14 +1279,11 @@
         →
       </a>
     </div>
-
   </div>
 </section>
-
 <!-- ════════ SECTION 6 · FROM FIELD TO FACTORY ════════ -->
 <section class="bg-paper py-12 md:py-16">
   <div class="article-section">
-
     <div class="reveal">
       <span class="article-num">05 / Field to Factory</span>
       <h2 class="article-h2">
@@ -1405,9 +1295,7 @@
         <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">每一批次的旅程</span>
       </div>
     </div>
-
     <div class="mt-10 reveal delay-1">
-
       <div class="field-step">
         <div class="step-num">01</div>
         <div class="step-info">
@@ -1416,7 +1304,6 @@
         </div>
       </div>
       <div class="field-arrow"></div>
-
       <div class="field-step">
         <div class="step-num">02</div>
         <div class="step-info">
@@ -1425,7 +1312,6 @@
         </div>
       </div>
       <div class="field-arrow"></div>
-
       <div class="field-step">
         <div class="step-num">03</div>
         <div class="step-info">
@@ -1434,7 +1320,6 @@
         </div>
       </div>
       <div class="field-arrow"></div>
-
       <div class="field-step">
         <div class="step-num">04</div>
         <div class="step-info">
@@ -1443,7 +1328,6 @@
         </div>
       </div>
       <div class="field-arrow"></div>
-
       <div class="field-step">
         <div class="step-num">05</div>
         <div class="step-info">
@@ -1451,16 +1335,12 @@
           <p><span data-zh>米其林研发团队负责风味调配 · 转化为 20+ 款最终产品</span><span data-en>Michelin R&D team leads flavor formulation · transformed into 20+ final SKUs</span></p>
         </div>
       </div>
-
     </div>
-
   </div>
 </section>
-
 <!-- ════════ SECTION 7 · CERTIFICATIONS ════════ -->
 <section class="bg-cream py-12 md:py-16">
   <div class="article-section">
-
     <div class="reveal">
       <span class="article-num">06 / Certifications</span>
       <h2 class="article-h2">
@@ -1472,7 +1352,6 @@
         <span data-en class="font-serif-sc not-italic" style="color: var(--terra);">信任,但要验证 · 我们欢迎验证</span>
       </div>
     </div>
-
     <div class="mt-8 flex flex-wrap gap-4 reveal delay-1">
       <div class="cert-badge">
         <span class="icon">🏅</span>
@@ -1499,14 +1378,11 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
-
 <!-- ════════ SECTION 8 · RELATED READING ════════ -->
 <section class="bg-paper py-12 md:py-16">
   <div class="article-section">
-
     <div class="reveal">
       <span class="article-num">07 / Related Reading</span>
       <h2 class="article-h2">
@@ -1514,7 +1390,6 @@
         <span data-en>Continue reading.</span>
       </h2>
     </div>
-
     <div class="mt-10 reveal delay-1">
       <a href="#" class="read-card block" data-foodvio-cta="general_contact">
         <div class="read-tag">Story 01 · Origin</div>
@@ -1529,10 +1404,8 @@
         <h5><span data-zh>意大利主厨如何用赣南螺丝椒做意式酱料?</span><span data-en>How our Italy-trained chef brings Gannan chili into Italian sauces</span></h5>
       </a>
     </div>
-
   </div>
 </section>
-
 <!-- ════════ SECTION 9 · CTA (chili-red themed) ════════ -->
 <section id="bottom-cta" class="py-12 md:py-16 px-6 md:px-12">
   <div class="max-w-[1100px] mx-auto">
@@ -1562,7 +1435,6 @@
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer class="text-white/80">
   <div class="max-w-[1440px] mx-auto px-6 md:px-12 pt-16 pb-10">
@@ -1579,7 +1451,7 @@
       </div>
       <div class="md:col-span-2"><div class="footer-col-title"><span data-zh>产品</span><span data-en>Products</span></div>
         <a href="products-sauces-v62.html" class="footer-link"><span data-zh>西式酱料</span><span data-en>Sauces</span></a>
-        <a href="products-index-v62.html#sides" class="footer-link"><span data-zh>健康小菜</span><span data-en>Healthy Sides</span></a></div>
+        </div>
       <div class="md:col-span-2"><div class="footer-col-title"><span data-zh>解决方案</span><span data-en>Solutions</span></div>
         <a href="for-foodservice-v62.html" class="footer-link"><span data-zh>连锁餐饮</span><span data-en>Foodservice</span></a>
         <a href="for-industrial-v62.html" class="footer-link"><span data-zh>机构团餐</span><span data-en>Industrial</span></a></div>
@@ -1601,7 +1473,6 @@
     </div>
   </div>
 </footer>
-
 <script>
 function toggleLang() {
   document.body.classList.toggle('lang-en');
@@ -1610,7 +1481,6 @@ function toggleLang() {
   localStorage.setItem('foodvio-lang', isEn ? 'en' : 'zh');
 }
 if (localStorage.getItem('foodvio-lang') === 'en') document.body.classList.add('lang-en');
-
 const navbar = document.getElementById('navbar');
 function updateNav() {
   const scrolled = window.scrollY > 60;
@@ -1619,7 +1489,6 @@ function updateNav() {
 }
 window.addEventListener('scroll', updateNav);
 updateNav();
-
 const menuTriggers = document.querySelectorAll('[data-menu]');
 const megaPanels = document.querySelectorAll('.mega-menu');
 let menuTimer = null;
@@ -1639,7 +1508,6 @@ megaPanels.forEach(panel => {
     menuTimer = setTimeout(() => panel.classList.remove('open'), 200);
   });
 });
-
 const reveals = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -1650,8 +1518,6 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 reveals.forEach(el => obs.observe(el));
-
-
 // W12 P0-1 · Hamburger toggle
 (function(){
   const burger = document.getElementById('navHamburger');
@@ -1667,10 +1533,7 @@ reveals.forEach(el => obs.observe(el));
   // 点 drawer 内链接后自动关
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
 })();
-
 </script>
-
-
 <script src="cookie-banner.js" defer></script>
 </body>
 </html>
