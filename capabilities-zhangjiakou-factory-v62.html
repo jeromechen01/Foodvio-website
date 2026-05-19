@@ -416,7 +416,20 @@
     background-position: center;
   }
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 </head>
 <body class="grain">
 
@@ -735,8 +748,8 @@
           <span data-en>North American buyers: from 9" pizza bases to European croissant blanks, we ship compliant. See spec sheets + FDA registration cert.</span>
         </p>
         <div class="flex flex-wrap gap-3">
-          <a href="#" class="btn-primary" data-foodvio-cta="custom_inquiry"><span data-zh>启动出口洽谈</span><span data-en>Start export talks</span><span>→</span></a>
-          <a href="products-index-v62.html#bakery" class="btn-outline" data-foodvio-cta="catalog_download"><span data-zh>下载烘焙目录</span><span data-en>Bakery catalog</span></a>
+          <span class="cta-as-text"><span data-zh>启动出口洽谈 · 联系客服</span><span data-en>Start export talks · Contact us</span></span>
+          <span class="cta-as-text"><span data-zh>下载烘焙目录 · 联系客服</span><span data-en>Bakery catalog · Contact us</span></span>
         </div>
       </div>
     </div>

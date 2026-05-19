@@ -869,7 +869,20 @@
     object-fit: cover; display: block;
   }
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 <script src="lead-capture.js" defer></script>
 </head>
 
@@ -1540,10 +1553,8 @@
             <span data-en>Request Gannan Sample Pack</span>
             <span>→</span>
           </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="origin_tour">
-            <span data-zh>预约赣州农场参观</span>
-            <span data-en>Book Ganzhou farm visit</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>预约赣州农场参观 · 联系客服</span>
+            <span data-en>Book Ganzhou farm visit · Contact us</span></span>
         </div>
       </div>
     </div>

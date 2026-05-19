@@ -982,7 +982,20 @@
   }
   /* 图片加载失败时,emoji + 渐变色块作为优雅降级(自动生效) */
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 <script src="lead-capture.js" defer></script>
 </head>
 
@@ -1200,9 +1213,7 @@
             <span data-zh>申请样品</span><span data-en>Request Samples</span>
             <span class="arrow">→</span>
           </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
-            <span data-zh>下载品牌手册</span><span data-en>Brand Manual PDF</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>下载品牌手册 · 联系客服</span><span data-en>Brand Manual PDF · Contact us</span></span>
         </div>
       </div>
     </div>
@@ -1437,12 +1448,8 @@ olor:var(--terra);margin-top:8px;font-style:italic;font-family:'Cormorant Garamo
         <span data-zh>申请样品</span><span data-en>Request Samples</span>
         <span class="arrow">→</span>
       </a>
-      <a href="#" class="btn-outline" data-foodvio-cta="custom_inquiry">
-        <span data-zh>渠道合作咨询</span><span data-en>Channel Partnership</span>
-      </a>
-      <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
-        <span data-zh>下载品牌手册</span><span data-en>Brand Manual PDF</span>
-      </a>
+      <span class="cta-as-text"><span data-zh>渠道合作咨询 · 联系客服</span><span data-en>Channel Partnership · Contact us</span></span>
+      <span class="cta-as-text"><span data-zh>下载品牌手册 · 联系客服</span><span data-en>Brand Manual PDF · Contact us</span></span>
     </div>
     <p class="font-display italic text-white/55 text-sm mt-10">
       Independent ChinnPaPa B2C site coming soon · 独立 B2C 站点即将上线

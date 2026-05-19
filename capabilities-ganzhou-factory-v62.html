@@ -676,7 +676,20 @@
     background-position: center;
   }
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 </head>
 
 <body class="grain">
@@ -1218,15 +1231,10 @@
           <span data-en>From Gannan chili field to export container — we walk you through the whole journey. Book a flight to Ganzhou, we arrange airport pickup + factory tour + Michelin R&D tasting.</span>
         </p>
         <div class="flex flex-wrap gap-3">
-          <a href="#" class="btn-primary" data-foodvio-cta="meeting_booking">
-            <span data-zh>预约赣州工厂参观</span>
-            <span data-en>Book Ganzhou factory tour</span>
-            <span>→</span>
-          </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
-            <span data-zh>下载工厂能力书</span>
-            <span data-en>Download factory deck</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>预约赣州工厂参观 · 联系客服</span>
+            <span data-en>Book Ganzhou factory tour · Contact us</span></span>
+          <span class="cta-as-text"><span data-zh>下载工厂能力书 · 联系客服</span>
+            <span data-en>Download factory deck · Contact us</span></span>
         </div>
       </div>
     </div>

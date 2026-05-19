@@ -413,7 +413,20 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 </head>
 <body class="grain">
 
@@ -841,8 +854,8 @@
         <h2 class="font-serif-sc font-bold text-white mb-6" style="font-size:clamp(28px,4vw,44px);"><span data-zh>告诉我们你的<br>目的地港口</span><span data-en>Tell us your<br>destination port.</span></h2>
         <p class="text-white/85 text-base md:text-lg mb-10 leading-relaxed"><span data-zh>给我们目的地港口 + 产品清单,我们快速回复 FOB 报价、航期、冷链方案。</span><span data-en>Give us your destination port + product list — we'll respond with FOB quote, schedule, and cold-chain plan.</span></p>
         <div class="flex flex-wrap gap-3">
-          <a href="for-global-v62.html" class="btn-primary" data-foodvio-cta="custom_inquiry"><span data-zh>启动 FOB 报价</span><span data-en>Start FOB quote</span><span>→</span></a>
-          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download"><span data-zh>下载出口能力书</span><span data-en>Export capability deck</span></a>
+          <span class="cta-as-text"><span data-zh>启动 FOB 报价 · 联系客服</span><span data-en>Start FOB quote · Contact us</span></span>
+          <span class="cta-as-text"><span data-zh>下载出口能力书 · 联系客服</span><span data-en>Export capability deck · Contact us</span></span>
         </div>
       </div>
     </div>

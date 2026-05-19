@@ -846,7 +846,20 @@
   }
   /* 图片加载失败时,emoji + 渐变色块作为优雅降级(自动生效) */
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 <script src="lead-capture.js" defer></script>
 </head>
 
@@ -1075,10 +1088,8 @@
             <span data-en>Request Sample Pack</span>
             <span class="arrow">→</span>
           </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
-            <span data-zh>下载酱料目录</span>
-            <span data-en>Sauce Catalog PDF</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>下载酱料目录 · 联系客服</span>
+            <span data-en>Sauce Catalog PDF · Contact us</span></span>
         </div>
       </div>
 
@@ -1239,38 +1250,6 @@
         </div>
       </a>
 
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-caesar" data-product="凯撒酱">
-        <div class="sauce-swatch sauce-caesar has-image">
-          <picture class="sauce-swatch-img">
-            <source type="image/webp" srcset="assets/products/sku-caesar.webp">
-            <img src="assets/products/sku-caesar.jpg" alt="sku-caesar" loading="lazy">
-          </picture></div>
-        <div class="info">
-          <h3><span data-zh>凯撒酱</span><span data-en>Caesar</span></h3>
-          <div class="name-en"><span data-zh>Caesar</span><span data-en>凯撒酱</span></div>
-          <p class="desc"><span data-zh>经典凯撒沙拉酱,鳀鱼+帕尔玛深度</span><span data-en>Classic Caesar with anchovy and Parmesan depth</span></p>
-          <div class="spec">200g × 36 / 箱</div>
-          <div class="tags"><span class="tag"><span data-zh>美式</span><span data-en>American</span></span><span class="tag"><span data-zh>沙拉</span><span data-en>Salad</span></span></div>
-          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
-        </div>
-      </a>
-
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-thousand-island" data-product="千岛酱">
-        <div class="sauce-swatch sauce-thousand has-image">
-          <picture class="sauce-swatch-img">
-            <source type="image/webp" srcset="assets/products/sku-thousand-island.webp">
-            <img src="assets/products/sku-thousand-island.jpg" alt="sku-thousand-island" loading="lazy">
-          </picture></div>
-        <div class="info">
-          <h3><span data-zh>千岛酱</span><span data-en>Thousand Island</span></h3>
-          <div class="name-en"><span data-zh>Thousand Island</span><span data-en>千岛酱</span></div>
-          <p class="desc"><span data-zh>美式经典,适用范围广,汉堡 / 沙拉 / 三文治</span><span data-en>Versatile American classic — burgers, salads, sandwiches</span></p>
-          <div class="spec">200g × 36 / 箱</div>
-          <div class="tags"><span class="tag"><span data-zh>美式</span><span data-en>American</span></span><span class="tag"><span data-zh>汉堡</span><span data-en>Burger</span></span></div>
-          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
-        </div>
-      </a>
-
       <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-yellow-curry" data-product="黄咖喱酱">
         <div class="sauce-swatch sauce-curry has-image">
           <picture class="sauce-swatch-img">
@@ -1363,38 +1342,6 @@
           <p class="desc"><span data-zh>东京学艺归来 · 经典甜咸照烧</span><span data-en>From Tokyo training · classic sweet-savory teriyaki</span></p>
           <div class="spec">200g × 36 / 箱</div>
           <div class="tags"><span class="tag"><span data-zh>日式</span><span data-en>Japanese</span></span><span class="tag"><span data-zh>烤鸡</span><span data-en>Chicken</span></span></div>
-          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
-        </div>
-      </a>
-
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-tartar" data-product="鞑靼酱">
-        <div class="sauce-swatch sauce-tartar has-image">
-          <picture class="sauce-swatch-img">
-            <source type="image/webp" srcset="assets/products/sku-tartar.webp">
-            <img src="assets/products/sku-tartar.jpg" alt="sku-tartar" loading="lazy">
-          </picture></div>
-        <div class="info">
-          <h3><span data-zh>鞑靼酱</span><span data-en>Tartar Sauce</span></h3>
-          <div class="name-en"><span data-zh>Tartar Sauce</span><span data-en>鞑靼酱</span></div>
-          <p class="desc"><span data-zh>日式炸物的灵魂伴侣,酸黄瓜与蛋黄</span><span data-en>Soul mate of Japanese fried food — pickle and yolk</span></p>
-          <div class="spec">150g × 50 / 箱</div>
-          <div class="tags"><span class="tag"><span data-zh>日式</span><span data-en>Japanese</span></span><span class="tag"><span data-zh>炸物</span><span data-en>Fried</span></span></div>
-          <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
-        </div>
-      </a>
-
-      <a href="#" class="sauce-card" data-foodvio-cta="general_contact" id="sku-salsa" data-product="莎莎酱">
-        <div class="sauce-swatch sauce-salsa has-image">
-          <picture class="sauce-swatch-img">
-            <source type="image/webp" srcset="assets/products/sku-salsa.webp">
-            <img src="assets/products/sku-salsa.jpg" alt="sku-salsa" loading="lazy">
-          </picture></div>
-        <div class="info">
-          <h3><span data-zh>莎莎酱</span><span data-en>Salsa</span></h3>
-          <div class="name-en"><span data-zh>Salsa</span><span data-en>莎莎酱</span></div>
-          <p class="desc"><span data-zh>墨西哥学艺主厨配方 · 番茄、洋葱、青椒鲜炒</span><span data-en>From Mexico-trained chef · fresh tomato, onion, and green pepper</span></p>
-          <div class="spec">200g × 36 / 箱</div>
-          <div class="tags"><span class="tag"><span data-zh>墨西哥</span><span data-en>Mexican</span></span><span class="tag"><span data-zh>玉米片</span><span data-en>Tortilla</span></span></div>
           <span class="view-link"><span data-zh>查看详情</span><span data-en>View details</span> →</span>
         </div>
       </a>
@@ -1583,12 +1530,8 @@
             <span data-zh>申请样品组合</span><span data-en>Request Sample Pack</span>
             <span class="arrow">→</span>
           </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="custom_inquiry">
-            <span data-zh>定制配方咨询</span><span data-en>Custom Recipe Inquiry</span>
-          </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
-            <span data-zh>下载完整目录</span><span data-en>Full Catalog PDF</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>定制配方咨询 · 联系客服</span><span data-en>Custom Recipe Inquiry · Contact us</span></span>
+          <span class="cta-as-text"><span data-zh>下载完整目录 · 联系客服</span><span data-en>Full Catalog PDF · Contact us</span></span>
         </div>
 
         <div class="mt-10 pt-8 border-t border-white/15 text-white/60 text-sm">

@@ -680,7 +680,20 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 <script src="lead-capture.js" defer></script>
 </head>
 
@@ -915,10 +928,8 @@
             <span data-en>Visit foodvio.com</span>
             <span class="arrow">→</span>
           </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
-            <span data-zh>下载能力书</span>
-            <span data-en>Capability Deck</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>下载能力书 · 联系客服</span>
+            <span data-en>Capability Deck · Contact us</span></span>
         </div>
       </div>
 
@@ -1197,9 +1208,7 @@
             <span data-zh>访问 foodvio.com</span><span data-en>Visit foodvio.com</span>
             <span class="arrow">→</span>
           </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
-            <span data-zh>下载能力书</span><span data-en>Capability Deck</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>下载能力书 · 联系客服</span><span data-en>Capability Deck · Contact us</span></span>
           <a href="#" class="btn-outline" data-foodvio-cta="general_contact">
             <span data-zh>FOB 询价</span><span data-en>FOB Quote</span>
           </a>

@@ -177,7 +177,7 @@ window.FoodvioLeads = (function() {
             <input name="name" required placeholder="您的姓名 *" style="padding:12px 14px;border:1px solid rgba(27,67,50,0.2);border-radius:8px;font-size:14px;background:#fff;font-family:inherit" />
             <input name="company" placeholder="公司名称(可选)" style="padding:12px 14px;border:1px solid rgba(27,67,50,0.2);border-radius:8px;font-size:14px;background:#fff;font-family:inherit" />
             <input name="email" type="email" required placeholder="邮箱 *" style="padding:12px 14px;border:1px solid rgba(27,67,50,0.2);border-radius:8px;font-size:14px;background:#fff;font-family:inherit" />
-            <input name="phone" placeholder="电话(可选)" style="padding:12px 14px;border:1px solid rgba(27,67,50,0.2);border-radius:8px;font-size:14px;background:#fff;font-family:inherit" />
+            <input name="phone" required placeholder="${document.body.classList.contains('lang-en') ? 'Phone *' : '电话/微信 *'}" style="padding:12px 14px;border:1px solid rgba(27,67,50,0.2);border-radius:8px;font-size:14px;background:#fff;font-family:inherit" />
             <textarea name="message" rows="3" placeholder="补充说明(可选)" style="padding:12px 14px;border:1px solid rgba(27,67,50,0.2);border-radius:8px;font-size:14px;background:#fff;resize:vertical;font-family:inherit"></textarea>
 
             <!-- W9 合规:同意勾选框 -->

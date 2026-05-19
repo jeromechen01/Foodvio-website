@@ -401,7 +401,20 @@
     background-position: center;
   }
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 </head>
 <body class="grain">
 
@@ -688,8 +701,8 @@
           <span data-en>From an idea to your first sample, our R&D chefs walk the journey with you. Visit our Huairou tasting kitchen, or book a video brief.</span>
         </p>
         <div class="flex flex-wrap gap-3">
-          <a href="#" class="btn-primary" data-foodvio-cta="custom_inquiry"><span data-zh>启动定制开发</span><span data-en>Start a custom brief</span><span>→</span></a>
-          <a href="#" class="btn-outline" data-foodvio-cta="meeting_booking"><span data-zh>预约怀柔来访</span><span data-en>Book Huairou visit</span></a>
+          <span class="cta-as-text"><span data-zh>启动定制开发 · 联系客服</span><span data-en>Start a custom brief · Contact us</span></span>
+          <span class="cta-as-text"><span data-zh>预约怀柔来访 · 联系客服</span><span data-en>Book Huairou visit · Contact us</span></span>
         </div>
       </div>
     </div>

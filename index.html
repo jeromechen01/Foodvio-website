@@ -1702,11 +1702,11 @@
       <!-- Card 4 跨境电商 已删除(W16 改动 1b) -->
 
       <!-- Card 5: Global -->
-      <a href="for-global-v62.html" class="role-card reveal delay-5">
+      <a href="for-global-v62.html" class="role-card reveal delay-5" onclick="forceEnglishAndGo(event, 'for-global-v62.html')">
         <span class="num">05</span>
         <span class="icon">🌍</span>
-        <h3 class="font-serif-sc font-bold text-2xl text-forest mb-2"><span data-zh>海外采购商</span><span data-en>Global</span></h3>
-        <div class="font-display italic text-sm text-terra mb-4">Global</div>
+        <h3 class="font-serif-sc font-bold text-2xl text-forest mb-2"><span data-zh>全球采购商</span><span data-en>Global Buyer</span></h3>
+        <div class="font-display italic text-sm text-terra mb-4">Global Buyer</div>
         <p class="text-sm text-forest/70 leading-relaxed mb-3">
           Southeast Asia · Africa · Japan · EU & NA
         </p>
@@ -1990,6 +1990,15 @@ function toggleLang() {
 }
 if (localStorage.getItem('foodvio-lang') === 'en') {
   document.body.classList.add('lang-en');
+}
+
+// W24 · 全球采购商 CTA - 强制英文切换 + 跳转
+function forceEnglishAndGo(event, targetUrl) {
+  event.preventDefault();
+  document.body.classList.add('lang-en');
+  document.documentElement.lang = 'en';
+  localStorage.setItem('foodvio-lang', 'en');
+  window.location.href = targetUrl;
 }
 
 // ============ Nav scroll state ============

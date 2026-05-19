@@ -53,29 +53,6 @@
 
   .hero-title { font-family: 'Noto Serif SC', serif; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #fff; }
 
-  /* W22 · 中国地图(真实轮廓 SVG) */
-  .china-map-wrap {
-    width: 100%;
-    background: rgba(27,67,50,0.03);
-    border: 1px solid rgba(27,67,50,0.08);
-    border-radius: 16px;
-    padding: 24px 20px;
-    aspect-ratio: 5/4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .china-map-svg {
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-  @media (max-width: 768px) {
-    .china-map-wrap { padding: 16px 12px; aspect-ratio: 4/3; }
-    .china-map-svg text { font-size: 22px !important; }
-  }
-
   /* Origin card */
   .origin-card {
     background: #fff;
@@ -593,7 +570,20 @@
     text-shadow: 0 4px 16px rgba(0,0,0,0.6);
   }
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 <script src="lead-capture.js" defer></script>
 </head>
 
@@ -827,45 +817,6 @@
         </p>
       </div>
 
-      <div class="md:col-span-7 reveal delay-1">
-        <div class="china-map-wrap">
-          <svg class="china-map-svg" viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <!-- 简化的中国大陆轮廓 -->
-            <path d="M 165,280 Q 130,250 145,200 Q 160,170 200,165 Q 240,155 280,170 L 330,160 Q 380,155 420,140 Q 470,130 510,135 Q 560,140 600,155 L 660,165 Q 710,170 750,180 Q 790,195 820,215 Q 845,235 855,260 L 870,295 Q 880,330 875,365 Q 870,395 855,415 L 830,440 Q 815,460 810,485 L 805,520 Q 800,550 785,575 L 760,610 Q 740,640 715,665 Q 690,690 660,705 Q 625,720 590,720 L 550,715 Q 510,705 475,690 L 440,675 Q 410,665 380,650 L 350,640 Q 330,620 315,600 Q 305,575 305,555 L 305,520 Q 295,495 275,475 L 250,455 Q 230,435 220,410 Q 215,390 215,365 Q 210,340 200,320 Q 185,300 165,280 Z M 800,200 L 815,195 L 830,205 L 835,225 L 820,240 L 800,235 L 790,215 Z" 
-                  fill="rgba(27,67,50,0.08)" stroke="rgba(27,67,50,0.20)" stroke-width="1.5"/>
-            
-            <!-- 5 个产地点 + 标签 -->
-            <!-- 新疆 -->
-            <circle cx="250" cy="290" r="6" fill="var(--sage)" opacity="0.85"/>
-            <text x="245" y="270" font-family="'Cormorant Garamond',serif" font-size="18" font-style="italic" fill="#1B4332" text-anchor="middle">新疆</text>
-            
-            <!-- 内蒙古 -->
-            <circle cx="520" cy="230" r="6" fill="var(--sage)" opacity="0.85"/>
-            <text x="520" y="210" font-family="'Cormorant Garamond',serif" font-size="18" font-style="italic" fill="#1B4332" text-anchor="middle">内蒙古</text>
-            
-            <!-- 东北(五常) -->
-            <circle cx="780" cy="240" r="6" fill="var(--sage)" opacity="0.85"/>
-            <text x="785" y="220" font-family="'Cormorant Garamond',serif" font-size="18" font-style="italic" fill="#1B4332" text-anchor="middle">东北 · 五常</text>
-            
-            <!-- 江西赣南(主推 · 星标) -->
-            <circle cx="660" cy="550" r="10" fill="var(--rust)" opacity="0.95"/>
-            <text x="660" y="588" font-family="'Cormorant Garamond',serif" font-size="20" font-weight="600" font-style="italic" fill="#C73E3A" text-anchor="middle">⭐ 江西赣南</text>
-            
-            <!-- 云南 -->
-            <circle cx="420" cy="600" r="6" fill="var(--sage)" opacity="0.85"/>
-            <text x="420" y="630" font-family="'Cormorant Garamond',serif" font-size="18" font-style="italic" fill="#1B4332" text-anchor="middle">云南</text>
-            
-            <!-- 连线(轻虚线,把5地连起来) -->
-            <g stroke="rgba(27,67,50,0.18)" stroke-width="1" stroke-dasharray="3,3" fill="none">
-              <line x1="250" y1="290" x2="520" y2="230"/>
-              <line x1="520" y1="230" x2="780" y2="240"/>
-              <line x1="660" y1="550" x2="520" y2="230"/>
-              <line x1="660" y1="550" x2="420" y2="600"/>
-            </g>
-          </svg>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -1024,15 +975,10 @@
       <span data-en>We offer origin tours, farm visits, and downloadable third-party test reports — so your customers can tell these stories too.</span>
     </p>
     <div class="flex flex-wrap gap-4 justify-center">
-      <a href="#" class="btn-primary" data-foodvio-cta="origin_tour">
-        <span data-zh>预约产地访查</span>
-        <span data-en>Book an origin tour</span>
-        <span>→</span>
-      </a>
-      <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
-        <span data-zh>下载溯源报告 PDF</span>
-        <span data-en>Download origin report</span>
-      </a>
+      <span class="cta-as-text"><span data-zh>预约产地访查 · 联系客服</span>
+        <span data-en>Book an origin tour · Contact us</span></span>
+      <span class="cta-as-text"><span data-zh>下载溯源报告 PDF · 联系客服</span>
+        <span data-en>Download origin report · Contact us</span></span>
     </div>
   </div>
 </section>

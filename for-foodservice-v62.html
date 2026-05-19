@@ -680,7 +680,20 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 <script src="lead-capture.js" defer></script>
 </head>
 
@@ -910,11 +923,8 @@
       <!-- CTAs -->
       <div class="md:col-span-4 reveal delay-3">
         <div class="flex flex-col gap-3 md:items-end">
-          <a href="#" class="btn-primary" data-foodvio-cta="catalog_download">
-            <span data-zh>下载产品手册</span>
-            <span data-en>Request Catalog</span>
-            <span class="arrow">→</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>下载产品手册 · 联系客服</span>
+            <span data-en>Request Catalog · Contact us</span></span>
           <a href="#" class="btn-outline" data-foodvio-cta="general_contact">
             <span data-zh>预约 15 分钟通话</span>
             <span data-en>Book a 15-min call</span>
@@ -1032,7 +1042,7 @@
           <span data-zh>每款产品配图文 SOP,后厨 5 分钟上手。100+ 门店全国一致,客诉率下降 60%。</span>
           <span data-en>Every product comes with illustrated SOPs. 5-minute onboarding. Consistent output across 100+ locations.</span>
         </p>
-        <a href="#" class="card-link" data-foodvio-cta="catalog_download"><span data-zh>申请 SOP</span><span data-en>Request SOPs</span> →</a>
+        <span class="cta-as-text"><span data-zh>申请 SOP · 联系客服</span><span data-en>Request SOPs · Contact us</span></span>
       </div>
 
       <div class="solution-card reveal delay-3">
@@ -1233,12 +1243,8 @@
             <span data-zh>申请样品</span><span data-en>Request Samples</span>
             <span class="arrow">→</span>
           </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="meeting_booking">
-            <span data-zh>预约通话</span><span data-en>Schedule a Call</span>
-          </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="catalog_download">
-            <span data-zh>下载手册 PDF</span><span data-en>Download Catalog</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>预约通话 · 联系客服</span><span data-en>Schedule a Call · Contact us</span></span>
+          <span class="cta-as-text"><span data-zh>下载手册 PDF · 联系客服</span><span data-en>Download Catalog · Contact us</span></span>
         </div>
 
         <div class="mt-10 pt-8 border-t border-white/15 text-white/60 text-sm">

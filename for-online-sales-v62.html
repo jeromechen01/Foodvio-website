@@ -680,7 +680,20 @@
     .section-no { margin-bottom: 0.75rem !important; }
   }
 
-</style>
+
+  /* W25b · CTA-as-text(C 方案:按钮转为不可点击文字)*/
+  .cta-as-text {
+    display: inline-block;
+    color: rgba(27,67,50,0.55);
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 8px 0;
+    cursor: default;
+    user-select: none;
+  }
+
+  </style>
 <script src="lead-capture.js" defer></script>
 </head>
 
@@ -910,11 +923,8 @@
       <!-- CTAs -->
       <div class="md:col-span-4 reveal delay-3">
         <div class="flex flex-col gap-3 md:items-end">
-          <a href="#" class="btn-primary" data-foodvio-cta="catalog_download">
-            <span data-zh>下载摄影资源包</span>
-            <span data-en>Photography Pack</span>
-            <span class="arrow">→</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>下载摄影资源包 · 联系客服</span>
+            <span data-en>Photography Pack · Contact us</span></span>
           <a href="#" class="btn-outline" data-foodvio-cta="sample_request">
             <span data-zh>申请样品组合</span>
             <span data-en>Request Sample Pack</span>
@@ -1032,7 +1042,7 @@
           <span data-zh>每款产品配高清电商主图 + 详情页设计 + 多语言文案 · 直播脚本 · 短视频素材 · 全部免费提供。</span>
           <span data-en>HD e-commerce photos, detail pages, multi-language copy, livestream scripts, short-video assets. All free.</span>
         </p>
-        <a href="#" class="card-link" data-foodvio-cta="catalog_download"><span data-zh>下载素材包</span><span data-en>Download asset pack</span> →</a>
+        <span class="cta-as-text"><span data-zh>下载素材包 · 联系客服</span><span data-en>Download asset pack · Contact us</span></span>
       </div>
 
       <div class="solution-card reveal delay-3">
@@ -1199,16 +1209,11 @@
         </p>
 
         <div class="flex flex-wrap gap-3 justify-center">
-          <a href="#" class="btn-primary" data-foodvio-cta="catalog_download">
-            <span data-zh>下载摄影包</span><span data-en>Photography Pack</span>
-            <span class="arrow">→</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>下载摄影包 · 联系客服</span><span data-en>Photography Pack · Contact us</span></span>
           <a href="#" class="btn-outline" data-foodvio-cta="sample_request">
             <span data-zh>申请样品组合</span><span data-en>Sample Pack</span>
           </a>
-          <a href="#" class="btn-outline" data-foodvio-cta="custom_inquiry">
-            <span data-zh>开始 OEM 询盘</span><span data-en>Start OEM Inquiry</span>
-          </a>
+          <span class="cta-as-text"><span data-zh>开始 OEM 询盘 · 联系客服</span><span data-en>Start OEM Inquiry · Contact us</span></span>
         </div>
 
         <div class="mt-10 pt-8 border-t border-white/15 text-white/60 text-sm">
