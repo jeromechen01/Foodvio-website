@@ -821,6 +821,52 @@
     cursor: default;
     user-select: none;
   }
+  
+  /* W30 · Footer 二维码区(全站同步)*/
+  .footer-qr-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+  .footer-qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88px;
+  }
+  .footer-qr-img {
+    width: 84px;
+    height: 84px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 4px;
+    object-fit: contain;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .footer-qr-item:hover .footer-qr-img {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(245,200,46,0.25);
+  }
+  .footer-qr-label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.75);
+    margin-top: 8px;
+    text-align: center;
+    line-height: 1.25;
+    max-width: 88px;
+    word-break: break-word;
+  }
+  @media (max-width: 480px) {
+    .footer-qr-row { gap: 10px; }
+    .footer-qr-item { width: 78px; }
+    .footer-qr-img { width: 72px; height: 72px; }
+    .footer-qr-label { font-size: 10px; }
+  }
   </style>
 <script src="lead-capture.js" defer></script>
 </head>
@@ -983,7 +1029,7 @@
   <a href="careers-v62.html" class="nav-drawer-link "><span class="zh">加入我们</span><span class="en-only">Careers</span><span class="en">Careers</span></a>
   <a href="about-v62.html" class="nav-drawer-link "><span class="zh">关于我们</span><span class="en-only">About</span><span class="en">About</span></a>
   <div class="nav-drawer-footer">
-    <a href="#" class="nav-drawer-cta" data-foodvio-cta="general_contact"><span class="zh">联系我们</span><span class="en-only">Contact us</span></a>
+    <a href="#footer-contact" class="nav-drawer-cta" onclick="document.body.classList.remove('nav-drawer-open')"><span class="zh">联系我们</span><span class="en-only">Contact us</span></a>
     <div class="nav-drawer-contact">
       ✉ huahuakefu1@foodvio.com.cn<br>
       ☎ 400-6879-568
@@ -1328,6 +1374,30 @@
           <span data-zh>源自中国的专业西餐食品品牌。从田间到餐桌,世界风味,中国制造。</span>
           <span data-en>The professional Western cuisine brand from China.</span>
         </p>
+        <!-- W30 · 3 个二维码(微信公众号 / 小程序 / 抖音)-->
+        <div class="footer-qr-row">
+          <div class="footer-qr-item">
+            <picture>
+              <source type="image/webp" srcset="assets/social/qr-wechat.webp">
+              <img src="assets/social/qr-wechat.jpg" alt="花花食界官方公众号二维码" loading="lazy" class="footer-qr-img">
+            </picture>
+            <div class="footer-qr-label"><span data-zh>官方公众号</span><span data-en>Official WeChat</span></div>
+          </div>
+          <div class="footer-qr-item">
+            <picture>
+              <source type="image/webp" srcset="assets/social/qr-miniprogram.webp">
+              <img src="assets/social/qr-miniprogram.jpg" alt="花花食界官方商城小程序二维码" loading="lazy" class="footer-qr-img">
+            </picture>
+            <div class="footer-qr-label"><span data-zh>官方商城</span><span data-en>Official Store</span></div>
+          </div>
+          <div class="footer-qr-item">
+            <picture>
+              <source type="image/webp" srcset="assets/social/qr-douyin.webp">
+              <img src="assets/social/qr-douyin.jpg" alt="花花食界抖音旗舰店二维码" loading="lazy" class="footer-qr-img">
+            </picture>
+            <div class="footer-qr-label"><span data-zh>抖音旗舰店</span><span data-en>Douyin</span></div>
+          </div>
+        </div>
       </div>
       <div class="md:col-span-2"><div class="footer-col-title"><span data-zh>产品</span><span data-en>Products</span></div>
         <a href="products-sauces-v62.html" class="footer-link"><span data-zh>西式酱料</span><span data-en>Sauces</span></a>
@@ -1338,7 +1408,7 @@
       <div class="md:col-span-2"><div class="footer-col-title"><span data-zh>探索</span><span data-en>Discover</span></div>
         <a href="our-story-index-v62.html" class="footer-link"><span data-zh>品牌故事</span><span data-en>Our Story</span></a>
         <a href="our-story-chinese-roots-v62.html" class="footer-link">Chinese Roots</a></div>
-      <div class="md:col-span-2"><div class="footer-col-title"><span data-zh>联系</span><span data-en>Contact</span></div>
+      <div class="md:col-span-2"><div class="footer-col-title" id="footer-contact"><span data-zh>联系</span><span data-en>Contact</span></div>
         <p class="text-xs text-white/55 leading-relaxed">400-6879-568<br>huahuakefu1@<br>foodvio.com.cn</p></div>
     </div>
     <div class="footer-divider mb-6"></div>

@@ -1067,7 +1067,53 @@
     display: block;
   }
   /* 图加载失败的 fallback:CSS 兜底显示渐变背景 + emoji */
-</style>
+
+  /* W29 · Footer 二维码区 */
+  .footer-qr-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+  .footer-qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88px;
+  }
+  .footer-qr-img {
+    width: 84px;
+    height: 84px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 4px;
+    object-fit: contain;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .footer-qr-item:hover .footer-qr-img {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(245,200,46,0.25);
+  }
+  .footer-qr-label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.75);
+    margin-top: 8px;
+    text-align: center;
+    line-height: 1.25;
+    max-width: 88px;
+    word-break: break-word;
+  }
+  @media (max-width: 480px) {
+    .footer-qr-row { gap: 10px; }
+    .footer-qr-item { width: 78px; }
+    .footer-qr-img { width: 72px; height: 72px; }
+    .footer-qr-label { font-size: 10px; }
+  }
+  </style>
 <script src="lead-capture.js" defer></script>
 </head>
 <body class="grain">
@@ -1101,7 +1147,7 @@
         <span></span><span></span><span></span>
       </button>
       <button onclick="toggleLang()" class="lang-toggle" id="lang-toggle-btn"><span class="lang-zh">中</span><span class="lang-sep"> / </span><span class="lang-en">EN</span></button>
-      <a href="#contact" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition" data-foodvio-cta="general_contact"><span data-zh>联系我们</span><span data-en>Contact</span></a>
+      <a href="#footer-contact" class="hidden md:inline-flex text-xs px-4 py-2 rounded-full bg-rust text-white hover:bg-rust/90 transition"><span data-zh>联系我们</span><span data-en>Contact</span></a>
     </div>
   </div>
   <!-- Mega Menu Panels -->
@@ -1235,7 +1281,7 @@
   <a href="careers-v62.html" class="nav-drawer-link "><span class="zh">加入我们</span><span class="en-only">Careers</span><span class="en">Careers</span></a>
   <a href="about-v62.html" class="nav-drawer-link "><span class="zh">关于我们</span><span class="en-only">About</span><span class="en">About</span></a>
   <div class="nav-drawer-footer">
-    <a href="#" class="nav-drawer-cta" data-foodvio-cta="general_contact"><span class="zh">联系我们</span><span class="en-only">Contact us</span></a>
+    <a href="#footer-contact" class="nav-drawer-cta" onclick="document.body.classList.remove('nav-drawer-open')"><span class="zh">联系我们</span><span class="en-only">Contact us</span></a>
     <div class="nav-drawer-contact">
       ✉ huahuakefu1@foodvio.com.cn<br>
       ☎ 400-6879-568
@@ -1892,11 +1938,29 @@
           <span data-zh>源自中国的专业西餐食品品牌。从田间到餐桌,世界风味,中国制造。</span>
           <span data-en>The professional Western cuisine brand from China. From field to plate — world flavors, made in China.</span>
         </p>
-        <div class="flex gap-2">
-          <a href="javascript:void(0)" onclick="showSocialInfo('wechat')" title="微信公众号:花花食界" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs cursor-pointer">微</a>
-          <a href="javascript:void(0)" onclick="showSocialInfo('video')" title="视频号:花花食界" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs cursor-pointer">视</a>
-          <a href="javascript:void(0)" onclick="showSocialInfo('redbook')" title="小红书:花花食界" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs cursor-pointer">红</a>
-          <a href="javascript:void(0)" onclick="showSocialInfo('linkedin')" title="LinkedIn: Foodvio" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs cursor-pointer">in</a>
+        <!-- W29 · 3 个二维码(微信公众号 / 小程序 / 抖音)-->
+        <div class="footer-qr-row">
+          <div class="footer-qr-item">
+            <picture>
+              <source type="image/webp" srcset="assets/social/qr-wechat.webp">
+              <img src="assets/social/qr-wechat.jpg" alt="花花食界官方公众号二维码" loading="lazy" class="footer-qr-img">
+            </picture>
+            <div class="footer-qr-label"><span data-zh>官方公众号</span><span data-en>Official WeChat</span></div>
+          </div>
+          <div class="footer-qr-item">
+            <picture>
+              <source type="image/webp" srcset="assets/social/qr-miniprogram.webp">
+              <img src="assets/social/qr-miniprogram.jpg" alt="花花食界官方商城小程序二维码" loading="lazy" class="footer-qr-img">
+            </picture>
+            <div class="footer-qr-label"><span data-zh>官方商城</span><span data-en>Official Store</span></div>
+          </div>
+          <div class="footer-qr-item">
+            <picture>
+              <source type="image/webp" srcset="assets/social/qr-douyin.webp">
+              <img src="assets/social/qr-douyin.jpg" alt="花花食界抖音旗舰店二维码" loading="lazy" class="footer-qr-img">
+            </picture>
+            <div class="footer-qr-label"><span data-zh>抖音旗舰店</span><span data-en>Douyin</span></div>
+          </div>
         </div>
       </div>
       <div class="md:col-span-2">
@@ -1923,7 +1987,7 @@
         <a href="mailto:huahuakefu1@foodvio.com.cn?subject=Careers Inquiry" class="footer-link" title="加入花花食界 - 简历投递邮箱"><span data-zh>招贤纳士</span><span data-en>Careers</span></a>
       </div>
       <div class="md:col-span-2">
-        <div class="footer-col-title"><span data-zh>联系</span><span data-en>Contact</span></div>
+        <div class="footer-col-title" id="footer-contact"><span data-zh>联系</span><span data-en>Contact</span></div>
         <p class="text-xs text-white/55 leading-relaxed">
           400-6879-568<br>
           huahuakefu1@<br>foodvio.com.cn<br>
@@ -2050,17 +2114,7 @@ for (let i = 0; i < 20; i++) {
 })();
 </script>
 <script src="cookie-banner.js" defer>
-  /* W28 · 社交图标点击提示 */
-  function showSocialInfo(platform) {
-    var info = {
-      wechat:   { name: "微信公众号:花花食界",  hint: "请打开微信「发现 → 公众号」搜索关注" },
-      video:    { name: "微信视频号:花花食界",  hint: "请打开微信「发现 → 视频号」搜索关注" },
-      redbook:  { name: "小红书:花花食界",      hint: "请打开小红书 App 搜索关注 @花花食界" },
-      linkedin: { name: "LinkedIn: Foodvio",   hint: "Visit linkedin.com and search for Foodvio · 即将上线" }
-    };
-    var s = info[platform];
-    if (s) { alert(s.name + "\n\n" + s.hint); }
-  }
+  /* W28 showSocialInfo function removed in W29 (二维码替代弹窗) */
 </script>
 </body>
 </html>
