@@ -624,9 +624,7 @@
   @media (max-width: 768px) {
     .hero-title-zh, .hero-title-en { font-size: clamp(34px, 9vw, 56px) !important; }
     .mega-menu { display: none; } /* mobile: simpler menu */
-    /* W12 P0-3 · 首页 R2-A 4 品类矩阵 mobile 优化:
-       每品类只显 2 张卡(隐藏 3、4 张),"查看全部"按钮放大置底 */
-    .ps-grid .ps-card:nth-child(n+3) { display: none; }
+    /* W28 · 移除 P0-3 隐藏规则,改为横向滑动 (见 max-width:520px 块) */
     .ps-cat-head {
       flex-direction: column;
       align-items: flex-start;
@@ -693,7 +691,56 @@
   .ps-more:hover{gap:10px;color:var(--rust)}
   .ps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
   @media(max-width:1024px){.ps-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
-  @media(max-width:520px){.ps-grid{grid-template-columns:1fr;gap:12px}}
+  @media(max-width:520px){
+    /* W28 · 手机端横向滑动(替代竖排单列)*/
+    .ps-grid{
+      display:flex;
+      grid-template-columns:none;
+      overflow-x:auto;
+      overflow-y:hidden;
+      scroll-snap-type:x mandatory;
+      gap:12px;
+      padding:0 24px 16px;
+      margin:0 -24px;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .ps-grid::-webkit-scrollbar{display:none}
+    .ps-grid .ps-card{
+      flex:0 0 78%;
+      max-width:280px;
+      scroll-snap-align:start;
+      min-height:auto;
+    }
+    /* W28 · 滑动提示气泡 */
+    .ps-swipe-hint{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-family:"Cormorant Garamond",serif;
+      font-style:italic;
+      font-size:12px;
+      color:var(--terra);
+      margin-top:8px;
+      padding:6px 14px;
+      background:rgba(231,158,93,0.08);
+      border-radius:999px;
+      letter-spacing:0.05em;
+      animation:swipe-pulse 2.4s ease-in-out infinite;
+    }
+    .ps-swipe-hint .arr{animation:swipe-arrow 1.4s ease-in-out infinite;display:inline-block}
+    @keyframes swipe-pulse{
+      0%,100%{opacity:.65}
+      50%{opacity:1}
+    }
+    @keyframes swipe-arrow{
+      0%{transform:translateX(0)}
+      50%{transform:translateX(6px)}
+      100%{transform:translateX(0)}
+    }
+  }
+  /* 桌面/平板隐藏 swipe hint */
+  @media(min-width:521px){.ps-swipe-hint{display:none}}
   .ps-card{background:#fff;border-radius:14px;border:1px solid rgba(13,42,31,0.06);padding:20px 18px 22px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:all .3s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden;min-height:240px}
   .ps-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px -16px rgba(13,42,31,.18);border-color:rgba(224,122,95,.3)}
   .ps-card .visual{aspect-ratio:1.1/1;border-radius:10px;background:linear-gradient(140deg,#F5F1EA 0%,#EAE3D5 100%);display:flex;align-items:center;justify-content:center;margin-bottom:14px;position:relative;overflow:hidden}
@@ -1325,6 +1372,12 @@
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
       </div>
+      <!-- W28 · 移动端横滑提示(桌面端 CSS 隐藏)-->
+      <div class="ps-swipe-hint" aria-hidden="true">
+        <span data-zh>向右滑动查看更多</span><span data-en>Swipe right for more</span>
+        <span class="arr">→</span>
+      </div>
+    
       <a href="products-sauces-v62.html" class="ps-more-mobile" data-foodvio-cta="general_contact">
         <span data-zh>查看全部 18 款酱料</span><span data-en>See all 18 sauces</span> →
       </a>
@@ -1392,6 +1445,12 @@
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
       </div>
+      <!-- W28 · 移动端横滑提示(桌面端 CSS 隐藏)-->
+      <div class="ps-swipe-hint" aria-hidden="true">
+        <span data-zh>向右滑动查看更多</span><span data-en>Swipe right for more</span>
+        <span class="arr">→</span>
+      </div>
+    
       <a href="products-staples-v62.html" class="ps-more-mobile" data-foodvio-cta="general_contact">
         <span data-zh>查看全部 11 款主食</span><span data-en>See all 11 staples</span> →
       </a>
@@ -1459,6 +1518,12 @@
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
       </div>
+      <!-- W28 · 移动端横滑提示(桌面端 CSS 隐藏)-->
+      <div class="ps-swipe-hint" aria-hidden="true">
+        <span data-zh>向右滑动查看更多</span><span data-en>Swipe right for more</span>
+        <span class="arr">→</span>
+      </div>
+    
       <a href="products-snacks-v62.html" class="ps-more-mobile" data-foodvio-cta="general_contact">
         <span data-zh>查看全部 6 款小食</span><span data-en>See all 6 snacks</span> →
       </a>
@@ -1526,6 +1591,12 @@
           <div class="arrow-cta"><span data-zh>查看详情</span><span data-en>View details</span> →</div>
         </a>
       </div>
+      <!-- W28 · 移动端横滑提示(桌面端 CSS 隐藏)-->
+      <div class="ps-swipe-hint" aria-hidden="true">
+        <span data-zh>向右滑动查看更多</span><span data-en>Swipe right for more</span>
+        <span class="arr">→</span>
+      </div>
+    
       <a href="products-mains-v62.html" class="ps-more-mobile" data-foodvio-cta="general_contact">
         <span data-zh>查看全部 4 款主菜</span><span data-en>See all 4 mains</span> →
       </a>
@@ -1676,8 +1747,8 @@
         <h3><span data-zh>世界大师,中国研发</span><span data-en>Global Masters,<br>Developed in China</span></h3>
         <div class="subtitle"><span data-zh>Global Masters, Developed in China</span><span data-en>世界大师 · 中国研发</span></div>
         <div class="meta">
-          <span data-zh>5 国留学经验 · 意大利 / 西班牙 / 韩国 / 日本 / 墨西哥</span>
-          <span data-en>Trained across 6 countries — from Naples to Tokyo, from Seoul to Mexico City.</span>
+          <span data-zh>6 国留学经验 · 意大利 / 西班牙 / 韩国 / 日本 / 墨西哥 / 泰国</span>
+          <span data-en>Trained across 6 countries — from Naples to Bangkok, from Seoul to Mexico City.</span>
         </div>
         <span class="read-more text-gold">
           <span data-zh>认识我们的主厨</span><span data-en>Meet our chefs</span>
@@ -1822,10 +1893,10 @@
           <span data-en>The professional Western cuisine brand from China. From field to plate — world flavors, made in China.</span>
         </p>
         <div class="flex gap-2">
-          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs">微</a>
-          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs">视</a>
-          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs">红</a>
-          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs">in</a>
+          <a href="javascript:void(0)" onclick="showSocialInfo('wechat')" title="微信公众号:花花食界" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs cursor-pointer">微</a>
+          <a href="javascript:void(0)" onclick="showSocialInfo('video')" title="视频号:花花食界" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs cursor-pointer">视</a>
+          <a href="javascript:void(0)" onclick="showSocialInfo('redbook')" title="小红书:花花食界" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs cursor-pointer">红</a>
+          <a href="javascript:void(0)" onclick="showSocialInfo('linkedin')" title="LinkedIn: Foodvio" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold/20 transition flex items-center justify-center text-xs cursor-pointer">in</a>
         </div>
       </div>
       <div class="md:col-span-2">
@@ -1978,6 +2049,18 @@ for (let i = 0; i < 20; i++) {
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
 })();
 </script>
-<script src="cookie-banner.js" defer></script>
+<script src="cookie-banner.js" defer>
+  /* W28 · 社交图标点击提示 */
+  function showSocialInfo(platform) {
+    var info = {
+      wechat:   { name: "微信公众号:花花食界",  hint: "请打开微信「发现 → 公众号」搜索关注" },
+      video:    { name: "微信视频号:花花食界",  hint: "请打开微信「发现 → 视频号」搜索关注" },
+      redbook:  { name: "小红书:花花食界",      hint: "请打开小红书 App 搜索关注 @花花食界" },
+      linkedin: { name: "LinkedIn: Foodvio",   hint: "Visit linkedin.com and search for Foodvio · 即将上线" }
+    };
+    var s = info[platform];
+    if (s) { alert(s.name + "\n\n" + s.hint); }
+  }
+</script>
 </body>
 </html>
